@@ -241,7 +241,7 @@ export const QUESTIONS = [
   }
 ];
 
-// ===== Technik-Quiz: Anhänger (BE) am Enyaq-Gespann =====
+// ===== Anhänger Quiz (BE) am Enyaq-Gespann =====
 export const TECHNIK_QUESTIONS = [
   {
     title: "WAS ZUERST?",
@@ -382,11 +382,46 @@ export const TECHNIK_QUESTIONS = [
     answers: ["Nichts, solange es nur kurz ist", "Das wird als Fehler gewertet", "Nur ein Hinweis vom Prüfer", "Punkt für Mut"],
     correct: 1,
     explain: "Auffahren auf den Bordstein oder Überfahren der Fahrbahnbegrenzung wird als Fehler gewertet."
+  },
+  {
+    title: "LICHT AN!",
+    text: "Welche Leuchte gehört NICHT zur Beleuchtung, die du am Anhänger prüfst?",
+    answers: ["Bremsleuchten", "Kennzeichenbeleuchtung", "Fernlicht", "Nebelschlussleuchte"],
+    correct: 2,
+    explain: "Ein Anhänger hat kein Fernlicht. Geprüft werden u. a. Schluss-, Brems-, Nebelschlussleuchte, Blinker und Kennzeichenbeleuchtung."
+  },
+  {
+    title: "WELCHE FORM?",
+    text: "Wie sehen die Rückstrahler hinten am Anhänger aus?",
+    answers: ["Rot und dreieckig", "Gelb und rund", "Weiß und eckig", "Rot und rund"],
+    correct: 0,
+    explain: "Hinten am Anhänger sitzen rote, dreieckige Rückstrahler. Vorne sind die Rückstrahler weiß."
+  },
+  {
+    title: "WIE PRÜFEN?",
+    text: "Wie prüfst du die Rückstrahler am Anhänger?",
+    answers: ["Einschalten und leuchten lassen", "Sichtprüfung auf Sauberkeit und Beschädigung", "Mit der Taschenlampe messen", "Gar nicht, die halten ewig"],
+    correct: 1,
+    explain: "Rückstrahler leuchten nicht selbst. Sie werden per Sichtprüfung kontrolliert: sauber, vollständig und unbeschädigt."
+  },
+  {
+    title: "MASSESCHLUSS?",
+    text: "Licht, Blinker und Bremse sind gleichzeitig an. Woran erkennst du einen Masseschluss?",
+    answers: ["Alle Leuchten sind gleich hell", "Leuchten flackern, werden schwächer oder leuchten mit", "Der Blinker ist schneller als sonst", "Das Radio rauscht"],
+    correct: 1,
+    explain: "Flackern, schwächer werden oder das Mitleuchten anderer Lampen deutet auf eine schlechte Masseverbindung hin, meist am Stecker oder an einer Fassung."
+  },
+  {
+    title: "WELCHE FARBE?",
+    text: "Welche Farbe haben die Rückstrahler vorne am Anhänger?",
+    answers: ["Rot", "Gelb", "Weiß", "Blau"],
+    correct: 2,
+    explain: "Vorne weiß, seitlich gelb, hinten rot und dreieckig."
   }
 ];
 
 // ===== Quiz-Übersicht =====
 export const QUIZZES = {
   freitag: { label: "Freitags Frage", configDoc: "current", questions: QUESTIONS },
-  technik: { label: "Technik Check", configDoc: "technik", questions: TECHNIK_QUESTIONS }
+  technik: { label: "Anhänger Quiz", configDoc: "technik", questions: TECHNIK_QUESTIONS }
 };
