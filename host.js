@@ -1,4 +1,4 @@
-import { app, db, QUESTIONS } from "./config.js";
+import { app, db, QUIZZES } from "./config.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { collection, onSnapshot, doc, setDoc, getDoc, deleteDoc }
@@ -6,7 +6,11 @@ import { collection, onSnapshot, doc, setDoc, getDoc, deleteDoc }
 
 const auth = getAuth(app);
 const $ = (id) => document.getElementById(id);
-let all = [], currentRound = "start", selected = null, unsub = null;
+let all = [], unsub = null;
+let quiz = "freitag";
+const currentRounds = {};            // aktive Runde je Quiz
+const selectedRounds = {};           // gewählte Runde je Quiz
+const quizOf = (r) => r.quiz || "freitag";
 
 // ---------- Login ----------
 $("btn-login").addEventListener("click", async () => {
@@ -26,11 +30,14 @@ onAuthStateChanged(auth, async (user) => {
   $("dash").hidden = !user;
   if (unsub) { unsub(); unsub = null; }
   if (!user) return;
-  try {
-    const c = await getDoc(doc(db, "config", "current"));
-    if (c.exists() && c.data().round) currentRound = c.data().round;
-  } catch (e) { console.warn(e); }
-  selected = currentRound;
+  for (const [id, qz] of Object.entries(QUIZZES)) {
+    currentRounds[id] = "start";
+    try {
+      const c = await getDoc(doc(db, "config", qz.configDoc));
+      if (c.exists() && c.data().round) currentRounds[id] = c.data().round;
+    } catch (e) { console.warn(e); }
+    selectedRounds[id] = currentRounds[id];
+  }
   unsub = onSnapshot(collection(db, "results"), (snap) => {
     all = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     render();
@@ -42,7 +49,18 @@ onAuthStateChanged(auth, async (user) => {
 
 // ---------- Anzeige ----------
 function render() {
-  const rounds = [...new Set([currentRound, ...all.map(r => r.round)])].sort().reverse();
+  const qs = $("quiz-select");
+  if (!qs.options.length) {
+    Object.entries(QUIZZES).forEach(([id, qz]) => {
+      const o = document.createElement("option"); o.value = id; o.textContent = qz.label; qs.appendChild(o);
+    });
+  }
+  qs.value = quiz;
+  const QUESTIONS = QUIZZES[quiz].questions;
+  const currentRound = currentRounds[quiz];
+  const selected = selectedRounds[quiz];
+  const mine = all.filter(r => quizOf(r) === quiz);
+  const rounds = [...new Set([currentRound, ...mine.map(r => r.round)])].sort().reverse();
   const sel = $("round-select");
   sel.innerHTML = "";
   rounds.forEach(r => {
@@ -53,7 +71,7 @@ function render() {
   sel.value = selected;
   $("current-info").textContent = `Aktive Runde: ${currentRound}. Neue Ergebnisse erscheinen live.`;
 
-  const rows = all.filter(r => r.round === selected).sort((a, b) => b.points - a.points);
+  const rows = mine.filter(r => r.round === selected).sort((a, b) => b.points - a.points);
   $("s-count").textContent = rows.length;
   $("s-avg").textContent = rows.length ? Math.round(rows.reduce((s, r) => s + r.points, 0) / rows.length) : 0;
   $("s-best").textContent = rows[0] ? rows[0].points : "–";
@@ -85,7 +103,8 @@ function render() {
   });
 }
 
-$("round-select").addEventListener("change", e => { selected = e.target.value; render(); });
+$("round-select").addEventListener("change", e => { selectedRounds[quiz] = e.target.value; render(); });
+$("quiz-select").addEventListener("change", e => { quiz = e.target.value; render(); });
 
 // ---------- Aktionen ----------
 async function removeResult(r) {
@@ -99,16 +118,18 @@ async function removeResult(r) {
 $("btn-new").addEventListener("click", async () => {
   const d = new Date();
   let id = d.toISOString().slice(0, 10);
-  if (all.some(r => r.round === id) || id === currentRound) id += "-" + d.toTimeString().slice(0, 5).replace(":", "");
-  if (!confirm(`Neue Runde „${id}“ starten? Die Bestenliste für die Schüler startet dann wieder leer. Alte Ergebnisse bleiben hier sichtbar.`)) return;
+  const currentRound = currentRounds[quiz];
+  if (all.some(r => quizOf(r) === quiz && r.round === id) || id === currentRound) id += "-" + d.toTimeString().slice(0, 5).replace(":", "");
+  if (!confirm(`${QUIZZES[quiz].label}: Neue Runde „${id}“ starten? Die Bestenliste für die Schüler startet dann wieder leer. Alte Ergebnisse bleiben hier sichtbar.`)) return;
   try {
-    await setDoc(doc(db, "config", "current"), { round: id });
-    currentRound = id; selected = id; render();
+    await setDoc(doc(db, "config", QUIZZES[quiz].configDoc), { round: id });
+    currentRounds[quiz] = id; selectedRounds[quiz] = id; render();
   } catch (e) { alert("Konnte keine neue Runde starten."); console.warn(e); }
 });
 
 $("btn-csv").addEventListener("click", () => {
-  const rows = all.filter(r => r.round === selected).sort((a, b) => b.points - a.points);
+  const selected = selectedRounds[quiz];
+  const rows = all.filter(r => quizOf(r) === quiz && r.round === selected).sort((a, b) => b.points - a.points);
   const esc = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const head = ["Platz", "Vorname", "Nachname", "Punkte", "Richtig", "Falsch bei Frage", "Datum"];
   const lines = [head.map(esc).join(";")];
@@ -120,7 +141,7 @@ $("btn-csv").addEventListener("click", () => {
   const blob = new Blob(["\ufeff" + lines.join("\n")], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = `quiz-ergebnisse-${selected}.csv`;
+  a.download = `${quiz}-ergebnisse-${selected}.csv`;
   a.click();
   URL.revokeObjectURL(a.href);
 });

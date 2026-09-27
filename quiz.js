@@ -1,20 +1,29 @@
-import { db, QUESTIONS, SECONDS_PER_QUESTION, MAX_POINTS_PER_QUESTION } from "./config.js";
+import { db, QUIZZES, QUESTIONS_PER_GAME, SECONDS_PER_QUESTION, MAX_POINTS_PER_QUESTION } from "./config.js";
 import {
   doc, getDoc, collection, query, where, getDocs, writeBatch, serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+const QUIZ = document.body.dataset.quiz || "freitag";
+const QUESTIONS = QUIZZES[QUIZ].questions;
 const $ = (id) => document.getElementById(id);
 const show = (id) => ["screen-start", "screen-q", "screen-end"].forEach(s => $(s).hidden = s !== id);
 
 let round = "start";
 let player = { first: "", last: "" };
 let idx = 0, points = 0, correctCount = 0, log = [];
+let game = []; // Indizes der Fragen dieses Spiels
+
+function pickQuestions() {
+  const ids = QUESTIONS.map((_, i) => i);
+  for (let i = ids.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [ids[i], ids[j]] = [ids[j], ids[i]]; }
+  return ids.slice(0, Math.min(QUESTIONS_PER_GAME, ids.length));
+}
 let timer = null, startedAt = 0, locked = false;
 
 // ---------- Runde & Bestenliste ----------
 async function loadRound() {
   try {
-    const snap = await getDoc(doc(db, "config", "current"));
+    const snap = await getDoc(doc(db, "config", QUIZZES[QUIZ].configDoc));
     if (snap.exists() && snap.data().round) round = snap.data().round;
   } catch (e) { console.warn(e); }
 }
@@ -22,7 +31,7 @@ async function loadRound() {
 async function loadBoard(targetId, highlightId) {
   const el = $(targetId);
   try {
-    const q = query(collection(db, "leaderboard"), where("round", "==", round));
+    const q = query(collection(db, "leaderboard"), where("round", "==", round), where("quiz", "==", QUIZ));
     const rows = (await getDocs(q)).docs.map(d => ({ id: d.id, ...d.data() }))
       .sort((a, b) => b.points - a.points).slice(0, 10);
     el.innerHTML = "";
@@ -46,24 +55,25 @@ $("btn-start").addEventListener("click", () => {
   const first = $("first").value.trim(), last = $("last").value.trim();
   const err = $("start-err");
   if (!first || !last) { err.textContent = "Bitte Vor- und Nachnamen eingeben."; err.hidden = false; return; }
-  if (localStorage.getItem("played_" + round)) {
-    err.textContent = "Du hast die Freitags Frage dieser Woche auf diesem Gerät schon gespielt."; err.hidden = false; return;
+  if (localStorage.getItem("played_" + QUIZ + "_" + round)) {
+    err.textContent = "Du hast die Freitags Frage dieser Runde auf diesem Gerät schon gespielt."; err.hidden = false; return;
   }
   err.hidden = true;
   player = { first, last };
   idx = 0; points = 0; correctCount = 0; log = [];
-  $("q-total").textContent = QUESTIONS.length;
+  game = pickQuestions();
+  $("q-total").textContent = game.length;
   show("screen-q");
   renderQuestion();
 });
 
 // ---------- Fragen ----------
 function renderQuestion() {
-  const q = QUESTIONS[idx];
+  const q = QUESTIONS[game[idx]];
   locked = false;
   $("q-num").textContent = idx + 1;
   $("q-points").textContent = points.toLocaleString("de-DE");
-  $("q-progress").style.width = (idx / QUESTIONS.length * 100) + "%";
+  $("q-progress").style.width = (idx / game.length * 100) + "%";
   $("q-title").textContent = q.title;
   $("q-text").textContent = q.text;
   $("q-explain").hidden = true;
@@ -98,7 +108,7 @@ function answer(choice) {
   if (locked) return;
   locked = true;
   clearInterval(timer);
-  const q = QUESTIONS[idx];
+  const q = QUESTIONS[game[idx]];
   const used = Math.min(SECONDS_PER_QUESTION, (performance.now() - startedAt) / 1000);
   const ok = choice === q.correct;
   let gained = 0;
@@ -106,7 +116,7 @@ function answer(choice) {
     gained = Math.round(MAX_POINTS_PER_QUESTION * (0.5 + 0.5 * (1 - used / SECONDS_PER_QUESTION)));
     points += gained; correctCount++;
   }
-  log.push({ q: idx + 1, chosen: choice, correct: ok, seconds: Math.round(used * 10) / 10, points: gained });
+  log.push({ q: game[idx] + 1, chosen: choice, correct: ok, seconds: Math.round(used * 10) / 10, points: gained });
 
   const btns = [...$("q-answers").children];
   btns.forEach((b, i) => {
@@ -119,7 +129,7 @@ function answer(choice) {
 
   setTimeout(() => {
     idx++;
-    if (idx < QUESTIONS.length) renderQuestion(); else finish();
+    if (idx < game.length) renderQuestion(); else finish();
   }, q.explain ? 2600 : 1300);
 }
 
@@ -128,9 +138,9 @@ async function finish() {
   show("screen-end");
   $("end-name").textContent = player.first.toUpperCase();
   $("end-points").textContent = points.toLocaleString("de-DE");
-  $("end-correct").textContent = `${correctCount} von ${QUESTIONS.length} Fragen richtig.`;
+  $("end-correct").textContent = `${correctCount} von ${game.length} Fragen richtig.`;
   $("end-status").textContent = "Ergebnis wird gespeichert …";
-  localStorage.setItem("played_" + round, "1");
+  localStorage.setItem("played_" + QUIZ + "_" + round, "1");
 
   let lbId = null;
   try {
@@ -139,12 +149,12 @@ async function finish() {
     const lbRef = doc(collection(db, "leaderboard"));
     lbId = lbRef.id;
     batch.set(resRef, {
-      round, first: player.first, last: player.last,
-      points, correct: correctCount, total: QUESTIONS.length,
+      quiz: QUIZ, round, first: player.first, last: player.last,
+      points, correct: correctCount, total: game.length,
       answers: log, lbId, createdAt: serverTimestamp()
     });
     batch.set(lbRef, {
-      round, name: `${player.first} ${player.last.charAt(0).toUpperCase()}.`,
+      quiz: QUIZ, round, name: `${player.first} ${player.last.charAt(0).toUpperCase()}.`,
       points, createdAt: serverTimestamp()
     });
     await batch.commit();
