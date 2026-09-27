@@ -420,8 +420,209 @@ export const TECHNIK_QUESTIONS = [
   }
 ];
 
+// ===== Technikquiz für die B-Prüfung (Enyaq) =====
+export const TECHNIKB_QUESTIONS = [
+  {
+    title: "WARNBLINKER?",
+    text: "In welcher Situation schaltest du das Warnblinklicht NICHT ein?",
+    answers: ["Am Stauende", "Bei einer Panne", "Beim Abschleppen", "Kurz in zweiter Reihe zum Bäcker"],
+    correct: 3,
+    explain: "Merkwort SUPAA: Stau, Unfall, Panne, Abschleppen, Abgeschleppt werden. Zum Falschparken ist der Warnblinker nicht da."
+  },
+  {
+    title: "SUPAA?",
+    text: "Merkwort SUPAA für das Warnblinklicht: Wofür steht das P?",
+    answers: ["Parken", "Panne", "Polizei", "Pause"],
+    correct: 1,
+    explain: "S = Stau, U = Unfall, P = Panne, A = Abschleppen, A = Abgeschleppt werden."
+  },
+  {
+    title: "SUPAA?",
+    text: "Wofür stehen die beiden A in SUPAA?",
+    answers: ["Autobahn und Ampel", "Abschleppen und Abgeschleppt werden", "Anhalten und Aussteigen", "Achtung und Abstand"],
+    correct: 1,
+    explain: "Warnblinklicht auch beim Abschleppen und wenn du selbst abgeschleppt wirst."
+  },
+  {
+    title: "PARKLICHT?",
+    text: "Was macht das Parklicht links bzw. rechts?",
+    answers: ["Es beleuchtet nur eine Seite des Fahrzeugs", "Es beleuchtet beide Seiten", "Es schaltet das Fernlicht ein", "Es blinkt dauerhaft"],
+    correct: 0,
+    explain: "Das Parklicht beleuchtet beim Parken nur die gewählte Seite, vorne weiß und hinten rot."
+  },
+  {
+    title: "STANDLICHT?",
+    text: "Welche Farben zeigt das Standlicht?",
+    answers: ["Vorne gelb, hinten rot", "Vorne weiß, hinten rot", "Vorne und hinten weiß", "Vorne rot, hinten weiß"],
+    correct: 1,
+    explain: "Standlicht beleuchtet beim Parken beide Seiten: vorne weiß, hinten rot."
+  },
+  {
+    title: "FERNLICHT?",
+    text: "Wann nutzt du das Fernlicht?",
+    answers: ["Immer bei Regen", "Im Dunkeln außerorts, wenn niemand geblendet wird", "Innerorts bei Dunkelheit", "Bei Nebel"],
+    correct: 1,
+    explain: "Fernlicht leuchtet die Straße außerorts im Dunkeln weit aus, aber nur, wenn niemand geblendet wird."
+  },
+  {
+    title: "ABBLENDLICHT?",
+    text: "Wofür ist das Abblendlicht da?",
+    answers: ["Nur für Tunnel", "Bei Dunkelheit, Scheinwerferkegel nach vorne", "Nur zum Parken", "Nur bei Nebel"],
+    correct: 1,
+    explain: "Abblendlicht nutzt du bei Dunkelheit. Es leuchtet weiß nach vorne, ohne andere zu blenden."
+  },
+  {
+    title: "NEBEL!",
+    text: "Wann darfst du die Nebelschlussleuchte einschalten?",
+    answers: ["Bei jedem Regen", "Nur bei Nebel mit weniger als 50 m Sicht", "Bei Dunkelheit", "Wenn jemand dicht auffährt"],
+    correct: 1,
+    explain: "Nur bei Nebel und Sichtweite unter 50 m. Dann gilt höchstens 50 km/h."
+  },
+  {
+    title: "WIE SCHNELL?",
+    text: "Nebelschlussleuchte ist an. Wie schnell darfst du höchstens fahren?",
+    answers: ["30 km/h", "50 km/h", "80 km/h", "100 km/h"],
+    correct: 1,
+    explain: "Mit eingeschalteter Nebelschlussleuchte, also Sicht unter 50 m, gilt maximal 50 km/h."
+  },
+  {
+    title: "WELCHE FARBE?",
+    text: "Welche Farbe hat die Nebelschlussleuchte?",
+    answers: ["Weiß", "Gelb", "Rot", "Orange"],
+    correct: 2,
+    explain: "Die Nebelschlussleuchte leuchtet rot nach hinten, damit du im Nebel gesehen wirst."
+  },
+  {
+    title: "ALLWETTERLICHT?",
+    text: "Wie heißt die Funktion am Enyaq, die früher Nebellicht (vorne) hieß?",
+    answers: ["Tagfahrlicht", "Allwetterlicht", "Kurvenlicht", "Parklicht"],
+    correct: 1,
+    explain: "Am Lichtschalter heißt sie Allwetterlicht. Sie leuchtet bei starker Sichtbehinderung wie Nebel oder Schnee die Straße aus."
+  },
+  {
+    title: "RÜCKSTRAHLER?",
+    text: "Wozu dienen die roten Rückstrahler hinten am Auto?",
+    answers: ["Als Bremslicht", "Damit das Fahrzeug auch ohne Beleuchtung erkennbar ist", "Als Ersatz für die Blinker", "Nur zur Deko"],
+    correct: 1,
+    explain: "Rückstrahler kennzeichnen das Fahrzeug, auch wenn die Beleuchtung aus ist."
+  },
+  {
+    title: "235/45 R21",
+    text: "Reifen 235/45 R21: Was bedeutet die 235?",
+    answers: ["Reifenbreite in mm", "Felgendurchmesser in mm", "Höchstgeschwindigkeit", "Tragfähigkeit in kg"],
+    correct: 0,
+    explain: "235 ist die Reifenbreite in Millimetern."
+  },
+  {
+    title: "235/45 R21",
+    text: "Reifen 235/45 R21: Was bedeutet die 45?",
+    answers: ["45 mm Profil", "Flankenhöhe = 45 % der Reifenbreite", "45 km/h Mindestgeschwindigkeit", "45 Wochen alt"],
+    correct: 1,
+    explain: "Die 45 ist das Querschnittsverhältnis: Die Flankenhöhe beträgt 45 % der Breite."
+  },
+  {
+    title: "235/45 R21",
+    text: "Reifen 235/45 R21: Wofür stehen R und 21?",
+    answers: ["Regenreifen, 21 bar", "Radialreifen, 21 Zoll Felgendurchmesser", "Reserverad, 21 kg", "Rennreifen, 21 mm Profil"],
+    correct: 1,
+    explain: "R steht für Radialreifen, 21 für den Felgendurchmesser in Zoll."
+  },
+  {
+    title: "WIE ALT?",
+    text: "Auf dem Reifen steht beim Herstellungsdatum \"0223\". Was heißt das?",
+    answers: ["2. Februar 2023", "2. Woche 2023", "Februar 2002", "23. Februar"],
+    correct: 1,
+    explain: "Die ersten zwei Ziffern sind die Woche, die letzten zwei das Jahr: 2. Woche 2023."
+  },
+  {
+    title: "WINTER?",
+    text: "Woran erkennst du einen Winterreifen?",
+    answers: ["Am Alpinsymbol (Berg mit Schneeflocke)", "An der Farbe", "Am Buchstaben W", "An der Reifenbreite"],
+    correct: 0,
+    explain: "Maßgeblich ist das Alpinsymbol, ein Berg mit Schneeflocke."
+  },
+  {
+    title: "WO STEHT'S?",
+    text: "Wo findest du die Angaben zum Reifendruck?",
+    answers: ["Im Handschuhfach auf dem Fahrzeugschein", "In der Fahrertür oder im Tankdeckel", "Auf dem Lenkrad", "Auf der Windschutzscheibe"],
+    correct: 1,
+    explain: "Die Reifendrucktabelle klebt in der Fahrertür oder im Tankdeckel."
+  },
+  {
+    title: "WOVON ABHÄNGIG?",
+    text: "Wovon hängt der richtige Reifendruck ab?",
+    answers: ["Von Außentemperatur und Uhrzeit", "Von Gewicht bzw. Beladung und Reifengröße", "Nur von der Marke", "Vom Ladestand der Batterie"],
+    correct: 1,
+    explain: "Der Reifendruck richtet sich nach Beladung und Reifengröße. Das zeigt die Tabelle."
+  },
+  {
+    title: "WIE VIEL BAR?",
+    text: "Enyaq mit normaler Beladung: Welcher Reifendruck steht in der Tabelle für Vorder- und Hinterachse?",
+    answers: ["2,2 bar", "2,7 bar", "3,1 bar", "3,5 bar"],
+    correct: 1,
+    explain: "Normal beladen: vorne und hinten 2,7 bar, bei allen Reifengrößen R19 bis R21."
+  },
+  {
+    title: "VOLL BELADEN!",
+    text: "Enyaq voll beladen: Welcher Druck gilt an der Hinterachse?",
+    answers: ["2,7 bar", "3,0 bar", "3,2 bar", "4,0 bar"],
+    correct: 2,
+    explain: "Voll beladen: vorne 3,1 bar, hinten 3,2 bar."
+  },
+  {
+    title: "EINHEIT?",
+    text: "1 bar entspricht wie vielen Kilopascal (kPa)?",
+    answers: ["10 kPa", "100 kPa", "1.000 kPa", "1 kPa"],
+    correct: 1,
+    explain: "1 bar = 100 kPa. Beide Einheiten stehen auf der Reifendrucktabelle."
+  },
+  {
+    title: "PRÜFPLAKETTE?",
+    text: "Wie liest du die Prüfplakette auf dem hinteren Kennzeichen?",
+    answers: ["Monat oben, Jahr in der Mitte", "Jahr oben, Monat in der Mitte", "Monat unten, Jahr oben", "Nur das Jahr zählt"],
+    correct: 0,
+    explain: "Der Monat steht oben, das Jahr in der Mitte der Plakette."
+  },
+  {
+    title: "STEMPEL?",
+    text: "Was zeigt der Zulassungsstempel auf dem Kennzeichen?",
+    answers: ["Wann die nächste HU fällig ist", "Wo das Fahrzeug zugelassen ist und dass Steuern und Versicherung bezahlt sind", "Die Schadstoffklasse", "Das Baujahr"],
+    correct: 1,
+    explain: "Der Zulassungsstempel zeigt die Zulassungsbehörde und bestätigt, dass Steuer und Versicherung bezahlt sind."
+  },
+  {
+    title: "BREMSE!",
+    text: "Bremsflüssigkeit ist unter Minimum. Was tust du?",
+    answers: ["Einfach Wasser nachfüllen", "Sofort anhalten und prüfen lassen", "Weiterfahren bis zum nächsten Service", "Scheibenwaschwasser nachfüllen"],
+    correct: 1,
+    explain: "Fehlt Bremsflüssigkeit, kann eine Undichtigkeit vorliegen: sofort anhalten und prüfen lassen."
+  },
+  {
+    title: "KÜHLWASSER?",
+    text: "Was ist im Kühlwasser enthalten?",
+    answers: ["Nur Wasser", "Wasser und Frostschutz", "Öl und Wasser", "Bremsflüssigkeit"],
+    correct: 1,
+    explain: "Kühlwasser enthält Wasser und Frostschutz. Der Stand muss zwischen min und max liegen."
+  },
+  {
+    title: "WIE VOLL?",
+    text: "Wo muss der Flüssigkeitsstand im Motorraum (Kühlwasser, Bremsflüssigkeit, Waschwasser) liegen?",
+    answers: ["Über max", "Zwischen min und max", "Unter min", "Egal, Hauptsache etwas drin"],
+    correct: 1,
+    explain: "Bei allen Behältern gilt: zwischen der min- und der max-Markierung."
+  },
+  {
+    title: "WASCHWASSER?",
+    text: "Was gehört ins Scheibenwaschwasser?",
+    answers: ["Wasser, Reiniger, ggf. Frostschutz", "Kühlwasser", "Nur Leitungswasser mit Spülmittel", "Bremsflüssigkeit"],
+    correct: 0,
+    explain: "Scheibenwaschwasser enthält Wasser, Reiniger und im Winter Frostschutz."
+  }
+];
+
 // ===== Quiz-Übersicht =====
 export const QUIZZES = {
   freitag: { label: "Freitags Frage", configDoc: "current", questions: QUESTIONS },
-  technik: { label: "Anhänger Quiz", configDoc: "technik", questions: TECHNIK_QUESTIONS }
+  technik: { label: "Anhänger Quiz", configDoc: "technik", questions: TECHNIK_QUESTIONS },
+  technikb: { label: "Technikquiz B-Prüfung", configDoc: "technikb", questions: TECHNIKB_QUESTIONS }
 };
