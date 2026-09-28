@@ -23,7 +23,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .hint{color:var(--muted);font-size:14px;line-height:1.5;margin:12px 0 20px}
 .err{color:#ff8a8d;font-size:14px;margin:0 0 12px}
 .btn{width:100%;min-height:58px;border:0;border-radius:16px;background:var(--lime);color:#11140a;font-size:17px;font-weight:900;letter-spacing:.18em;cursor:pointer;transition:transform .15s,filter .15s}
-.btn:hover{filter:brightness(1.06)} .btn:active{transform:scale(.98)}
+@media (hover:hover){.btn:hover{filter:brightness(1.06)}} .btn:active{transform:scale(.98)}
 .btn:disabled{opacity:.5;cursor:default}
 .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 .privacy{color:var(--muted);font-size:13px;line-height:1.55;margin:16px 0 0}
@@ -57,7 +57,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 #q-text{margin:0 0 22px;text-align:center;font-size:18px;font-weight:700;line-height:1.5}
 .answers{display:flex;flex-direction:column;gap:14px}
 .ans{display:flex;align-items:center;gap:16px;width:100%;min-height:64px;padding:10px 16px;border:2px solid #e3e6ea;border-radius:999px;background:#fff;color:#4a505a;font-size:17px;font-weight:600;text-align:left;cursor:pointer;transition:border-color .15s,background .15s,transform .1s}
-.ans:hover:not(:disabled){border-color:#1a1e27}
+@media (hover:hover){.ans:hover:not(:disabled){border-color:#1a1e27}}
 .ans:active:not(:disabled){transform:scale(.99)}
 .ans .l{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:2px solid #1a1e27;color:#1a1e27;font-weight:900}
 .ans.ok{border-color:var(--ok);background:#e9f8ef;color:#10532f}
