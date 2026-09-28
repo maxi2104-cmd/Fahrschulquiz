@@ -4,8 +4,15 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const QUIZ = document.body.dataset.quiz || "freitag";
-const QUESTIONS = QUIZZES[QUIZ].questions;
 const $ = (id) => document.getElementById(id);
+const QZ = QUIZZES[QUIZ];
+if (!QZ) {
+  $("screen-start").innerHTML = '<h1 class="title">BALD<br>VERFÜGBAR.</h1><p class="lead">Dieses Quiz ist noch in Vorbereitung.</p>';
+  throw new Error("Quiz noch ohne Fragen: " + QUIZ);
+}
+const QUESTIONS = QZ.questions;
+const TIMED = QZ.timer !== false;
+const PER_GAME = QZ.perGame || QUESTIONS_PER_GAME;
 const show = (id) => ["screen-start", "screen-q", "screen-end"].forEach(s => $(s).hidden = s !== id);
 
 let round = "start";
@@ -16,7 +23,7 @@ let game = []; // Indizes der Fragen dieses Spiels
 function pickQuestions() {
   const ids = QUESTIONS.map((_, i) => i);
   for (let i = ids.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [ids[i], ids[j]] = [ids[j], ids[i]]; }
-  return ids.slice(0, Math.min(QUESTIONS_PER_GAME, ids.length));
+  return ids.slice(0, Math.min(PER_GAME, ids.length));
 }
 let timer = null, startedAt = 0, locked = false;
 
@@ -56,7 +63,7 @@ $("btn-start").addEventListener("click", () => {
   const err = $("start-err");
   if (!first || !last) { err.textContent = "Bitte Vor- und Nachnamen eingeben."; err.hidden = false; return; }
   if (localStorage.getItem("played_" + QUIZ + "_" + round)) {
-    err.textContent = "Du hast die Freitags Frage dieser Runde auf diesem Gerät schon gespielt."; err.hidden = false; return;
+    err.textContent = `Du hast „${QZ.label}“ in dieser Runde auf diesem Gerät schon gespielt.`; err.hidden = false; return;
   }
   err.hidden = true;
   player = { first, last };
@@ -87,7 +94,9 @@ function renderQuestion() {
     b.addEventListener("click", () => answer(i));
     box.appendChild(b);
   });
-  startTimer();
+  if (TIMED) startTimer();
+  else { startedAt = performance.now(); const t = document.querySelector(".timer"); if (t) t.style.display = "none"; }
+  if ($("btn-next")) $("btn-next").hidden = true;
 }
 
 function startTimer() {
@@ -109,11 +118,14 @@ function answer(choice) {
   locked = true;
   clearInterval(timer);
   const q = QUESTIONS[game[idx]];
-  const used = Math.min(SECONDS_PER_QUESTION, (performance.now() - startedAt) / 1000);
+  const secs = (performance.now() - startedAt) / 1000;
+  const used = TIMED ? Math.min(SECONDS_PER_QUESTION, secs) : Math.min(secs, 3600);
   const ok = choice === q.correct;
   let gained = 0;
   if (ok) {
-    gained = Math.round(MAX_POINTS_PER_QUESTION * (0.5 + 0.5 * (1 - used / SECONDS_PER_QUESTION)));
+    gained = TIMED
+      ? Math.round(MAX_POINTS_PER_QUESTION * (0.5 + 0.5 * (1 - used / SECONDS_PER_QUESTION)))
+      : (QZ.pointsPerCorrect || MAX_POINTS_PER_QUESTION);
     points += gained; correctCount++;
   }
   log.push({ q: game[idx] + 1, chosen: choice, correct: ok, seconds: Math.round(used * 10) / 10, points: gained });
@@ -127,10 +139,14 @@ function answer(choice) {
   $("q-points").textContent = points.toLocaleString("de-DE");
   if (q.explain) { $("q-explain").textContent = (choice === -1 ? "Zeit abgelaufen. " : "") + q.explain; $("q-explain").hidden = false; }
 
-  setTimeout(() => {
-    idx++;
-    if (idx < game.length) renderQuestion(); else finish();
-  }, q.explain ? 2600 : 1300);
+  const next = () => { idx++; if (!TIMED) window.scrollTo(0, 0); if (idx < game.length) renderQuestion(); else finish(); };
+  if (!TIMED && $("btn-next")) {
+    $("btn-next").textContent = idx + 1 < game.length ? "WEITER" : "ERGEBNIS ANZEIGEN";
+    $("btn-next").hidden = false;
+    $("btn-next").onclick = next;
+    return;
+  }
+  setTimeout(next, q.explain ? 2600 : 1300);
 }
 
 // ---------- Ende ----------

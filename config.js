@@ -1,6 +1,7 @@
 // ===== Firebase =====
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { PAEDAGOGIK_QUESTIONS, VERKEHRSRECHT_QUESTIONS, FAHRERLAUBNISRECHT_QUESTIONS, FB_TECHNIK_QUESTIONS } from "./fortbildung-fragen.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD7YxS-sQ8_q4HcwMTmGHs-8-D9Kw_xsSo",
@@ -570,13 +571,6 @@ export const TECHNIKB_QUESTIONS = [
     explain: "Voll beladen: vorne 3,1 bar, hinten 3,2 bar."
   },
   {
-    title: "EINHEIT?",
-    text: "1 bar entspricht wie vielen Kilopascal (kPa)?",
-    answers: ["10 kPa", "100 kPa", "1.000 kPa", "1 kPa"],
-    correct: 1,
-    explain: "1 bar = 100 kPa. Beide Einheiten stehen auf der Reifendrucktabelle."
-  },
-  {
     title: "PRÜFPLAKETTE?",
     text: "Wie liest du die Prüfplakette auf dem hinteren Kennzeichen?",
     answers: ["Monat oben, Jahr in der Mitte", "Jahr oben, Monat in der Mitte", "Monat unten, Jahr oben", "Nur das Jahr zählt"],
@@ -617,12 +611,106 @@ export const TECHNIKB_QUESTIONS = [
     answers: ["Wasser, Reiniger, ggf. Frostschutz", "Kühlwasser", "Nur Leitungswasser mit Spülmittel", "Bremsflüssigkeit"],
     correct: 0,
     explain: "Scheibenwaschwasser enthält Wasser, Reiniger und im Winter Frostschutz."
+  },
+  {
+    title: "WIE TIEF?",
+    text: "Wie viel Profiltiefe müssen die Reifen am Pkw mindestens haben?",
+    answers: ["1 mm", "1,6 mm", "2,5 mm", "4 mm"],
+    correct: 1,
+    explain: "Gesetzlich vorgeschrieben sind mindestens 1,6 mm Profiltiefe."
+  },
+  {
+    title: "LICHTSCHALTER?",
+    text: "Welche Stellung findest du NICHT am Lichtdrehschalter des Enyaq?",
+    answers: ["Standlicht", "Abblendlicht", "Fernlicht", "Licht aus"],
+    correct: 2,
+    explain: "Am Drehschalter: Licht aus, Tagfahrlicht bzw. AUTO, Standlicht, Abblendlicht. Das Fernlicht schaltest du nicht dort."
+  },
+  {
+    title: "WELCHE FARBE?",
+    text: "Welche Farbe hat das Allwetterlicht (früher Nebellicht) vorne?",
+    answers: ["Gelb", "Weiß", "Rot", "Blau"],
+    correct: 1,
+    explain: "Das Nebel- bzw. Allwetterlicht vorne leuchtet weiß."
+  },
+  {
+    title: "KÜHLWASSER?",
+    text: "Der Kühlwasserstand ist unter min. Was tust du?",
+    answers: ["Nichts, Elektroautos brauchen das nicht", "Auffüllen und ggf. prüfen lassen", "Bremsflüssigkeit nachfüllen", "Scheibenwaschwasser einfüllen"],
+    correct: 1,
+    explain: "Fehlt Kühlwasser, füllst du es auf und lässt es gegebenenfalls prüfen."
+  },
+  {
+    title: "EV-REIFEN?",
+    text: "Was bedeutet ein Aufdruck wie \"e-Performance\" auf dem Reifen des Enyaq?",
+    answers: ["Winterreifen", "Reifen speziell für Elektroautos", "Notrad", "Rennreifen"],
+    correct: 1,
+    explain: "Das ist ein EV-Reifen, abgestimmt auf Elektroautos."
+  },
+  {
+    title: "STAU!",
+    text: "Du kommst auf der Autobahn an ein Stauende. Was schaltest du ein?",
+    answers: ["Fernlicht", "Nebelschlussleuchte", "Warnblinklicht", "Nur das Radio"],
+    correct: 2,
+    explain: "Das S in SUPAA: Am Stauende sicherst du mit dem Warnblinklicht nach hinten ab."
+  },
+  {
+    title: "TAGFAHRLICHT?",
+    text: "Reicht das Tagfahrlicht bei Dunkelheit aus?",
+    answers: ["Ja, immer", "Nein, bei Dunkelheit brauchst du Abblendlicht", "Nur innerorts", "Nur mit Warnblinker"],
+    correct: 1,
+    explain: "Tagfahrlicht ersetzt bei Dunkelheit nicht das Abblendlicht."
+  },
+  {
+    title: "GEGENVERKEHR!",
+    text: "Du fährst nachts mit Fernlicht, und es kommt dir ein Auto entgegen. Was tust du?",
+    answers: ["Fernlicht anlassen", "Rechtzeitig abblenden", "Lichthupe geben", "Nebelschlussleuchte an"],
+    correct: 1,
+    explain: "Fernlicht nur, wenn niemand geblendet wird. Bei Gegenverkehr rechtzeitig abblenden."
+  },
+  {
+    title: "WINTER?",
+    text: "Reicht heute nur die Kennzeichnung M+S für einen Winterreifen?",
+    answers: ["Ja, M+S reicht immer", "Nein, entscheidend ist das Alpinsymbol", "Nur bei Elektroautos", "Nur bei Sommerreifen"],
+    correct: 1,
+    explain: "Als Winterreifen gilt heute nur ein Reifen mit Alpinsymbol, also Berg mit Schneeflocke."
+  },
+  {
+    title: "WANN PRÜFEN?",
+    text: "Wann prüfst du den Reifendruck am besten?",
+    answers: ["Direkt nach einer langen Autobahnfahrt", "Bei kalten Reifen", "Nur im Sommer", "Nie, das macht die Werkstatt"],
+    correct: 1,
+    explain: "Die Werte in der Tabelle gelten für kalte Reifen. Warme Reifen zeigen einen höheren Druck."
+  },
+  {
+    title: "HU?",
+    text: "Wann muss ein neuer Pkw zum ersten Mal zur Hauptuntersuchung?",
+    answers: ["Nach 1 Jahr", "Nach 2 Jahren", "Nach 3 Jahren", "Nach 5 Jahren"],
+    correct: 2,
+    explain: "Neue Pkw müssen nach 3 Jahren zur ersten HU, danach alle 2 Jahre."
+  },
+  {
+    title: "FROST!",
+    text: "Warum gehört im Winter Frostschutz ins Scheibenwaschwasser?",
+    answers: ["Damit es besser riecht", "Damit es nicht einfriert", "Damit die Scheibe schneller trocknet", "Das ist nur Deko"],
+    correct: 1,
+    explain: "Ohne Frostschutz friert das Waschwasser ein, und du hast keine freie Sicht mehr."
   }
 ];
 
 // ===== Quiz-Übersicht =====
-export const QUIZZES = {
+// Fortbildung: kein Zeitlimit, 20 Fragen pro Spiel, 50 Punkte pro richtiger Antwort (max. 1.000)
+const FB = { timer: false, perGame: 20, pointsPerCorrect: 50, back: "fortbildung.html", backLabel: "Fortbildung" };
+
+const ALL_QUIZZES = {
   freitag: { label: "Freitags Frage", configDoc: "current", questions: QUESTIONS },
   technik: { label: "Anhänger Quiz", configDoc: "technik", questions: TECHNIK_QUESTIONS },
-  technikb: { label: "Technikquiz B-Prüfung", configDoc: "technikb", questions: TECHNIKB_QUESTIONS }
+  technikb: { label: "Technikquiz B-Prüfung", configDoc: "technikb", questions: TECHNIKB_QUESTIONS },
+  fbpaed: { label: "Fortbildung · Pädagogik", configDoc: "fbpaed", questions: PAEDAGOGIK_QUESTIONS, ...FB },
+  fbrecht: { label: "Fortbildung · Verkehrsrecht", configDoc: "fbrecht", questions: VERKEHRSRECHT_QUESTIONS, ...FB },
+  fbfe: { label: "Fortbildung · Fahrerlaubnisrecht", configDoc: "fbfe", questions: FAHRERLAUBNISRECHT_QUESTIONS, ...FB },
+  fbtechnik: { label: "Fortbildung · Technik", configDoc: "fbtechnik", questions: FB_TECHNIK_QUESTIONS, ...FB }
 };
+
+// Nur Quizze mit Fragen sind aktiv
+export const QUIZZES = Object.fromEntries(Object.entries(ALL_QUIZZES).filter(([, q]) => q.questions.length > 0));
