@@ -1804,7 +1804,694 @@ export const PAEDAGOGIK_QUESTIONS = [
  }
 ];
 
+// Fahrerlaubnisrecht: Lkw-Klassen und Prüfungsfahrzeuge (Anlage 7 FeV), aus den Unterlagen der Fortbildung.
+export const FAHRERLAUBNISRECHT_QUESTIONS = [
+ {
+  "title": "WELCHE ANLAGE?",
+  "text": "In welcher Anlage der FeV stehen die Anforderungen an die Prüfungsfahrzeuge?",
+  "answers": [
+   "Anlage 7",
+   "Anlage 3",
+   "Anlage 1",
+   "Anlage 9"
+  ],
+  "correct": 0,
+  "explain": "Die Prüfungsfahrzeuge sind in Anlage 7 FeV geregelt."
+ },
+ {
+  "title": "KLASSE C1",
+  "text": "Welche zulässige Gesamtmasse dürfen Kraftfahrzeuge der Klasse C1 haben?",
+  "answers": [
+   "Bis 3,5 t",
+   "Über 3,5 t ohne Obergrenze",
+   "Über 7,5 t bis 12 t",
+   "Über 3,5 t bis 7,5 t"
+  ],
+  "correct": 3,
+  "explain": "C1: Kraftfahrzeuge über 3,5 t zGm bis 7,5 t zGm."
+ },
+ {
+  "title": "PERSONEN?",
+  "text": "Für wie viele Personen außer dem Fahrer dürfen Fahrzeuge der Klassen C1 und C ausgelegt und gebaut sein?",
+  "answers": [
+   "Für drei",
+   "Für acht",
+   "Für neun",
+   "Für sechzehn"
+  ],
+  "correct": 1,
+  "explain": "C1 und C: für acht Personen außer dem Fahrer ausgelegt und gebaut."
+ },
+ {
+  "title": "ANHÄNGER?",
+  "text": "Welchen Anhänger darf man mit Klasse C1 mitführen?",
+  "answers": [
+   "Jeden Anhänger bis 12.000 kg Kombination",
+   "Bis 3.500 kg zGm",
+   "Bis 750 kg zGm",
+   "Bis 1.300 kg zGm"
+  ],
+  "correct": 2,
+  "explain": "C1: auch mit Anhänger bis 750 kg zGm. Für schwerere Anhänger braucht man C1E."
+ },
+ {
+  "title": "AUSGENOMMEN?",
+  "text": "Welche Fahrzeugklassen sind bei den Kraftfahrzeugen der Klassen C1 und C ausgenommen?",
+  "answers": [
+   "C1E, CE",
+   "B, BE",
+   "AM, A1, A2, A, D1, D",
+   "T, L"
+  ],
+  "correct": 2,
+  "explain": "C1 und C: Kraftfahrzeuge (AM, A1, A2, A, D1, D ausgenommen)."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Wie hoch ist das Mindestalter für Klasse C1?",
+  "answers": [
+   "18 Jahre",
+   "24 Jahre",
+   "17 Jahre",
+   "21 Jahre"
+  ],
+  "correct": 0,
+  "explain": "Mindestalter C1: 18."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C1",
+  "text": "Wie lang muss das Prüfungsfahrzeug der Klasse C1 mindestens sein?",
+  "answers": [
+   "5 m",
+   "8 m",
+   "9 m",
+   "7 m"
+  ],
+  "correct": 0,
+  "explain": "Prüfungsfahrzeug C1: Länge mindestens 5 m."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C1",
+  "text": "Welche zulässige Gesamtmasse muss das Prüfungsfahrzeug der Klasse C1 mindestens haben?",
+  "answers": [
+   "12.000 kg",
+   "5.500 kg",
+   "3.500 kg",
+   "7.500 kg"
+  ],
+  "correct": 1,
+  "explain": "Prüfungsfahrzeug C1: zGm mindestens 5.500 kg."
+ },
+ {
+  "title": "TEMPO?",
+  "text": "Welche bauartbedingte Höchstgeschwindigkeit müssen die Prüfungsfahrzeuge der Klassen C1, C1E, C und CE mindestens erreichen?",
+  "answers": [
+   "60 km/h",
+   "90 km/h",
+   "100 km/h",
+   "80 km/h"
+  ],
+  "correct": 3,
+  "explain": "Für C1, C1E, C und CE gilt jeweils: bbH mindestens 80 km/h."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C1",
+  "text": "Welche Ausstattung muss das Prüfungsfahrzeug der Klasse C1 haben?",
+  "answers": [
+   "Mindestbreite 2,40 m",
+   "ABS und Fahrtenschreiber",
+   "Nur ABS",
+   "Zweileitungsbremsanlage und Anhängerkupplung"
+  ],
+  "correct": 1,
+  "explain": "Prüfungsfahrzeug C1: mit ABS und mit Fahrtenschreiber."
+ },
+ {
+  "title": "AUFBAU?",
+  "text": "Wie muss der Aufbau der Prüfungsfahrzeuge der Lkw-Klassen sein?",
+  "answers": [
+   "Offene Pritsche ohne Bordwände",
+   "Kastenförmig oder vergleichbar, mindestens so breit und so hoch wie das Fahrerhaus",
+   "Mindestens doppelt so hoch wie das Fahrerhaus",
+   "Beliebig, Hauptsache mit Plane"
+  ],
+  "correct": 1,
+  "explain": "Aufbau kastenförmig oder vergleichbar, mindestens so breit und so hoch wie das Fahrerhaus."
+ },
+ {
+  "title": "SICHT NACH HINTEN?",
+  "text": "Wie darf beim Prüfungsfahrzeug die Sicht nach hinten möglich sein?",
+  "answers": [
+   "Nur mit Einweiser",
+   "Durch Umdrehen über die Schulter",
+   "Nur über die Außenspiegel oder andere zugelassene Einrichtungen für indirekte Sicht",
+   "Durch eine Heckscheibe"
+  ],
+  "correct": 2,
+  "explain": "Sicht nach hinten nur über die Außenspiegel oder andere zugelassene Einrichtungen für indirekte Sicht."
+ },
+ {
+  "title": "KLASSE C1E",
+  "text": "Wie schwer darf die Kombination aus einem Fahrzeug der Klasse C1 und einem Anhänger über 750 kg mit Klasse C1E höchstens sein?",
+  "answers": [
+   "8.250 kg",
+   "7.500 kg",
+   "20.000 kg",
+   "12.000 kg"
+  ],
+  "correct": 3,
+  "explain": "C1E: C1 mit Anhänger oder Sattelanhänger über 750 kg, Kombination bis max. 12.000 kg."
+ },
+ {
+  "title": "WELCHE KLASSE?",
+  "text": "Ein Fahrzeug der Klasse B zieht einen Anhänger über 3.500 kg, die Kombination liegt unter 12.000 kg. Welche Klasse ist nötig?",
+  "answers": [
+   "CE",
+   "C1E",
+   "C1",
+   "BE"
+  ],
+  "correct": 1,
+  "explain": "C1E umfasst auch Kraftfahrzeuge der Klasse B mit Anhänger oder Sattelanhänger über 3.500 kg, Kombination bis max. 12.000 kg."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Wie hoch ist das Mindestalter für Klasse C1E?",
+  "answers": [
+   "17 Jahre",
+   "21 Jahre",
+   "18 Jahre",
+   "24 Jahre"
+  ],
+  "correct": 2,
+  "explain": "Mindestalter C1E: 18."
+ },
+ {
+  "title": "EINGESCHLOSSEN?",
+  "text": "Welche Klasse ist in C1E eingeschlossen?",
+  "answers": [
+   "CE",
+   "BE",
+   "T",
+   "C1"
+  ],
+  "correct": 1,
+  "explain": "In C1E eingeschlossen: BE (D1E, wenn D1 bereits vorhanden ist oder später erteilt wird)."
+ },
+ {
+  "title": "EINGESCHLOSSEN?",
+  "text": "Wann ist D1E in der Klasse C1E eingeschlossen?",
+  "answers": [
+   "Immer",
+   "Nie",
+   "Wenn D1 bereits vorhanden ist oder später erteilt wird",
+   "Ab einem Alter von 21 Jahren"
+  ],
+  "correct": 2,
+  "explain": "C1E schließt D1E ein, wenn D1 bereits vorhanden ist oder später erteilt wird."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C1E",
+  "text": "Wie lang muss die Fahrzeugkombination beim Prüfungsfahrzeug der Klasse C1E mindestens sein?",
+  "answers": [
+   "7,50 m",
+   "8 m",
+   "9 m",
+   "14 m"
+  ],
+  "correct": 2,
+  "explain": "Prüfungsfahrzeug C1E: Länge der Fahrzeugkombination mindestens 9 m."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C1E",
+  "text": "Welche zulässige Gesamtmasse muss der Anhänger des C1E-Prüfungsfahrzeugs mindestens haben?",
+  "answers": [
+   "3.500 kg",
+   "750 kg",
+   "800 kg",
+   "1.300 kg"
+  ],
+  "correct": 3,
+  "explain": "Prüfungsfahrzeug C1E: zGm des Anhängers mindestens 1.300 kg."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C1E",
+  "text": "Welches tatsächliche Gewicht muss der Anhänger des C1E-Prüfungsfahrzeugs mindestens haben?",
+  "answers": [
+   "800 kg",
+   "750 kg",
+   "1.000 kg",
+   "1.300 kg"
+  ],
+  "correct": 0,
+  "explain": "Prüfungsfahrzeug C1E: tatsächliches Gewicht des Anhängers mindestens 800 kg."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C1E",
+  "text": "Welche Bremse muss der Anhänger des C1E-Prüfungsfahrzeugs haben?",
+  "answers": [
+   "Nur eine Feststellbremse",
+   "Keine, die Zugmaschine bremst mit",
+   "Eine eigene Bremsanlage",
+   "Eine Auflaufbremse ist verboten, sonst egal"
+  ],
+  "correct": 2,
+  "explain": "Prüfungsfahrzeug C1E: Anhänger mit eigener Bremsanlage."
+ },
+ {
+  "title": "PRÜFUNGSKOMBI C1E",
+  "text": "Woraus besteht das Prüfungsfahrzeug der Klasse C1E?",
+  "answers": [
+   "Aus einer Sattelzugmaschine und einem Sattelanhänger",
+   "Aus einem Prüfungsfahrzeug der Klasse C und einem Anhänger",
+   "Aus einem Prüfungsfahrzeug der Klasse C1 und einem Anhänger",
+   "Aus einem Pkw der Klasse B und einem Anhänger"
+  ],
+  "correct": 2,
+  "explain": "C1E: Fahrzeugkombination aus einem Prüfungsfahrzeug der Klasse C1 und einem Anhänger."
+ },
+ {
+  "title": "KLASSE C",
+  "text": "Welche zulässige Gesamtmasse haben Kraftfahrzeuge der Klasse C?",
+  "answers": [
+   "Über 3,5 t bis 7,5 t",
+   "Über 7,5 t bis 12 t",
+   "Über 3,5 t",
+   "Bis 12 t"
+  ],
+  "correct": 2,
+  "explain": "C: Kraftfahrzeuge über 3,5 t zGm, ohne Obergrenze."
+ },
+ {
+  "title": "ANHÄNGER?",
+  "text": "Welchen Anhänger darf man mit Klasse C mitführen?",
+  "answers": [
+   "Nur Sattelanhänger",
+   "Bis 750 kg zGm",
+   "Über 750 kg zGm",
+   "Bis 3.500 kg zGm"
+  ],
+  "correct": 1,
+  "explain": "C: auch mit Anhänger bis 750 kg zGm. Darüber braucht man CE."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Wie hoch ist das Mindestalter für Klasse C?",
+  "answers": [
+   "17 Jahre im begleiteten Fahren",
+   "18 Jahre ohne Ausnahme",
+   "24 Jahre",
+   "21 Jahre, unter bestimmten Voraussetzungen 18"
+  ],
+  "correct": 3,
+  "explain": "Mindestalter C: 21 (18 unter bestimmten Voraussetzungen, siehe § 10 Nr. 7 FeV)."
+ },
+ {
+  "title": "PARAGRAF?",
+  "text": "Wo stehen die Voraussetzungen, unter denen Klasse C und CE schon mit 18 erteilt werden können?",
+  "answers": [
+   "§ 10 Nr. 7 FeV",
+   "Anlage 7 FeV",
+   "§ 10 Nr. 1 FeV",
+   "§ 6 Abs. 2 FeV"
+  ],
+  "correct": 0,
+  "explain": "Mindestalter C und CE: 21, 18 unter bestimmten Voraussetzungen nach § 10 Nr. 7 FeV."
+ },
+ {
+  "title": "EINGESCHLOSSEN?",
+  "text": "Welche Klasse ist in Klasse C eingeschlossen?",
+  "answers": [
+   "T",
+   "C1",
+   "C1E",
+   "BE"
+  ],
+  "correct": 1,
+  "explain": "In C eingeschlossen: C1."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C",
+  "text": "Wie lang muss das Prüfungsfahrzeug der Klasse C mindestens sein?",
+  "answers": [
+   "9 m",
+   "14 m",
+   "8 m",
+   "5 m"
+  ],
+  "correct": 2,
+  "explain": "Prüfungsfahrzeug C: Länge mindestens 8 m."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C",
+  "text": "Welche Mindestbreite muss das Prüfungsfahrzeug der Klasse C haben?",
+  "answers": [
+   "2,55 m",
+   "2,00 m",
+   "2,40 m",
+   "2,20 m"
+  ],
+  "correct": 2,
+  "explain": "Prüfungsfahrzeug C: Mindestbreite 2,40 m."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C",
+  "text": "Welche zulässige Gesamtmasse muss das Prüfungsfahrzeug der Klasse C mindestens haben?",
+  "answers": [
+   "7.500 kg",
+   "20.000 kg",
+   "10.000 kg",
+   "12.000 kg"
+  ],
+  "correct": 3,
+  "explain": "Prüfungsfahrzeug C: zGm mindestens 12.000 kg."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG C",
+  "text": "Welches tatsächliche Gewicht muss das Prüfungsfahrzeug der Klasse C mindestens haben?",
+  "answers": [
+   "8.000 kg",
+   "15.000 kg",
+   "10.000 kg",
+   "12.000 kg"
+  ],
+  "correct": 2,
+  "explain": "Prüfungsfahrzeug C: tatsächliches Gewicht mindestens 10.000 kg."
+ },
+ {
+  "title": "KLASSE CE",
+  "text": "Was darf man mit Klasse CE fahren?",
+  "answers": [
+   "Kraftfahrzeuge der Klasse C1 mit Anhänger bis 12.000 kg Kombination",
+   "Kraftfahrzeuge der Klasse C mit Anhänger oder Sattelanhänger über 750 kg zGm",
+   "Kraftfahrzeuge der Klasse B mit Anhänger über 3.500 kg",
+   "Nur Sattelzüge, keine Gliederzüge"
+  ],
+  "correct": 1,
+  "explain": "CE: Kraftfahrzeuge der Klasse C mit Anhänger oder Sattelanhänger über 750 kg zGm."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Wie hoch ist das Mindestalter für Klasse CE?",
+  "answers": [
+   "21 Jahre, unter bestimmten Voraussetzungen 18",
+   "18 Jahre ohne Ausnahme",
+   "25 Jahre",
+   "24 Jahre"
+  ],
+  "correct": 0,
+  "explain": "Mindestalter CE: 21 (18 siehe § 10 Nr. 7 FeV)."
+ },
+ {
+  "title": "EINGESCHLOSSEN?",
+  "text": "Welche Klassen sind in CE eingeschlossen?",
+  "answers": [
+   "C1, C1E und T",
+   "Nur C1",
+   "C1 und BE",
+   "D und DE"
+  ],
+  "correct": 0,
+  "explain": "In CE eingeschlossen: C1, C1E, T (DE, wenn D bereits vorhanden ist oder später erteilt wird)."
+ },
+ {
+  "title": "EINGESCHLOSSEN?",
+  "text": "Wann ist DE in der Klasse CE eingeschlossen?",
+  "answers": [
+   "Immer",
+   "Wenn D bereits vorhanden ist oder später erteilt wird",
+   "Ab 24 Jahren",
+   "Nie"
+  ],
+  "correct": 1,
+  "explain": "CE schließt DE ein, wenn D bereits vorhanden ist oder später erteilt wird."
+ },
+ {
+  "title": "GLIEDERZUG",
+  "text": "Woraus besteht das CE-Prüfungsfahrzeug als Gliederzug?",
+  "answers": [
+   "C-Prüfungsfahrzeug mit einem Anhänger mit selbsttätiger Kupplung und eigener Lenkung oder einem Starrdeichselanhänger",
+   "C1-Prüfungsfahrzeug mit einem beliebigen Anhänger",
+   "C-Prüfungsfahrzeug mit Anhänger bis 750 kg",
+   "Sattelzugmaschine mit Sattelanhänger"
+  ],
+  "correct": 0,
+  "explain": "CE Gliederzug: Prüfungsfahrzeug der Klasse C und ein Anhänger mit selbsttätiger Kupplung und eigener Lenkung oder ein Starrdeichselanhänger."
+ },
+ {
+  "title": "GLIEDERZUG",
+  "text": "Wie lang muss die Fahrzeugkombination beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) mindestens sein?",
+  "answers": [
+   "9 m",
+   "18,75 m",
+   "12 m",
+   "14 m"
+  ],
+  "correct": 3,
+  "explain": "CE Gliederzug/Starrdeichsel: Länge der Fahrzeugkombination mindestens 14 m."
+ },
+ {
+  "title": "GLIEDERZUG",
+  "text": "Wie lang muss der Anhänger beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) mindestens sein?",
+  "answers": [
+   "5 m",
+   "9 m",
+   "4,50 m",
+   "7,50 m"
+  ],
+  "correct": 3,
+  "explain": "CE Gliederzug/Starrdeichsel: Länge des Anhängers mindestens 7,50 m."
+ },
+ {
+  "title": "GLIEDERZUG",
+  "text": "Welche Mindestbreite muss der Anhänger beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) haben?",
+  "answers": [
+   "2,20 m",
+   "2,40 m",
+   "2,55 m",
+   "Keine Vorgabe"
+  ],
+  "correct": 1,
+  "explain": "CE Gliederzug/Starrdeichsel: Mindestbreite des Anhängers 2,40 m."
+ },
+ {
+  "title": "GLIEDERZUG",
+  "text": "Welche Bremsanlage muss das CE-Prüfungsfahrzeug als Gliederzug haben?",
+  "answers": [
+   "Eine Einleitungsbremsanlage",
+   "Eine Zweileitungsbremsanlage",
+   "Nur eine Feststellbremse am Anhänger",
+   "Eine Auflaufbremse"
+  ],
+  "correct": 1,
+  "explain": "CE Gliederzug/Starrdeichsel: Zweileitungsbremsanlage."
+ },
+ {
+  "title": "GLIEDERZUG",
+  "text": "Welche Ausstattung muss der Anhänger beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) haben?",
+  "answers": [
+   "ABS",
+   "Eine eigene Lenkung ist verboten",
+   "Keine besondere Ausstattung",
+   "Fahrtenschreiber"
+  ],
+  "correct": 0,
+  "explain": "CE Gliederzug/Starrdeichsel: Anhänger mit ABS."
+ },
+ {
+  "title": "CE-KOMBI",
+  "text": "Welche zulässige Gesamtmasse und welches tatsächliche Gewicht muss die CE-Prüfungskombination mindestens haben?",
+  "answers": [
+   "zGm 20.000 kg, tatsächliches Gewicht 15.000 kg",
+   "zGm 12.000 kg, tatsächliches Gewicht 10.000 kg",
+   "zGm 40.000 kg, tatsächliches Gewicht 20.000 kg",
+   "zGm 15.000 kg, tatsächliches Gewicht 20.000 kg"
+  ],
+  "correct": 0,
+  "explain": "Gliederzug und Sattelzug: zGm der Kombi mindestens 20.000 kg, tatsächliches Gewicht mindestens 15.000 kg."
+ },
+ {
+  "title": "SATTELZUG",
+  "text": "Wie lang muss das CE-Prüfungsfahrzeug als Sattelzug mindestens sein?",
+  "answers": [
+   "14 m",
+   "9 m",
+   "8 m",
+   "16,50 m"
+  ],
+  "correct": 0,
+  "explain": "CE Sattel: Länge mindestens 14 m."
+ },
+ {
+  "title": "SATTELZUG",
+  "text": "Für welche Fahrzeuge gilt beim CE-Sattelzug die Mindestbreite von 2,40 m?",
+  "answers": [
+   "Nur für den Sattelanhänger",
+   "Nur für die Sattelzugmaschine",
+   "Für keines von beiden",
+   "Für Sattelzugmaschine und Sattelanhänger"
+  ],
+  "correct": 3,
+  "explain": "CE Sattel: Mindestbreite der Sattelzugmaschine und des Sattelanhängers 2,40 m."
+ },
+ {
+  "title": "SATTELZUG",
+  "text": "Welche Fahrzeuge des CE-Sattelzugs müssen mit ABS ausgerüstet sein?",
+  "answers": [
+   "Nur der Sattelanhänger",
+   "Sattelzugmaschine und Sattelanhänger",
+   "Nur die Sattelzugmaschine",
+   "Keines von beiden"
+  ],
+  "correct": 1,
+  "explain": "CE Sattel: Sattelzugmaschine und Sattelanhänger mit ABS, dazu mit Fahrtenschreiber."
+ },
+ {
+  "title": "KLASSE T",
+  "text": "Wofür gilt die Klasse T?",
+  "answers": [
+   "Für Fahrzeuge in land- oder forstwirtschaftlicher Nutzung, auch mit Anhängern",
+   "Für Lkw bis 7,5 t",
+   "Für alle Zugmaschinen ohne Einschränkung",
+   "Nur für Baumaschinen"
+  ],
+  "correct": 0,
+  "explain": "T: in land- oder forstwirtschaftlicher Nutzung, auch mit Anhängern."
+ },
+ {
+  "title": "KLASSE T",
+  "text": "Bis zu welcher bauartbedingten Höchstgeschwindigkeit dürfen Zugmaschinen mit Klasse T gefahren werden?",
+  "answers": [
+   "80 km/h",
+   "32 km/h",
+   "40 km/h",
+   "60 km/h"
+  ],
+  "correct": 3,
+  "explain": "T: Zugmaschinen bis 60 km/h bbH (bzw. bis 40 km/h bbH)."
+ },
+ {
+  "title": "KLASSE T",
+  "text": "Bis zu welcher bbH sind selbstfahrende Arbeitsmaschinen oder Futtermischwagen in Klasse T enthalten?",
+  "answers": [
+   "25 km/h",
+   "32 km/h",
+   "60 km/h",
+   "40 km/h"
+  ],
+  "correct": 3,
+  "explain": "T: selbstfahrende Arbeitsmaschinen oder Futtermischwagen bis 40 km/h bbH."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Ab welchem Alter darf man mit Klasse T Fahrzeuge bis 40 km/h bbH fahren?",
+  "answers": [
+   "17 Jahre",
+   "15 Jahre",
+   "16 Jahre",
+   "18 Jahre"
+  ],
+  "correct": 2,
+  "explain": "Mindestalter T (§ 6 Abs. 2 FeV): 16 bis 40 km/h bbH, 18 bis 60 km/h bbH."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Ab welchem Alter darf man mit Klasse T Zugmaschinen bis 60 km/h bbH fahren?",
+  "answers": [
+   "21 Jahre",
+   "17 Jahre",
+   "18 Jahre",
+   "16 Jahre"
+  ],
+  "correct": 2,
+  "explain": "Mindestalter T (§ 6 Abs. 2 FeV): 18 bis 60 km/h bbH."
+ },
+ {
+  "title": "PARAGRAF?",
+  "text": "Wo steht das Mindestalter für Klasse T?",
+  "answers": [
+   "§ 10 Nr. 7 FeV",
+   "§ 4 Abs. 1 FeV",
+   "Anlage 7 FeV",
+   "§ 6 Abs. 2 FeV"
+  ],
+  "correct": 3,
+  "explain": "Das Mindestalter für Klasse T steht in § 6 Abs. 2 FeV."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG T",
+  "text": "Woraus besteht das Prüfungsfahrzeug der Klasse T?",
+  "answers": [
+   "Aus einer selbstfahrenden Arbeitsmaschine",
+   "Aus einer Zugmaschine der Klasse T und einem Anhänger",
+   "Aus einem Lkw der Klasse C1 und einem Anhänger",
+   "Aus einer Zugmaschine ohne Anhänger"
+  ],
+  "correct": 1,
+  "explain": "T: Fahrzeugkombination aus einer Zugmaschine der Klasse T und einem Anhänger."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG T",
+  "text": "Welche bauartbedingte Höchstgeschwindigkeit muss das Prüfungsfahrzeug der Klasse T haben?",
+  "answers": [
+   "Mindestens 80 km/h",
+   "Mindestens 60 km/h",
+   "Genau 40 km/h",
+   "Mehr als 32 km/h"
+  ],
+  "correct": 3,
+  "explain": "Prüfungsfahrzeug T: bbH über 32 km/h."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG T",
+  "text": "Welche Bremsanlage braucht das Prüfungsfahrzeug der Klasse T?",
+  "answers": [
+   "Eine Zweileitungs-Bremsanlage",
+   "Eine Auflaufbremse",
+   "Eine Einleitungsbremsanlage",
+   "Keine besondere"
+  ],
+  "correct": 0,
+  "explain": "Prüfungsfahrzeug T: Zweileitungs-Bremsanlage."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG T",
+  "text": "Was gilt für den Anhänger des T-Prüfungsfahrzeugs?",
+  "answers": [
+   "Er braucht mindestens eine geschlossene Ladefläche",
+   "Ein Fahrgestell ohne Boden reicht",
+   "Er muss kastenförmig sein",
+   "Er muss mindestens 2,40 m breit sein"
+  ],
+  "correct": 0,
+  "explain": "Prüfungsfahrzeug T: Anhänger mit mindestens geschlossener Ladefläche, Fahrgestell ohne geschlossenen Boden ist nicht zulässig."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG T",
+  "text": "Wie lang muss ein Starrdeichselanhänger beim T-Prüfungsfahrzeug mindestens sein, wenn einer verwendet wird?",
+  "answers": [
+   "4,50 m",
+   "7,50 m",
+   "5 m",
+   "3,50 m"
+  ],
+  "correct": 0,
+  "explain": "Prüfungsfahrzeug T: Länge des Starrdeichselanhängers mindestens 4,50 m."
+ },
+ {
+  "title": "PRÜFUNGSFAHRZEUG T",
+  "text": "Wie lang muss die Fahrzeugkombination beim T-Prüfungsfahrzeug insgesamt mindestens sein?",
+  "answers": [
+   "9 m",
+   "14 m",
+   "4,50 m",
+   "7,50 m"
+  ],
+  "correct": 3,
+  "explain": "Prüfungsfahrzeug T: Länge der Fahrzeugkombination gesamt mindestens 7,50 m."
+ }
+];
+
 // In Vorbereitung – Fragen folgen:
 export const VERKEHRSRECHT_QUESTIONS = [];
-export const FAHRERLAUBNISRECHT_QUESTIONS = [];
 export const FB_TECHNIK_QUESTIONS = [];
