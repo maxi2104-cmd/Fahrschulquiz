@@ -156,6 +156,7 @@ async function finish() {
   $("end-points").textContent = points.toLocaleString("de-DE");
   $("end-correct").textContent = `${correctCount} von ${game.length} Fragen richtig.`;
   $("end-status").textContent = "Ergebnis wird gespeichert …";
+  renderReview();
   localStorage.setItem("played_" + QUIZ + "_" + round, "1");
 
   let lbId = null;
@@ -180,6 +181,50 @@ async function finish() {
     $("end-status").textContent = "Speichern hat nicht geklappt. Bitte gib der Fahrschule kurz Bescheid.";
   }
   loadBoard("board2", lbId);
+}
+
+// ---------- Auswertung: falsch beantwortete Fragen ----------
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function renderReview() {
+  const old = $("review"); if (old) old.remove();
+  const wrong = log.filter(a => !a.correct);
+  const box = el("section", "review"); box.id = "review";
+  box.appendChild(el("h2", "lbl lb-title", wrong.length ? `DEINE FEHLER (${wrong.length})` : "DEINE FEHLER"));
+  if (!wrong.length) {
+    box.appendChild(el("p", "rv-none", "Alles richtig – keine Fehler! Stark."));
+  } else {
+    box.appendChild(el("p", "hint", "Hier siehst du jede falsch beantwortete Frage mit der richtigen Antwort und der Erklärung."));
+    wrong.forEach((a, n) => {
+      const q = QUESTIONS[a.q - 1];
+      const card = el("article", "rv-card");
+      const top = el("div", "rv-top");
+      top.append(el("span", "rv-no", String(n + 1)), el("span", "rv-title", q.title));
+      const body = el("div", "rv-body");
+      body.appendChild(el("p", "rv-q", q.text));
+      const mine = el("div", "rv-ans rv-bad");
+      mine.append(el("span", "rv-tag", "DEINE ANTWORT"),
+        el("span", "", a.chosen === -1 ? "Keine Antwort (Zeit abgelaufen)" : "ABCD"[a.chosen] + " · " + q.answers[a.chosen]));
+      const right = el("div", "rv-ans rv-ok");
+      right.append(el("span", "rv-tag", "RICHTIG"), el("span", "", "ABCD"[q.correct] + " · " + q.answers[q.correct]));
+      body.append(mine, right);
+      const text = q.detail || q.explain;
+      if (text) {
+        const ex = el("div", "rv-explain");
+        ex.append(el("span", "rv-tag", "ERKLÄRUNG"), el("p", "", text));
+        body.appendChild(ex);
+      }
+      card.append(top, body);
+      box.appendChild(card);
+    });
+  }
+  const anchor = document.querySelector("#screen-end .lb-title");
+  anchor.parentNode.insertBefore(box, anchor);
 }
 
 // ---------- Init ----------

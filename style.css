@@ -84,3 +84,19 @@ td.wrong{color:#ff8a8d}
 .stat b{display:block;font-size:28px;color:var(--lime)}
 .stat span{color:var(--muted);font-size:13px}
 select.inp{min-height:48px;font-size:15px;width:auto}
+
+/* Auswertung falscher Antworten */
+.review{margin-top:8px}
+.rv-none{margin:0;padding:18px;border:1px dashed var(--line);border-radius:14px;text-align:center;color:var(--lime);font-weight:700}
+.rv-card{margin:0 0 16px;border-radius:18px;overflow:hidden;background:#fff;color:#1a1e27}
+.rv-top{display:flex;align-items:center;gap:12px;background:var(--head);color:var(--text);padding:14px 16px;border-bottom:3px solid var(--lime)}
+.rv-no{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--bad);color:#fff;font-weight:900;font-size:14px}
+.rv-title{font-weight:900;letter-spacing:.04em}
+.rv-body{padding:16px 16px 18px}
+.rv-q{margin:0 0 14px;font-size:16px;font-weight:700;line-height:1.5}
+.rv-ans{display:flex;flex-direction:column;gap:4px;margin:0 0 10px;padding:12px 14px;border-radius:12px;font-size:15px;line-height:1.45;font-weight:600}
+.rv-bad{background:#fdecec;color:#7a1c1f;border:1px solid #f5c2c4}
+.rv-ok{background:#e9f8ef;color:#10532f;border:1px solid #bfe8d0}
+.rv-tag{font-size:11px;font-weight:900;letter-spacing:.18em;opacity:.8}
+.rv-explain{margin-top:14px;padding:14px;border-radius:12px;background:#f1f3f5;color:#343a44}
+.rv-explain p{margin:6px 0 0;font-size:15px;line-height:1.6}
