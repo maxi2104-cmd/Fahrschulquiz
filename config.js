@@ -700,7 +700,8 @@ export const TECHNIKB_QUESTIONS = [
 
 // ===== Quiz-Übersicht =====
 // Fortbildung: kein Zeitlimit, 20 Fragen pro Spiel, 50 Punkte pro richtiger Antwort (max. 1.000)
-const FB = { timer: false, perGame: 20, pointsPerCorrect: 50, back: "fortbildung.html", backLabel: "Fortbildung" };
+// repeat: true = beliebig oft spielbar (keine Sperre pro Runde)
+const FB = { timer: false, perGame: 20, pointsPerCorrect: 50, repeat: true, back: "fortbildung.html", backLabel: "Fortbildung" };
 
 const ALL_QUIZZES = {
   freitag: { label: "Freitags Frage", configDoc: "current", questions: QUESTIONS },

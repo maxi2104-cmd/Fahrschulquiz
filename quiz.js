@@ -63,7 +63,7 @@ $("btn-start").addEventListener("click", () => {
   const first = $("first").value.trim(), last = $("last").value.trim();
   const err = $("start-err");
   if (!first || !last) { err.textContent = "Bitte Vor- und Nachnamen eingeben."; err.hidden = false; return; }
-  if (localStorage.getItem("played_" + QUIZ + "_" + round)) {
+  if (!QZ.repeat && localStorage.getItem("played_" + QUIZ + "_" + round)) {
     err.textContent = `Du hast „${QZ.label}“ in dieser Runde auf diesem Gerät schon gespielt.`; err.hidden = false; return;
   }
   err.hidden = true;
@@ -158,7 +158,7 @@ async function finish() {
   $("end-correct").textContent = `${correctCount} von ${game.length} Fragen richtig.`;
   $("end-status").textContent = "Ergebnis wird gespeichert …";
   renderReview();
-  localStorage.setItem("played_" + QUIZ + "_" + round, "1");
+  if (!QZ.repeat) localStorage.setItem("played_" + QUIZ + "_" + round, "1");
 
   let lbId = null;
   try {
