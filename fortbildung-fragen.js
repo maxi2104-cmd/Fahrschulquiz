@@ -3714,12 +3714,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "PARAGRAF?",
   "text": "Wo ist der Begriff Güterkraftverkehr bestimmt?",
   "answers": [
-   "§ 9 GüKG",
-   "§ 15a GüKG",
    "§ 3 GüKG",
-   "§ 1 GüKG"
+   "§ 9 GüKG",
+   "§ 1 GüKG",
+   "§ 15a GüKG"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Die Begriffsbestimmung steht in § 1 GüKG."
  },
  {
@@ -3727,57 +3727,57 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Tonnenbegrenzung enthält das GüKG selbst?",
   "answers": [
    "3,5 t",
-   "2,5 t",
+   "Keine",
    "7,5 t",
-   "Keine"
+   "2,5 t"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Das GüKG selbst enthält keine Tonnenbegrenzung. Die Ausnahme für kleinere Fahrzeuge steht in § 2 Abs. 1 Nr. 10 GüKG."
  },
  {
   "title": "AUSNAHME",
   "text": "Welche Fahrzeuge nimmt § 2 Abs. 1 Nr. 10 GüKG grundsätzlich vom Anwendungsbereich aus?",
   "answers": [
-   "Fahrzeuge bis einschließlich 7,5 t zGm",
-   "Fahrzeuge bis einschließlich 2,5 t zGm ohne Ausnahme",
    "Fahrzeuge bis einschließlich 3,5 t zGm, soweit keine Sonderregelung greift",
-   "Alle Fahrzeuge im Werkverkehr"
+   "Alle Fahrzeuge im Werkverkehr",
+   "Fahrzeuge bis einschließlich 2,5 t zGm ohne Ausnahme",
+   "Fahrzeuge bis einschließlich 7,5 t zGm"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "§ 2 Abs. 1 Nr. 10 GüKG nimmt die Beförderung mit Fahrzeugen bis einschließlich 3,5 t zGm grundsätzlich aus, soweit keine Sonderregelung greift."
  },
  {
   "title": "PARAGRAF?",
   "text": "Welche Vorschrift nimmt Fahrzeuge bis einschließlich 3,5 t zGm grundsätzlich vom GüKG aus?",
   "answers": [
-   "§ 1 Abs. 2 GüKG",
    "§ 3 GüKG",
    "§ 15a GüKG",
-   "§ 2 Abs. 1 Nr. 10 GüKG"
+   "§ 2 Abs. 1 Nr. 10 GüKG",
+   "§ 1 Abs. 2 GüKG"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "§ 2 Abs. 1 Nr. 10 GüKG enthält die Ausnahme bis einschließlich 3,5 t zGm."
  },
  {
   "title": "GEWERBLICH?",
   "text": "Wann liegt gewerblicher Güterkraftverkehr vor?",
   "answers": [
+   "Wenn das Fahrzeug über 7,5 t wiegt",
    "Wenn die Beförderung nicht als Werkverkehr einzuordnen ist",
    "Nur bei grenzüberschreitenden Fahrten",
-   "Wenn das Fahrzeug über 7,5 t wiegt",
    "Wenn eigenes Personal fährt"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Gewerblicher Güterkraftverkehr liegt vor, wenn die Beförderung nicht als Werkverkehr einzuordnen ist."
  },
  {
   "title": "SCHWELLE?",
   "text": "Welche Gewichtsschwelle gilt im nationalen gewerblichen Güterkraftverkehr grundsätzlich?",
   "answers": [
-   "Über 12 t zGm",
+   "Über 2,5 t zGm",
    "Über 3,5 t zGm",
-   "Über 7,5 t zGm",
-   "Über 2,5 t zGm"
+   "Über 12 t zGm",
+   "Über 7,5 t zGm"
   ],
   "correct": 1,
   "explain": "Nationaler Verkehr: grundsätzlich über 3,5 t zGm."
@@ -3786,22 +3786,22 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "SCHWELLE?",
   "text": "Welche Gewichtsschwelle gilt im grenzüberschreitenden Verkehr und bei Kabotage?",
   "answers": [
+   "Über 2,5 t zGm",
    "Über 7,5 t zGm",
-   "Über 3,5 t zGm",
    "Keine Schwelle",
-   "Über 2,5 t zGm"
+   "Über 3,5 t zGm"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Grenzüberschreitender Verkehr und Kabotage: über 2,5 t zGm."
  },
  {
   "title": "GRUNDLAGE?",
   "text": "Worauf geht die 2,5-t-Schwelle im grenzüberschreitenden Verkehr zurück?",
   "answers": [
-   "Auf die CEMT-Regeln",
+   "Auf § 9 GüKG",
    "Auf das Mobilitätspaket I",
-   "Auf die Fahrerlaubnis-Verordnung",
-   "Auf § 9 GüKG"
+   "Auf die CEMT-Regeln",
+   "Auf die Fahrerlaubnis-Verordnung"
   ],
   "correct": 1,
   "explain": "Die Schwelle von über 2,5 t zGm im grenzüberschreitenden Verkehr und bei Kabotage stammt aus dem Mobilitätspaket I."
@@ -3812,8 +3812,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "Güterkraftverkehr für eigene Zwecke eines Unternehmens, wenn die Voraussetzungen des § 1 Abs. 2 GüKG erfüllt sind",
    "Güterkraftverkehr gegen Entgelt für fremde Auftraggeber",
-   "Güterkraftverkehr mit Fahrzeugen bis 3,5 t",
-   "Jeder Transport innerhalb eines Werksgeländes"
+   "Jeder Transport innerhalb eines Werksgeländes",
+   "Güterkraftverkehr mit Fahrzeugen bis 3,5 t"
   ],
   "correct": 0,
   "explain": "Werkverkehr ist Güterkraftverkehr für eigene Zwecke des Unternehmens nach § 1 Abs. 2 GüKG."
@@ -3822,44 +3822,44 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "WERKVERKEHR?",
   "text": "Welche Voraussetzung gehört NICHT zum Werkverkehr?",
   "answers": [
-   "Die Güter sind Eigentum des Unternehmens",
-   "Es fährt eigenes Personal",
+   "Die Beförderung ist nur eine Hilfstätigkeit",
    "Die Güter gehören einem fremden Auftraggeber",
-   "Die Beförderung ist nur eine Hilfstätigkeit"
+   "Es fährt eigenes Personal",
+   "Die Güter sind Eigentum des Unternehmens"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Werkverkehr: Güter sind Eigentum des Unternehmens, bestimmter Beförderungszweck, eigenes Personal, Beförderung nur als Hilfstätigkeit."
  },
  {
   "title": "PERSONAL?",
   "text": "Wer muss im Werkverkehr fahren?",
   "answers": [
-   "Eigenes Personal des Unternehmens",
-   "Ein beauftragter Frachtführer",
    "Nur der Unternehmer selbst",
-   "Beliebiges Leihpersonal"
+   "Beliebiges Leihpersonal",
+   "Ein beauftragter Frachtführer",
+   "Eigenes Personal des Unternehmens"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Eine Voraussetzung des Werkverkehrs ist eigenes Personal."
  },
  {
   "title": "HILFSTÄTIGKEIT",
   "text": "Welche Rolle darf die Beförderung beim Werkverkehr spielen?",
   "answers": [
-   "Eine entgeltliche Dienstleistung für Dritte",
    "Egal, jede Rolle ist erlaubt",
-   "Die Haupttätigkeit des Unternehmens",
-   "Nur eine Hilfstätigkeit"
+   "Eine entgeltliche Dienstleistung für Dritte",
+   "Nur eine Hilfstätigkeit",
+   "Die Haupttätigkeit des Unternehmens"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Im Werkverkehr ist die Beförderung nur eine Hilfstätigkeit des Unternehmens."
  },
  {
   "title": "ZWECK?",
   "text": "Welchem Zweck muss die Beförderung im Werkverkehr dienen?",
   "answers": [
-   "Der Beförderung von Personen",
    "Der Kabotage im Ausland",
+   "Der Beförderung von Personen",
    "Der Anlieferung zum Unternehmen oder dem Eigengebrauch außerhalb des Unternehmens",
    "Der Auslieferung an fremde Kunden gegen Fracht"
   ],
@@ -3870,36 +3870,36 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "ERLAUBNIS?",
   "text": "Braucht man für Werkverkehr eine güterkraftverkehrsrechtliche Erlaubnis?",
   "answers": [
-   "Ja, immer eine Gemeinschaftslizenz",
    "Ja, eine CEMT-Genehmigung",
    "Nur bei Fahrzeugen bis 3,5 t",
-   "Nein, Werkverkehr ist nach § 9 GüKG erlaubnisfrei"
+   "Nein, Werkverkehr ist nach § 9 GüKG erlaubnisfrei",
+   "Ja, immer eine Gemeinschaftslizenz"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Werkverkehr ist nach § 9 GüKG güterkraftverkehrsrechtlich erlaubnisfrei."
  },
  {
   "title": "ANMELDUNG?",
   "text": "Was gilt für Werkverkehr mit Fahrzeugen oder Kombinationen über 3,5 t zGm?",
   "answers": [
+   "CEMT-Genehmigung",
    "Gemeinschaftslizenz nach § 3 GüKG",
    "Keine Pflichten",
-   "Anmeldepflicht beim Bundesamt nach § 15a GüKG",
-   "CEMT-Genehmigung"
+   "Anmeldepflicht beim Bundesamt nach § 15a GüKG"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Werkverkehr über 3,5 t zGm muss nach § 15a GüKG beim Bundesamt angemeldet werden."
  },
  {
   "title": "GEMEINSCHAFTSLIZENZ",
   "text": "Seit wann gilt die aktuelle Rechtslage zur Gemeinschaftslizenz laut Unterlage?",
   "answers": [
-   "Seit dem 01.01.2018",
    "Seit dem 27.02.2026",
+   "Seit dem 01.01.2024",
    "Seit dem 26.02.2025",
-   "Seit dem 01.01.2024"
+   "Seit dem 01.01.2018"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Aktuelle Rechtslage zur Gemeinschaftslizenz seit 27.02.2026."
  },
  {
@@ -3907,35 +3907,35 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Was benötigt ein Unternehmer mit Sitz im Inland seit 2026 grundsätzlich für gewerblichen Güterkraftverkehr?",
   "answers": [
    "Nur eine Anmeldung beim Bundesamt",
+   "Eine von einer inländischen Behörde erteilte Gemeinschaftslizenz",
    "Eine Erlaubnisurkunde nach altem Recht",
-   "Eine CEMT-Genehmigung",
-   "Eine von einer inländischen Behörde erteilte Gemeinschaftslizenz"
+   "Eine CEMT-Genehmigung"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Seit 2026 braucht, wer gewerblichen Güterkraftverkehr durchführt, grundsätzlich eine Gemeinschaftslizenz (§ 3 GüKG)."
  },
  {
   "title": "PARAGRAF?",
   "text": "In welchem Paragrafen des GüKG ist die Gemeinschaftslizenz geregelt?",
   "answers": [
-   "§ 3 GüKG",
+   "§ 15a GüKG",
    "§ 1 GüKG",
-   "§ 9 GüKG",
-   "§ 15a GüKG"
+   "§ 3 GüKG",
+   "§ 9 GüKG"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Gemeinschaftslizenz: § 3 GüKG."
  },
  {
   "title": "GÜLTIGKEIT?",
   "text": "Wie lange ist eine Gemeinschaftslizenz gültig?",
   "answers": [
+   "Bis zu 5 Jahre",
    "Unbefristet",
    "Bis zu 15 Jahre",
-   "Bis zu 10 Jahre",
-   "Bis zu 5 Jahre"
+   "Bis zu 10 Jahre"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Gültigkeit der Gemeinschaftslizenz: bis zu 10 Jahre."
  },
  {
@@ -3943,47 +3943,47 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Voraussetzungen gelten für die Gemeinschaftslizenz?",
   "answers": [
    "Mitgliedschaft in einem Verband und Versicherung",
+   "Führerschein CE, Berufserfahrung und Wohnsitz",
    "Mindestens drei Lkw und eine Werkstatt",
-   "Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung",
-   "Führerschein CE, Berufserfahrung und Wohnsitz"
+   "Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Voraussetzungen: Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit, fachliche Eignung."
  },
  {
   "title": "VORAUSSETZUNGEN",
   "text": "Welche ist KEINE Voraussetzung für die Gemeinschaftslizenz?",
   "answers": [
+   "Zuverlässigkeit",
    "Fachliche Eignung",
    "Der Unternehmer muss selbst die Fahrerlaubnis CE besitzen",
-   "Finanzielle Leistungsfähigkeit",
-   "Zuverlässigkeit"
+   "Finanzielle Leistungsfähigkeit"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Genannt werden Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung."
  },
  {
   "title": "MITFÜHREN?",
   "text": "Was muss bei der Güterbeförderung im Fahrzeug mitgeführt werden?",
   "answers": [
+   "Das Original der Gemeinschaftslizenz",
    "Der Nachweis der Fachkundeprüfung",
-   "Eine beglaubigte Kopie der Gemeinschaftslizenz",
    "Die Anmeldebestätigung nach § 15a",
-   "Das Original der Gemeinschaftslizenz"
+   "Eine beglaubigte Kopie der Gemeinschaftslizenz"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Für die eingesetzten Kraftfahrzeuge werden beglaubigte Kopien der Gemeinschaftslizenz ausgegeben, die mitzuführen sind."
  },
  {
   "title": "ERLAUBNISURKUNDE",
   "text": "Werden noch neue Erlaubnisse nach der bis zum 26.02.2026 geltenden Fassung des § 3 GüKG erteilt?",
   "answers": [
-   "Ja, aber nur für Fahrzeuge bis 7,5 t",
    "Nein, und bestehende Erlaubnisse sind sofort ungültig",
-   "Nein, bestehende Erlaubnisse genießen aber Bestandsschutz",
-   "Ja, wahlweise zur Gemeinschaftslizenz"
+   "Ja, wahlweise zur Gemeinschaftslizenz",
+   "Ja, aber nur für Fahrzeuge bis 7,5 t",
+   "Nein, bestehende Erlaubnisse genießen aber Bestandsschutz"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Neue Erlaubnisse nach altem Recht werden nicht mehr erteilt. Bestehende Erlaubnisse genießen Bestandsschutz."
  },
  {
@@ -3991,23 +3991,23 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie lange bleibt eine befristete Erlaubnis nach altem Recht gültig?",
   "answers": [
    "Bis zum 26.02.2026",
-   "Bis zum 27.02.2036",
    "Bis zum Ablauf ihrer Befristung",
-   "Noch 10 Jahre ab Ausstellung"
+   "Noch 10 Jahre ab Ausstellung",
+   "Bis zum 27.02.2036"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Befristete Erlaubnisse bleiben bis zum Ablauf ihrer Befristung gültig."
  },
  {
   "title": "BESTANDSSCHUTZ",
   "text": "Bis wann bleibt eine unbefristete Erlaubnis nach altem Recht gültig?",
   "answers": [
-   "Unbegrenzt",
-   "Bis zum 31.12.2030",
    "Bis zum 27.02.2036",
+   "Bis zum 31.12.2030",
+   "Unbegrenzt",
    "Bis zum 27.02.2026"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Unbefristete Erlaubnisse bleiben bis zum 27.02.2036 gültig."
  },
  {
@@ -4015,8 +4015,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welches Eigenkapital muss für das erste Kfz über 3,5 t zGm nachgewiesen werden?",
   "answers": [
    "1.800 €",
-   "5.000 €",
    "900 €",
+   "5.000 €",
    "9.000 €"
   ],
   "correct": 3,
@@ -4026,10 +4026,10 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "FINANZEN",
   "text": "Welcher Betrag gilt für jedes weitere Kfz über 3,5 t zGm?",
   "answers": [
-   "1.800 €",
+   "900 €",
    "9.000 €",
    "5.000 €",
-   "900 €"
+   "1.800 €"
   ],
   "correct": 2,
   "explain": "Über 3,5 t zGm: jedes weitere Kfz 5.000 €."
@@ -4040,8 +4040,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "900 €",
    "1.800 €",
-   "5.000 €",
-   "9.000 €"
+   "9.000 €",
+   "5.000 €"
   ],
   "correct": 1,
   "explain": "Von 2,5 bis 3,5 t zGm: 1. Kfz 1.800 €, jedes weitere 900 €."
@@ -4050,10 +4050,10 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "FINANZEN",
   "text": "Welcher Betrag gilt für jedes weitere Kfz von 2,5 bis 3,5 t zGm?",
   "answers": [
-   "500 €",
-   "900 €",
    "1.800 €",
-   "5.000 €"
+   "900 €",
+   "5.000 €",
+   "500 €"
   ],
   "correct": 1,
   "explain": "Von 2,5 bis 3,5 t zGm: jedes weitere Kfz 900 €."
@@ -4062,72 +4062,72 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "RECHNEN!",
   "text": "Ein Unternehmer setzt 3 Lkw über 3,5 t zGm ein. Wie hoch ist die geforderte finanzielle Leistungsfähigkeit?",
   "answers": [
-   "27.000 €",
-   "14.000 €",
+   "15.000 €",
    "19.000 €",
-   "15.000 €"
+   "14.000 €",
+   "27.000 €"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "9.000 € für das erste Kfz + 2 × 5.000 € für die weiteren = 19.000 €."
  },
  {
   "title": "ZUVERLÄSSIGKEIT",
   "text": "Wie wird die persönliche Zuverlässigkeit des Unternehmers geprüft?",
   "answers": [
-   "Anhand der gesetzlich vorgesehenen Register- und Behördenauskünfte",
-   "Durch eine praktische Fahrprüfung",
    "Durch einen Test beim Bundesamt",
-   "Durch eine Selbstauskunft ohne Nachweis"
+   "Durch eine praktische Fahrprüfung",
+   "Durch eine Selbstauskunft ohne Nachweis",
+   "Anhand der gesetzlich vorgesehenen Register- und Behördenauskünfte"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Die persönliche Zuverlässigkeit wird anhand der gesetzlich vorgesehenen Register- und Behördenauskünfte geprüft."
  },
  {
   "title": "ZUVERLÄSSIGKEIT",
   "text": "Welches Beispiel nennt die Unterlage gegen die Zuverlässigkeit eines Unternehmers?",
   "answers": [
-   "Ein Fahrzeug ohne Winterreifen",
-   "Ein Punkt in Flensburg",
    "Ein abgelaufener TÜV",
-   "Eine Vorstrafe wegen Steuerhinterziehung"
+   "Ein Punkt in Flensburg",
+   "Eine Vorstrafe wegen Steuerhinterziehung",
+   "Ein Fahrzeug ohne Winterreifen"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Der Unternehmer dürfte zum Beispiel nicht wegen Steuerhinterziehung vorbestraft sein."
  },
  {
   "title": "FACHLICHE EIGNUNG",
   "text": "Wie wird die fachliche Eignung grundsätzlich nachgewiesen?",
   "answers": [
-   "Durch fünf Jahre Fahrpraxis",
-   "Durch eine Bescheinigung der Hausbank",
    "Durch die Fachkundeprüfung oder eine anerkannte gleichwertige Qualifikation",
-   "Durch den Führerschein CE"
+   "Durch den Führerschein CE",
+   "Durch fünf Jahre Fahrpraxis",
+   "Durch eine Bescheinigung der Hausbank"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Fachliche Eignung: Fachkundeprüfung bzw. anerkannte gleichwertige Qualifikation. Für langjährige Unternehmer können Übergangsregelungen gelten."
  },
  {
   "title": "INTERNATIONAL",
   "text": "Wofür berechtigt die Gemeinschaftslizenz im internationalen Verkehr?",
   "answers": [
-   "Zum grenzüberschreitenden Güterkraftverkehr im Rahmen der europäischen Vorschriften, innerhalb der europäischen Grenzen",
+   "Nur zum Verkehr innerhalb Deutschlands",
    "Zur Kabotage in jedem CEMT-Staat",
    "Zum Verkehr in alle Staaten der Welt",
-   "Nur zum Verkehr innerhalb Deutschlands"
+   "Zum grenzüberschreitenden Güterkraftverkehr im Rahmen der europäischen Vorschriften, innerhalb der europäischen Grenzen"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Die Gemeinschaftslizenz findet innerhalb der europäischen Grenzen Anwendung."
  },
  {
   "title": "DRITTSTAATEN",
   "text": "Was kann für Fahrten in Drittstaaten zusätzlich erforderlich sein?",
   "answers": [
-   "Eine CEMT- oder eine bilaterale Genehmigung",
-   "Eine Anmeldung nach § 15a GüKG",
+   "Eine zweite Gemeinschaftslizenz",
    "Nichts, die Gemeinschaftslizenz reicht immer",
-   "Eine zweite Gemeinschaftslizenz"
+   "Eine Anmeldung nach § 15a GüKG",
+   "Eine CEMT- oder eine bilaterale Genehmigung"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Für Drittstaaten können zusätzlich CEMT- oder bilaterale Genehmigungen erforderlich sein."
  },
  {
@@ -4135,32 +4135,32 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wozu berechtigt eine CEMT-Genehmigung?",
   "answers": [
    "Zum Werkverkehr ohne Anmeldung",
-   "Zu bestimmten grenzüberschreitenden Güterbeförderungen zwischen CEMT-Mitgliedsstaaten",
    "Zur Kabotage in jedem CEMT-Mitgliedsstaat",
-   "Zur Personenbeförderung"
+   "Zur Personenbeförderung",
+   "Zu bestimmten grenzüberschreitenden Güterbeförderungen zwischen CEMT-Mitgliedsstaaten"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "CEMT-Genehmigungen ermöglichen bestimmte grenzüberschreitende Beförderungen zwischen CEMT-Mitgliedsstaaten."
  },
  {
   "title": "CEMT",
   "text": "Berechtigt eine CEMT-Genehmigung zur Kabotage innerhalb eines CEMT-Mitgliedsstaates?",
   "answers": [
-   "Ja, unbegrenzt",
    "Grundsätzlich nicht",
-   "Ja, bis zu 3 Fahrten",
-   "Nur mit Fahrzeugen über 3,5 t"
+   "Nur mit Fahrzeugen über 3,5 t",
+   "Ja, unbegrenzt",
+   "Ja, bis zu 3 Fahrten"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "CEMT-Genehmigungen berechtigen grundsätzlich nicht zur Kabotage, also zum Binnenverkehr innerhalb eines CEMT-Mitgliedsstaates."
  },
  {
   "title": "KABOTAGE?",
   "text": "Was ist mit Kabotage gemeint?",
   "answers": [
+   "Werkverkehr mit eigenem Personal",
    "Transport zwischen zwei Nachbarstaaten",
    "Transport über See",
-   "Werkverkehr mit eigenem Personal",
    "Binnenverkehr innerhalb eines Staates"
   ],
   "correct": 3,
@@ -4170,8 +4170,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "CEMT",
   "text": "Was gilt für die Anzahl der CEMT-Genehmigungen?",
   "answers": [
-   "Jeder Unternehmer erhält automatisch eine",
    "Pro Lkw gibt es immer eine",
+   "Jeder Unternehmer erhält automatisch eine",
    "Sie ist unbegrenzt",
    "Sie ist begrenzt"
   ],
@@ -4182,12 +4182,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BEHÖRDE?",
   "text": "Welche Behörde ist für CEMT-Genehmigungen zuständig?",
   "answers": [
-   "Die IHK",
    "Kraftfahrt-Bundesamt (KBA)",
+   "Bundesamt für Logistik und Mobilität (BALM)",
    "Die örtliche Straßenverkehrsbehörde",
-   "Bundesamt für Logistik und Mobilität (BALM)"
+   "Die IHK"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Zuständige Behörde für CEMT-Genehmigungen: Bundesamt für Logistik und Mobilität (BALM)."
  },
  {
@@ -4195,11 +4195,11 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Was ist Dreiländerverkehr?",
   "answers": [
    "Binnenverkehr in einem fremden Staat",
-   "Verkehr durch genau drei Länder mit einem Lkw",
    "Grenzüberschreitender Verkehr durch einen Frachtführer, der in keinem der beiden Länder seinen Sitz hat",
+   "Verkehr durch genau drei Länder mit einem Lkw",
    "Werkverkehr über drei Standorte"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Dreiländerverkehr = grenzüberschreitender Verkehr durch einen Frachtführer, der in keinem der beiden Länder seinen Sitz hat."
  },
  {
@@ -4207,9 +4207,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Ist Dreiländerverkehr mit einer CEMT-Genehmigung möglich?",
   "answers": [
    "Nein, niemals",
-   "Ja, ohne jede Einschränkung",
+   "Nur mit zusätzlicher Anmeldung nach § 15a",
    "Er kann im Rahmen der CEMT-Regeln zulässig sein",
-   "Nur mit zusätzlicher Anmeldung nach § 15a"
+   "Ja, ohne jede Einschränkung"
   ],
   "correct": 2,
   "explain": "Dreiländerverkehr kann im Rahmen der CEMT-Regeln zulässig sein."
@@ -4220,8 +4220,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "Wenn der Staat nicht durch eine CEMT-Genehmigung abgedeckt ist und ein bilaterales Abkommen oder eine nationale Regelung gilt",
    "Bei Werkverkehr über 3,5 t",
-   "Nur bei Kabotage in Deutschland",
-   "Bei jeder Fahrt innerhalb der EU"
+   "Bei jeder Fahrt innerhalb der EU",
+   "Nur bei Kabotage in Deutschland"
   ],
   "correct": 0,
   "explain": "Bilaterale Genehmigungen gelten, wenn ein Staat nicht durch CEMT abgedeckt ist und ein bilaterales Abkommen oder eine nationale Regelung Anwendung findet."
@@ -4230,12 +4230,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BILATERAL",
   "text": "Welche Arten von bilateralen Drittstaatengenehmigungen gibt es?",
   "answers": [
-   "Gemeinschaftslizenz, Erlaubnisurkunde oder Anmeldung",
    "CEMT-, Kabotage- oder Werkverkehrsgenehmigung",
-   "Tages-, Wochen- oder Monatsvignette",
-   "Zeitgenehmigung, Einzelfahrtengenehmigung oder Mehrfahrtengenehmigung"
+   "Gemeinschaftslizenz, Erlaubnisurkunde oder Anmeldung",
+   "Zeitgenehmigung, Einzelfahrtengenehmigung oder Mehrfahrtengenehmigung",
+   "Tages-, Wochen- oder Monatsvignette"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Bilaterale Genehmigungen: Zeitgenehmigung, Einzelfahrtengenehmigung oder Mehrfahrtengenehmigung."
  },
  {
@@ -4254,12 +4254,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "SCHWERLAST",
   "text": "Was gilt für Großraum- und Schwerlastanhänger und -auflieger?",
   "answers": [
-   "Sie haben keine Achslastgrenzen",
-   "Für sie gelten besonders niedrige Höchstmaße",
+   "Sie weichen wegen ihres Einsatzbereichs bei Masse, Länge, Breite und Höhe von den gesetzlichen Werten ab",
    "Sie dürfen nur im Werkverkehr fahren",
-   "Sie weichen wegen ihres Einsatzbereichs bei Masse, Länge, Breite und Höhe von den gesetzlichen Werten ab"
+   "Für sie gelten besonders niedrige Höchstmaße",
+   "Sie haben keine Achslastgrenzen"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Großraum- und Schwerlastanhänger weichen bezüglich Masse, Länge, Breite und Höhe von den gesetzlichen Werten ab."
  },
  {
@@ -4267,9 +4267,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Was ist ein Dollyanhänger?",
   "answers": [
    "Ein kurzer Anhänger mit Sattelkupplung, um einen Sattelauflieger an ein Zugfahrzeug ohne eigene Sattelkupplung anzuhängen",
-   "Ein Schwerlastauflieger mit Lenkachse",
    "Ein Anhänger mit Starrdeichsel für Kleinlasten",
-   "Eine Sattelzugmaschine ohne Aufbau"
+   "Eine Sattelzugmaschine ohne Aufbau",
+   "Ein Schwerlastauflieger mit Lenkachse"
   ],
   "correct": 0,
   "explain": "Ein Dolly ist ein kurzer Anhänger mit Sattelkupplung. Er ermöglicht es, einen Sattelauflieger an ein Zugfahrzeug ohne eigene Sattelkupplung anzuhängen."
@@ -4278,8 +4278,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "DOLLY",
   "text": "Wofür werden „Untersetzachsen“ (Dollys) z. B. verwendet?",
   "answers": [
-   "Um Anhänger ohne Bremse zu ziehen",
    "Als Ersatz für den Lufttrockner",
+   "Um Anhänger ohne Bremse zu ziehen",
    "Um die Achslast der Zugmaschine zu erhöhen",
    "Um Lang-Lkw („Gigaliner“) zusammenzustellen"
   ],
@@ -4290,12 +4290,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BREITE?",
   "text": "Wie breit darf ein Fahrzeug höchstens sein?",
   "answers": [
-   "2,50 m",
-   "2,60 m",
    "2,55 m",
-   "2,40 m"
+   "2,60 m",
+   "2,40 m",
+   "2,50 m"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Höchstzulässige Fahrzeugbreite: 2,55 m, mit Kühlaufbau 2,60 m."
  },
  {
@@ -4303,9 +4303,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie breit darf ein Fahrzeug mit Kühlaufbau höchstens sein?",
   "answers": [
    "2,60 m",
-   "2,65 m",
    "2,55 m",
-   "2,50 m"
+   "2,50 m",
+   "2,65 m"
   ],
   "correct": 0,
   "explain": "Fahrzeugbreite mit Kühlaufbau: 2,60 m."
@@ -4314,96 +4314,96 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "HÖHE?",
   "text": "Wie hoch darf ein Fahrzeug höchstens sein?",
   "answers": [
-   "3,80 m",
    "4,50 m",
-   "4,00 m",
-   "4,20 m"
+   "3,80 m",
+   "4,20 m",
+   "4,00 m"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Höchstzulässige Fahrzeughöhe: 4,00 m."
  },
  {
   "title": "BEGRENZUNGSLEUCHTEN",
   "text": "Ein Anhänger ist breiter als das Zugfahrzeug. Ab wann braucht er eigene Begrenzungsleuchten?",
   "answers": [
+   "Nie, das Zugfahrzeug reicht",
    "Immer, sobald er breiter ist",
    "Wenn er seitlich mehr als 40 cm über die Begrenzungsleuchten des Zugfahrzeugs hinausragt",
-   "Wenn er mehr als 10 cm breiter ist",
-   "Nie, das Zugfahrzeug reicht"
+   "Wenn er mehr als 10 cm breiter ist"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Ragt der Anhänger seitlich mehr als 40 cm über die Begrenzungsleuchten des Zugfahrzeugs hinaus, muss er eigene Begrenzungsleuchten haben."
  },
  {
   "title": "LÄNGE?",
   "text": "Wie lang darf ein Kraftfahrzeug (außer Zugmaschinen) mit Anhänger höchstens sein?",
   "answers": [
+   "16,50 m",
    "18,00 m",
    "15,50 m",
-   "18,75 m",
-   "16,50 m"
+   "18,75 m"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Länge von Kraftfahrzeugen – außer Zugmaschinen – mit Anhänger: 18,00 m."
  },
  {
   "title": "LÄNGE?",
   "text": "Wie lang dürfen Zugmaschinen mit Anhängern höchstens sein?",
   "answers": [
-   "16,50 m",
    "18,00 m",
-   "18,75 m",
-   "20,75 m"
+   "20,75 m",
+   "16,50 m",
+   "18,75 m"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Länge von Zugmaschinen mit Anhängern: 18,75 m."
  },
  {
   "title": "BESONDERE BAUART",
   "text": "Wie lang dürfen Lastkraftwagenzüge besonderer Bauart höchstens sein?",
   "answers": [
-   "18,75 m",
+   "16,40 m",
    "25,25 m",
-   "18,00 m",
-   "16,40 m"
+   "18,75 m",
+   "18,00 m"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Lastkraftwagenzüge bei besonderer Bauart: 18,75 m."
  },
  {
   "title": "SYSTEMLÄNGE",
   "text": "Welche Systemlänge darf beim Lastkraftwagenzug besonderer Bauart nicht überschritten werden?",
   "answers": [
+   "16,50 m",
    "15,65 m",
-   "16,40 m",
    "18,75 m",
-   "16,50 m"
+   "16,40 m"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Teillängen bei besonderer Bauart: Systemlänge 16,40 m, Ladelänge (X1 + X2) 15,65 m."
  },
  {
   "title": "LADELÄNGE",
   "text": "Welche Ladelänge (X1 + X2) darf beim Lastkraftwagenzug besonderer Bauart nicht überschritten werden?",
   "answers": [
-   "15,50 m",
    "15,65 m",
+   "15,50 m",
    "7,825 m",
    "16,40 m"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Ladelänge (X1 + X2): höchstens 15,65 m."
  },
  {
   "title": "TEILLÄNGEN",
   "text": "Wie lang ist jede der beiden Ladelängen X1 und X2, wenn die Maße ganz ausgenutzt werden?",
   "answers": [
+   "7,825 m",
    "8,20 m",
    "7,65 m",
-   "7,50 m",
-   "7,825 m"
+   "7,50 m"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Ganz ausgenutzt: Ladelänge X1 7,825 m und X2 7,825 m, zusammen 15,65 m."
  },
  {
@@ -4422,12 +4422,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "TEILLÄNGEN",
   "text": "Welcher Abstand zwischen Lkw und Anhänger ergibt sich (Systemlänge minus Ladelänge)?",
   "answers": [
-   "0,50 m",
-   "2,35 m",
    "0,75 m",
-   "1,00 m"
+   "2,35 m",
+   "1,00 m",
+   "0,50 m"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Abstand Lkw – Anhänger = Systemlänge minus Ladelänge = 16,40 m − 15,65 m = 0,75 m."
  },
  {
@@ -4446,24 +4446,24 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "SATTELZUG",
   "text": "Wie lang darf ein Sattelzug besonderer Bauart höchstens sein?",
   "answers": [
-   "16,50 m",
    "18,00 m",
+   "15,50 m",
    "18,75 m",
-   "15,50 m"
+   "16,50 m"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Sattelzuglänge bei besonderer Bauart: 16,50 m."
  },
  {
   "title": "SATTELZAPFEN",
   "text": "Welcher Abstand vom Sattelzapfen bis zur hinteren Begrenzung ist beim Sattelzug besonderer Bauart höchstens erlaubt?",
   "answers": [
-   "10 m",
-   "12 m",
+   "13,60 m",
    "2,04 m",
-   "13,60 m"
+   "10 m",
+   "12 m"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Besondere Bauart: Abstand Sattelzapfen bis hintere Begrenzung max. 12 m, vorderer Überhangradius max. 2,04 m."
  },
  {
@@ -4471,9 +4471,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie groß darf der vordere Überhangradius beim Sattelzug besonderer Bauart höchstens sein?",
   "answers": [
    "2,04 m",
+   "2,35 m",
    "2,55 m",
-   "1,50 m",
-   "2,35 m"
+   "1,50 m"
   ],
   "correct": 0,
   "explain": "Vorderer Überhangradius beim Sattelzug besonderer Bauart: max. 2,04 m."
@@ -4482,70 +4482,70 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "LADUNG",
   "text": "Was gilt für Breite und Höhe, wenn Ladung über die Fahrzeugumrisse hinausragt?",
   "answers": [
-   "Nur die Höhe ist begrenzt",
-   "Sie dürfen um 50 cm überschritten werden",
    "Die zulässigen Werte für Breite und Höhe dürfen nicht überschritten werden",
-   "Es gelten keine Grenzen"
+   "Sie dürfen um 50 cm überschritten werden",
+   "Es gelten keine Grenzen",
+   "Nur die Höhe ist begrenzt"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Ragt Ladung über die Fahrzeugumrisse hinaus, dürfen die zulässigen Werte für Breite und Höhe nicht überschritten werden."
  },
  {
   "title": "NACH VORN",
   "text": "Wie weit darf Ladung nach vorn überstehen?",
   "answers": [
-   "Bis 2,5 m Höhe höchstens 50 cm, darüber gar nicht",
-   "Bis 2,5 m Höhe gar nicht, ab 2,5 m Höhe höchstens 50 cm",
    "Immer höchstens 1,5 m",
-   "Immer höchstens 1 m"
+   "Immer höchstens 1 m",
+   "Bis 2,5 m Höhe höchstens 50 cm, darüber gar nicht",
+   "Bis 2,5 m Höhe gar nicht, ab 2,5 m Höhe höchstens 50 cm"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Nach vorn darf Ladung bis zu einer Höhe von 2,5 m nicht über das Fahrzeug (bei Zügen über das Zugfahrzeug) hinausragen. Ab 2,5 m Höhe höchstens 50 cm."
  },
  {
   "title": "NACH HINTEN",
   "text": "Wie weit darf Ladung nach hinten über die Ladefläche hinausragen?",
   "answers": [
+   "Gar nicht",
    "Bis 1,5 m, bei Fahrtstrecken unter 100 km bis 3 m",
    "Immer bis 3 m",
-   "Gar nicht",
    "Bis 0,5 m, bei kurzen Strecken bis 1 m"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Nach hinten bis 1,5 m, bei Fahrtstrecken unter 100 km sogar bis 3 m."
  },
  {
   "title": "NACH HINTEN",
   "text": "Welche Gesamtzuglänge darf mit nach hinten überstehender Ladung nicht überschritten werden?",
   "answers": [
-   "20,75 m",
    "18,75 m",
-   "18,00 m",
-   "25,25 m"
+   "20,75 m",
+   "25,25 m",
+   "18,00 m"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Auch mit überstehender Ladung darf eine Gesamtzuglänge von 20,75 m nicht überschritten werden."
  },
  {
   "title": "ÜBERLÄNGE",
   "text": "Wie werden Fahrzeugkombinationen mit Überlänge in Deutschland zugelassen und wie heißen sie?",
   "answers": [
-   "Durch eine Ausnahmeverordnung – Lang-Lkw, EuroCombi oder Gigaliner",
    "Durch eine CEMT-Genehmigung – Schwerlastzug",
    "Durch § 15a GüKG – Werkverkehrszug",
+   "Durch eine Ausnahmeverordnung – Lang-Lkw, EuroCombi oder Gigaliner",
    "Gar nicht, sie sind verboten"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Durch eine Ausnahmeverordnung sind bestimmte Fahrzeuge mit Überlänge (Lang-Lkw, Euro-Combi, Giga-Liner) zugelassen."
  },
  {
   "title": "LANG-LKW",
   "text": "Wie lang darf ein Lang-Lkw höchstens sein?",
   "answers": [
-   "24,00 m",
    "18,75 m",
+   "20,75 m",
    "25,25 m",
-   "20,75 m"
+   "24,00 m"
   ],
   "correct": 2,
   "explain": "Die Länge der Fahrzeugkombination darf 25,25 m nicht überschreiten."
@@ -4554,24 +4554,24 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "LANG-LKW",
   "text": "Darf die Ladung beim Lang-Lkw nach hinten überstehen?",
   "answers": [
-   "Nein",
    "Ja, bis 3 m auf Strecken unter 100 km",
    "Ja, bis 1,5 m",
+   "Nein",
    "Ja, bis 50 cm"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Beim Lang-Lkw darf die Ladung nicht nach hinten überstehen."
  },
  {
   "title": "LANG-LKW",
   "text": "Welche Gesamtmasse gilt für den Lang-Lkw?",
   "answers": [
-   "60 t",
-   "36 t",
    "44 t, im kombinierten Verkehr bis 48 t",
-   "40 t, im kombinierten Verkehr bis 44 t"
+   "40 t, im kombinierten Verkehr bis 44 t",
+   "60 t",
+   "36 t"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Die höchstzulässige Gesamtmasse beträgt 40 t, im kombinierten Verkehr bis 44 t."
  },
  {
@@ -4579,11 +4579,11 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Kombinationen kommen beim Lang-Lkw vor allem zum Einsatz?",
   "answers": [
    "Zwei Sattelzugmaschinen hintereinander",
+   "Lkw mit drei Starrdeichselanhängern",
    "Lkw mit Dolly und Sattelanhänger sowie Sattelzug mit Zentralachsanhänger",
-   "Nur Sattelzüge ohne Anhänger",
-   "Lkw mit drei Starrdeichselanhängern"
+   "Nur Sattelzüge ohne Anhänger"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Kombinationen: Lkw plus Untersetzachse (Dolly) mit Sattelanhänger, Sattelzug plus Zentralachsanhänger."
  },
  {
@@ -4592,8 +4592,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "Das Leergewicht einer Achse",
    "Die Gesamtlast, die von den Rädern einer Achse oder Achsgruppe auf die Fahrbahn übertragen wird",
-   "Die Last auf der Sattelkupplung",
-   "Die Nutzlast eines Anhängers"
+   "Die Nutzlast eines Anhängers",
+   "Die Last auf der Sattelkupplung"
   ],
   "correct": 1,
   "explain": "Die Achslast ist die Gesamtlast, die von den Rädern einer Achse oder einer Achsgruppe auf die Fahrbahn übertragen wird."
@@ -4602,36 +4602,36 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "EINZELACHSE",
   "text": "Welche Achslast ist für eine Einzelachse höchstens zulässig?",
   "answers": [
-   "12 t",
-   "10 t",
    "11,5 t",
-   "8 t"
+   "8 t",
+   "10 t",
+   "12 t"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Einzelachse: 10 t, angetriebene Einzelachse: 11,5 t."
  },
  {
   "title": "EINZELACHSE",
   "text": "Welche Achslast ist für eine angetriebene Einzelachse höchstens zulässig?",
   "answers": [
-   "11 t",
-   "11,5 t",
+   "10 t",
    "13 t",
-   "10 t"
+   "11 t",
+   "11,5 t"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Angetriebene Einzelachse: 11,5 t."
  },
  {
   "title": "DOPPELACHSE KFZ",
   "text": "Welche Achslast gilt für eine Kfz-Doppelachse mit einem Achsabstand von 1,3 m bis weniger als 1,8 m?",
   "answers": [
-   "16,0 t",
-   "19,0 t",
    "20,0 t",
-   "18,0 t"
+   "18,0 t",
+   "19,0 t",
+   "16,0 t"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Kfz-Doppelachse: unter 1,0 m 11,5 t, 1,0 bis unter 1,3 m 16 t, 1,3 bis unter 1,8 m 18 t, mit Antriebsachse, Doppelbereifung und Luftfederung 19 t."
  },
  {
@@ -4639,9 +4639,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wann darf eine Kfz-Doppelachse 19 t tragen?",
   "answers": [
    "Bei Antriebsachse mit Doppelbereifung und Luftfederung",
-   "Bei einem Achsabstand unter 1,0 m",
    "Bei jedem Achsabstand über 1,8 m",
-   "Nur im kombinierten Verkehr"
+   "Nur im kombinierten Verkehr",
+   "Bei einem Achsabstand unter 1,0 m"
   ],
   "correct": 0,
   "explain": "19,0 t gelten bei Antriebsachse mit Doppelbereifung und Luftfederung."
@@ -4651,71 +4651,71 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Achslast gilt für eine Kfz-Doppelachse mit einem Achsabstand von weniger als 1,0 m?",
   "answers": [
    "16,0 t",
-   "11,5 t",
    "11,0 t",
+   "11,5 t",
    "10,0 t"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Kfz-Doppelachse unter 1,0 m Achsabstand: 11,5 t."
  },
  {
   "title": "DOPPELACHSE ANH.",
   "text": "Welche Achslast gilt für eine Anhänger-Doppelachse mit einem Achsabstand von 1,8 m oder mehr?",
   "answers": [
-   "20,0 t",
+   "24,0 t",
    "19,0 t",
    "18,0 t",
-   "24,0 t"
+   "20,0 t"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Anhänger-Doppelachse: unter 1,0 m 11 t, 1,0 bis unter 1,3 m 16 t, 1,3 bis unter 1,8 m 18 t, ab 1,8 m 20 t."
  },
  {
   "title": "DOPPELACHSE ANH.",
   "text": "Welche Achslast gilt für eine Anhänger-Doppelachse mit einem Achsabstand von weniger als 1,0 m?",
   "answers": [
+   "16,0 t",
    "11,0 t",
-   "11,5 t",
    "10,0 t",
-   "16,0 t"
+   "11,5 t"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Anhänger-Doppelachse unter 1,0 m Achsabstand: 11,0 t."
  },
  {
   "title": "DOPPELACHSE",
   "text": "Welche Achslast gilt für eine Doppelachse (Kfz und Anhänger) mit 1,0 m bis weniger als 1,3 m Achsabstand?",
   "answers": [
-   "18,0 t",
-   "11,5 t",
    "16,0 t",
-   "20,0 t"
+   "20,0 t",
+   "18,0 t",
+   "11,5 t"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Bei 1,0 bis unter 1,3 m Achsabstand gelten für Kfz- und Anhänger-Doppelachse 16 t."
  },
  {
   "title": "DREIFACHACHSE",
   "text": "Welche Achslast gilt für eine Dreifachachse mit einem Achsabstand von nicht mehr als 1,3 m?",
   "answers": [
-   "21 t",
    "24 t",
-   "27 t",
-   "18 t"
+   "18 t",
+   "21 t",
+   "27 t"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Dreifachachse: bis 1,3 m Achsabstand 21 t, über 1,3 m bis 1,4 m 24 t."
  },
  {
   "title": "DREIFACHACHSE",
   "text": "Welche Achslast gilt für eine Dreifachachse mit einem Achsabstand von mehr als 1,3 m und nicht mehr als 1,4 m?",
   "answers": [
-   "21 t",
-   "27 t",
    "20 t",
-   "24 t"
+   "24 t",
+   "27 t",
+   "21 t"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Dreifachachse über 1,3 m bis 1,4 m Achsabstand: 24 t."
  },
  {
@@ -4723,9 +4723,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Gesamtmasse gilt für Kraftfahrzeuge (außer Kraftomnibusse) und Anhänger mit nicht mehr als zwei Achsen?",
   "answers": [
    "18 t",
-   "24 t",
    "20 t",
-   "16 t"
+   "16 t",
+   "24 t"
   ],
   "correct": 0,
   "explain": "Kraftfahrzeuge – ausgenommen Kraftomnibusse – und Anhänger mit nicht mehr als zwei Achsen: 18 t."
@@ -4734,105 +4734,105 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für Anhänger mit mehr als zwei Achsen?",
   "answers": [
-   "20 t",
    "26 t",
    "18 t",
-   "24 t"
+   "24 t",
+   "20 t"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Anhänger mit mehr als zwei Achsen: 24 t."
  },
  {
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für Fahrzeugkombinationen mit weniger als vier Achsen?",
   "answers": [
+   "24 t",
    "32 t",
    "28 t",
-   "24 t",
    "36 t"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Fahrzeugkombinationen mit weniger als vier Achsen: 28 t."
  },
  {
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für ein zweiachsiges Kraftfahrzeug mit zweiachsigem Anhänger?",
   "answers": [
+   "28 t",
    "40 t",
-   "36 t",
    "35 t",
-   "28 t"
+   "36 t"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Zweiachsiges Kraftfahrzeug mit zweiachsigem Anhänger: 36 t."
  },
  {
   "title": "SATTELZUG 2+2",
   "text": "Wann darf eine zweiachsige Sattelzugmaschine mit zweiachsigem Sattelanhänger 38 t statt 36 t wiegen?",
   "answers": [
+   "Immer im kombinierten Verkehr",
    "Bei Antriebsachse mit Doppelbereifung und Luftfederung und einem Sattelanhänger mit mehr als 1,8 m Achsabstand",
-   "Bei jedem Sattelzug mit Luftfederung am Auflieger",
    "Wenn der Auflieger kürzer als 12 m ist",
-   "Immer im kombinierten Verkehr"
+   "Bei jedem Sattelzug mit Luftfederung am Auflieger"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Zweiachsige SZM mit zweiachsigem Sattelanhänger: 36 t, 38 t bei Antriebsachse mit Doppelbereifung und Luftfederung und Sattelanhänger mit mehr als 1,8 m Achsabstand."
  },
  {
   "title": "VIER ACHSEN",
   "text": "Andere Fahrzeugkombinationen mit vier Achsen: Welche Gesamtmasse gilt bei einem Zugfahrzeug mit 25 t bzw. 26 t?",
   "answers": [
-   "35 t bzw. 36 t",
    "28 t bzw. 36 t",
    "40 t bzw. 44 t",
-   "36 t bzw. 38 t"
+   "36 t bzw. 38 t",
+   "35 t bzw. 36 t"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Andere Kombinationen mit vier Achsen: 35 t (Zugfahrzeug 25 t), 36 t (Zugfahrzeug 26 t)."
  },
  {
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für Fahrzeugkombinationen mit mehr als vier Achsen (kein kombinierter Verkehr)?",
   "answers": [
-   "36 t",
    "40 t",
-   "44 t",
-   "38 t"
+   "38 t",
+   "36 t",
+   "44 t"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Fahrzeugkombinationen mit mehr als vier Achsen, kein kombinierter Verkehr: 40 t."
  },
  {
   "title": "KOMBINIERTER VERKEHR",
   "text": "Welche Gesamtmasse gilt im kombinierten Verkehr für Kombinationen mit mehr als vier Achsen?",
   "answers": [
-   "40 t",
-   "44 t",
    "48 t",
-   "42 t"
+   "42 t",
+   "44 t",
+   "40 t"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Kombinierter Verkehr: Kombinationen mit mehr als vier Achsen max. 44 t, mit oder ohne 40-Fuß-ISO-Container, auch Lang-Lkw."
  },
  {
   "title": "KOMBINIERTER VERKEHR",
   "text": "Welche Gesamtmasse gilt im kombinierten Verkehr für Anhänger mit nicht mehr als zwei Achsen?",
   "answers": [
-   "22 t",
    "20 t",
-   "24 t",
-   "18 t"
+   "18 t",
+   "22 t",
+   "24 t"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Kombinierter Verkehr: Anhänger mit nicht mehr als zwei Achsen max. 20 t."
  },
  {
   "title": "KOMBINIERTER VERKEHR",
   "text": "Welche Verkehrsarten zählen zum kombinierten Verkehr?",
   "answers": [
+   "Nur Schiene/Straße",
    "Straße/Luft",
    "Werkverkehr und gewerblicher Verkehr",
-   "Nur Schiene/Straße",
    "Schiene/Straße, Binnenwasserstraße/Straße, See/Straße"
   ],
   "correct": 3,
@@ -4843,33 +4843,33 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie bestimmt man die zulässige Gesamtmasse eines Anhängerzugs?",
   "answers": [
    "Nur die zGM des Zugfahrzeugs",
+   "zGM Zugfahrzeug + zGM Anhänger – solange die gesetzlichen Grenzen nicht überschritten werden",
    "zGM Zugfahrzeug + zGM Anhänger − Stützlast",
-   "zGM Anhänger × 2",
-   "zGM Zugfahrzeug + zGM Anhänger – solange die gesetzlichen Grenzen nicht überschritten werden"
+   "zGM Anhänger × 2"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Man addiert die zGM des Zugfahrzeugs und des Anhängers. Übersteigt der Wert die gesetzlichen Grenzen nicht, gilt er als zGM des Zuges."
  },
  {
   "title": "SATTELZUG-FORMEL",
   "text": "Wie berechnet man die zulässige Gesamtmasse eines Sattelzugs?",
   "answers": [
-   "zGM Auflieger + Sattellast",
    "zGM Zugmaschine + zGM Auflieger − niedrigerer Wert von Sattellast oder Aufliegelast",
    "zGM Zugmaschine + zGM Auflieger − höherer Wert von Sattellast oder Aufliegelast",
-   "zGM Zugmaschine + zGM Auflieger"
+   "zGM Zugmaschine + zGM Auflieger",
+   "zGM Auflieger + Sattellast"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Formel: zGM SZM + zGM Auflieger − höherer Wert von Sattellast oder Aufliegelast = zGM Sattelzug."
  },
  {
   "title": "SATTELLAST",
   "text": "Was ist die Sattellast?",
   "answers": [
+   "Der Teil der Aufliegermasse, der am Königszapfen wirkt",
    "Die Achslast der Hinterachse",
-   "Die Leermasse des Aufliegers",
    "Die Nutzlast der Sattelzugmaschine – die Masse, die auf der Sattelkupplung lasten darf",
-   "Der Teil der Aufliegermasse, der am Königszapfen wirkt"
+   "Die Leermasse des Aufliegers"
   ],
   "correct": 2,
   "explain": "Sattellast = Nutzlast der Sattelzugmaschine, also die Masse, die auf der Sattelkupplung lasten darf."
@@ -4878,12 +4878,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "AUFLIEGELAST",
   "text": "Was ist die Aufliegelast?",
   "answers": [
-   "Die Masse, die auf der Sattelkupplung lasten darf",
    "Die gesamte Nutzlast des Aufliegers",
    "Der Teil der Gesamtmasse des Aufliegers, der am Königszapfen auf die Sattelzugmaschine wirkt",
+   "Die Masse, die auf der Sattelkupplung lasten darf",
    "Die Stützlast eines Zentralachsanhängers"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Aufliegelast = der Teil der Gesamtmasse des Sattelaufliegers, der am Königszapfen auf die Sattelzugmaschine wirkt."
  },
  {
@@ -4891,36 +4891,384 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "SZM 18 t zGM, Auflieger 34 t zGM, Sattellast 9 t, Aufliegelast 10 t. Welche zGM ergibt die Formel, und was ist erlaubt?",
   "answers": [
    "52 t, erlaubt 40 t",
+   "42 t errechnet, erlaubt sind nur 40 t",
    "41 t, alles erlaubt",
-   "43 t, erlaubt 44 t",
-   "42 t errechnet, erlaubt sind nur 40 t"
+   "43 t, erlaubt 44 t"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "18 t + 34 t − 10 t (höherer Wert) = 42 t. Erlaubt sind nur 40 t, die Nutzlast des Aufliegers darf nicht voll ausgenutzt werden."
  },
  {
   "title": "RECHNEN!",
   "text": "SZM 24 t zGM, Auflieger 30 t zGM, Sattellast 14 t, Aufliegelast 10 t. Welche zGM hat der Sattelzug?",
   "answers": [
-   "54 t",
-   "40 t",
+   "44 t",
    "38 t",
-   "44 t"
+   "54 t",
+   "40 t"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "24 t + 30 t − 14 t (höherer Wert: Sattellast) = 40 t. Die Fahrzeuge wurden geschickt kombiniert."
  },
  {
   "title": "RECHNEN!",
   "text": "SZM 17 t zGM, Auflieger 31 t zGM, Sattellast und Aufliegelast je 9 t. Welche zGM hat der Sattelzug?",
   "answers": [
-   "48 t",
+   "39 t",
    "30 t",
-   "40 t",
-   "39 t"
+   "48 t",
+   "40 t"
+  ],
+  "correct": 0,
+  "explain": "17 t + 31 t − 9 t = 39 t. Die Grenze von 40 t wird nicht erreicht."
+ },
+ {
+  "title": "KABOTAGE",
+  "text": "Was ist Kabotage laut BALM-Faltblatt?",
+  "answers": [
+   "Eine Transportdienstleistung innerhalb eines Landes durch ein Unternehmen, das in diesem Staat weder Sitz noch Niederlassung hat",
+   "Werkverkehr mit eigenem Personal im Ausland",
+   "Jeder Transport über eine Staatsgrenze",
+   "Ein Transport im eigenen Heimatstaat"
+  ],
+  "correct": 0,
+  "explain": "Kabotage ist das Erbringen einer Transportdienstleistung innerhalb eines Landes durch ein Transportunternehmen, das in diesem Staat weder Sitz noch Niederlassung hat."
+ },
+ {
+  "title": "KABOTAGE ODER NICHT?",
+  "text": "Ein italienisches Transportunternehmen befördert eine Sendung von München nach Köln. Was ist das?",
+  "answers": [
+   "Werkverkehr",
+   "Kabotage",
+   "Grenzüberschreitender Transport",
+   "Transitverkehr ohne Genehmigung"
+  ],
+  "correct": 1,
+  "explain": "München nach Köln ist ein Transport innerhalb Deutschlands durch ein Unternehmen ohne Sitz in Deutschland, also Kabotage."
+ },
+ {
+  "title": "KABOTAGE ODER NICHT?",
+  "text": "Ein italienisches Transportunternehmen befördert eine Sendung von München nach Prag. Was ist das?",
+  "answers": [
+   "Grenzüberschreitender Transport, keine Kabotage",
+   "Kabotage",
+   "Transitkabotage",
+   "Anschlusskabotage"
+  ],
+  "correct": 0,
+  "explain": "München nach Prag überschreitet eine Grenze, das ist grenzüberschreitender Transport und keine Kabotage."
+ },
+ {
+  "title": "RECHTSGRUNDLAGE",
+  "text": "Nach welcher Verordnung richten sich die Voraussetzungen der Kabotage?",
+  "answers": [
+   "Verordnung (EG) Nr. 561/2006",
+   "Anlage 7 FeV",
+   "Verordnung (EG) Nr. 1072/2009",
+   "§ 15a GüKG"
+  ],
+  "correct": 2,
+  "explain": "Voraussetzungen und Bedingungen der Kabotage nach Verordnung (EG) Nr. 1072/2009."
+ },
+ {
+  "title": "VORAUSSETZUNGEN",
+  "text": "Welche Voraussetzung gehört NICHT zur Kabotage nach VO (EG) Nr. 1072/2009?",
+  "answers": [
+   "Das Unternehmen braucht eine Niederlassung im Aufnahmestaat",
+   "Gültige Gemeinschaftslizenz",
+   "Einsatz desselben Kraftfahrzeugs",
+   "Sitz des Unternehmens in EU/EWR"
+  ],
+  "correct": 0,
+  "explain": "Voraussetzungen: Sitz in EU/EWR, gültige Gemeinschaftslizenz, vorherige grenzüberschreitende Beförderung mit vollständiger Entladung im Aufnahmestaat, dasselbe Kfz, Belege mitführen."
+ },
+ {
+  "title": "AUFNAHMESTAAT",
+  "text": "Was ist der Aufnahmestaat?",
+  "answers": [
+   "Der Staat, in dem der Fahrer wohnt",
+   "Der Staat, in dem das Unternehmen seinen Sitz hat",
+   "Der EU-/EWR-Staat, in dem die grenzüberschreitende Beförderung vollständig entladen wurde und in dem das Unternehmen nicht ansässig ist",
+   "Jeder Staat, durch den der Lkw fährt"
+  ],
+  "correct": 2,
+  "explain": "Aufnahmestaat = EU-/EWR-Staat mit vollständiger Entladung der grenzüberschreitenden Beförderung, in dem das Unternehmen nicht ansässig ist."
+ },
+ {
+  "title": "VORAUSSETZUNG",
+  "text": "Was muss vor einer Kabotagebeförderung erfolgt sein?",
+  "answers": [
+   "Eine Anmeldung nach § 15a GüKG",
+   "Eine Teilentladung im Aufnahmestaat",
+   "Eine grenzüberschreitende Beförderung mit vollständiger Entladung im Aufnahmestaat",
+   "Eine Leerfahrt im Heimatstaat"
+  ],
+  "correct": 2,
+  "explain": "Voraussetzung ist eine grenzüberschreitende Beförderung mit vollständiger Entladung in einem EU-/EWR-Staat, in dem das Unternehmen nicht ansässig ist."
+ },
+ {
+  "title": "BELEGE",
+  "text": "Welche Belege müssen bei der Kabotage mitgeführt werden?",
+  "answers": [
+   "Belege für die grenzüberschreitende Beförderung sowie für jede Kabotagebeförderung",
+   "Keine, die Gemeinschaftslizenz reicht",
+   "Nur der Beleg für die letzte Kabotagefahrt",
+   "Nur die Fahrerkarte"
+  ],
+  "correct": 0,
+  "explain": "Mitzuführen sind Belege für die grenzüberschreitende Beförderung sowie für jede Kabotagebeförderung."
+ },
+ {
+  "title": "FAHRZEUG",
+  "text": "Welches Fahrzeug muss für die Kabotagebeförderungen eingesetzt werden?",
+  "answers": [
+   "Jedes Fahrzeug des Unternehmens",
+   "Ein Mietfahrzeug aus dem Aufnahmestaat",
+   "Ein Fahrzeug mit Zulassung im Aufnahmestaat",
+   "Dasselbe Kraftfahrzeug wie bei der grenzüberschreitenden Beförderung"
   ],
   "correct": 3,
-  "explain": "17 t + 31 t − 9 t = 39 t. Die Grenze von 40 t wird nicht erreicht."
+  "explain": "Voraussetzung ist der Einsatz desselben Kraftfahrzeugs."
+ },
+ {
+  "title": "ANSCHLUSSKABOTAGE",
+  "text": "Wie viele Kabotagebeförderungen sind bei der Anschlusskabotage höchstens erlaubt, und in welcher Zeit?",
+  "answers": [
+   "3 innerhalb von 7 Tagen",
+   "3 innerhalb von 3 Tagen",
+   "1 innerhalb von 3 Tagen",
+   "7 innerhalb von 3 Tagen"
+  ],
+  "correct": 0,
+  "explain": "Anschlusskabotage: nach vollständiger Entladung im Aufnahmestaat maximal drei Kabotagebeförderungen innerhalb von sieben Tagen („3 in 7“-Regel)."
+ },
+ {
+  "title": "ANSCHLUSSKABOTAGE",
+  "text": "Wo finden die Beförderungen bei der Anschlusskabotage statt?",
+  "answers": [
+   "Nur im Heimatstaat des Unternehmens",
+   "Im Anschluss in demselben Aufnahmestaat, in dem entladen wurde",
+   "Nur auf dem Rückweg über die Grenze",
+   "In beliebigen Drittstaaten"
+  ],
+  "correct": 1,
+  "explain": "Anschlusskabotage: im Anschluss an die Entladung in diesem Aufnahmestaat."
+ },
+ {
+  "title": "BEISPIEL",
+  "text": "Ein deutsches Unternehmen entlädt in Madrid vollständig. Was ist per Anschlusskabotage in Spanien erlaubt?",
+  "answers": [
+   "Gar keine Beförderung",
+   "Drei Binnenbeförderungen innerhalb von sieben Tagen",
+   "Unbegrenzt viele Fahrten für eine Woche",
+   "Eine Beförderung innerhalb von drei Tagen"
+  ],
+  "correct": 1,
+  "explain": "Nach vollständiger Entladung in Madrid sind im Aufnahmestaat Spanien noch drei Binnenbeförderungen innerhalb von sieben Tagen erlaubt."
+ },
+ {
+  "title": "TRANSITKABOTAGE",
+  "text": "Welche Regel gilt für die Transitkabotage?",
+  "answers": [
+   "„3 in 7“ – drei Beförderungen in sieben Tagen pro Staat",
+   "„1 in 3“ – in jedem Staat eine der insgesamt drei Kabotagebeförderungen innerhalb von drei Tagen",
+   "„4 in 4“ – vier Beförderungen in vier Tagen",
+   "„1 in 7“ – eine Beförderung pro Woche"
+  ],
+  "correct": 1,
+  "explain": "Transitkabotage: in jedem Staat jeweils eine der insgesamt drei Kabotagebeförderungen innerhalb von drei Tagen („1 in 3“-Regel)."
+ },
+ {
+  "title": "TRANSITKABOTAGE",
+  "text": "Unter welcher Bedingung dürfen Kabotagebeförderungen auch in anderen EU-/EWR-Staaten durchgeführt werden?",
+  "answers": [
+   "Wenn der Lkw jeweils unbeladen über die Grenze in diesen Staat fährt",
+   "Wenn der Lkw beladen über die Grenze fährt",
+   "Wenn der Fahrer gewechselt wird",
+   "Nur mit CEMT-Genehmigung"
+  ],
+  "correct": 0,
+  "explain": "Transitkabotage: Der Lkw fährt jeweils unbeladen (Leerfahrt) über die Grenze in einen anderen EU-/EWR-Staat."
+ },
+ {
+  "title": "TRANSITKABOTAGE",
+  "text": "In welchem Zeitraum nach der grenzüberschreitenden Beförderung ist Transitkabotage möglich?",
+  "answers": [
+   "Innerhalb von sieben Tagen",
+   "Innerhalb von drei Tagen",
+   "Innerhalb eines Monats",
+   "Innerhalb von vier Tagen"
+  ],
+  "correct": 0,
+  "explain": "Innerhalb von sieben Tagen nach abgeschlossener grenzüberschreitender Beförderung dürfen die Kabotagebeförderungen auch in anderen EU-/EWR-Staaten erfolgen."
+ },
+ {
+  "title": "BEISPIEL",
+  "text": "Deutsches Unternehmen, vollständige Entladung in Madrid. Was ist per Transitkabotage möglich?",
+  "answers": [
+   "Drei Kabotagebeförderungen in Frankreich",
+   "Unbegrenzt viele Fahrten in Belgien",
+   "Jeweils eine Kabotagebeförderung in Frankreich, Belgien und den Niederlanden",
+   "Keine, Transitkabotage gibt es nicht"
+  ],
+  "correct": 2,
+  "explain": "Nach Entladung in Madrid kann das Unternehmen jeweils eine Kabotagebeförderung in Frankreich, Belgien und den Niederlanden durchführen."
+ },
+ {
+  "title": "KOMBINATION",
+  "text": "Dürfen Anschluss- und Transitkabotage kombiniert werden?",
+  "answers": [
+   "Ja, sofern die jeweiligen Voraussetzungen erfüllt sind",
+   "Nur mit CEMT-Genehmigung",
+   "Ja, dann sind 6 Beförderungen erlaubt",
+   "Nein, nie"
+  ],
+  "correct": 0,
+  "explain": "Die Kombination von Anschluss- und Transitkabotage ist zulässig, sofern die jeweiligen Voraussetzungen erfüllt sind."
+ },
+ {
+  "title": "KOMBINATION",
+  "text": "Nach Entladung in Madrid: Welche Kombination ist laut Faltblatt zulässig?",
+  "answers": [
+   "Drei in Frankreich, ohne Leerfahrt",
+   "Zwei Kabotagebeförderungen in Spanien und eine in Frankreich",
+   "Drei in Spanien und zwei in Frankreich",
+   "Vier in Spanien"
+  ],
+  "correct": 1,
+  "explain": "Zulässig ist z. B. eine in Spanien, eine in Frankreich und eine in Belgien, oder zwei in Spanien und die dritte in Frankreich. Insgesamt bleiben es drei."
+ },
+ {
+  "title": "ABKÜHLPHASE",
+  "text": "Wie lange dauert die „Abkühl-Phase“ (Cooling-Off-Phase) nach der Kabotage?",
+  "answers": [
+   "Drei Tage",
+   "Vier Tage",
+   "Sieben Tage",
+   "Zwei Wochen"
+  ],
+  "correct": 1,
+  "explain": "Um erneut Kabotage in diesem Mitgliedstaat durchführen zu dürfen, muss eine Abkühlphase von vier Tagen eingehalten werden."
+ },
+ {
+  "title": "ABKÜHLPHASE",
+  "text": "Seit wann gilt die Abkühlphase nach der Kabotage?",
+  "answers": [
+   "Seit dem 27.02.2026",
+   "Seit dem 21.05.2022",
+   "Seit dem 01.01.2020",
+   "Seit dem 21.02.2022"
+  ],
+  "correct": 3,
+  "explain": "Ab dem 21.02.2022 gilt die „Abkühlphase“ nach der Kabotage."
+ },
+ {
+  "title": "ABKÜHLPHASE",
+  "text": "Wofür gilt die Abkühlphase genau?",
+  "answers": [
+   "Für weitere Kabotage mit demselben Fahrzeug in demselben Mitgliedstaat",
+   "Für alle Fahrzeuge des Unternehmens in der ganzen EU",
+   "Für den Fahrer, der vier Tage Pause machen muss",
+   "Nur für grenzüberschreitende Fahrten"
+  ],
+  "correct": 0,
+  "explain": "Nach den maximal zulässigen Kabotagefahrten bzw. nach Ablauf der Frist ist mit demselben Fahrzeug in diesem Mitgliedstaat keine weitere Kabotage erlaubt, bis vier Tage Abkühlphase eingehalten sind."
+ },
+ {
+  "title": "BELEGE",
+  "text": "Was muss ein Unternehmer zusätzlich vorlegen, wenn das Fahrzeug innerhalb von vier Tagen vor der grenzüberschreitenden Beförderung schon im Aufnahmestaat war?",
+  "answers": [
+   "Eine Bescheinigung der Abkühlphase vom BALM",
+   "Eine CEMT-Genehmigung",
+   "Eindeutige Belege für alle Beförderungen, die in diesem Zeitraum durchgeführt wurden",
+   "Nichts Zusätzliches"
+  ],
+  "correct": 2,
+  "explain": "Ab 21.02.2022: War das Kfz innerhalb von vier Tagen vor der grenzüberschreitenden Beförderung im Aufnahmestaat, müssen eindeutige Belege für alle Beförderungen in diesem Zeitraum vorgelegt werden."
+ },
+ {
+  "title": "KONTROLLE",
+  "text": "Wie dürfen die Belege bei einer Straßenkontrolle vorgezeigt werden?",
+  "answers": [
+   "Nur im Original auf Papier",
+   "Nur per Post innerhalb von 14 Tagen",
+   "Nur durch den Unternehmer selbst",
+   "Auf Verlangen persönlich oder alternativ digital in geeigneter Form"
+  ],
+  "correct": 3,
+  "explain": "Die Belege sind auf Verlangen persönlich vorzuzeigen, alternativ digital in geeigneter Form."
+ },
+ {
+  "title": "KONTROLLE",
+  "text": "Was darf das Fahrpersonal tun, wenn die Belege bei der Kontrolle nicht im Fahrzeug sind?",
+  "answers": [
+   "Nichts, die Fahrt muss sofort enden",
+   "Die Belege später nachreichen, ohne Frist",
+   "Kontakt mit anderen Personen oder Stellen aufnehmen, damit die Belege vor Abschluss der Kontrolle bereitgestellt werden",
+   "Die Kontrolle abbrechen"
+  ],
+  "correct": 2,
+  "explain": "Das Fahrpersonal darf Kontakt aufnehmen, wenn die Belege dort vorliegen und vor Abschluss der Kontrolle bereitgestellt werden können. Sonst können weitere Überprüfungsschritte folgen."
+ },
+ {
+  "title": "EINGANGSSCHWELLE",
+  "text": "Ab dem 21.05.2022 wurde die Eingangsschwelle für den grenzüberschreitenden gewerblichen Güterverkehr herabgesetzt – von wie viel auf wie viel?",
+  "answers": [
+   "Von 7,5 t auf 3,5 t",
+   "Von 12 t auf 7,5 t",
+   "Von 2,5 t auf 1,5 t",
+   "Von 3,5 t auf 2,5 t"
+  ],
+  "correct": 3,
+  "explain": "Ab dem 21.05.2022 wird die Eingangsschwelle von 3,5 Tonnen auf 2,5 Tonnen herabgesetzt."
+ },
+ {
+  "title": "EINGANGSSCHWELLE",
+  "text": "Was ist seit dem 21.05.2022 bei Fahrzeugen über 2,5 t zGM im grenzüberschreitenden gewerblichen Güterverkehr in der EU erforderlich?",
+  "answers": [
+   "Eine Anmeldung nach § 15a GüKG",
+   "Eine Gemeinschaftslizenz",
+   "Keine Genehmigung",
+   "Eine CEMT-Genehmigung"
+  ],
+  "correct": 1,
+  "explain": "Ab 21.05.2022 ist für Kfz inkl. Anhänger über 2,5 t zGM im grenzüberschreitenden gewerblichen Güterverkehr auf EU-Wegstrecken eine Gemeinschaftslizenz erforderlich."
+ },
+ {
+  "title": "BIS 2,5 T",
+  "text": "Was ändert sich für Fahrzeuge inklusive Anhänger mit einer zGM bis 2,5 t?",
+  "answers": [
+   "Sie brauchen jetzt eine Gemeinschaftslizenz",
+   "Sie brauchen eine CEMT-Genehmigung",
+   "Nichts, es ergeben sich keine Änderungen",
+   "Sie dürfen keine Kabotage mehr fahren"
+  ],
+  "correct": 2,
+  "explain": "Für Kfz inklusive Anhänger mit einer zGM bis 2,5 t ergeben sich keine Änderungen."
+ },
+ {
+  "title": "VERORDNUNG",
+  "text": "In welcher Verordnung sind die neuen Kabotagebestimmungen im Detail hinterlegt?",
+  "answers": [
+   "Verordnung (EU) 2016/403",
+   "Verordnung (EG) Nr. 561/2006",
+   "Verordnung (EU) 2020/1055",
+   "Richtlinie 2003/59/EG"
+  ],
+  "correct": 2,
+  "explain": "Die neuen Kabotagebestimmungen stehen in der Verordnung (EU) 2020/1055. Sie ändert insbesondere die Verordnungen (EG) Nr. 1071/2009 und Nr. 1072/2009."
+ },
+ {
+  "title": "STICHTAGE",
+  "text": "An welchen beiden Stichtagen traten die neuen Kabotageregeln in Kraft?",
+  "answers": [
+   "21.02.2021 und 21.05.2021",
+   "01.01.2022 und 01.07.2022",
+   "27.02.2026 und 27.02.2036",
+   "21.02.2022 und 21.05.2022"
+  ],
+  "correct": 3,
+  "explain": "Ab dem 21.02.2022 bzw. 21.05.2022 gelten die neuen Regeln im Bereich der Kabotage."
  }
 ];
 
