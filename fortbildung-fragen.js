@@ -3444,5 +3444,559 @@ export const FB_TECHNIK_QUESTIONS = [
  }
 ];
 
-// In Vorbereitung – Fragen folgen:
-export const VERKEHRSRECHT_QUESTIONS = [];
+// Verkehrsrecht: Vorschriften des Güterkraftverkehrs (GüKG), aus den Unterlagen der Fortbildung.
+export const VERKEHRSRECHT_QUESTIONS = [
+ {
+  "title": "GÜTERKRAFTVERKEHR?",
+  "text": "Was ist Güterkraftverkehr nach § 1 GüKG?",
+  "answers": [
+   "Nur die Beförderung von Gütern mit Anhänger",
+   "Die entgeltliche Beförderung von Personen",
+   "Die geschäftsmäßige oder entgeltliche Beförderung von Gütern mit Kraftfahrzeugen",
+   "Jede Beförderung von Gütern mit Fahrzeugen über 7,5 t"
+  ],
+  "correct": 2,
+  "explain": "§ 1 GüKG: Güterkraftverkehr ist die geschäftsmäßige oder entgeltliche Beförderung von Gütern mit Kraftfahrzeugen."
+ },
+ {
+  "title": "PARAGRAF?",
+  "text": "Wo ist der Begriff Güterkraftverkehr bestimmt?",
+  "answers": [
+   "§ 3 GüKG",
+   "§ 15a GüKG",
+   "§ 1 GüKG",
+   "§ 9 GüKG"
+  ],
+  "correct": 2,
+  "explain": "Die Begriffsbestimmung steht in § 1 GüKG."
+ },
+ {
+  "title": "TONNEN?",
+  "text": "Welche Tonnenbegrenzung enthält das GüKG selbst?",
+  "answers": [
+   "Keine",
+   "3,5 t",
+   "7,5 t",
+   "2,5 t"
+  ],
+  "correct": 0,
+  "explain": "Das GüKG selbst enthält keine Tonnenbegrenzung. Die Ausnahme für kleinere Fahrzeuge steht in § 2 Abs. 1 Nr. 10 GüKG."
+ },
+ {
+  "title": "AUSNAHME",
+  "text": "Welche Fahrzeuge nimmt § 2 Abs. 1 Nr. 10 GüKG grundsätzlich vom Anwendungsbereich aus?",
+  "answers": [
+   "Alle Fahrzeuge im Werkverkehr",
+   "Fahrzeuge bis einschließlich 7,5 t zGm",
+   "Fahrzeuge bis einschließlich 3,5 t zGm, soweit keine Sonderregelung greift",
+   "Fahrzeuge bis einschließlich 2,5 t zGm ohne Ausnahme"
+  ],
+  "correct": 2,
+  "explain": "§ 2 Abs. 1 Nr. 10 GüKG nimmt die Beförderung mit Fahrzeugen bis einschließlich 3,5 t zGm grundsätzlich aus, soweit keine Sonderregelung greift."
+ },
+ {
+  "title": "PARAGRAF?",
+  "text": "Welche Vorschrift nimmt Fahrzeuge bis einschließlich 3,5 t zGm grundsätzlich vom GüKG aus?",
+  "answers": [
+   "§ 15a GüKG",
+   "§ 3 GüKG",
+   "§ 1 Abs. 2 GüKG",
+   "§ 2 Abs. 1 Nr. 10 GüKG"
+  ],
+  "correct": 3,
+  "explain": "§ 2 Abs. 1 Nr. 10 GüKG enthält die Ausnahme bis einschließlich 3,5 t zGm."
+ },
+ {
+  "title": "GEWERBLICH?",
+  "text": "Wann liegt gewerblicher Güterkraftverkehr vor?",
+  "answers": [
+   "Wenn die Beförderung nicht als Werkverkehr einzuordnen ist",
+   "Nur bei grenzüberschreitenden Fahrten",
+   "Wenn eigenes Personal fährt",
+   "Wenn das Fahrzeug über 7,5 t wiegt"
+  ],
+  "correct": 0,
+  "explain": "Gewerblicher Güterkraftverkehr liegt vor, wenn die Beförderung nicht als Werkverkehr einzuordnen ist."
+ },
+ {
+  "title": "SCHWELLE?",
+  "text": "Welche Gewichtsschwelle gilt im nationalen gewerblichen Güterkraftverkehr grundsätzlich?",
+  "answers": [
+   "Über 12 t zGm",
+   "Über 7,5 t zGm",
+   "Über 2,5 t zGm",
+   "Über 3,5 t zGm"
+  ],
+  "correct": 3,
+  "explain": "Nationaler Verkehr: grundsätzlich über 3,5 t zGm."
+ },
+ {
+  "title": "SCHWELLE?",
+  "text": "Welche Gewichtsschwelle gilt im grenzüberschreitenden Verkehr und bei Kabotage?",
+  "answers": [
+   "Über 2,5 t zGm",
+   "Über 7,5 t zGm",
+   "Über 3,5 t zGm",
+   "Keine Schwelle"
+  ],
+  "correct": 0,
+  "explain": "Grenzüberschreitender Verkehr und Kabotage: über 2,5 t zGm."
+ },
+ {
+  "title": "GRUNDLAGE?",
+  "text": "Worauf geht die 2,5-t-Schwelle im grenzüberschreitenden Verkehr zurück?",
+  "answers": [
+   "Auf das Mobilitätspaket I",
+   "Auf die Fahrerlaubnis-Verordnung",
+   "Auf die CEMT-Regeln",
+   "Auf § 9 GüKG"
+  ],
+  "correct": 0,
+  "explain": "Die Schwelle von über 2,5 t zGm im grenzüberschreitenden Verkehr und bei Kabotage stammt aus dem Mobilitätspaket I."
+ },
+ {
+  "title": "WERKVERKEHR?",
+  "text": "Was ist Werkverkehr?",
+  "answers": [
+   "Güterkraftverkehr mit Fahrzeugen bis 3,5 t",
+   "Güterkraftverkehr gegen Entgelt für fremde Auftraggeber",
+   "Jeder Transport innerhalb eines Werksgeländes",
+   "Güterkraftverkehr für eigene Zwecke eines Unternehmens, wenn die Voraussetzungen des § 1 Abs. 2 GüKG erfüllt sind"
+  ],
+  "correct": 3,
+  "explain": "Werkverkehr ist Güterkraftverkehr für eigene Zwecke des Unternehmens nach § 1 Abs. 2 GüKG."
+ },
+ {
+  "title": "WERKVERKEHR?",
+  "text": "Welche Voraussetzung gehört NICHT zum Werkverkehr?",
+  "answers": [
+   "Die Güter gehören einem fremden Auftraggeber",
+   "Die Güter sind Eigentum des Unternehmens",
+   "Es fährt eigenes Personal",
+   "Die Beförderung ist nur eine Hilfstätigkeit"
+  ],
+  "correct": 0,
+  "explain": "Werkverkehr: Güter sind Eigentum des Unternehmens, bestimmter Beförderungszweck, eigenes Personal, Beförderung nur als Hilfstätigkeit."
+ },
+ {
+  "title": "PERSONAL?",
+  "text": "Wer muss im Werkverkehr fahren?",
+  "answers": [
+   "Nur der Unternehmer selbst",
+   "Eigenes Personal des Unternehmens",
+   "Ein beauftragter Frachtführer",
+   "Beliebiges Leihpersonal"
+  ],
+  "correct": 1,
+  "explain": "Eine Voraussetzung des Werkverkehrs ist eigenes Personal."
+ },
+ {
+  "title": "HILFSTÄTIGKEIT",
+  "text": "Welche Rolle darf die Beförderung beim Werkverkehr spielen?",
+  "answers": [
+   "Egal, jede Rolle ist erlaubt",
+   "Die Haupttätigkeit des Unternehmens",
+   "Eine entgeltliche Dienstleistung für Dritte",
+   "Nur eine Hilfstätigkeit"
+  ],
+  "correct": 3,
+  "explain": "Im Werkverkehr ist die Beförderung nur eine Hilfstätigkeit des Unternehmens."
+ },
+ {
+  "title": "ZWECK?",
+  "text": "Welchem Zweck muss die Beförderung im Werkverkehr dienen?",
+  "answers": [
+   "Der Kabotage im Ausland",
+   "Der Auslieferung an fremde Kunden gegen Fracht",
+   "Der Beförderung von Personen",
+   "Der Anlieferung zum Unternehmen oder dem Eigengebrauch außerhalb des Unternehmens"
+  ],
+  "correct": 3,
+  "explain": "Beförderungszweck im Werkverkehr: Anlieferung zum Unternehmen oder Eigengebrauch außerhalb des Unternehmens."
+ },
+ {
+  "title": "ERLAUBNIS?",
+  "text": "Braucht man für Werkverkehr eine güterkraftverkehrsrechtliche Erlaubnis?",
+  "answers": [
+   "Ja, immer eine Gemeinschaftslizenz",
+   "Ja, eine CEMT-Genehmigung",
+   "Nein, Werkverkehr ist nach § 9 GüKG erlaubnisfrei",
+   "Nur bei Fahrzeugen bis 3,5 t"
+  ],
+  "correct": 2,
+  "explain": "Werkverkehr ist nach § 9 GüKG güterkraftverkehrsrechtlich erlaubnisfrei."
+ },
+ {
+  "title": "ANMELDUNG?",
+  "text": "Was gilt für Werkverkehr mit Fahrzeugen oder Kombinationen über 3,5 t zGm?",
+  "answers": [
+   "Gemeinschaftslizenz nach § 3 GüKG",
+   "Anmeldepflicht beim Bundesamt nach § 15a GüKG",
+   "Keine Pflichten",
+   "CEMT-Genehmigung"
+  ],
+  "correct": 1,
+  "explain": "Werkverkehr über 3,5 t zGm muss nach § 15a GüKG beim Bundesamt angemeldet werden."
+ },
+ {
+  "title": "GEMEINSCHAFTSLIZENZ",
+  "text": "Seit wann gilt die aktuelle Rechtslage zur Gemeinschaftslizenz laut Unterlage?",
+  "answers": [
+   "Seit dem 26.02.2025",
+   "Seit dem 27.02.2026",
+   "Seit dem 01.01.2024",
+   "Seit dem 01.01.2018"
+  ],
+  "correct": 1,
+  "explain": "Aktuelle Rechtslage zur Gemeinschaftslizenz seit 27.02.2026."
+ },
+ {
+  "title": "GEMEINSCHAFTSLIZENZ",
+  "text": "Was benötigt ein Unternehmer mit Sitz im Inland seit 2026 grundsätzlich für gewerblichen Güterkraftverkehr?",
+  "answers": [
+   "Eine CEMT-Genehmigung",
+   "Nur eine Anmeldung beim Bundesamt",
+   "Eine von einer inländischen Behörde erteilte Gemeinschaftslizenz",
+   "Eine Erlaubnisurkunde nach altem Recht"
+  ],
+  "correct": 2,
+  "explain": "Seit 2026 braucht, wer gewerblichen Güterkraftverkehr durchführt, grundsätzlich eine Gemeinschaftslizenz (§ 3 GüKG)."
+ },
+ {
+  "title": "PARAGRAF?",
+  "text": "In welchem Paragrafen des GüKG ist die Gemeinschaftslizenz geregelt?",
+  "answers": [
+   "§ 3 GüKG",
+   "§ 1 GüKG",
+   "§ 15a GüKG",
+   "§ 9 GüKG"
+  ],
+  "correct": 0,
+  "explain": "Gemeinschaftslizenz: § 3 GüKG."
+ },
+ {
+  "title": "GÜLTIGKEIT?",
+  "text": "Wie lange ist eine Gemeinschaftslizenz gültig?",
+  "answers": [
+   "Bis zu 10 Jahre",
+   "Unbefristet",
+   "Bis zu 5 Jahre",
+   "Bis zu 15 Jahre"
+  ],
+  "correct": 0,
+  "explain": "Gültigkeit der Gemeinschaftslizenz: bis zu 10 Jahre."
+ },
+ {
+  "title": "VORAUSSETZUNGEN",
+  "text": "Welche Voraussetzungen gelten für die Gemeinschaftslizenz?",
+  "answers": [
+   "Führerschein CE, Berufserfahrung und Wohnsitz",
+   "Mitgliedschaft in einem Verband und Versicherung",
+   "Mindestens drei Lkw und eine Werkstatt",
+   "Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung"
+  ],
+  "correct": 3,
+  "explain": "Voraussetzungen: Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit, fachliche Eignung."
+ },
+ {
+  "title": "VORAUSSETZUNGEN",
+  "text": "Welche ist KEINE Voraussetzung für die Gemeinschaftslizenz?",
+  "answers": [
+   "Zuverlässigkeit",
+   "Finanzielle Leistungsfähigkeit",
+   "Der Unternehmer muss selbst die Fahrerlaubnis CE besitzen",
+   "Fachliche Eignung"
+  ],
+  "correct": 2,
+  "explain": "Genannt werden Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung."
+ },
+ {
+  "title": "MITFÜHREN?",
+  "text": "Was muss bei der Güterbeförderung im Fahrzeug mitgeführt werden?",
+  "answers": [
+   "Eine beglaubigte Kopie der Gemeinschaftslizenz",
+   "Der Nachweis der Fachkundeprüfung",
+   "Die Anmeldebestätigung nach § 15a",
+   "Das Original der Gemeinschaftslizenz"
+  ],
+  "correct": 0,
+  "explain": "Für die eingesetzten Kraftfahrzeuge werden beglaubigte Kopien der Gemeinschaftslizenz ausgegeben, die mitzuführen sind."
+ },
+ {
+  "title": "ERLAUBNISURKUNDE",
+  "text": "Werden noch neue Erlaubnisse nach der bis zum 26.02.2026 geltenden Fassung des § 3 GüKG erteilt?",
+  "answers": [
+   "Nein, und bestehende Erlaubnisse sind sofort ungültig",
+   "Ja, aber nur für Fahrzeuge bis 7,5 t",
+   "Ja, wahlweise zur Gemeinschaftslizenz",
+   "Nein, bestehende Erlaubnisse genießen aber Bestandsschutz"
+  ],
+  "correct": 3,
+  "explain": "Neue Erlaubnisse nach altem Recht werden nicht mehr erteilt. Bestehende Erlaubnisse genießen Bestandsschutz."
+ },
+ {
+  "title": "BESTANDSSCHUTZ",
+  "text": "Wie lange bleibt eine befristete Erlaubnis nach altem Recht gültig?",
+  "answers": [
+   "Bis zum 27.02.2036",
+   "Bis zum Ablauf ihrer Befristung",
+   "Bis zum 26.02.2026",
+   "Noch 10 Jahre ab Ausstellung"
+  ],
+  "correct": 1,
+  "explain": "Befristete Erlaubnisse bleiben bis zum Ablauf ihrer Befristung gültig."
+ },
+ {
+  "title": "BESTANDSSCHUTZ",
+  "text": "Bis wann bleibt eine unbefristete Erlaubnis nach altem Recht gültig?",
+  "answers": [
+   "Bis zum 27.02.2036",
+   "Bis zum 31.12.2030",
+   "Unbegrenzt",
+   "Bis zum 27.02.2026"
+  ],
+  "correct": 0,
+  "explain": "Unbefristete Erlaubnisse bleiben bis zum 27.02.2036 gültig."
+ },
+ {
+  "title": "FINANZEN",
+  "text": "Welches Eigenkapital muss für das erste Kfz über 3,5 t zGm nachgewiesen werden?",
+  "answers": [
+   "5.000 €",
+   "9.000 €",
+   "1.800 €",
+   "900 €"
+  ],
+  "correct": 1,
+  "explain": "Finanzielle Leistungsfähigkeit über 3,5 t zGm: 1. Kfz 9.000 €, jedes weitere 5.000 €."
+ },
+ {
+  "title": "FINANZEN",
+  "text": "Welcher Betrag gilt für jedes weitere Kfz über 3,5 t zGm?",
+  "answers": [
+   "900 €",
+   "5.000 €",
+   "1.800 €",
+   "9.000 €"
+  ],
+  "correct": 1,
+  "explain": "Über 3,5 t zGm: jedes weitere Kfz 5.000 €."
+ },
+ {
+  "title": "FINANZEN",
+  "text": "Welcher Betrag gilt für das erste Kfz von 2,5 bis 3,5 t zGm?",
+  "answers": [
+   "900 €",
+   "1.800 €",
+   "9.000 €",
+   "5.000 €"
+  ],
+  "correct": 1,
+  "explain": "Von 2,5 bis 3,5 t zGm: 1. Kfz 1.800 €, jedes weitere 900 €."
+ },
+ {
+  "title": "FINANZEN",
+  "text": "Welcher Betrag gilt für jedes weitere Kfz von 2,5 bis 3,5 t zGm?",
+  "answers": [
+   "1.800 €",
+   "500 €",
+   "5.000 €",
+   "900 €"
+  ],
+  "correct": 3,
+  "explain": "Von 2,5 bis 3,5 t zGm: jedes weitere Kfz 900 €."
+ },
+ {
+  "title": "RECHNEN!",
+  "text": "Ein Unternehmer setzt 3 Lkw über 3,5 t zGm ein. Wie hoch ist die geforderte finanzielle Leistungsfähigkeit?",
+  "answers": [
+   "27.000 €",
+   "15.000 €",
+   "19.000 €",
+   "14.000 €"
+  ],
+  "correct": 2,
+  "explain": "9.000 € für das erste Kfz + 2 × 5.000 € für die weiteren = 19.000 €."
+ },
+ {
+  "title": "ZUVERLÄSSIGKEIT",
+  "text": "Wie wird die persönliche Zuverlässigkeit des Unternehmers geprüft?",
+  "answers": [
+   "Durch eine Selbstauskunft ohne Nachweis",
+   "Anhand der gesetzlich vorgesehenen Register- und Behördenauskünfte",
+   "Durch eine praktische Fahrprüfung",
+   "Durch einen Test beim Bundesamt"
+  ],
+  "correct": 1,
+  "explain": "Die persönliche Zuverlässigkeit wird anhand der gesetzlich vorgesehenen Register- und Behördenauskünfte geprüft."
+ },
+ {
+  "title": "ZUVERLÄSSIGKEIT",
+  "text": "Welches Beispiel nennt die Unterlage gegen die Zuverlässigkeit eines Unternehmers?",
+  "answers": [
+   "Eine Vorstrafe wegen Steuerhinterziehung",
+   "Ein Fahrzeug ohne Winterreifen",
+   "Ein abgelaufener TÜV",
+   "Ein Punkt in Flensburg"
+  ],
+  "correct": 0,
+  "explain": "Der Unternehmer dürfte zum Beispiel nicht wegen Steuerhinterziehung vorbestraft sein."
+ },
+ {
+  "title": "FACHLICHE EIGNUNG",
+  "text": "Wie wird die fachliche Eignung grundsätzlich nachgewiesen?",
+  "answers": [
+   "Durch fünf Jahre Fahrpraxis",
+   "Durch den Führerschein CE",
+   "Durch eine Bescheinigung der Hausbank",
+   "Durch die Fachkundeprüfung oder eine anerkannte gleichwertige Qualifikation"
+  ],
+  "correct": 3,
+  "explain": "Fachliche Eignung: Fachkundeprüfung bzw. anerkannte gleichwertige Qualifikation. Für langjährige Unternehmer können Übergangsregelungen gelten."
+ },
+ {
+  "title": "INTERNATIONAL",
+  "text": "Wofür berechtigt die Gemeinschaftslizenz im internationalen Verkehr?",
+  "answers": [
+   "Zum grenzüberschreitenden Güterkraftverkehr im Rahmen der europäischen Vorschriften, innerhalb der europäischen Grenzen",
+   "Zum Verkehr in alle Staaten der Welt",
+   "Zur Kabotage in jedem CEMT-Staat",
+   "Nur zum Verkehr innerhalb Deutschlands"
+  ],
+  "correct": 0,
+  "explain": "Die Gemeinschaftslizenz findet innerhalb der europäischen Grenzen Anwendung."
+ },
+ {
+  "title": "DRITTSTAATEN",
+  "text": "Was kann für Fahrten in Drittstaaten zusätzlich erforderlich sein?",
+  "answers": [
+   "Eine zweite Gemeinschaftslizenz",
+   "Nichts, die Gemeinschaftslizenz reicht immer",
+   "Eine CEMT- oder eine bilaterale Genehmigung",
+   "Eine Anmeldung nach § 15a GüKG"
+  ],
+  "correct": 2,
+  "explain": "Für Drittstaaten können zusätzlich CEMT- oder bilaterale Genehmigungen erforderlich sein."
+ },
+ {
+  "title": "CEMT",
+  "text": "Wozu berechtigt eine CEMT-Genehmigung?",
+  "answers": [
+   "Zur Kabotage in jedem CEMT-Mitgliedsstaat",
+   "Zum Werkverkehr ohne Anmeldung",
+   "Zu bestimmten grenzüberschreitenden Güterbeförderungen zwischen CEMT-Mitgliedsstaaten",
+   "Zur Personenbeförderung"
+  ],
+  "correct": 2,
+  "explain": "CEMT-Genehmigungen ermöglichen bestimmte grenzüberschreitende Beförderungen zwischen CEMT-Mitgliedsstaaten."
+ },
+ {
+  "title": "CEMT",
+  "text": "Berechtigt eine CEMT-Genehmigung zur Kabotage innerhalb eines CEMT-Mitgliedsstaates?",
+  "answers": [
+   "Ja, unbegrenzt",
+   "Nur mit Fahrzeugen über 3,5 t",
+   "Grundsätzlich nicht",
+   "Ja, bis zu 3 Fahrten"
+  ],
+  "correct": 2,
+  "explain": "CEMT-Genehmigungen berechtigen grundsätzlich nicht zur Kabotage, also zum Binnenverkehr innerhalb eines CEMT-Mitgliedsstaates."
+ },
+ {
+  "title": "KABOTAGE?",
+  "text": "Was ist mit Kabotage gemeint?",
+  "answers": [
+   "Transport über See",
+   "Binnenverkehr innerhalb eines Staates",
+   "Werkverkehr mit eigenem Personal",
+   "Transport zwischen zwei Nachbarstaaten"
+  ],
+  "correct": 1,
+  "explain": "Die Unterlage erklärt Kabotage als Binnenverkehr innerhalb eines (CEMT-Mitglieds-)Staates."
+ },
+ {
+  "title": "CEMT",
+  "text": "Was gilt für die Anzahl der CEMT-Genehmigungen?",
+  "answers": [
+   "Jeder Unternehmer erhält automatisch eine",
+   "Pro Lkw gibt es immer eine",
+   "Sie ist begrenzt",
+   "Sie ist unbegrenzt"
+  ],
+  "correct": 2,
+  "explain": "Die Anzahl der CEMT-Genehmigungen ist begrenzt."
+ },
+ {
+  "title": "BEHÖRDE?",
+  "text": "Welche Behörde ist für CEMT-Genehmigungen zuständig?",
+  "answers": [
+   "Kraftfahrt-Bundesamt (KBA)",
+   "Die örtliche Straßenverkehrsbehörde",
+   "Die IHK",
+   "Bundesamt für Logistik und Mobilität (BALM)"
+  ],
+  "correct": 3,
+  "explain": "Zuständige Behörde für CEMT-Genehmigungen: Bundesamt für Logistik und Mobilität (BALM)."
+ },
+ {
+  "title": "DREILÄNDERVERKEHR",
+  "text": "Was ist Dreiländerverkehr?",
+  "answers": [
+   "Verkehr durch genau drei Länder mit einem Lkw",
+   "Grenzüberschreitender Verkehr durch einen Frachtführer, der in keinem der beiden Länder seinen Sitz hat",
+   "Werkverkehr über drei Standorte",
+   "Binnenverkehr in einem fremden Staat"
+  ],
+  "correct": 1,
+  "explain": "Dreiländerverkehr = grenzüberschreitender Verkehr durch einen Frachtführer, der in keinem der beiden Länder seinen Sitz hat."
+ },
+ {
+  "title": "DREILÄNDERVERKEHR",
+  "text": "Ist Dreiländerverkehr mit einer CEMT-Genehmigung möglich?",
+  "answers": [
+   "Ja, ohne jede Einschränkung",
+   "Nur mit zusätzlicher Anmeldung nach § 15a",
+   "Nein, niemals",
+   "Er kann im Rahmen der CEMT-Regeln zulässig sein"
+  ],
+  "correct": 3,
+  "explain": "Dreiländerverkehr kann im Rahmen der CEMT-Regeln zulässig sein."
+ },
+ {
+  "title": "BILATERAL",
+  "text": "Wann kann eine bilaterale Drittstaatengenehmigung erforderlich sein?",
+  "answers": [
+   "Bei Werkverkehr über 3,5 t",
+   "Wenn der Staat nicht durch eine CEMT-Genehmigung abgedeckt ist und ein bilaterales Abkommen oder eine nationale Regelung gilt",
+   "Bei jeder Fahrt innerhalb der EU",
+   "Nur bei Kabotage in Deutschland"
+  ],
+  "correct": 1,
+  "explain": "Bilaterale Genehmigungen gelten, wenn ein Staat nicht durch CEMT abgedeckt ist und ein bilaterales Abkommen oder eine nationale Regelung Anwendung findet."
+ },
+ {
+  "title": "BILATERAL",
+  "text": "Welche Arten von bilateralen Drittstaatengenehmigungen gibt es?",
+  "answers": [
+   "Zeitgenehmigung, Einzelfahrtengenehmigung oder Mehrfahrtengenehmigung",
+   "Gemeinschaftslizenz, Erlaubnisurkunde oder Anmeldung",
+   "Tages-, Wochen- oder Monatsvignette",
+   "CEMT-, Kabotage- oder Werkverkehrsgenehmigung"
+  ],
+  "correct": 0,
+  "explain": "Bilaterale Genehmigungen: Zeitgenehmigung, Einzelfahrtengenehmigung oder Mehrfahrtengenehmigung."
+ },
+ {
+  "title": "BILATERAL",
+  "text": "Was gilt bei bilateralen Genehmigungen für Dreiländerverkehr und Kabotage?",
+  "answers": [
+   "Sie sind nur mit CEMT erlaubt",
+   "Sie können je nach Staat erlaubt oder verboten sein",
+   "Sie sind immer verboten",
+   "Sie sind immer erlaubt"
+  ],
+  "correct": 1,
+  "explain": "Die Bedingungen können von Staat zu Staat abweichen. Dreiländerverkehr und Kabotage können erlaubt oder verboten sein."
+ }
+];
+
