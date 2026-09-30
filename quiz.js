@@ -2,6 +2,7 @@ import { db, QUIZZES, QUESTIONS_PER_GAME, SECONDS_PER_QUESTION, MAX_POINTS_PER_Q
 import {
   doc, getDoc, collection, query, where, getDocs, writeBatch, serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { mountLookup } from "./lookup.js";
 
 const QUIZ = document.body.dataset.quiz || "freitag";
 const $ = (id) => document.getElementById(id);
@@ -223,9 +224,15 @@ function renderReview() {
       box.appendChild(card);
     });
   }
-  const anchor = document.querySelector("#screen-end .lb-title");
+  const anchor = document.querySelector("#screen-end .lk-btn") || document.querySelector("#screen-end .lb-title");
   anchor.parentNode.insertBefore(box, anchor);
 }
+
+// ---------- Nachschlagen (nur auf Start- und Ergebnisseite, nicht während der Fragen) ----------
+mountLookup([{ name: QZ.label, questions: QUESTIONS }], [
+  { el: $("screen-start"), before: document.querySelector("#screen-start .lb-title") },
+  { el: $("screen-end"), before: document.querySelector("#screen-end .lb-title") }
+]);
 
 // ---------- Init ----------
 (async () => {
