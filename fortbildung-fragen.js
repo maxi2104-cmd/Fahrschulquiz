@@ -3086,46 +3086,46 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "DAUERBREMSE?",
   "text": "Wozu dienen Dauerbremsen am Lkw?",
   "answers": [
-   "Zum Festhalten des Fahrzeugs beim Parken",
    "Nur für Notbremsungen",
-   "Zum verschleißfreien Bremsen und zur Entlastung der Betriebsbremse, z. B. bei langen Gefällen",
-   "Zum Bremsen des Anhängers beim Abkuppeln"
+   "Zum Bremsen des Anhängers beim Abkuppeln",
+   "Zum Festhalten des Fahrzeugs beim Parken",
+   "Zum verschleißfreien Bremsen und zur Entlastung der Betriebsbremse, z. B. bei langen Gefällen"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Dauerbremsen arbeiten verschleißfrei und entlasten die Betriebsbremse bei langen Bergabfahrten."
  },
  {
   "title": "DAUERBREMSE?",
   "text": "Was soll eine Dauerbremse bei langen Bergabfahrten vor allem verhindern?",
   "answers": [
-   "Überhitzung der Betriebsbremse und Fading",
    "Einfrieren der Druckluftanlage",
-   "Zu hohen Kraftstoffverbrauch",
-   "Blockieren der Räder"
+   "Überhitzung der Betriebsbremse und Fading",
+   "Blockieren der Räder",
+   "Zu hohen Kraftstoffverbrauch"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Wird nur mit der Betriebsbremse gebremst, überhitzt sie und verliert Wirkung (Fading)."
  },
  {
   "title": "ZWEI GRUPPEN",
   "text": "In welche zwei Gruppen teilt man Dauerbremsen ein?",
   "answers": [
-   "Trommel- und Scheibenbremsen",
-   "Einkreis- und Zweikreisbremsen",
    "Motorbremsen und Retarder",
-   "Betriebs- und Feststellbremsen"
+   "Trommel- und Scheibenbremsen",
+   "Betriebs- und Feststellbremsen",
+   "Einkreis- und Zweikreisbremsen"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Motorbremsen wirken über den Motor, Retarder sind eigene Bauteile im Antriebsstrang."
  },
  {
   "title": "MOTORBREMSE",
   "text": "Wovon hängt die Wirkung einer Motorbremse ab?",
   "answers": [
-   "Von der Beladung des Anhängers",
+   "Von der Außentemperatur",
    "Von der Fahrgeschwindigkeit",
    "Von der Motordrehzahl",
-   "Von der Außentemperatur"
+   "Von der Beladung des Anhängers"
   ],
   "correct": 2,
   "explain": "Motorbremsen wirken am besten bei hoher Motordrehzahl."
@@ -3134,117 +3134,117 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "MOTORBREMSE",
   "text": "Was muss der Fahrer beachten, damit die Motorbremse gut wirkt?",
   "answers": [
-   "Die Feststellbremse leicht anziehen",
-   "Rechtzeitig herunterschalten, damit die Drehzahl hoch ist",
+   "Die Kupplung treten",
    "Möglichst hoch schalten",
-   "Die Kupplung treten"
+   "Die Feststellbremse leicht anziehen",
+   "Rechtzeitig herunterschalten, damit die Drehzahl hoch ist"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Weil Motorbremsen drehzahlabhängig sind, muss man rechtzeitig herunterschalten."
  },
  {
   "title": "AUSPUFFKLAPPE",
   "text": "Wie funktioniert die Auspuffklappenbremse (Motorstaubremse)?",
   "answers": [
-   "Eine Klappe im Abgasstrang schließt, der Motor arbeitet gegen den Abgasgegendruck",
+   "Öl wird in einen Rotor gepumpt",
    "Das Auslassventil öffnet kurz vor dem oberen Totpunkt",
    "Elektromagnete erzeugen Wirbelströme",
-   "Öl wird in einen Rotor gepumpt"
+   "Eine Klappe im Abgasstrang schließt, der Motor arbeitet gegen den Abgasgegendruck"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Auspuffklappenbremse: Klappe im Abgasstrang, der Motor muss gegen den Gegendruck arbeiten."
  },
  {
   "title": "SCHWÄCHSTE?",
   "text": "Welche Dauerbremse hat die geringste Bremsleistung, ist aber einfach und günstig?",
   "answers": [
-   "Konstantdrosselbremse",
-   "Dekompressionsbremse",
    "Sekundärretarder",
-   "Auspuffklappenbremse"
+   "Auspuffklappenbremse",
+   "Konstantdrosselbremse",
+   "Dekompressionsbremse"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Die Auspuffklappenbremse allein hat die geringste Bremsleistung."
  },
  {
   "title": "KD-BREMSE",
   "text": "Wie funktioniert die Konstantdrosselbremse (KD-Bremse)?",
   "answers": [
-   "Kühlmittel wird in einen Rotor geleitet",
    "Ein zusätzliches Ventil im Zylinderkopf lässt verdichtete Luft über eine Drossel ab",
    "Eine Klappe im Abgasstrang schließt allein",
+   "Kühlmittel wird in einen Rotor geleitet",
    "Wirbelströme bremsen die Gelenkwelle"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "KD-Bremse: zusätzliches Ventil im Zylinderkopf, meist kombiniert mit der Auspuffklappe."
  },
  {
   "title": "KD-BREMSE",
   "text": "Bei welchem Hersteller ist die Konstantdrosselbremse typisch?",
   "answers": [
-   "MAN",
-   "Mercedes-Benz",
+   "Voith",
    "Telma",
-   "Voith"
+   "MAN",
+   "Mercedes-Benz"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Die KD-Bremse ist typisch für Mercedes-Benz."
  },
  {
   "title": "DEKOMPRESSION",
   "text": "Wie funktioniert eine Dekompressionsbremse (z. B. „Jake Brake“)?",
   "answers": [
-   "Öl bremst einen Rotor im Getriebe",
-   "Elektromagnete bremsen Rotorscheiben",
    "Das Auslassventil öffnet kurz vor dem oberen Totpunkt, die Verdichtungsarbeit geht verloren",
-   "Eine Klappe im Abgasstrang wird geschlossen"
+   "Elektromagnete bremsen Rotorscheiben",
+   "Eine Klappe im Abgasstrang wird geschlossen",
+   "Öl bremst einen Rotor im Getriebe"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Die verdichtete Luft drückt den Kolben nicht wieder nach unten, die Energie geht verloren."
  },
  {
   "title": "DEKOMPRESSION",
   "text": "Welcher Nachteil wird der Dekompressionsbremse zugeschrieben?",
   "answers": [
-   "Sie braucht sehr viel Strom",
    "Sie belastet das Kühlsystem am stärksten",
-   "Sie ist laut",
-   "Sie hat kaum Bremsleistung"
+   "Sie braucht sehr viel Strom",
+   "Sie hat kaum Bremsleistung",
+   "Sie ist laut"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Die Dekompressionsbremse hat eine hohe Bremsleistung, ist aber laut."
  },
  {
   "title": "EVB",
   "text": "Wie funktioniert die Abgasventilbremse (EVB, z. B. bei MAN)?",
   "answers": [
-   "Wirbelströme entstehen in Rotorscheiben",
    "Das Auslassventil wird durch den Abgasgegendruck leicht offen gehalten, zusammen mit einer Auspuffklappe",
+   "Wirbelströme entstehen in Rotorscheiben",
    "Nur eine Klappe im Abgasstrang schließt",
    "Kühlmittel dient als Arbeitsmedium"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "EVB (Exhaust Valve Brake): Weiterentwicklung der Staubremse mit mehr Leistung."
  },
  {
   "title": "NICHT MOTORBREMSE",
   "text": "Welche Dauerbremse gehört NICHT zu den Motorbremsen?",
   "answers": [
+   "Sekundärretarder",
    "Auspuffklappenbremse",
-   "Konstantdrosselbremse",
    "Dekompressionsbremse",
-   "Sekundärretarder"
+   "Konstantdrosselbremse"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Retarder sind eigene Bauteile im Antriebsstrang, keine Motorbremsen."
  },
  {
   "title": "PRIMÄRRETARDER",
   "text": "Wo sitzt ein Primärretarder?",
   "answers": [
+   "An der Hinterachse des Anhängers",
    "Im Abgasstrang",
    "Hinter dem Getriebe an der Gelenkwelle",
-   "An der Hinterachse des Anhängers",
    "Vor dem Getriebe, auf der Motorseite"
   ],
   "correct": 3,
@@ -3255,11 +3255,11 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wann bremst ein Primärretarder besonders gut?",
   "answers": [
    "Nur im Stand",
-   "Nur bei hohem Tempo auf der Autobahn",
    "Nur bei ausgekuppeltem Motor",
-   "Schon bei niedriger Geschwindigkeit, z. B. im Verteilerverkehr"
+   "Schon bei niedriger Geschwindigkeit, z. B. im Verteilerverkehr",
+   "Nur bei hohem Tempo auf der Autobahn"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Weil er von der Motordrehzahl abhängt, wirkt er auch bei langsamer Fahrt gut."
  },
  {
@@ -3267,23 +3267,23 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wo sitzt ein Sekundärretarder?",
   "answers": [
    "Im Zylinderkopf",
-   "Im Abgasstrang",
+   "Hinter dem Getriebe an der Gelenkwelle",
    "Vor dem Getriebe am Motor",
-   "Hinter dem Getriebe an der Gelenkwelle"
+   "Im Abgasstrang"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Sekundärretarder: hinter dem Getriebe an der Gelenkwelle."
  },
  {
   "title": "SEKUNDÄRRETARDER",
   "text": "Wovon hängt die Wirkung eines Sekundärretarders ab?",
   "answers": [
-   "Vom eingelegten Gang allein",
-   "Von der Fahrgeschwindigkeit",
+   "Von der Motordrehzahl",
    "Von der Batteriespannung",
-   "Von der Motordrehzahl"
+   "Vom eingelegten Gang allein",
+   "Von der Fahrgeschwindigkeit"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Sekundärretarder wirken abhängig von der Fahrgeschwindigkeit: stark bei hohem Tempo, schwächer bei langsamer Fahrt."
  },
  {
@@ -3291,11 +3291,11 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wann lässt die Wirkung eines Sekundärretarders nach?",
   "answers": [
    "Bei hohem Tempo",
+   "Bei hoher Motordrehzahl",
    "Bei langsamer Fahrt",
-   "Bei kaltem Motor",
-   "Bei hoher Motordrehzahl"
+   "Bei kaltem Motor"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Der Sekundärretarder ist im Fernverkehr bei hohem Tempo stark, bei langsamer Fahrt lässt er nach."
  },
  {
@@ -3314,24 +3314,24 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "ARBEITSMEDIUM",
   "text": "Welches Arbeitsmedium nutzt ein klassischer hydrodynamischer Sekundärretarder?",
   "answers": [
-   "Öl, das über einen Wärmetauscher gekühlt wird",
-   "Abgas",
    "Druckluft",
+   "Abgas",
+   "Öl, das über einen Wärmetauscher gekühlt wird",
    "Elektrischen Strom"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Hydrodynamische Retarder bremsen über Flüssigkeitsreibung, beim Sekundärretarder mit Öl."
  },
  {
   "title": "WASSERRETARDER",
   "text": "Was ist das Besondere am Wasserretarder (z. B. Aquatarder)?",
   "answers": [
+   "Er sitzt im Abgasstrang",
    "Er nutzt direkt das Kühlmittel des Motors als Arbeitsmedium",
    "Er braucht einen eigenen Ölkreislauf",
-   "Er sitzt im Abgasstrang",
    "Er arbeitet mit Elektromagneten"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Der Wasserretarder ist hydrodynamisch und nutzt das Kühlmittel statt Öl."
  },
  {
@@ -3350,24 +3350,24 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "WIRBELSTROM",
   "text": "Wie funktioniert ein elektrodynamischer Retarder (Wirbelstrombremse, z. B. Telma)?",
   "answers": [
-   "Elektromagnete erzeugen Wirbelströme in Rotorscheiben auf der Gelenkwelle",
    "Öl wird in einen Rotor gepumpt",
-   "Das Auslassventil wird offen gehalten",
-   "Eine Klappe schließt den Abgasstrang"
+   "Eine Klappe schließt den Abgasstrang",
+   "Elektromagnete erzeugen Wirbelströme in Rotorscheiben auf der Gelenkwelle",
+   "Das Auslassventil wird offen gehalten"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Elektrodynamischer Retarder: Magnetfelder bremsen die Rotorscheiben über Wirbelströme."
  },
  {
   "title": "WIRBELSTROM",
   "text": "Wohin gibt eine Wirbelstrombremse die Bremswärme ab?",
   "answers": [
-   "An die Luft",
-   "An die Druckluftanlage",
    "An das Getriebeöl",
+   "An die Druckluftanlage",
+   "An die Luft",
    "An das Kühlsystem des Motors"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Wirbelstrombremsen geben die Wärme an die Luft ab, hydrodynamische Retarder ans Kühlsystem."
  },
  {
@@ -3375,21 +3375,21 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Welche Nachteile hat der elektrodynamische Retarder?",
   "answers": [
    "Belastet das Kühlsystem am stärksten",
+   "Schwer, hoher Strombedarf, Leistungsverlust bei Hitze",
    "Wirkt nur bei hoher Motordrehzahl",
-   "Sehr laut und langsames Ansprechen",
-   "Schwer, hoher Strombedarf, Leistungsverlust bei Hitze"
+   "Sehr laut und langsames Ansprechen"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Die Wirbelstrombremse spricht sehr schnell an, ist aber schwer, braucht viel Strom und verliert bei Hitze an Leistung."
  },
  {
   "title": "WÄRME",
   "text": "Wohin geben hydrodynamische Retarder die Bremswärme ab?",
   "answers": [
-   "An die Bremsscheiben",
+   "An die Batterie",
    "An das Kühlsystem",
    "Direkt an die Luft",
-   "An die Batterie"
+   "An die Bremsscheiben"
   ],
   "correct": 1,
   "explain": "Hydrodynamische Retarder geben die Wärme über das Kühlsystem ab."
@@ -3398,49 +3398,301 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "WELCHE HÄNGEN AB?",
   "text": "Welche Dauerbremsen hängen von der Fahrgeschwindigkeit ab?",
   "answers": [
-   "Motorbremsen und Primärretarder",
    "Nur die Dekompressionsbremse",
+   "Sekundärretarder und Wirbelstrombremse",
    "Auspuffklappe und KD-Bremse",
-   "Sekundärretarder und Wirbelstrombremse"
+   "Motorbremsen und Primärretarder"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Motorbremsen und Primärretarder hängen von der Motordrehzahl ab, Sekundär- und Wirbelstromretarder von der Fahrgeschwindigkeit."
  },
  {
   "title": "WIRKPRINZIP",
   "text": "Worüber bremsen hydrodynamische Retarder?",
   "answers": [
-   "Über Magnetfelder",
-   "Über Abgasgegendruck",
    "Über Flüssigkeitsreibung",
-   "Über Reibbeläge"
+   "Über Abgasgegendruck",
+   "Über Reibbeläge",
+   "Über Magnetfelder"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Hydrodynamische Retarder bremsen über Flüssigkeitsreibung, elektrodynamische über Magnetfelder."
  },
  {
   "title": "PFLICHT",
   "text": "Ab welcher zGm muss ein Kraftomnibus nach § 41 Abs. 15 StVZO eine Dauerbremse haben?",
   "answers": [
-   "Über 9 t",
-   "Über 5,5 t",
+   "Über 3,5 t",
    "Über 7,5 t",
-   "Über 3,5 t"
+   "Über 5,5 t",
+   "Über 9 t"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "§ 41 Abs. 15 StVZO: Kraftomnibusse über 5,5 t zGm müssen eine Dauerbremse haben."
  },
  {
   "title": "PFLICHT",
   "text": "Ab welcher zGm müssen andere Kraftfahrzeuge (z. B. Lkw) nach § 41 Abs. 15 StVZO eine Dauerbremse haben?",
   "answers": [
+   "Über 12 t",
    "Über 9 t",
    "Über 5,5 t",
-   "Über 7,5 t",
-   "Über 12 t"
+   "Über 7,5 t"
+  ],
+  "correct": 1,
+  "explain": "§ 41 Abs. 15 StVZO: andere Kraftfahrzeuge über 9 t zGm müssen eine Dauerbremse haben."
+ },
+ {
+  "title": "LUFTPRESSER",
+  "text": "Welche Kontrolle gehört zum Luftpresser?",
+  "answers": [
+   "Staubmanschetten prüfen",
+   "Granulatkartusche prüfen",
+   "Abschaltdruck am Typenschild ablesen",
+   "Luftfilterkontrollanzeige beobachten, Leitungsanschlüsse auf Dichtheit und Keilriemenspannung prüfen"
+  ],
+  "correct": 3,
+  "explain": "Luftpresser: Luftfilterkontrollanzeige beobachten, Anschlüsse auf Dichtheit prüfen, Keilriemenspannung prüfen, bei eigener Ölschmierung Ölstand prüfen, Fülldauer beachten."
+ },
+ {
+  "title": "LUFTPRESSER",
+  "text": "Wann muss beim Luftpresser der Ölstand geprüft werden?",
+  "answers": [
+   "Wenn er eine eigene Ölschmierung hat",
+   "Nur nach einem Kartuschenwechsel",
+   "Nie, er ist wartungsfrei",
+   "Nur im Winter"
   ],
   "correct": 0,
-  "explain": "§ 41 Abs. 15 StVZO: andere Kraftfahrzeuge über 9 t zGm müssen eine Dauerbremse haben."
+  "explain": "Bei eigener Ölschmierung des Luftpressers den Ölstand prüfen."
+ },
+ {
+  "title": "LUFTPRESSER",
+  "text": "Welche Pflege braucht der Luftpresser?",
+  "answers": [
+   "Mit Frostschutzmittel befüllen",
+   "Täglich entwässern",
+   "Bremseinstellung nachstellen",
+   "Luftfilter reinigen und Kühlrippen sauber halten"
+  ],
+  "correct": 3,
+  "explain": "Luftpresser: Luftfilter reinigen, Betriebsanleitung beachten, Kühlrippen sauber halten."
+ },
+ {
+  "title": "LUFTPRESSER",
+  "text": "Worauf achtet man beim Luftpresser zusätzlich während des Befüllens?",
+  "answers": [
+   "Auf die Farbe der Luft",
+   "Auf die Fülldauer",
+   "Auf die Außentemperatur",
+   "Auf die Belagstärke"
+  ],
+  "correct": 1,
+  "explain": "Beim Luftpresser die Fülldauer beachten."
+ },
+ {
+  "title": "DRUCKREGLER",
+  "text": "Was wird am Druckregler kontrolliert?",
+  "answers": [
+   "Der Flüssigkeitsstand",
+   "Die Keilriemenspannung",
+   "Der Abschaltdruck – ablesbar an den Zeigern des Druckmessers",
+   "Die Belagstärke"
+  ],
+  "correct": 2,
+  "explain": "Druckregler: Abschaltdruck kontrollieren, das Erreichen lässt sich am Druckmesser ablesen. Wartung: eventuell vorhandenen Filter reinigen."
+ },
+ {
+  "title": "FROSTSCHUTZ",
+  "text": "Was kontrolliert man an der Frostschutzeinrichtung?",
+  "answers": [
+   "Die Einstellung auf Sommer- oder Winterbetrieb und im Winter täglich den Flüssigkeitsstand",
+   "Das Typenschild",
+   "Nur einmal im Jahr den Füllstand",
+   "Die Keilriemenspannung"
+  ],
+  "correct": 0,
+  "explain": "Frostschutzeinrichtung: Sommer-/Winterbetrieb kontrollieren, Flüssigkeitsstand im Winter täglich prüfen."
+ },
+ {
+  "title": "FROSTSCHUTZ",
+  "text": "Was gilt für Frostschutzpumpen im Sommer?",
+  "answers": [
+   "Sie werden im Sommer entleert",
+   "Sie werden im Sommer ausgebaut",
+   "Sie werden im Sommer mit Wasser befüllt",
+   "Sie müssen auch im Sommer mit Frostschutzmittel befüllt sein"
+  ],
+  "correct": 3,
+  "explain": "Frostschutzpumpen müssen auch im Sommer mit Frostschutzmittel befüllt sein."
+ },
+ {
+  "title": "FROSTSCHUTZ",
+  "text": "Welches Frostschutzmittel darf verwendet werden?",
+  "answers": [
+   "Jedes Scheibenfrostschutzmittel",
+   "Spiritus",
+   "Nur vom Hersteller freigegebene Frostschutzmittel",
+   "Kühlerfrostschutz aus dem Motor"
+  ],
+  "correct": 2,
+  "explain": "Für die Frostschutzeinrichtung nur vom Hersteller freigegebene Frostschutzmittel verwenden."
+ },
+ {
+  "title": "LUFTTROCKNER",
+  "text": "Wie prüft man die Funktion des Lufttrockners?",
+  "answers": [
+   "Am Luftfilter des Luftpressers",
+   "Am Bremspedal",
+   "An den Entwässerungsventilen der Vorratsbehälter",
+   "An der Keilriemenspannung"
+  ],
+  "correct": 2,
+  "explain": "Die Funktion des Lufttrockners wird an den Entwässerungsventilen der Vorratsbehälter überprüft."
+ },
+ {
+  "title": "LUFTTROCKNER",
+  "text": "Was ist zu tun, wenn sich in den Vorratsbehältern Wasser angesammelt hat?",
+  "answers": [
+   "Nichts, das ist normal",
+   "Die Kartusche des Lufttrockners muss ausgetauscht werden",
+   "Frostschutzmittel nachfüllen",
+   "Den Druckregler nachstellen"
+  ],
+  "correct": 1,
+  "explain": "Hat sich Wasser angesammelt, muss die Kartusche ausgetauscht werden."
+ },
+ {
+  "title": "LUFTTROCKNER",
+  "text": "Wann werden die Granulatkartuschen des Lufttrockners getauscht?",
+  "answers": [
+   "Einmal im Monat",
+   "Nach Vorschriften des Herstellers",
+   "Nie",
+   "Nur wenn sie sichtbar kaputt sind"
+  ],
+  "correct": 1,
+  "explain": "Wartung Lufttrockner: Austausch der Granulatkartuschen nach Vorschrift des Herstellers, Betriebsanleitung beachten."
+ },
+ {
+  "title": "LUFTBEHÄLTER",
+  "text": "Worauf werden Luftbehälter bei der Sichtprüfung kontrolliert?",
+  "answers": [
+   "Auf Verformung, Risse, Korrosion und das Vorhandensein des Typenschildes",
+   "Auf den Ölstand",
+   "Auf die Keilriemenspannung",
+   "Auf die Belagstärke"
+  ],
+  "correct": 0,
+  "explain": "Luftbehälter: Sichtprüfung auf Verformung, Risse, Korrosion und Typenschild."
+ },
+ {
+  "title": "LUFTBEHÄLTER",
+  "text": "Welche Pflege brauchen Luftbehälter?",
+  "answers": [
+   "Nachstellen lassen",
+   "Regelmäßig entwässern (wenn möglich)",
+   "Mit Frostschutz befüllen",
+   "Luftfilter reinigen"
+  ],
+  "correct": 1,
+  "explain": "Luftbehälter regelmäßig entwässern, wenn möglich."
+ },
+ {
+  "title": "MEMBRANZYLINDER",
+  "text": "Was haben Fahrzeuge mit Membran-Bremszylinder meist?",
+  "answers": [
+   "Automatische Gestängesteller",
+   "Keine Staubmanschetten",
+   "Eine Auflaufbremse",
+   "Hydraulische Bremsen"
+  ],
+  "correct": 0,
+  "explain": "Fahrzeuge mit Membran-Bremszylinder haben meist automatische Gestängesteller."
+ },
+ {
+  "title": "MEMBRANZYLINDER",
+  "text": "Welche Kontrollen sind bei Membran-Bremszylindern besonders wichtig?",
+  "answers": [
+   "Ölstand und Luftfilter prüfen",
+   "Frostschutz im Sommer ablassen",
+   "Typenschild erneuern",
+   "Belagstärke kontrollieren und Staubmanschetten prüfen"
+  ],
+  "correct": 3,
+  "explain": "Membran-Bremszylinder: Kontrolle der Belagstärke besonders wichtig, Staubmanschetten überprüfen."
+ },
+ {
+  "title": "NACHSTELLEN",
+  "text": "Was ist zu tun, wenn keine automatischen Gestängesteller vorhanden sind?",
+  "answers": [
+   "Den Abschaltdruck erhöhen",
+   "Die Bremsbeläge monatlich tauschen",
+   "Die Bremseinstellung regelmäßig nachstellen lassen",
+   "Nichts, die Bremse stellt sich selbst ein"
+  ],
+  "correct": 2,
+  "explain": "Ohne automatische Gestängesteller die Bremseinstellung regelmäßig nachstellen lassen."
+ },
+ {
+  "title": "BREMSBELÄGE",
+  "text": "Wie dick müssen Bremsbeläge an der Druckluftbremse mindestens sein?",
+  "answers": [
+   "3 mm",
+   "8 mm",
+   "1,6 mm",
+   "5 mm"
+  ],
+  "correct": 3,
+  "explain": "Die Stärke der Bremsbeläge regelmäßig an allen Rädern kontrollieren. Mindeststärke 5 mm."
+ },
+ {
+  "title": "BREMSBELÄGE",
+  "text": "Was ist zu tun, wenn die Mindestbelagstärke erreicht ist?",
+  "answers": [
+   "Bei der nächsten HU erneuern",
+   "Nur an der Vorderachse erneuern",
+   "Die Bremsbeläge sofort erneuern",
+   "Nachstellen reicht"
+  ],
+  "correct": 2,
+  "explain": "Bei Erreichen der Mindestbelagstärke müssen die Beläge sofort erneuert werden."
+ },
+ {
+  "title": "DICHTHEIT",
+  "text": "Wie läuft die Dichtheitsprüfung der Druckluftbeschaffungsanlage ab?",
+  "answers": [
+   "Motor laufen lassen, bis der Druckregler abschaltet, dann Motor abstellen und Druckabfall beobachten",
+   "Nur das Typenschild prüfen",
+   "Bremspedal treten und Motor laufen lassen",
+   "Luftbehälter entleeren und neu befüllen"
+  ],
+  "correct": 0,
+  "explain": "Dichtheitsprüfung: Motor laufen lassen bis der Druckregler abschaltet, Motor abstellen, Druckabfall beobachten."
+ },
+ {
+  "title": "DICHTHEIT",
+  "text": "Wann gilt die Druckluftbeschaffungsanlage als dicht?",
+  "answers": [
+   "Wenn der Druckabfall in 10 Minuten nicht mehr als 0,1 bar beträgt",
+   "Wenn der Druckabfall in 3 Minuten höchstens 0,3 bar beträgt",
+   "Wenn der Druck in 1 Minute nicht fällt",
+   "Wenn der Druckabfall in 10 Minuten höchstens 1 bar beträgt"
+  ],
+  "correct": 0,
+  "explain": "Druckluftbeschaffungsanlage: dicht bei höchstens 0,1 bar Druckabfall in 10 Minuten."
+ },
+ {
+  "title": "BETRIEBSBREMSE",
+  "text": "Wie viel Druckabfall ist bei der Dichtheitsprüfung der Betriebsbremsanlage zulässig?",
+  "answers": [
+   "Gar keiner",
+   "Bei Teilbremsung (ca. ½ Pedalweg) höchstens 0,3 bar nach 3 Minuten",
+   "Bei Vollbremsung höchstens 0,1 bar nach 10 Minuten",
+   "Bei Teilbremsung höchstens 1 bar nach 1 Minute"
+  ],
+  "correct": 1,
+  "explain": "Betriebsbremsanlage: Bei einer Teilbremsung (ca. ½ Pedalweg) darf der Druckabfall nach 3 Minuten höchstens 0,3 bar betragen."
  }
 ];
 
