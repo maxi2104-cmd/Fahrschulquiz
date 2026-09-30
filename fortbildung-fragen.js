@@ -3080,6 +3080,369 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
  }
 ];
 
+// Technik: Dauerbremsanlagen.
+export const FB_TECHNIK_QUESTIONS = [
+ {
+  "title": "DAUERBREMSE?",
+  "text": "Wozu dienen Dauerbremsen am Lkw?",
+  "answers": [
+   "Zum Festhalten des Fahrzeugs beim Parken",
+   "Nur für Notbremsungen",
+   "Zum verschleißfreien Bremsen und zur Entlastung der Betriebsbremse, z. B. bei langen Gefällen",
+   "Zum Bremsen des Anhängers beim Abkuppeln"
+  ],
+  "correct": 2,
+  "explain": "Dauerbremsen arbeiten verschleißfrei und entlasten die Betriebsbremse bei langen Bergabfahrten."
+ },
+ {
+  "title": "DAUERBREMSE?",
+  "text": "Was soll eine Dauerbremse bei langen Bergabfahrten vor allem verhindern?",
+  "answers": [
+   "Überhitzung der Betriebsbremse und Fading",
+   "Einfrieren der Druckluftanlage",
+   "Zu hohen Kraftstoffverbrauch",
+   "Blockieren der Räder"
+  ],
+  "correct": 0,
+  "explain": "Wird nur mit der Betriebsbremse gebremst, überhitzt sie und verliert Wirkung (Fading)."
+ },
+ {
+  "title": "ZWEI GRUPPEN",
+  "text": "In welche zwei Gruppen teilt man Dauerbremsen ein?",
+  "answers": [
+   "Trommel- und Scheibenbremsen",
+   "Einkreis- und Zweikreisbremsen",
+   "Motorbremsen und Retarder",
+   "Betriebs- und Feststellbremsen"
+  ],
+  "correct": 2,
+  "explain": "Motorbremsen wirken über den Motor, Retarder sind eigene Bauteile im Antriebsstrang."
+ },
+ {
+  "title": "MOTORBREMSE",
+  "text": "Wovon hängt die Wirkung einer Motorbremse ab?",
+  "answers": [
+   "Von der Beladung des Anhängers",
+   "Von der Fahrgeschwindigkeit",
+   "Von der Motordrehzahl",
+   "Von der Außentemperatur"
+  ],
+  "correct": 2,
+  "explain": "Motorbremsen wirken am besten bei hoher Motordrehzahl."
+ },
+ {
+  "title": "MOTORBREMSE",
+  "text": "Was muss der Fahrer beachten, damit die Motorbremse gut wirkt?",
+  "answers": [
+   "Die Feststellbremse leicht anziehen",
+   "Rechtzeitig herunterschalten, damit die Drehzahl hoch ist",
+   "Möglichst hoch schalten",
+   "Die Kupplung treten"
+  ],
+  "correct": 1,
+  "explain": "Weil Motorbremsen drehzahlabhängig sind, muss man rechtzeitig herunterschalten."
+ },
+ {
+  "title": "AUSPUFFKLAPPE",
+  "text": "Wie funktioniert die Auspuffklappenbremse (Motorstaubremse)?",
+  "answers": [
+   "Eine Klappe im Abgasstrang schließt, der Motor arbeitet gegen den Abgasgegendruck",
+   "Das Auslassventil öffnet kurz vor dem oberen Totpunkt",
+   "Elektromagnete erzeugen Wirbelströme",
+   "Öl wird in einen Rotor gepumpt"
+  ],
+  "correct": 0,
+  "explain": "Auspuffklappenbremse: Klappe im Abgasstrang, der Motor muss gegen den Gegendruck arbeiten."
+ },
+ {
+  "title": "SCHWÄCHSTE?",
+  "text": "Welche Dauerbremse hat die geringste Bremsleistung, ist aber einfach und günstig?",
+  "answers": [
+   "Konstantdrosselbremse",
+   "Dekompressionsbremse",
+   "Sekundärretarder",
+   "Auspuffklappenbremse"
+  ],
+  "correct": 3,
+  "explain": "Die Auspuffklappenbremse allein hat die geringste Bremsleistung."
+ },
+ {
+  "title": "KD-BREMSE",
+  "text": "Wie funktioniert die Konstantdrosselbremse (KD-Bremse)?",
+  "answers": [
+   "Kühlmittel wird in einen Rotor geleitet",
+   "Ein zusätzliches Ventil im Zylinderkopf lässt verdichtete Luft über eine Drossel ab",
+   "Eine Klappe im Abgasstrang schließt allein",
+   "Wirbelströme bremsen die Gelenkwelle"
+  ],
+  "correct": 1,
+  "explain": "KD-Bremse: zusätzliches Ventil im Zylinderkopf, meist kombiniert mit der Auspuffklappe."
+ },
+ {
+  "title": "KD-BREMSE",
+  "text": "Bei welchem Hersteller ist die Konstantdrosselbremse typisch?",
+  "answers": [
+   "MAN",
+   "Mercedes-Benz",
+   "Telma",
+   "Voith"
+  ],
+  "correct": 1,
+  "explain": "Die KD-Bremse ist typisch für Mercedes-Benz."
+ },
+ {
+  "title": "DEKOMPRESSION",
+  "text": "Wie funktioniert eine Dekompressionsbremse (z. B. „Jake Brake“)?",
+  "answers": [
+   "Öl bremst einen Rotor im Getriebe",
+   "Elektromagnete bremsen Rotorscheiben",
+   "Das Auslassventil öffnet kurz vor dem oberen Totpunkt, die Verdichtungsarbeit geht verloren",
+   "Eine Klappe im Abgasstrang wird geschlossen"
+  ],
+  "correct": 2,
+  "explain": "Die verdichtete Luft drückt den Kolben nicht wieder nach unten, die Energie geht verloren."
+ },
+ {
+  "title": "DEKOMPRESSION",
+  "text": "Welcher Nachteil wird der Dekompressionsbremse zugeschrieben?",
+  "answers": [
+   "Sie braucht sehr viel Strom",
+   "Sie belastet das Kühlsystem am stärksten",
+   "Sie ist laut",
+   "Sie hat kaum Bremsleistung"
+  ],
+  "correct": 2,
+  "explain": "Die Dekompressionsbremse hat eine hohe Bremsleistung, ist aber laut."
+ },
+ {
+  "title": "EVB",
+  "text": "Wie funktioniert die Abgasventilbremse (EVB, z. B. bei MAN)?",
+  "answers": [
+   "Wirbelströme entstehen in Rotorscheiben",
+   "Das Auslassventil wird durch den Abgasgegendruck leicht offen gehalten, zusammen mit einer Auspuffklappe",
+   "Nur eine Klappe im Abgasstrang schließt",
+   "Kühlmittel dient als Arbeitsmedium"
+  ],
+  "correct": 1,
+  "explain": "EVB (Exhaust Valve Brake): Weiterentwicklung der Staubremse mit mehr Leistung."
+ },
+ {
+  "title": "NICHT MOTORBREMSE",
+  "text": "Welche Dauerbremse gehört NICHT zu den Motorbremsen?",
+  "answers": [
+   "Auspuffklappenbremse",
+   "Konstantdrosselbremse",
+   "Dekompressionsbremse",
+   "Sekundärretarder"
+  ],
+  "correct": 3,
+  "explain": "Retarder sind eigene Bauteile im Antriebsstrang, keine Motorbremsen."
+ },
+ {
+  "title": "PRIMÄRRETARDER",
+  "text": "Wo sitzt ein Primärretarder?",
+  "answers": [
+   "Im Abgasstrang",
+   "Hinter dem Getriebe an der Gelenkwelle",
+   "An der Hinterachse des Anhängers",
+   "Vor dem Getriebe, auf der Motorseite"
+  ],
+  "correct": 3,
+  "explain": "Primärretarder: vor dem Getriebe, wirkt abhängig von der Motordrehzahl."
+ },
+ {
+  "title": "PRIMÄRRETARDER",
+  "text": "Wann bremst ein Primärretarder besonders gut?",
+  "answers": [
+   "Nur im Stand",
+   "Nur bei hohem Tempo auf der Autobahn",
+   "Nur bei ausgekuppeltem Motor",
+   "Schon bei niedriger Geschwindigkeit, z. B. im Verteilerverkehr"
+  ],
+  "correct": 3,
+  "explain": "Weil er von der Motordrehzahl abhängt, wirkt er auch bei langsamer Fahrt gut."
+ },
+ {
+  "title": "SEKUNDÄRRETARDER",
+  "text": "Wo sitzt ein Sekundärretarder?",
+  "answers": [
+   "Im Zylinderkopf",
+   "Im Abgasstrang",
+   "Vor dem Getriebe am Motor",
+   "Hinter dem Getriebe an der Gelenkwelle"
+  ],
+  "correct": 3,
+  "explain": "Sekundärretarder: hinter dem Getriebe an der Gelenkwelle."
+ },
+ {
+  "title": "SEKUNDÄRRETARDER",
+  "text": "Wovon hängt die Wirkung eines Sekundärretarders ab?",
+  "answers": [
+   "Vom eingelegten Gang allein",
+   "Von der Fahrgeschwindigkeit",
+   "Von der Batteriespannung",
+   "Von der Motordrehzahl"
+  ],
+  "correct": 1,
+  "explain": "Sekundärretarder wirken abhängig von der Fahrgeschwindigkeit: stark bei hohem Tempo, schwächer bei langsamer Fahrt."
+ },
+ {
+  "title": "SEKUNDÄRRETARDER",
+  "text": "Wann lässt die Wirkung eines Sekundärretarders nach?",
+  "answers": [
+   "Bei hohem Tempo",
+   "Bei langsamer Fahrt",
+   "Bei kaltem Motor",
+   "Bei hoher Motordrehzahl"
+  ],
+  "correct": 1,
+  "explain": "Der Sekundärretarder ist im Fernverkehr bei hohem Tempo stark, bei langsamer Fahrt lässt er nach."
+ },
+ {
+  "title": "INTARDER",
+  "text": "Was für eine Dauerbremse ist ein Intarder?",
+  "answers": [
+   "Ein hydrodynamischer Sekundärretarder",
+   "Eine Dekompressionsbremse",
+   "Eine Wirbelstrombremse",
+   "Eine Auspuffklappenbremse"
+  ],
+  "correct": 0,
+  "explain": "Der Intarder ist ein hydrodynamischer Sekundärretarder hinter dem Getriebe."
+ },
+ {
+  "title": "ARBEITSMEDIUM",
+  "text": "Welches Arbeitsmedium nutzt ein klassischer hydrodynamischer Sekundärretarder?",
+  "answers": [
+   "Öl, das über einen Wärmetauscher gekühlt wird",
+   "Abgas",
+   "Druckluft",
+   "Elektrischen Strom"
+  ],
+  "correct": 0,
+  "explain": "Hydrodynamische Retarder bremsen über Flüssigkeitsreibung, beim Sekundärretarder mit Öl."
+ },
+ {
+  "title": "WASSERRETARDER",
+  "text": "Was ist das Besondere am Wasserretarder (z. B. Aquatarder)?",
+  "answers": [
+   "Er nutzt direkt das Kühlmittel des Motors als Arbeitsmedium",
+   "Er braucht einen eigenen Ölkreislauf",
+   "Er sitzt im Abgasstrang",
+   "Er arbeitet mit Elektromagneten"
+  ],
+  "correct": 0,
+  "explain": "Der Wasserretarder ist hydrodynamisch und nutzt das Kühlmittel statt Öl."
+ },
+ {
+  "title": "WASSERRETARDER",
+  "text": "Welche Vor- und Nachteile hat der Wasserretarder?",
+  "answers": [
+   "Günstig, hat aber die geringste Bremsleistung",
+   "Sehr leise, braucht aber viel Strom",
+   "Kein eigener Ölkreislauf und leichter, belastet aber das Kühlsystem stark",
+   "Schnelles Ansprechen, aber sehr schwer"
+  ],
+  "correct": 2,
+  "explain": "Der Wasserretarder spart den Ölkreislauf, das Kühlsystem muss aber die Bremswärme aufnehmen."
+ },
+ {
+  "title": "WIRBELSTROM",
+  "text": "Wie funktioniert ein elektrodynamischer Retarder (Wirbelstrombremse, z. B. Telma)?",
+  "answers": [
+   "Elektromagnete erzeugen Wirbelströme in Rotorscheiben auf der Gelenkwelle",
+   "Öl wird in einen Rotor gepumpt",
+   "Das Auslassventil wird offen gehalten",
+   "Eine Klappe schließt den Abgasstrang"
+  ],
+  "correct": 0,
+  "explain": "Elektrodynamischer Retarder: Magnetfelder bremsen die Rotorscheiben über Wirbelströme."
+ },
+ {
+  "title": "WIRBELSTROM",
+  "text": "Wohin gibt eine Wirbelstrombremse die Bremswärme ab?",
+  "answers": [
+   "An die Luft",
+   "An die Druckluftanlage",
+   "An das Getriebeöl",
+   "An das Kühlsystem des Motors"
+  ],
+  "correct": 0,
+  "explain": "Wirbelstrombremsen geben die Wärme an die Luft ab, hydrodynamische Retarder ans Kühlsystem."
+ },
+ {
+  "title": "WIRBELSTROM",
+  "text": "Welche Nachteile hat der elektrodynamische Retarder?",
+  "answers": [
+   "Belastet das Kühlsystem am stärksten",
+   "Wirkt nur bei hoher Motordrehzahl",
+   "Sehr laut und langsames Ansprechen",
+   "Schwer, hoher Strombedarf, Leistungsverlust bei Hitze"
+  ],
+  "correct": 3,
+  "explain": "Die Wirbelstrombremse spricht sehr schnell an, ist aber schwer, braucht viel Strom und verliert bei Hitze an Leistung."
+ },
+ {
+  "title": "WÄRME",
+  "text": "Wohin geben hydrodynamische Retarder die Bremswärme ab?",
+  "answers": [
+   "An die Bremsscheiben",
+   "An das Kühlsystem",
+   "Direkt an die Luft",
+   "An die Batterie"
+  ],
+  "correct": 1,
+  "explain": "Hydrodynamische Retarder geben die Wärme über das Kühlsystem ab."
+ },
+ {
+  "title": "WELCHE HÄNGEN AB?",
+  "text": "Welche Dauerbremsen hängen von der Fahrgeschwindigkeit ab?",
+  "answers": [
+   "Motorbremsen und Primärretarder",
+   "Nur die Dekompressionsbremse",
+   "Auspuffklappe und KD-Bremse",
+   "Sekundärretarder und Wirbelstrombremse"
+  ],
+  "correct": 3,
+  "explain": "Motorbremsen und Primärretarder hängen von der Motordrehzahl ab, Sekundär- und Wirbelstromretarder von der Fahrgeschwindigkeit."
+ },
+ {
+  "title": "WIRKPRINZIP",
+  "text": "Worüber bremsen hydrodynamische Retarder?",
+  "answers": [
+   "Über Magnetfelder",
+   "Über Abgasgegendruck",
+   "Über Flüssigkeitsreibung",
+   "Über Reibbeläge"
+  ],
+  "correct": 2,
+  "explain": "Hydrodynamische Retarder bremsen über Flüssigkeitsreibung, elektrodynamische über Magnetfelder."
+ },
+ {
+  "title": "PFLICHT",
+  "text": "Ab welcher zGm muss ein Kraftomnibus nach § 41 Abs. 15 StVZO eine Dauerbremse haben?",
+  "answers": [
+   "Über 9 t",
+   "Über 5,5 t",
+   "Über 7,5 t",
+   "Über 3,5 t"
+  ],
+  "correct": 1,
+  "explain": "§ 41 Abs. 15 StVZO: Kraftomnibusse über 5,5 t zGm müssen eine Dauerbremse haben."
+ },
+ {
+  "title": "PFLICHT",
+  "text": "Ab welcher zGm müssen andere Kraftfahrzeuge (z. B. Lkw) nach § 41 Abs. 15 StVZO eine Dauerbremse haben?",
+  "answers": [
+   "Über 9 t",
+   "Über 5,5 t",
+   "Über 7,5 t",
+   "Über 12 t"
+  ],
+  "correct": 0,
+  "explain": "§ 41 Abs. 15 StVZO: andere Kraftfahrzeuge über 9 t zGm müssen eine Dauerbremse haben."
+ }
+];
+
 // In Vorbereitung – Fragen folgen:
 export const VERKEHRSRECHT_QUESTIONS = [];
-export const FB_TECHNIK_QUESTIONS = [];
