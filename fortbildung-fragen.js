@@ -1810,44 +1810,44 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "WELCHE ANLAGE?",
   "text": "In welcher Anlage der FeV stehen die Anforderungen an die Prüfungsfahrzeuge?",
   "answers": [
-   "Anlage 7",
+   "Anlage 9",
    "Anlage 3",
    "Anlage 1",
-   "Anlage 9"
+   "Anlage 7"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Die Prüfungsfahrzeuge sind in Anlage 7 FeV geregelt."
  },
  {
   "title": "KLASSE C1",
   "text": "Welche zulässige Gesamtmasse dürfen Kraftfahrzeuge der Klasse C1 haben?",
   "answers": [
-   "Bis 3,5 t",
-   "Über 3,5 t ohne Obergrenze",
+   "Über 3,5 t bis 7,5 t",
    "Über 7,5 t bis 12 t",
-   "Über 3,5 t bis 7,5 t"
+   "Bis 3,5 t",
+   "Über 3,5 t ohne Obergrenze"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "C1: Kraftfahrzeuge über 3,5 t zGm bis 7,5 t zGm."
  },
  {
   "title": "PERSONEN?",
   "text": "Für wie viele Personen außer dem Fahrer dürfen Fahrzeuge der Klassen C1 und C ausgelegt und gebaut sein?",
   "answers": [
-   "Für drei",
-   "Für acht",
+   "Für sechzehn",
    "Für neun",
-   "Für sechzehn"
+   "Für acht",
+   "Für drei"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "C1 und C: für acht Personen außer dem Fahrer ausgelegt und gebaut."
  },
  {
   "title": "ANHÄNGER?",
   "text": "Welchen Anhänger darf man mit Klasse C1 mitführen?",
   "answers": [
-   "Jeden Anhänger bis 12.000 kg Kombination",
    "Bis 3.500 kg zGm",
+   "Jeden Anhänger bis 12.000 kg Kombination",
    "Bis 750 kg zGm",
    "Bis 1.300 kg zGm"
   ],
@@ -1858,105 +1858,105 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "AUSGENOMMEN?",
   "text": "Welche Fahrzeugklassen sind bei den Kraftfahrzeugen der Klassen C1 und C ausgenommen?",
   "answers": [
-   "C1E, CE",
    "B, BE",
    "AM, A1, A2, A, D1, D",
-   "T, L"
+   "T, L",
+   "C1E, CE"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "C1 und C: Kraftfahrzeuge (AM, A1, A2, A, D1, D ausgenommen)."
  },
  {
   "title": "MINDESTALTER?",
   "text": "Wie hoch ist das Mindestalter für Klasse C1?",
   "answers": [
-   "18 Jahre",
    "24 Jahre",
-   "17 Jahre",
-   "21 Jahre"
+   "18 Jahre",
+   "21 Jahre",
+   "17 Jahre"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Mindestalter C1: 18."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C1",
   "text": "Wie lang muss das Prüfungsfahrzeug der Klasse C1 mindestens sein?",
   "answers": [
-   "5 m",
-   "8 m",
    "9 m",
-   "7 m"
+   "5 m",
+   "7 m",
+   "8 m"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Prüfungsfahrzeug C1: Länge mindestens 5 m."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C1",
   "text": "Welche zulässige Gesamtmasse muss das Prüfungsfahrzeug der Klasse C1 mindestens haben?",
   "answers": [
-   "12.000 kg",
    "5.500 kg",
-   "3.500 kg",
-   "7.500 kg"
+   "7.500 kg",
+   "12.000 kg",
+   "3.500 kg"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Prüfungsfahrzeug C1: zGm mindestens 5.500 kg."
  },
  {
   "title": "TEMPO?",
   "text": "Welche bauartbedingte Höchstgeschwindigkeit müssen die Prüfungsfahrzeuge der Klassen C1, C1E, C und CE mindestens erreichen?",
   "answers": [
-   "60 km/h",
-   "90 km/h",
+   "80 km/h",
    "100 km/h",
-   "80 km/h"
+   "60 km/h",
+   "90 km/h"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Für C1, C1E, C und CE gilt jeweils: bbH mindestens 80 km/h."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C1",
   "text": "Welche Ausstattung muss das Prüfungsfahrzeug der Klasse C1 haben?",
   "answers": [
-   "Mindestbreite 2,40 m",
    "ABS und Fahrtenschreiber",
-   "Nur ABS",
-   "Zweileitungsbremsanlage und Anhängerkupplung"
+   "Zweileitungsbremsanlage und Anhängerkupplung",
+   "Mindestbreite 2,40 m",
+   "Nur ABS"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Prüfungsfahrzeug C1: mit ABS und mit Fahrtenschreiber."
  },
  {
   "title": "AUFBAU?",
   "text": "Wie muss der Aufbau der Prüfungsfahrzeuge der Lkw-Klassen sein?",
   "answers": [
-   "Offene Pritsche ohne Bordwände",
-   "Kastenförmig oder vergleichbar, mindestens so breit und so hoch wie das Fahrerhaus",
+   "Beliebig, Hauptsache mit Plane",
    "Mindestens doppelt so hoch wie das Fahrerhaus",
-   "Beliebig, Hauptsache mit Plane"
+   "Kastenförmig oder vergleichbar, mindestens so breit und so hoch wie das Fahrerhaus",
+   "Offene Pritsche ohne Bordwände"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Aufbau kastenförmig oder vergleichbar, mindestens so breit und so hoch wie das Fahrerhaus."
  },
  {
   "title": "SICHT NACH HINTEN?",
   "text": "Wie darf beim Prüfungsfahrzeug die Sicht nach hinten möglich sein?",
   "answers": [
-   "Nur mit Einweiser",
    "Durch Umdrehen über die Schulter",
-   "Nur über die Außenspiegel oder andere zugelassene Einrichtungen für indirekte Sicht",
-   "Durch eine Heckscheibe"
+   "Nur mit Einweiser",
+   "Durch eine Heckscheibe",
+   "Nur über die Außenspiegel oder andere zugelassene Einrichtungen für indirekte Sicht"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Sicht nach hinten nur über die Außenspiegel oder andere zugelassene Einrichtungen für indirekte Sicht."
  },
  {
   "title": "KLASSE C1E",
   "text": "Wie schwer darf die Kombination aus einem Fahrzeug der Klasse C1 und einem Anhänger über 750 kg mit Klasse C1E höchstens sein?",
   "answers": [
+   "20.000 kg",
    "8.250 kg",
    "7.500 kg",
-   "20.000 kg",
    "12.000 kg"
   ],
   "correct": 3,
@@ -1966,34 +1966,34 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "WELCHE KLASSE?",
   "text": "Ein Fahrzeug der Klasse B zieht einen Anhänger über 3.500 kg, die Kombination liegt unter 12.000 kg. Welche Klasse ist nötig?",
   "answers": [
-   "CE",
-   "C1E",
+   "BE",
    "C1",
-   "BE"
+   "CE",
+   "C1E"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "C1E umfasst auch Kraftfahrzeuge der Klasse B mit Anhänger oder Sattelanhänger über 3.500 kg, Kombination bis max. 12.000 kg."
  },
  {
   "title": "MINDESTALTER?",
   "text": "Wie hoch ist das Mindestalter für Klasse C1E?",
   "answers": [
-   "17 Jahre",
    "21 Jahre",
-   "18 Jahre",
-   "24 Jahre"
+   "24 Jahre",
+   "17 Jahre",
+   "18 Jahre"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Mindestalter C1E: 18."
  },
  {
   "title": "EINGESCHLOSSEN?",
   "text": "Welche Klasse ist in C1E eingeschlossen?",
   "answers": [
-   "CE",
-   "BE",
    "T",
-   "C1"
+   "BE",
+   "C1",
+   "CE"
   ],
   "correct": 1,
   "explain": "In C1E eingeschlossen: BE (D1E, wenn D1 bereits vorhanden ist oder später erteilt wird)."
@@ -2014,24 +2014,24 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "PRÜFUNGSFAHRZEUG C1E",
   "text": "Wie lang muss die Fahrzeugkombination beim Prüfungsfahrzeug der Klasse C1E mindestens sein?",
   "answers": [
-   "7,50 m",
    "8 m",
-   "9 m",
-   "14 m"
+   "14 m",
+   "7,50 m",
+   "9 m"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Prüfungsfahrzeug C1E: Länge der Fahrzeugkombination mindestens 9 m."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C1E",
   "text": "Welche zulässige Gesamtmasse muss der Anhänger des C1E-Prüfungsfahrzeugs mindestens haben?",
   "answers": [
-   "3.500 kg",
-   "750 kg",
    "800 kg",
-   "1.300 kg"
+   "1.300 kg",
+   "3.500 kg",
+   "750 kg"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Prüfungsfahrzeug C1E: zGm des Anhängers mindestens 1.300 kg."
  },
  {
@@ -2050,34 +2050,34 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "PRÜFUNGSFAHRZEUG C1E",
   "text": "Welche Bremse muss der Anhänger des C1E-Prüfungsfahrzeugs haben?",
   "answers": [
-   "Nur eine Feststellbremse",
-   "Keine, die Zugmaschine bremst mit",
    "Eine eigene Bremsanlage",
+   "Keine, die Zugmaschine bremst mit",
+   "Nur eine Feststellbremse",
    "Eine Auflaufbremse ist verboten, sonst egal"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Prüfungsfahrzeug C1E: Anhänger mit eigener Bremsanlage."
  },
  {
   "title": "PRÜFUNGSKOMBI C1E",
   "text": "Woraus besteht das Prüfungsfahrzeug der Klasse C1E?",
   "answers": [
+   "Aus einem Prüfungsfahrzeug der Klasse C1 und einem Anhänger",
    "Aus einer Sattelzugmaschine und einem Sattelanhänger",
    "Aus einem Prüfungsfahrzeug der Klasse C und einem Anhänger",
-   "Aus einem Prüfungsfahrzeug der Klasse C1 und einem Anhänger",
    "Aus einem Pkw der Klasse B und einem Anhänger"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "C1E: Fahrzeugkombination aus einem Prüfungsfahrzeug der Klasse C1 und einem Anhänger."
  },
  {
   "title": "KLASSE C",
   "text": "Welche zulässige Gesamtmasse haben Kraftfahrzeuge der Klasse C?",
   "answers": [
-   "Über 3,5 t bis 7,5 t",
    "Über 7,5 t bis 12 t",
+   "Bis 12 t",
    "Über 3,5 t",
-   "Bis 12 t"
+   "Über 3,5 t bis 7,5 t"
   ],
   "correct": 2,
   "explain": "C: Kraftfahrzeuge über 3,5 t zGm, ohne Obergrenze."
@@ -2086,21 +2086,21 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "ANHÄNGER?",
   "text": "Welchen Anhänger darf man mit Klasse C mitführen?",
   "answers": [
-   "Nur Sattelanhänger",
    "Bis 750 kg zGm",
    "Über 750 kg zGm",
+   "Nur Sattelanhänger",
    "Bis 3.500 kg zGm"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "C: auch mit Anhänger bis 750 kg zGm. Darüber braucht man CE."
  },
  {
   "title": "MINDESTALTER?",
   "text": "Wie hoch ist das Mindestalter für Klasse C?",
   "answers": [
-   "17 Jahre im begleiteten Fahren",
-   "18 Jahre ohne Ausnahme",
    "24 Jahre",
+   "18 Jahre ohne Ausnahme",
+   "17 Jahre im begleiteten Fahren",
    "21 Jahre, unter bestimmten Voraussetzungen 18"
   ],
   "correct": 3,
@@ -2110,82 +2110,82 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "PARAGRAF?",
   "text": "Wo stehen die Voraussetzungen, unter denen Klasse C und CE schon mit 18 erteilt werden können?",
   "answers": [
-   "§ 10 Nr. 7 FeV",
    "Anlage 7 FeV",
-   "§ 10 Nr. 1 FeV",
-   "§ 6 Abs. 2 FeV"
+   "§ 6 Abs. 2 FeV",
+   "§ 10 Nr. 7 FeV",
+   "§ 10 Nr. 1 FeV"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Mindestalter C und CE: 21, 18 unter bestimmten Voraussetzungen nach § 10 Nr. 7 FeV."
  },
  {
   "title": "EINGESCHLOSSEN?",
   "text": "Welche Klasse ist in Klasse C eingeschlossen?",
   "answers": [
-   "T",
    "C1",
+   "BE",
    "C1E",
-   "BE"
+   "T"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "In C eingeschlossen: C1."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C",
   "text": "Wie lang muss das Prüfungsfahrzeug der Klasse C mindestens sein?",
   "answers": [
-   "9 m",
-   "14 m",
    "8 m",
-   "5 m"
+   "14 m",
+   "5 m",
+   "9 m"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Prüfungsfahrzeug C: Länge mindestens 8 m."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C",
   "text": "Welche Mindestbreite muss das Prüfungsfahrzeug der Klasse C haben?",
   "answers": [
-   "2,55 m",
    "2,00 m",
    "2,40 m",
+   "2,55 m",
    "2,20 m"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Prüfungsfahrzeug C: Mindestbreite 2,40 m."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C",
   "text": "Welche zulässige Gesamtmasse muss das Prüfungsfahrzeug der Klasse C mindestens haben?",
   "answers": [
-   "7.500 kg",
-   "20.000 kg",
    "10.000 kg",
-   "12.000 kg"
+   "12.000 kg",
+   "20.000 kg",
+   "7.500 kg"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Prüfungsfahrzeug C: zGm mindestens 12.000 kg."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG C",
   "text": "Welches tatsächliche Gewicht muss das Prüfungsfahrzeug der Klasse C mindestens haben?",
   "answers": [
-   "8.000 kg",
-   "15.000 kg",
    "10.000 kg",
-   "12.000 kg"
+   "12.000 kg",
+   "8.000 kg",
+   "15.000 kg"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Prüfungsfahrzeug C: tatsächliches Gewicht mindestens 10.000 kg."
  },
  {
   "title": "KLASSE CE",
   "text": "Was darf man mit Klasse CE fahren?",
   "answers": [
-   "Kraftfahrzeuge der Klasse C1 mit Anhänger bis 12.000 kg Kombination",
+   "Nur Sattelzüge, keine Gliederzüge",
    "Kraftfahrzeuge der Klasse C mit Anhänger oder Sattelanhänger über 750 kg zGm",
    "Kraftfahrzeuge der Klasse B mit Anhänger über 3.500 kg",
-   "Nur Sattelzüge, keine Gliederzüge"
+   "Kraftfahrzeuge der Klasse C1 mit Anhänger bis 12.000 kg Kombination"
   ],
   "correct": 1,
   "explain": "CE: Kraftfahrzeuge der Klasse C mit Anhänger oder Sattelanhänger über 750 kg zGm."
@@ -2206,36 +2206,36 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "EINGESCHLOSSEN?",
   "text": "Welche Klassen sind in CE eingeschlossen?",
   "answers": [
-   "C1, C1E und T",
+   "D und DE",
    "Nur C1",
    "C1 und BE",
-   "D und DE"
+   "C1, C1E und T"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "In CE eingeschlossen: C1, C1E, T (DE, wenn D bereits vorhanden ist oder später erteilt wird)."
  },
  {
   "title": "EINGESCHLOSSEN?",
   "text": "Wann ist DE in der Klasse CE eingeschlossen?",
   "answers": [
+   "Ab 24 Jahren",
    "Immer",
    "Wenn D bereits vorhanden ist oder später erteilt wird",
-   "Ab 24 Jahren",
    "Nie"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "CE schließt DE ein, wenn D bereits vorhanden ist oder später erteilt wird."
  },
  {
   "title": "GLIEDERZUG",
   "text": "Woraus besteht das CE-Prüfungsfahrzeug als Gliederzug?",
   "answers": [
-   "C-Prüfungsfahrzeug mit einem Anhänger mit selbsttätiger Kupplung und eigener Lenkung oder einem Starrdeichselanhänger",
    "C1-Prüfungsfahrzeug mit einem beliebigen Anhänger",
    "C-Prüfungsfahrzeug mit Anhänger bis 750 kg",
-   "Sattelzugmaschine mit Sattelanhänger"
+   "Sattelzugmaschine mit Sattelanhänger",
+   "C-Prüfungsfahrzeug mit einem Anhänger mit selbsttätiger Kupplung und eigener Lenkung oder einem Starrdeichselanhänger"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "CE Gliederzug: Prüfungsfahrzeug der Klasse C und ein Anhänger mit selbsttätiger Kupplung und eigener Lenkung oder ein Starrdeichselanhänger."
  },
  {
@@ -2243,20 +2243,20 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "text": "Wie lang muss die Fahrzeugkombination beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) mindestens sein?",
   "answers": [
    "9 m",
-   "18,75 m",
+   "14 m",
    "12 m",
-   "14 m"
+   "18,75 m"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "CE Gliederzug/Starrdeichsel: Länge der Fahrzeugkombination mindestens 14 m."
  },
  {
   "title": "GLIEDERZUG",
   "text": "Wie lang muss der Anhänger beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) mindestens sein?",
   "answers": [
+   "4,50 m",
    "5 m",
    "9 m",
-   "4,50 m",
    "7,50 m"
   ],
   "correct": 3,
@@ -2267,59 +2267,59 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "text": "Welche Mindestbreite muss der Anhänger beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) haben?",
   "answers": [
    "2,20 m",
-   "2,40 m",
    "2,55 m",
+   "2,40 m",
    "Keine Vorgabe"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "CE Gliederzug/Starrdeichsel: Mindestbreite des Anhängers 2,40 m."
  },
  {
   "title": "GLIEDERZUG",
   "text": "Welche Bremsanlage muss das CE-Prüfungsfahrzeug als Gliederzug haben?",
   "answers": [
-   "Eine Einleitungsbremsanlage",
-   "Eine Zweileitungsbremsanlage",
+   "Eine Auflaufbremse",
    "Nur eine Feststellbremse am Anhänger",
-   "Eine Auflaufbremse"
+   "Eine Zweileitungsbremsanlage",
+   "Eine Einleitungsbremsanlage"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "CE Gliederzug/Starrdeichsel: Zweileitungsbremsanlage."
  },
  {
   "title": "GLIEDERZUG",
   "text": "Welche Ausstattung muss der Anhänger beim CE-Prüfungsfahrzeug (Gliederzug oder Starrdeichsel) haben?",
   "answers": [
-   "ABS",
+   "Fahrtenschreiber",
    "Eine eigene Lenkung ist verboten",
-   "Keine besondere Ausstattung",
-   "Fahrtenschreiber"
+   "ABS",
+   "Keine besondere Ausstattung"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "CE Gliederzug/Starrdeichsel: Anhänger mit ABS."
  },
  {
   "title": "CE-KOMBI",
   "text": "Welche zulässige Gesamtmasse und welches tatsächliche Gewicht muss die CE-Prüfungskombination mindestens haben?",
   "answers": [
-   "zGm 20.000 kg, tatsächliches Gewicht 15.000 kg",
-   "zGm 12.000 kg, tatsächliches Gewicht 10.000 kg",
    "zGm 40.000 kg, tatsächliches Gewicht 20.000 kg",
+   "zGm 12.000 kg, tatsächliches Gewicht 10.000 kg",
+   "zGm 20.000 kg, tatsächliches Gewicht 15.000 kg",
    "zGm 15.000 kg, tatsächliches Gewicht 20.000 kg"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Gliederzug und Sattelzug: zGm der Kombi mindestens 20.000 kg, tatsächliches Gewicht mindestens 15.000 kg."
  },
  {
   "title": "SATTELZUG",
   "text": "Wie lang muss das CE-Prüfungsfahrzeug als Sattelzug mindestens sein?",
   "answers": [
-   "14 m",
    "9 m",
    "8 m",
+   "14 m",
    "16,50 m"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "CE Sattel: Länge mindestens 14 m."
  },
  {
@@ -2327,8 +2327,8 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "text": "Für welche Fahrzeuge gilt beim CE-Sattelzug die Mindestbreite von 2,40 m?",
   "answers": [
    "Nur für den Sattelanhänger",
-   "Nur für die Sattelzugmaschine",
    "Für keines von beiden",
+   "Nur für die Sattelzugmaschine",
    "Für Sattelzugmaschine und Sattelanhänger"
   ],
   "correct": 3,
@@ -2338,12 +2338,12 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "SATTELZUG",
   "text": "Welche Fahrzeuge des CE-Sattelzugs müssen mit ABS ausgerüstet sein?",
   "answers": [
-   "Nur der Sattelanhänger",
-   "Sattelzugmaschine und Sattelanhänger",
+   "Keines von beiden",
    "Nur die Sattelzugmaschine",
-   "Keines von beiden"
+   "Nur der Sattelanhänger",
+   "Sattelzugmaschine und Sattelanhänger"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "CE Sattel: Sattelzugmaschine und Sattelanhänger mit ABS, dazu mit Fahrtenschreiber."
  },
  {
@@ -2351,9 +2351,9 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "text": "Wofür gilt die Klasse T?",
   "answers": [
    "Für Fahrzeuge in land- oder forstwirtschaftlicher Nutzung, auch mit Anhängern",
+   "Nur für Baumaschinen",
    "Für Lkw bis 7,5 t",
-   "Für alle Zugmaschinen ohne Einschränkung",
-   "Nur für Baumaschinen"
+   "Für alle Zugmaschinen ohne Einschränkung"
   ],
   "correct": 0,
   "explain": "T: in land- oder forstwirtschaftlicher Nutzung, auch mit Anhängern."
@@ -2362,9 +2362,9 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "KLASSE T",
   "text": "Bis zu welcher bauartbedingten Höchstgeschwindigkeit dürfen Zugmaschinen mit Klasse T gefahren werden?",
   "answers": [
-   "80 km/h",
    "32 km/h",
    "40 km/h",
+   "80 km/h",
    "60 km/h"
   ],
   "correct": 3,
@@ -2374,22 +2374,22 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "KLASSE T",
   "text": "Bis zu welcher bbH sind selbstfahrende Arbeitsmaschinen oder Futtermischwagen in Klasse T enthalten?",
   "answers": [
-   "25 km/h",
-   "32 km/h",
    "60 km/h",
-   "40 km/h"
+   "40 km/h",
+   "25 km/h",
+   "32 km/h"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "T: selbstfahrende Arbeitsmaschinen oder Futtermischwagen bis 40 km/h bbH."
  },
  {
   "title": "MINDESTALTER?",
   "text": "Ab welchem Alter darf man mit Klasse T Fahrzeuge bis 40 km/h bbH fahren?",
   "answers": [
+   "18 Jahre",
    "17 Jahre",
-   "15 Jahre",
    "16 Jahre",
-   "18 Jahre"
+   "15 Jahre"
   ],
   "correct": 2,
   "explain": "Mindestalter T (§ 6 Abs. 2 FeV): 16 bis 40 km/h bbH, 18 bis 60 km/h bbH."
@@ -2399,9 +2399,9 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "text": "Ab welchem Alter darf man mit Klasse T Zugmaschinen bis 60 km/h bbH fahren?",
   "answers": [
    "21 Jahre",
-   "17 Jahre",
+   "16 Jahre",
    "18 Jahre",
-   "16 Jahre"
+   "17 Jahre"
   ],
   "correct": 2,
   "explain": "Mindestalter T (§ 6 Abs. 2 FeV): 18 bis 60 km/h bbH."
@@ -2411,8 +2411,8 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "text": "Wo steht das Mindestalter für Klasse T?",
   "answers": [
    "§ 10 Nr. 7 FeV",
-   "§ 4 Abs. 1 FeV",
    "Anlage 7 FeV",
+   "§ 4 Abs. 1 FeV",
    "§ 6 Abs. 2 FeV"
   ],
   "correct": 3,
@@ -2434,61 +2434,649 @@ export const FAHRERLAUBNISRECHT_QUESTIONS = [
   "title": "PRÜFUNGSFAHRZEUG T",
   "text": "Welche bauartbedingte Höchstgeschwindigkeit muss das Prüfungsfahrzeug der Klasse T haben?",
   "answers": [
+   "Mehr als 32 km/h",
    "Mindestens 80 km/h",
-   "Mindestens 60 km/h",
    "Genau 40 km/h",
-   "Mehr als 32 km/h"
+   "Mindestens 60 km/h"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Prüfungsfahrzeug T: bbH über 32 km/h."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG T",
   "text": "Welche Bremsanlage braucht das Prüfungsfahrzeug der Klasse T?",
   "answers": [
-   "Eine Zweileitungs-Bremsanlage",
-   "Eine Auflaufbremse",
    "Eine Einleitungsbremsanlage",
-   "Keine besondere"
+   "Keine besondere",
+   "Eine Zweileitungs-Bremsanlage",
+   "Eine Auflaufbremse"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Prüfungsfahrzeug T: Zweileitungs-Bremsanlage."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG T",
   "text": "Was gilt für den Anhänger des T-Prüfungsfahrzeugs?",
   "answers": [
+   "Er muss mindestens 2,40 m breit sein",
    "Er braucht mindestens eine geschlossene Ladefläche",
    "Ein Fahrgestell ohne Boden reicht",
-   "Er muss kastenförmig sein",
-   "Er muss mindestens 2,40 m breit sein"
+   "Er muss kastenförmig sein"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Prüfungsfahrzeug T: Anhänger mit mindestens geschlossener Ladefläche, Fahrgestell ohne geschlossenen Boden ist nicht zulässig."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG T",
   "text": "Wie lang muss ein Starrdeichselanhänger beim T-Prüfungsfahrzeug mindestens sein, wenn einer verwendet wird?",
   "answers": [
-   "4,50 m",
-   "7,50 m",
+   "3,50 m",
    "5 m",
-   "3,50 m"
+   "4,50 m",
+   "7,50 m"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Prüfungsfahrzeug T: Länge des Starrdeichselanhängers mindestens 4,50 m."
  },
  {
   "title": "PRÜFUNGSFAHRZEUG T",
   "text": "Wie lang muss die Fahrzeugkombination beim T-Prüfungsfahrzeug insgesamt mindestens sein?",
   "answers": [
-   "9 m",
    "14 m",
-   "4,50 m",
-   "7,50 m"
+   "7,50 m",
+   "9 m",
+   "4,50 m"
+  ],
+  "correct": 1,
+  "explain": "Prüfungsfahrzeug T: Länge der Fahrzeugkombination gesamt mindestens 7,50 m."
+ },
+ {
+  "title": "VORBESITZ?",
+  "text": "Welche Klassen muss man laut Übersicht besitzen, bevor man die Klasse CE erwerben kann?",
+  "answers": [
+   "Nur B",
+   "C1 und C1E",
+   "B und C1",
+   "B und C"
   ],
   "correct": 3,
-  "explain": "Prüfungsfahrzeug T: Länge der Fahrzeugkombination gesamt mindestens 7,50 m."
+  "explain": "CE: Vorbesitz der Klassen B und C."
+ },
+ {
+  "title": "VORBESITZ?",
+  "text": "Welche Klasse ist Vorbesitz für die Klasse C1E?",
+  "answers": [
+   "BE",
+   "C1",
+   "C",
+   "Keine"
+  ],
+  "correct": 1,
+  "explain": "C1E: Vorbesitz der Klasse C1."
+ },
+ {
+  "title": "VORBESITZ?",
+  "text": "Welche Klasse ist Vorbesitz für die Klasse C1?",
+  "answers": [
+   "Keine",
+   "BE",
+   "C",
+   "B"
+  ],
+  "correct": 3,
+  "explain": "C1: Vorbesitz der Klasse B."
+ },
+ {
+  "title": "VORBESITZ?",
+  "text": "Welche Klasse muss man für die Klasse T vorher besitzen?",
+  "answers": [
+   "L",
+   "Keine",
+   "AM",
+   "B"
+  ],
+  "correct": 1,
+  "explain": "T: kein Vorbesitz erforderlich."
+ },
+ {
+  "title": "BEFRISTUNG?",
+  "text": "Für wie viele Jahre wird die Fahrerlaubnis der Klassen C1, C1E und CE befristet?",
+  "answers": [
+   "Gar nicht",
+   "10 Jahre",
+   "15 Jahre",
+   "5 Jahre"
+  ],
+  "correct": 3,
+  "explain": "Befristung der Fahrerlaubnis C1, C1E und CE: 5 Jahre."
+ },
+ {
+  "title": "BEFRISTUNG?",
+  "text": "Ist die Fahrerlaubnis der Klasse T befristet?",
+  "answers": [
+   "Nur bis zum 50. Lebensjahr",
+   "Nein",
+   "Ja, auf 15 Jahre",
+   "Ja, auf 5 Jahre"
+  ],
+  "correct": 1,
+  "explain": "T: keine Befristung der Fahrerlaubnis, keine Wiederholungsuntersuchung."
+ },
+ {
+  "title": "FÜHRERSCHEINKARTE?",
+  "text": "Wie lange ist die Führerscheinkarte der Klassen C1, C1E, CE und T befristet?",
+  "answers": [
+   "15 Jahre",
+   "5 Jahre",
+   "10 Jahre",
+   "Unbefristet"
+  ],
+  "correct": 0,
+  "explain": "Befristung der Führerscheinkarte: 15 Jahre."
+ },
+ {
+  "title": "EINSCHLUSS?",
+  "text": "Welche Klasse ist laut Übersicht in CE eingeschlossen?",
+  "answers": [
+   "D",
+   "BE",
+   "D1",
+   "A2"
+  ],
+  "correct": 1,
+  "explain": "Einschlussklassen CE laut Übersicht: BE, C1E, T."
+ },
+ {
+  "title": "EINSCHLUSS?",
+  "text": "Welche Klassen sind in der Klasse T eingeschlossen?",
+  "answers": [
+   "AM und L",
+   "C1 und C1E",
+   "B und BE",
+   "Keine"
+  ],
+  "correct": 0,
+  "explain": "T: Einschlussklassen AM und L."
+ },
+ {
+  "title": "UNTERSUCHUNG?",
+  "text": "Für welche Klasse ist laut Übersicht KEINE ärztliche Untersuchung erforderlich, sondern nur ein Sehtest?",
+  "answers": [
+   "C1E",
+   "T",
+   "CE",
+   "C1"
+  ],
+  "correct": 1,
+  "explain": "C1, C1E und CE: ärztliche Untersuchung ja. T: nein, nur Sehtest."
+ },
+ {
+  "title": "WIEDERHOLUNG?",
+  "text": "Wann ist bei den Klassen C1, C1E und CE eine Wiederholungsuntersuchung fällig?",
+  "answers": [
+   "Alle 15 Jahre",
+   "Alle 2 Jahre",
+   "Alle 5 Jahre",
+   "Nie"
+  ],
+  "correct": 2,
+  "explain": "Wiederholungsuntersuchung C1, C1E und CE: nach 5 Jahren."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Unter welcher Voraussetzung kann man die Klasse CE schon mit 18 erwerben?",
+  "answers": [
+   "Nach 5 Jahren Besitz der Klasse B",
+   "Nach erfolgreicher Grundqualifikation",
+   "Mit schriftlicher Zustimmung der Eltern",
+   "Nach bestandener Theorieprüfung B"
+  ],
+  "correct": 1,
+  "explain": "CE mit 18: nach erfolgreicher Grundqualifikation oder während bzw. nach einer Berufsausbildung zum Berufskraftfahrer."
+ },
+ {
+  "title": "MINDESTALTER?",
+  "text": "Für welche Personen gilt bei CE außerdem ein Mindestalter von 18?",
+  "answers": [
+   "Für alle Inhaber der Klasse C1",
+   "Für Fahrlehrer-Anwärter",
+   "Für Inhaber der Klasse T",
+   "Während oder nach Abschluss einer Berufsausbildung zum Berufskraftfahrer oder einer ähnlichen Tätigkeit"
+  ],
+  "correct": 3,
+  "explain": "CE mit 18: für Personen während oder nach Abschluss einer Berufsausbildung zum Berufskraftfahrer oder einer ähnlichen Tätigkeit."
+ },
+ {
+  "title": "DOPPELSTUNDE?",
+  "text": "Wie lange dauert eine Doppelstunde im theoretischen Unterricht?",
+  "answers": [
+   "90 Minuten",
+   "120 Minuten",
+   "60 Minuten",
+   "45 Minuten"
+  ],
+  "correct": 0,
+  "explain": "Theoretische Mindestausbildung in Doppelstunden à 90 Minuten."
+ },
+ {
+  "title": "THEORIE CE",
+  "text": "Erweiterung auf CE mit Vorbesitz C: Wie viele Doppelstunden Grundstoff und Zusatzstoff sind mindestens vorgeschrieben?",
+  "answers": [
+   "12 Grundstoff, 4 Zusatzstoff",
+   "6 Grundstoff, 6 Zusatzstoff",
+   "6 Grundstoff, 4 Zusatzstoff",
+   "6 Grundstoff, 10 Zusatzstoff"
+  ],
+  "correct": 2,
+  "explain": "Erweiterung CE: Grundstoff 6, klassenspezifischer Zusatzstoff bei Vorbesitz C: 4."
+ },
+ {
+  "title": "THEORIE C + CE",
+  "text": "Gemeinsamer Erwerb von C und CE: Wie viele Doppelstunden Zusatzstoff sind mindestens vorgeschrieben?",
+  "answers": [
+   "6 für Klasse C und 6 für Klasse CE",
+   "10 für Klasse C und 4 für Klasse CE",
+   "2 für Klasse C und 4 für Klasse CE",
+   "4 für Klasse C und 10 für Klasse CE"
+  ],
+  "correct": 1,
+  "explain": "Gemeinsamer Erwerb C und CE: Grundstoff 6, Zusatzstoff Klasse C 10, Klasse CE 4."
+ },
+ {
+  "title": "THEORIE B + C + CE",
+  "text": "Gemeinsamer Erwerb von B, C und CE: Wie viele Doppelstunden Grundstoff sind mindestens vorgeschrieben?",
+  "answers": [
+   "12",
+   "6",
+   "14",
+   "10"
+  ],
+  "correct": 0,
+  "explain": "Gemeinsamer Erwerb B, C, CE: Grundstoff 12, Zusatzstoff Klasse B 2, Klasse C 10, Klasse CE 4."
+ },
+ {
+  "title": "PRAXIS CE",
+  "text": "Welche Sonderfahrten sind bei der Erweiterung von C auf CE mindestens vorgeschrieben?",
+  "answers": [
+   "3 Überland, 1 Autobahn, 1 Nacht",
+   "5 Überland, 2 Autobahn, 3 Nacht",
+   "8 Überland, 3 Autobahn, 3 Nacht",
+   "5 Überland, 3 Autobahn, 2 Nacht"
+  ],
+  "correct": 1,
+  "explain": "Erweiterung C auf CE: ÜL 5, AB 2, NF 3."
+ },
+ {
+  "title": "PRAXIS (B)+C+CE",
+  "text": "Welche Sonderfahrten sind beim gemeinsamen Erwerb von (B), C und CE mindestens vorgeschrieben?",
+  "answers": [
+   "4 Überland, 2 Autobahn, 2 Nacht",
+   "5 Überland, 2 Autobahn, 3 Nacht",
+   "8 Überland, 3 Autobahn, 3 Nacht",
+   "10 Überland, 4 Autobahn, 3 Nacht"
+  ],
+  "correct": 2,
+  "explain": "Gemeinsamer Erwerb (B), C und CE: ÜL 8, AB 3, NF 3."
+ },
+ {
+  "title": "SOLO ODER ZUG?",
+  "text": "Gemeinsamer Erwerb von (B), C und CE: Wie verteilen sich die 8 Überlandfahrten?",
+  "answers": [
+   "Alle 8 solo",
+   "5 solo, 3 im Zug",
+   "4 solo, 4 im Zug",
+   "3 solo, 5 im Zug"
+  ],
+  "correct": 3,
+  "explain": "ÜL 8: davon solo 3, Zug 5."
+ },
+ {
+  "title": "SOLO ODER ZUG?",
+  "text": "Gemeinsamer Erwerb von (B), C und CE: Wie viele der 3 Nachtfahrten finden im Zug statt?",
+  "answers": [
+   "2",
+   "1",
+   "Keine",
+   "Alle 3"
+  ],
+  "correct": 3,
+  "explain": "NF 3: davon solo 0, Zug 3."
+ },
+ {
+  "title": "SOLO ODER ZUG?",
+  "text": "Gemeinsamer Erwerb von (B), C und CE: Wie verteilen sich die 3 Autobahnfahrten?",
+  "answers": [
+   "2 solo, 1 im Zug",
+   "Alle 3 solo",
+   "Alle 3 im Zug",
+   "1 solo, 2 im Zug"
+  ],
+  "correct": 3,
+  "explain": "AB 3: davon solo 1, Zug 2."
+ },
+ {
+  "title": "PRÜFUNG CE",
+  "text": "Wie ist die Theorieprüfung der Klasse CE aufgebaut?",
+  "answers": [
+   "30 Fragen: 20 Grundstoff, 10 Zusatzstoff",
+   "30 Fragen: nur Zusatzstoff",
+   "30 Fragen: 10 Grundstoff, 20 Zusatzstoff",
+   "20 Fragen: 10 Grundstoff, 10 Zusatzstoff"
+  ],
+  "correct": 2,
+  "explain": "Theorieprüfung CE: 30 Fragen, davon 10 Grundstoff und 20 Zusatzstoff."
+ },
+ {
+  "title": "FEHLERPUNKTE?",
+  "text": "Wie viele Fehlerpunkte sind in der Theorieprüfung CE bzw. C1 (Erweiterung) höchstens zulässig?",
+  "answers": [
+   "20",
+   "13",
+   "6",
+   "10"
+  ],
+  "correct": 3,
+  "explain": "Zulässige Fehlerpunktzahl: 10, außer 2 Fragen mit einer Wertigkeit von 5 FP wurden falsch beantwortet."
+ },
+ {
+  "title": "5-PUNKTE-FRAGEN",
+  "text": "Was gilt trotz Einhaltung der zulässigen Fehlerpunktzahl als nicht bestanden?",
+  "answers": [
+   "Wenn alle Grundstofffragen richtig sind",
+   "Wenn 2 Fragen mit einer Wertigkeit von 5 FP falsch beantwortet wurden",
+   "Wenn eine Frage mit 2 FP falsch ist",
+   "Wenn die Prüfung länger als 45 Minuten dauert"
+  ],
+  "correct": 1,
+  "explain": "Bei der zulässigen FP-Zahl dürfen keine 2 Fragen mit einer Wertigkeit von 5 FP falsch beantwortet werden."
+ },
+ {
+  "title": "SCHRITTWEISE",
+  "text": "Gemeinsamer Erwerb B, C und CE: Was wird bei den Prüfungen C und CE angerechnet?",
+  "answers": [
+   "Die bestandene Praxisprüfung B",
+   "Die Fehlerpunkte aus dem Grundstoff der Prüfung B",
+   "Nichts, jede Prüfung zählt einzeln",
+   "Die Zahl der Doppelstunden"
+  ],
+  "correct": 1,
+  "explain": "Die Prüfung erfolgt schrittweise. Die Fehlerpunktzahl aus dem Grundstoff von B wird angerechnet."
+ },
+ {
+  "title": "PRÜFUNG C",
+  "text": "Gemeinsamer Erwerb B, C und CE: Wie viele Fragen Zusatzstoff C hat die Prüfung C laut Übersicht?",
+  "answers": [
+   "27",
+   "30",
+   "10",
+   "20"
+  ],
+  "correct": 0,
+  "explain": "Prüfung C: Übernahme der FP aus Grundstoff B + 27 Fragen Zusatzstoff C, zulässig 13 FP."
+ },
+ {
+  "title": "PRÜFUNG CE",
+  "text": "Gemeinsamer Erwerb B, C und CE: Wie viele Fragen Zusatzstoff CE hat die Prüfung CE, und wie viele FP sind zulässig?",
+  "answers": [
+   "30 Fragen, 10 FP",
+   "27 Fragen, 13 FP",
+   "20 Fragen, 13 FP",
+   "20 Fragen, 10 FP"
+  ],
+  "correct": 2,
+  "explain": "Prüfung CE: Übernahme der FP aus Grundstoff B + 20 Fragen Zusatzstoff CE, zulässig 13 FP."
+ },
+ {
+  "title": "PRÜFUNG B",
+  "text": "Wie ist die Prüfung B beim gemeinsamen Erwerb mit C1 bzw. C und CE aufgebaut?",
+  "answers": [
+   "30 Fragen: 10 Grundstoff, 20 Zusatzstoff",
+   "27 Fragen Zusatzstoff",
+   "20 Fragen: 10 Grundstoff, 10 Zusatzstoff",
+   "30 Fragen: 20 Grundstoff, 10 Zusatzstoff"
+  ],
+  "correct": 3,
+  "explain": "Prüfung B: 30 Fragen, davon 20 Grundstoff und 10 Zusatzstoff."
+ },
+ {
+  "title": "PRAXISPRÜFUNG",
+  "text": "Wie lange dauert die praktische Prüfung der Klassen C1, C1E und CE?",
+  "answers": [
+   "70 Minuten, davon 35 Minuten Fahrzeit",
+   "90 Minuten, davon 60 Minuten Fahrzeit",
+   "60 Minuten, davon 45 Minuten Fahrzeit",
+   "85 Minuten, davon 50 Minuten Fahrzeit"
+  ],
+  "correct": 3,
+  "explain": "Praktische Prüfung C1, C1E, CE: 85 Minuten, davon 50 Minuten Fahrzeit."
+ },
+ {
+  "title": "THEORIE C1E",
+  "text": "Wie viele Doppelstunden theoretische Mindestausbildung sind für C1E vorgeschrieben?",
+  "answers": [
+   "6",
+   "2",
+   "4",
+   "Keine"
+  ],
+  "correct": 3,
+  "explain": "C1E: keine theoretische Mindestausbildung."
+ },
+ {
+  "title": "PRÜFUNG C1E",
+  "text": "Gibt es für die Klasse C1E eine theoretische Fahrerlaubnisprüfung?",
+  "answers": [
+   "Nein",
+   "Ja, 20 Fragen",
+   "Ja, 30 Fragen",
+   "Nur bei gemeinsamem Erwerb"
+  ],
+  "correct": 0,
+  "explain": "C1E: keine theoretische Prüfung."
+ },
+ {
+  "title": "PRAXIS C1E",
+  "text": "Welche Sonderfahrten sind bei der Erweiterung von C1 auf C1E mindestens vorgeschrieben?",
+  "answers": [
+   "3 Überland, 1 Autobahn, 1 Nacht",
+   "Keine",
+   "4 Überland, 2 Autobahn, 2 Nacht",
+   "5 Überland, 2 Autobahn, 3 Nacht"
+  ],
+  "correct": 0,
+  "explain": "Erweiterung C1 auf C1E: ÜL 3, AB 1, NF 1."
+ },
+ {
+  "title": "PRAXIS (B)+C1+C1E",
+  "text": "Welche Sonderfahrten sind beim gemeinsamen Erwerb von (B), C1 und C1E mindestens vorgeschrieben?",
+  "answers": [
+   "4 Überland, 2 Autobahn, 2 Nacht",
+   "3 Überland, 1 Autobahn, 1 Nacht",
+   "6 Überland, 2 Autobahn, 2 Nacht",
+   "8 Überland, 3 Autobahn, 3 Nacht"
+  ],
+  "correct": 0,
+  "explain": "Gemeinsamer Erwerb (B), C1 und C1E: ÜL 4 (1 solo, 3 Zug), AB 2 (1 solo, 1 Zug), NF 2 (0 solo, 2 Zug)."
+ },
+ {
+  "title": "SOLO ODER ZUG?",
+  "text": "Gemeinsamer Erwerb von (B), C1 und C1E: Wie verteilen sich die 4 Überlandfahrten?",
+  "answers": [
+   "1 solo, 3 im Zug",
+   "2 solo, 2 im Zug",
+   "Alle 4 im Zug",
+   "3 solo, 1 im Zug"
+  ],
+  "correct": 0,
+  "explain": "ÜL 4: davon solo 1, Zug 3."
+ },
+ {
+  "title": "THEORIE C1",
+  "text": "Erweiterung auf C1 mit Vorbesitz B: Wie viele Doppelstunden sind mindestens vorgeschrieben?",
+  "answers": [
+   "6 Grundstoff, 6 Zusatzstoff",
+   "12 Grundstoff, 6 Zusatzstoff",
+   "6 Grundstoff, 4 Zusatzstoff",
+   "6 Grundstoff, 2 Zusatzstoff"
+  ],
+  "correct": 0,
+  "explain": "Erweiterung C1: Grundstoff 6, Zusatzstoff bei Vorbesitz Klasse B: 6."
+ },
+ {
+  "title": "THEORIE C1",
+  "text": "Erweiterung auf C1: Wie viele Doppelstunden Zusatzstoff sind bei Vorbesitz D1 oder D vorgeschrieben?",
+  "answers": [
+   "6",
+   "0",
+   "2",
+   "4"
+  ],
+  "correct": 2,
+  "explain": "Erweiterung C1: Zusatzstoff bei Vorbesitz D1: 2, bei Vorbesitz D: 2."
+ },
+ {
+  "title": "THEORIE B + C1",
+  "text": "Gemeinsamer Erwerb von B und C1: Wie viele Doppelstunden sind mindestens vorgeschrieben?",
+  "answers": [
+   "6 Grundstoff, 2 Zusatzstoff B, 6 Zusatzstoff C1",
+   "12 Grundstoff, 2 Zusatzstoff B, 6 Zusatzstoff C1",
+   "12 Grundstoff, 6 Zusatzstoff B, 2 Zusatzstoff C1",
+   "12 Grundstoff, 2 Zusatzstoff B, 10 Zusatzstoff C1"
+  ],
+  "correct": 1,
+  "explain": "Gemeinsamer Erwerb B und C1: Grundstoff 12, Klasse B 2, Klasse C1 6."
+ },
+ {
+  "title": "PRAXIS C1",
+  "text": "Welche Sonderfahrten sind für C1 mindestens vorgeschrieben?",
+  "answers": [
+   "Keine",
+   "4 Überland, 2 Autobahn, 2 Nacht",
+   "3 Überland, 1 Autobahn, 1 Nacht",
+   "5 Überland, 2 Autobahn, 3 Nacht"
+  ],
+  "correct": 2,
+  "explain": "C1: ÜL 3, AB 1, NF 1."
+ },
+ {
+  "title": "B VOR C1",
+  "text": "Gemeinsamer Erwerb B und C1: Wann darf mit der Ausbildung der Klasse C1 begonnen werden?",
+  "answers": [
+   "Sofort am ersten Tag",
+   "Erst nach bestandener Praxisprüfung B",
+   "Erst nach 5 Jahren Besitz der Klasse B",
+   "Wenn die Voraussetzungen für die Prüfung B im Wesentlichen erfüllt sind"
+  ],
+  "correct": 3,
+  "explain": "Die Ausbildung B ist wie beim Ersterwerb durchzuführen. Die Voraussetzungen für die Prüfung B müssen im Wesentlichen erfüllt sein, bevor mit C1 begonnen wird."
+ },
+ {
+  "title": "PRÜFUNG C1",
+  "text": "Wie ist die Theorieprüfung der Klasse C1 (Erweiterung) aufgebaut?",
+  "answers": [
+   "30 Fragen: 10 Grundstoff, 20 Zusatzstoff, zulässig 10 FP",
+   "30 Fragen: 20 Grundstoff, 10 Zusatzstoff, zulässig 10 FP",
+   "30 Fragen: 10 Grundstoff, 20 Zusatzstoff, zulässig 13 FP",
+   "20 Fragen: 10 Grundstoff, 10 Zusatzstoff, zulässig 6 FP"
+  ],
+  "correct": 0,
+  "explain": "Theorieprüfung C1: 30 Fragen, 10 Grundstoff, 20 Zusatzstoff, zulässig 10 FP."
+ },
+ {
+  "title": "REIHENFOLGE",
+  "text": "Gemeinsamer Erwerb B und C1: In welcher Reihenfolge wird die Theorie geprüft?",
+  "answers": [
+   "Die Reihenfolge ist egal",
+   "Erst muss die Prüfung B bestanden sein, dann darf C1 abgelegt werden",
+   "Erst C1, dann B",
+   "Beide gleichzeitig in einem Bogen"
+  ],
+  "correct": 1,
+  "explain": "Die Prüfung erfolgt schrittweise: Erst muss B bestanden werden, bevor C1 abgelegt werden darf."
+ },
+ {
+  "title": "PRÜFUNG C1",
+  "text": "Gemeinsamer Erwerb B und C1: Wie viele Fehlerpunkte dürfen die übernommenen FP aus dem Grundstoff B und die FP aus C1 zusammen höchstens ergeben?",
+  "answers": [
+   "10",
+   "20",
+   "13",
+   "6"
+  ],
+  "correct": 2,
+  "explain": "Prüfung C1: Übernahme der FP aus Grundstoff B + 20 Fragen Zusatzstoff C1, zusammen höchstens 13 FP."
+ },
+ {
+  "title": "THEORIE T",
+  "text": "Ersterteilung der Klasse T: Wie viele Doppelstunden sind mindestens vorgeschrieben?",
+  "answers": [
+   "12 Grundstoff, 6 Zusatzstoff",
+   "6 Grundstoff, 6 Zusatzstoff",
+   "12 Grundstoff, 2 Zusatzstoff",
+   "6 Grundstoff, 4 Zusatzstoff"
+  ],
+  "correct": 0,
+  "explain": "T bei Ersterteilung: Grundstoff 12, Zusatzstoff 6."
+ },
+ {
+  "title": "THEORIE T",
+  "text": "Erweiterung auf Klasse T: Wie viele Doppelstunden sind mindestens vorgeschrieben?",
+  "answers": [
+   "12 Grundstoff, 6 Zusatzstoff",
+   "Keine",
+   "6 Grundstoff, 6 Zusatzstoff",
+   "6 Grundstoff, 2 Zusatzstoff"
+  ],
+  "correct": 2,
+  "explain": "T bei Erweiterung: Grundstoff 6, Zusatzstoff 6."
+ },
+ {
+  "title": "PRAXIS T",
+  "text": "Was nennt die Übersicht als praktische Mindestausbildung der Klasse T?",
+  "answers": [
+   "Keine Ausbildung nötig",
+   "Grundausbildung",
+   "5 Überland, 2 Autobahn, 3 Nacht",
+   "3 Überland, 1 Autobahn, 1 Nacht"
+  ],
+  "correct": 1,
+  "explain": "T: praktische Mindestausbildung = Grundausbildung."
+ },
+ {
+  "title": "PRÜFUNG T",
+  "text": "Wie ist die Theorieprüfung bei Ersterteilung der Klasse T aufgebaut?",
+  "answers": [
+   "20 Fragen: 10 Grundstoff, 10 Zusatzstoff, zulässig 6 FP",
+   "30 Fragen: 20 Grundstoff, 10 Zusatzstoff, zulässig 10 FP",
+   "30 Fragen: 20 Grundstoff, 10 Zusatzstoff, zulässig 13 FP",
+   "30 Fragen: 10 Grundstoff, 20 Zusatzstoff, zulässig 10 FP"
+  ],
+  "correct": 1,
+  "explain": "T Ersterteilung: 30 Fragen, 20 Grundstoff, 10 Zusatzstoff, zulässig 10 FP."
+ },
+ {
+  "title": "PRÜFUNG T",
+  "text": "Wie ist die Theorieprüfung bei Erweiterung auf Klasse T aufgebaut?",
+  "answers": [
+   "20 Fragen: 10 Grundstoff, 10 Zusatzstoff, zulässig 6 FP",
+   "30 Fragen: 20 Grundstoff, 10 Zusatzstoff, zulässig 10 FP",
+   "20 Fragen: 10 Grundstoff, 10 Zusatzstoff, zulässig 10 FP",
+   "10 Fragen Zusatzstoff, zulässig 6 FP"
+  ],
+  "correct": 0,
+  "explain": "T Erweiterung: 20 Fragen, 10 Grundstoff, 10 Zusatzstoff, zulässig 6 FP."
+ },
+ {
+  "title": "PRAXISPRÜFUNG T",
+  "text": "Wie lange dauert die praktische Prüfung der Klasse T?",
+  "answers": [
+   "60 Minuten, davon 45 Minuten Fahrzeit",
+   "85 Minuten, davon 50 Minuten Fahrzeit",
+   "70 Minuten, davon 35 Minuten Fahrzeit",
+   "45 Minuten, davon 30 Minuten Fahrzeit"
+  ],
+  "correct": 2,
+  "explain": "Praktische Prüfung T: 70 Minuten, davon 35 Minuten Fahrzeit."
  }
 ];
 
