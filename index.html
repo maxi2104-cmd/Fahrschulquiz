@@ -25,12 +25,12 @@ body.splash{padding:0;overflow:hidden;background:#000}
 .sp-lines{position:fixed;inset:0;overflow:hidden;pointer-events:none}
 .sp-lines span{position:absolute;left:-40%;width:180%;height:var(--h);background:var(--c);transform:rotate(-12deg) scaleX(0);transform-origin:left top;
   animation:sp-draw .7s cubic-bezier(.65,0,.35,1) var(--t) forwards}
-.sp-band{position:fixed;left:-40%;width:180%;top:calc(70% + 6px);height:120%;background:var(--band);transform:rotate(-12deg);transform-origin:left top;opacity:0;animation:sp-fade .6s ease-out 1.25s forwards}
+.sp-band{position:fixed;left:-40%;width:180%;top:calc(86% + 6px);height:120%;background:var(--band);transform:rotate(-12deg);transform-origin:left top;opacity:0;animation:sp-fade .6s ease-out 1.25s forwards}
 /* 3. Hirsch */
-.sp-deer{position:relative;width:min(88vw,470px);max-height:52vh;aspect-ratio:190/212;opacity:0;transform:scale(.82) translateY(14px);
+.sp-deer{position:relative;width:min(88vw,500px);max-height:58vh;aspect-ratio:295/285;opacity:0;transform:scale(.82) translateY(14px);
   animation:sp-deer 1s cubic-bezier(.2,.8,.2,1) 1.5s forwards}
 .sp-deer i{display:block;width:100%;height:100%;background:#c2e54d;will-change:transform;
-  -webkit-mask:url(logo-emblem-green.svg) center/contain no-repeat;mask:url(logo-emblem-green.svg) center/contain no-repeat;
+  -webkit-mask:url(logo.svg) center/contain no-repeat;mask:url(logo.svg) center/contain no-repeat;
   animation:sp-pulse 2.4s ease-in-out 2.5s infinite,sp-tone 7.2s ease-in-out 2.5s infinite}
 @keyframes sp-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
 @keyframes sp-tone{0%,100%{background:#c2e54d}25%{background:#d8f27e}50%{background:#a9d936}75%{background:#e6f9a8}}
@@ -68,13 +68,12 @@ body.done .sp-deer i{animation-delay:0s!important}
   <span style="--h:6px;--c:var(--lime);top:9%;--t:.7s"></span>
   <span style="--h:3px;--c:var(--lime-d);top:13%;--t:.85s"></span>
   <span style="--h:2px;--c:var(--line);top:5%;--t:1s"></span>
-  <span style="--h:6px;--c:var(--lime);top:70%;--t:1.1s;z-index:1"></span>
+  <span style="--h:6px;--c:var(--lime);top:86%;--t:1.1s;z-index:1"></span>
 </div>
 
 <main class="sp">
   <button class="sp-skip" aria-label="Animation überspringen" onclick="document.body.classList.add('done');this.remove()"></button>
   <div class="sp-deer" role="img" aria-label="On Track Logo"><i></i></div>
-  <div class="sp-name"><b>ON TRACK</b><small>MAXIMILIAN HÖFLER · SINCE 2024</small></div>
   <div class="sp-btns">
     <a class="btn" href="auswahl.html">ZUR QUIZAUSWAHL</a>
     <button id="btn-install" class="btn" type="button">QUIZ ALS APP INSTALLIEREN</button>
