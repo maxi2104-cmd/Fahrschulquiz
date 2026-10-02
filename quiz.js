@@ -102,6 +102,11 @@ function renderQuestion() {
   $("q-progress").style.width = (idx / game.length * 100) + "%";
   $("q-title").textContent = q.title;
   $("q-text").textContent = q.text;
+  // optionales Bild zur Frage (SVG, direkt in den Fragen hinterlegt)
+  let pic = document.getElementById("q-pic");
+  if (!pic) { pic = document.createElement("div"); pic.id = "q-pic"; pic.className = "q-pic"; $("q-text").before(pic); }
+  pic.innerHTML = q.svg || "";
+  pic.hidden = !q.svg;
   $("q-explain").hidden = true;
   const box = $("q-answers"); box.innerHTML = "";
   q.answers.forEach((txt, i) => {
@@ -250,6 +255,7 @@ function renderReview() {
       const top = el("div", "rv-top");
       top.append(el("span", "rv-no", String(n + 1)), el("span", "rv-title", q.title));
       const body = el("div", "rv-body");
+      if (q.svg) { const pv = el("div", "q-pic rv-pic"); pv.innerHTML = q.svg; body.appendChild(pv); }
       body.appendChild(el("p", "rv-q", q.text));
       const mine = el("div", "rv-ans rv-bad");
       mine.append(el("span", "rv-tag", "DEINE ANTWORT"),
