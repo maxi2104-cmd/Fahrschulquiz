@@ -19,7 +19,7 @@
 <style>
 html,body{height:100%}
 body.splash{padding:0;overflow:hidden;background:#000}
-.sp{position:fixed;left:0;right:0;top:0;height:calc(82vh - 30vw);z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+.sp{position:fixed;left:0;right:0;top:0;height:calc(70vh - 30vw + 10px);z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
   padding:calc(14px + env(safe-area-inset-top)) 24px 14px;box-sizing:border-box;text-align:center}
 /* 1. Hintergrund */
 .sp-bg{position:fixed;inset:0;background:var(--bg);opacity:0;animation:sp-fade .7s ease-out .1s forwards}
@@ -27,7 +27,7 @@ body.splash{padding:0;overflow:hidden;background:#000}
 .sp-lines{position:fixed;inset:0;overflow:hidden;pointer-events:none}
 .sp-lines span{position:absolute;left:-40%;width:180%;height:var(--h);background:var(--c);transform:rotate(-12deg) scaleX(0);transform-origin:left top;
   animation:sp-draw .7s cubic-bezier(.65,0,.35,1) var(--t) forwards}
-.sp-photo{position:fixed;left:0;right:0;bottom:0;top:calc(82vh - 30vw);z-index:1;background:#000 url(startbild.jpg) 62% 55%/cover no-repeat;
+.sp-photo{position:fixed;left:0;right:0;bottom:0;top:calc(70vh - 30vw);z-index:1;background:#000 url(startbild.jpg) 62% 30%/cover no-repeat;
   clip-path:polygon(0 calc(21.5vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%);-webkit-clip-path:polygon(0 calc(21.5vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%);
   opacity:0;animation:sp-fade .8s ease-out 1.25s forwards}
 .sp-lines{z-index:2}
@@ -40,13 +40,15 @@ body.splash{padding:0;overflow:hidden;background:#000}
 .sp-name b{display:block;font-size:clamp(30px,9vw,46px);font-weight:900;letter-spacing:.32em;margin-right:-.32em;color:var(--text)}
 .sp-name small{display:block;margin-top:6px;font-size:12px;letter-spacing:.24em;color:var(--muted)}
 /* 4. Buttons */
-.sp-btns{position:relative;width:100%;max-width:380px;display:flex;flex-direction:column;gap:12px}
-.sp-btns .btn{margin:0;opacity:0;animation:sp-up .6s ease-out forwards}
 .sp-btns .btn:nth-child(1){animation-delay:2.6s}
 .sp-btns .btn:nth-child(2){animation-delay:2.75s}
 .sp-btns .btn:nth-child(3){animation-delay:2.9s}
-.sp-btns .btn{display:flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box;font-size:14px;padding:0 12px;min-height:50px}
-.sp-btns{flex:none;gap:10px}
+.sp-btns{position:fixed;z-index:4;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:560px;margin:0 auto}
+.sp-btns .btn{margin:0;opacity:0;animation:sp-up .6s ease-out forwards;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  min-height:112px;padding:12px 6px;border-radius:20px;text-decoration:none;box-sizing:border-box;font-size:12.5px;line-height:1.25;letter-spacing:.1em;text-align:center;
+  box-shadow:0 10px 28px rgba(0,0,0,.45);hyphens:manual}
+.sp-btns .btn svg{width:30px;height:30px;flex:none}
+.sp-btns .btn:disabled{opacity:.85}
 .sp-skip{position:fixed;inset:0;z-index:1;background:transparent;border:0}
 @keyframes sp-fade{to{opacity:1}}
 @keyframes sp-draw{to{transform:rotate(-12deg) scaleX(1)}}
@@ -54,7 +56,21 @@ body.splash{padding:0;overflow:hidden;background:#000}
 @keyframes sp-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 body.done .sp-bg,body.done .sp-photo,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name,body.done .sp-btns .btn{animation-duration:0s!important;animation-delay:0s!important}
 body.done .sp-deer .sp-logo{animation-delay:0s!important}
-@media (prefers-reduced-motion: reduce){.sp *, .sp-bg, .sp-photo, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
+@media (prefers-reduced-motion: reduce){.sp *, .sp-btns .btn, .sp-bg, .sp-photo, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
+
+/* Tablet quer & Computer: flachere Linie, größeres Logo, Buttons mittig (Handy-Ansicht bleibt unverändert) */
+@media (min-width: 700px) and (min-aspect-ratio: 1/1) {
+  .sp-lines span{transform:rotate(-5deg) scaleX(0);animation-name:sp-draw-w}
+  .sp-photo{top:calc(66vh - 12.5vw);background-position:50% 42%;
+    clip-path:polygon(0 calc(9vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%);-webkit-clip-path:polygon(0 calc(9vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%)}
+  .sp{height:calc(66vh - 12.5vw + 10px);padding-top:calc(28px + env(safe-area-inset-top))}
+  .sp-deer .sp-logo{max-width:min(60vw,560px)}
+  .sp-btns{left:50%;right:auto;width:min(680px,calc(100vw - 48px));transform:translateX(-50%);bottom:calc(32px + env(safe-area-inset-bottom));gap:16px}
+  .sp-btns .btn{min-height:128px;font-size:14px;border-radius:22px}
+  .sp-btns .btn svg{width:34px;height:34px}
+}
+@media (min-width: 700px) and (min-aspect-ratio: 1/1){.sp-lines .sp-edge{top:66%!important}}
+@keyframes sp-draw-w{to{transform:rotate(-5deg) scaleX(1)}}
 /* Installations-Hinweis */
 .ins{position:fixed;inset:0;z-index:30;background:rgba(5,7,10,.78);display:flex;align-items:flex-end;justify-content:center;padding:12px 12px calc(12px + env(safe-area-inset-bottom))}
 .ins[hidden]{display:none}
@@ -79,7 +95,7 @@ body.done .sp-deer .sp-logo{animation-delay:0s!important}
   <span style="--h:6px;--c:var(--lime);top:9%;--t:.7s"></span>
   <span style="--h:3px;--c:var(--lime-d);top:13%;--t:.85s"></span>
   <span style="--h:2px;--c:var(--line);top:5%;--t:1s"></span>
-  <span style="--h:6px;--c:var(--lime);top:82%;--t:1.1s"></span>
+  <span class="sp-edge" style="--h:6px;--c:var(--lime);top:70%;--t:1.1s"></span>
 </div>
 
 <main class="sp">
@@ -1042,13 +1058,14 @@ body.done .sp-deer .sp-logo{animation-delay:0s!important}
 </g>
 </svg>
 </div>
-  <div class="sp-btns">
-    <a class="btn" href="auswahl.html">ZUR QUIZAUSWAHL</a>
-    <button id="btn-install" class="btn" type="button">ZUM HOMESCREEN HINZUFÜGEN</button>
-    <a class="btn" href="https://www.ontrack-fahr.schule" target="_blank" rel="noopener">ZUR WEBSITE</a>
-  </div>
+
 </main>
 
+<nav class="sp-btns" aria-label="Start">
+  <a class="btn" href="auswahl.html"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span>ZUR QUIZ&shy;AUSWAHL</span></a>
+  <button id="btn-install" class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg><span id="btn-install-t">ZUM HOME&shy;SCREEN HINZU&shy;FÜGEN</span></button>
+  <a class="btn" href="https://www.ontrack-fahr.schule" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg><span>ZUR WEBSITE</span></a>
+</nav>
 <div id="ins" class="ins" hidden>
   <div class="ins-box" role="dialog" aria-modal="true" aria-labelledby="ins-h">
     <h2 id="ins-h">ZUM HOMESCREEN</h2>
@@ -1087,9 +1104,10 @@ setTimeout(() => { const s = document.querySelector(".sp-skip"); if (s) s.remove
   const inApp = /Instagram|FBAN|FBAV|FB_IAB|Line\/|WhatsApp|TikTok|Snapchat/i.test(ua);
   const isChrome = /CriOS|Chrome\//.test(ua) && !/Edg|OPR|SamsungBrowser/.test(ua);
   let deferred = null;
-  if (standalone) { btn.textContent = "IST AUF DEM HOMESCREEN ✓"; btn.disabled = true; }
+  const lbl = document.getElementById("btn-install-t");
+  if (standalone) { lbl.textContent = "AUF DEM HOMESCREEN ✓"; btn.disabled = true; }
   window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; });
-  window.addEventListener("appinstalled", () => { btn.textContent = "IST AUF DEM HOMESCREEN ✓"; btn.disabled = true; });
+  window.addEventListener("appinstalled", () => { lbl.textContent = "AUF DEM HOMESCREEN ✓"; btn.disabled = true; });
 
   const box = document.getElementById("ins"), now = document.getElementById("ins-now"), list = document.getElementById("ins-list");
   // passenden Browser zuerst zeigen und hervorheben
