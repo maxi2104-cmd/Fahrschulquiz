@@ -214,7 +214,7 @@ function confetti(ok) {
   if (reduce) return;
   const box = document.createElement("div");
   box.className = "confetti";
-  const count = ok ? 68 : 52;
+  const count = ok ? 204 : 156;
   const img = ok ? "url(logo-emblem-green.svg)" : "url(logo-emblem-red.svg)";
   const rnd = (a, b) => a + Math.random() * (b - a);
   for (let i = 0; i < count; i++) {
