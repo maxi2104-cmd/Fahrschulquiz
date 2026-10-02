@@ -29,7 +29,11 @@ body.splash{padding:0;overflow:hidden;background:#000}
 /* 3. Hirsch */
 .sp-deer{position:relative;width:min(88vw,470px);max-height:52vh;aspect-ratio:190/212;opacity:0;transform:scale(.82) translateY(14px);
   animation:sp-deer 1s cubic-bezier(.2,.8,.2,1) 1.5s forwards}
-.sp-deer img{width:100%;height:100%;object-fit:contain;display:block}
+.sp-deer i{display:block;width:100%;height:100%;background:#c2e54d;will-change:transform;
+  -webkit-mask:url(logo-emblem-green.svg) center/contain no-repeat;mask:url(logo-emblem-green.svg) center/contain no-repeat;
+  animation:sp-pulse 2.4s ease-in-out 2.5s infinite,sp-tone 7.2s ease-in-out 2.5s infinite}
+@keyframes sp-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+@keyframes sp-tone{0%,100%{background:#c2e54d}25%{background:#d8f27e}50%{background:#a9d936}75%{background:#e6f9a8}}
 .sp-name{position:relative;opacity:0;animation:sp-up .7s ease-out 2.2s forwards}
 .sp-name b{display:block;font-size:clamp(30px,9vw,46px);font-weight:900;letter-spacing:.32em;margin-right:-.32em;color:var(--text)}
 .sp-name small{display:block;margin-top:6px;font-size:12px;letter-spacing:.24em;color:var(--muted)}
@@ -44,7 +48,8 @@ body.splash{padding:0;overflow:hidden;background:#000}
 @keyframes sp-draw{to{transform:rotate(-12deg) scaleX(1)}}
 @keyframes sp-deer{to{opacity:1;transform:none}}
 @keyframes sp-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-body.done *{animation-duration:0s!important;animation-delay:0s!important}
+body.done .sp-bg,body.done .sp-band,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name,body.done .sp-btns .btn{animation-duration:0s!important;animation-delay:0s!important}
+body.done .sp-deer i{animation-delay:0s!important}
 @media (prefers-reduced-motion: reduce){.sp *, .sp-bg, .sp-band, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
 /* Installations-Hinweis */
 .ins{position:fixed;inset:0;z-index:30;background:rgba(5,7,10,.78);display:flex;align-items:flex-end;justify-content:center;padding:12px 12px calc(12px + env(safe-area-inset-bottom))}
@@ -68,7 +73,7 @@ body.done *{animation-duration:0s!important;animation-delay:0s!important}
 
 <main class="sp">
   <button class="sp-skip" aria-label="Animation überspringen" onclick="document.body.classList.add('done');this.remove()"></button>
-  <div class="sp-deer"><img src="logo-emblem-green.svg" alt="On Track Logo"></div>
+  <div class="sp-deer" role="img" aria-label="On Track Logo"><i></i></div>
   <div class="sp-name"><b>ON TRACK</b><small>MAXIMILIAN HÖFLER · SINCE 2024</small></div>
   <div class="sp-btns">
     <a class="btn" href="auswahl.html">ZUR QUIZAUSWAHL</a>
