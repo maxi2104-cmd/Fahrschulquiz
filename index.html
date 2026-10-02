@@ -54,9 +54,9 @@ body.splash{padding:0;overflow:hidden;background:#000}
 @keyframes sp-draw{to{transform:rotate(-12deg) scaleX(1)}}
 @keyframes sp-deer{to{opacity:1;transform:none}}
 @keyframes sp-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-body.done .sp-bg,body.done .sp-photo,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name,body.done .sp-btns .btn{animation-duration:0s!important;animation-delay:0s!important}
-body.done .sp-deer .sp-logo{animation-delay:0s!important}
-@media (prefers-reduced-motion: reduce){.sp *, .sp-btns .btn, .sp-bg, .sp-photo, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
+body.done .sp-ticker,body.done .sp-bg,body.done .sp-photo,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name,body.done .sp-btns .btn{animation-duration:0s!important;animation-delay:0s!important}
+body.done .sp-deer .sp-logo,body.done .sp-ticker-track{animation-delay:0s!important}
+@media (prefers-reduced-motion: reduce){.sp-ticker-track{animation:none!important}.sp *, .sp-btns .btn, .sp-bg, .sp-photo, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
 
 /* Tablet quer & Computer: flachere Linie, größeres Logo, Buttons mittig (Handy-Ansicht bleibt unverändert) */
 @media (min-width: 700px) and (min-aspect-ratio: 1/1) {
@@ -71,6 +71,15 @@ body.done .sp-deer .sp-logo{animation-delay:0s!important}
 }
 @media (min-width: 700px) and (min-aspect-ratio: 1/1){.sp-lines .sp-edge{top:66%!important}}
 @keyframes sp-draw-w{to{transform:rotate(-5deg) scaleX(1)}}
+
+/* Laufschrift direkt unter der Kante */
+.sp-ticker{position:fixed;z-index:2;left:-40%;width:180%;top:calc(70% + 6px);height:32px;overflow:hidden;
+  transform:rotate(-12deg);transform-origin:left top;background:rgba(8,10,14,.62);opacity:0;animation:sp-fade .6s ease-out 1.6s forwards;pointer-events:none}
+.sp-ticker-track{display:flex;width:max-content;height:100%;align-items:center;will-change:transform;animation:sp-run 38s linear 1.6s infinite}
+.sp-ticker-track span{white-space:pre;padding-right:0;font-family:"Copperplate Gothic Bold","Copperplate Gothic","Copperplate","Copperplate Gothic Light",Georgia,serif;
+  font-weight:700;font-size:16px;letter-spacing:.06em;color:#ff6b6b;text-transform:uppercase}
+@keyframes sp-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (min-width: 700px) and (min-aspect-ratio: 1/1){.sp-ticker{top:calc(66% + 6px);transform:rotate(-5deg);height:38px}.sp-ticker-track span{font-size:19px}}
 /* Installations-Hinweis */
 .ins{position:fixed;inset:0;z-index:30;background:rgba(5,7,10,.78);display:flex;align-items:flex-end;justify-content:center;padding:12px 12px calc(12px + env(safe-area-inset-bottom))}
 .ins[hidden]{display:none}
@@ -91,6 +100,9 @@ body.done .sp-deer .sp-logo{animation-delay:0s!important}
 <body class="splash">
 <div class="sp-bg" aria-hidden="true"></div>
 <div class="sp-photo" role="img" aria-label="Fahrschulauto Skoda Enyaq von On Track"></div>
+<div class="sp-ticker" role="marquee" aria-label="Breaking News: Theoriekurs startet am 16. November, nur noch wenige Plätze frei. Jetzt schnell einen Platz sichern!">
+  <div class="sp-ticker-track"><span>+++ Breaking News: Theoriekurs startet am 16. November, nur noch wenige Plätze frei. +++ Jetzt schnell einen Platz sichern!&nbsp;</span><span>+++ Breaking News: Theoriekurs startet am 16. November, nur noch wenige Plätze frei. +++ Jetzt schnell einen Platz sichern!&nbsp;</span><span>+++ Breaking News: Theoriekurs startet am 16. November, nur noch wenige Plätze frei. +++ Jetzt schnell einen Platz sichern!&nbsp;</span><span>+++ Breaking News: Theoriekurs startet am 16. November, nur noch wenige Plätze frei. +++ Jetzt schnell einen Platz sichern!&nbsp;</span></div>
+</div>
 <div class="sp-lines" aria-hidden="true">
   <span style="--h:6px;--c:var(--lime);top:9%;--t:.7s"></span>
   <span style="--h:3px;--c:var(--lime-d);top:13%;--t:.85s"></span>
