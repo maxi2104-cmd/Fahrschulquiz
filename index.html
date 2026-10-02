@@ -40,23 +40,29 @@ body.splash{padding:0;overflow:hidden;background:#000}
 .sp-name b{display:block;font-size:clamp(30px,9vw,46px);font-weight:900;letter-spacing:.32em;margin-right:-.32em;color:var(--text)}
 .sp-name small{display:block;margin-top:6px;font-size:12px;letter-spacing:.24em;color:var(--muted)}
 /* 4. Buttons */
-.sp-btns .btn:nth-child(1){animation-delay:2.6s}
-.sp-btns .btn:nth-child(2){animation-delay:2.75s}
-.sp-btns .btn:nth-child(3){animation-delay:2.9s}
+.sp-btns .btn:nth-child(1){--d:2.6s}
+.sp-btns .btn:nth-child(2){--d:2.75s}
+.sp-btns .btn:nth-child(3){--d:2.9s}
 .sp-btns{position:fixed;z-index:4;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:560px;margin:0 auto}
-.sp-btns .btn{margin:0;opacity:0;animation:sp-up .6s ease-out forwards;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
-  min-height:112px;padding:12px 6px;border-radius:20px;text-decoration:none;box-sizing:border-box;font-size:12.5px;line-height:1.25;letter-spacing:.1em;text-align:center;
+.sp-btns .btn{margin:0;opacity:0;animation:btn-in .6s ease-out var(--d,0s) both,btn-pulse 2.2s ease-in-out calc(var(--d,0s) + 1s) infinite;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  min-height:216px;padding:16px 6px;border-radius:24px;text-decoration:none;box-sizing:border-box;font-size:15px;line-height:1.25;letter-spacing:.06em;gap:14px;text-align:center;
   box-shadow:0 10px 28px rgba(0,0,0,.45);hyphens:manual}
-.sp-btns .btn svg{width:30px;height:30px;flex:none}
+.sp-btns .btn svg{width:56px;height:56px;flex:none}
+.sp-btns .btn:hover,.sp-btns .btn:focus-visible{animation:btn-in .6s ease-out var(--d,0s) both,btn-hold .25s ease-out forwards}
+@keyframes btn-in{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+@keyframes btn-pulse{0%,100%{scale:1}50%{scale:1.06}}
+@keyframes btn-hold{to{scale:1.1}}
+@media (max-height:700px){.sp-btns .btn{min-height:176px}.sp-btns .btn svg{width:46px;height:46px}}
 .sp-btns .btn:disabled{opacity:.85}
 .sp-skip{position:fixed;inset:0;z-index:1;background:transparent;border:0}
 @keyframes sp-fade{to{opacity:1}}
 @keyframes sp-draw{to{transform:rotate(-12deg) scaleX(1)}}
 @keyframes sp-deer{to{opacity:1;transform:none}}
 @keyframes sp-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-body.done .sp-ticker,body.done .sp-bg,body.done .sp-photo,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name,body.done .sp-btns .btn{animation-duration:0s!important;animation-delay:0s!important}
+body.done .sp-ticker,body.done .sp-bg,body.done .sp-photo,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name{animation-duration:0s!important;animation-delay:0s!important}
+body.done .sp-btns .btn{--d:0s}
 body.done .sp-deer .sp-logo,body.done .sp-ticker-track{animation-delay:0s!important}
-@media (prefers-reduced-motion: reduce){.sp-ticker-track{animation:none!important}.sp *, .sp-btns .btn, .sp-bg, .sp-photo, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
+@media (prefers-reduced-motion: reduce){.sp-ticker-track{animation:none!important}.sp-btns .btn{animation:none!important;opacity:1!important}.sp *, .sp-bg, .sp-photo, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
 
 /* Tablet quer & Computer: flachere Linie, größeres Logo, Buttons mittig (Handy-Ansicht bleibt unverändert) */
 @media (min-width: 700px) and (min-aspect-ratio: 1/1) {
@@ -65,9 +71,9 @@ body.done .sp-deer .sp-logo,body.done .sp-ticker-track{animation-delay:0s!import
     clip-path:polygon(0 calc(9vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%);-webkit-clip-path:polygon(0 calc(9vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%)}
   .sp{height:calc(66vh - 12.5vw + 10px);padding-top:calc(28px + env(safe-area-inset-top))}
   .sp-deer .sp-logo{max-width:min(60vw,560px)}
-  .sp-btns{left:50%;right:auto;width:min(680px,calc(100vw - 48px));transform:translateX(-50%);bottom:calc(32px + env(safe-area-inset-bottom));gap:16px}
-  .sp-btns .btn{min-height:128px;font-size:14px;border-radius:22px}
-  .sp-btns .btn svg{width:34px;height:34px}
+  .sp-btns{left:50%;right:auto;max-width:none;width:min(980px,calc(100vw - 64px));transform:translateX(-50%);bottom:calc(32px + env(safe-area-inset-bottom));gap:16px}
+  .sp-btns .btn{min-height:256px;font-size:20px;border-radius:28px;letter-spacing:.1em}
+  .sp-btns .btn svg{width:68px;height:68px}
 }
 @media (min-width: 700px) and (min-aspect-ratio: 1/1){.sp-lines .sp-edge{top:66%!important}}
 @keyframes sp-draw-w{to{transform:rotate(-5deg) scaleX(1)}}
