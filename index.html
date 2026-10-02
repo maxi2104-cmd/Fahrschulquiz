@@ -19,19 +19,22 @@
 <style>
 html,body{height:100%}
 body.splash{padding:0;overflow:hidden;background:#000}
-.sp{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
-  padding:calc(24px + env(safe-area-inset-top)) 24px calc(28px + env(safe-area-inset-bottom));text-align:center}
+.sp{position:fixed;left:0;right:0;top:0;height:calc(82vh - 30vw);z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  padding:calc(14px + env(safe-area-inset-top)) 24px 14px;box-sizing:border-box;text-align:center}
 /* 1. Hintergrund */
 .sp-bg{position:fixed;inset:0;background:var(--bg);opacity:0;animation:sp-fade .7s ease-out .1s forwards}
 /* 2. Striche */
 .sp-lines{position:fixed;inset:0;overflow:hidden;pointer-events:none}
 .sp-lines span{position:absolute;left:-40%;width:180%;height:var(--h);background:var(--c);transform:rotate(-12deg) scaleX(0);transform-origin:left top;
   animation:sp-draw .7s cubic-bezier(.65,0,.35,1) var(--t) forwards}
-.sp-band{position:fixed;left:-40%;width:180%;top:calc(86% + 6px);height:120%;background:var(--band);transform:rotate(-12deg);transform-origin:left top;opacity:0;animation:sp-fade .6s ease-out 1.25s forwards}
+.sp-photo{position:fixed;left:0;right:0;bottom:0;top:calc(82vh - 30vw);z-index:1;background:#000 url(startbild.jpg) 62% 55%/cover no-repeat;
+  clip-path:polygon(0 calc(21.5vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%);-webkit-clip-path:polygon(0 calc(21.5vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%);
+  opacity:0;animation:sp-fade .8s ease-out 1.25s forwards}
+.sp-lines{z-index:2}
 /* 3. Hirsch */
-.sp-deer{position:relative;width:min(88vw,500px);max-height:58vh;aspect-ratio:295/285;opacity:0;transform:scale(.82) translateY(14px);
+.sp-deer{position:relative;flex:1 1 auto;min-height:0;width:100%;display:flex;justify-content:center;opacity:0;transform:scale(.82) translateY(14px);
   animation:sp-deer 1s cubic-bezier(.2,.8,.2,1) 1.5s forwards}
-.sp-deer .sp-logo{display:block;width:100%;height:100%;overflow:visible;transform-origin:50% 45%;will-change:transform;animation:sp-pulse 2.4s ease-in-out 2.5s infinite}
+.sp-deer .sp-logo{display:block;height:100%;max-width:min(88vw,460px);overflow:visible;transform-origin:50% 45%;will-change:transform;animation:sp-pulse 2.4s ease-in-out 2.5s infinite}
 @keyframes sp-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
 .sp-name{position:relative;opacity:0;animation:sp-up .7s ease-out 2.2s forwards}
 .sp-name b{display:block;font-size:clamp(30px,9vw,46px);font-weight:900;letter-spacing:.32em;margin-right:-.32em;color:var(--text)}
@@ -40,16 +43,18 @@ body.splash{padding:0;overflow:hidden;background:#000}
 .sp-btns{position:relative;width:100%;max-width:380px;display:flex;flex-direction:column;gap:12px}
 .sp-btns .btn{margin:0;opacity:0;animation:sp-up .6s ease-out forwards}
 .sp-btns .btn:nth-child(1){animation-delay:2.6s}
-.sp-btns .btn:nth-child(2){animation-delay:2.8s}
-.sp-btns .btn{display:flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box;font-size:15px;padding:0 12px}
+.sp-btns .btn:nth-child(2){animation-delay:2.75s}
+.sp-btns .btn:nth-child(3){animation-delay:2.9s}
+.sp-btns .btn{display:flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box;font-size:14px;padding:0 12px;min-height:50px}
+.sp-btns{flex:none;gap:10px}
 .sp-skip{position:fixed;inset:0;z-index:1;background:transparent;border:0}
 @keyframes sp-fade{to{opacity:1}}
 @keyframes sp-draw{to{transform:rotate(-12deg) scaleX(1)}}
 @keyframes sp-deer{to{opacity:1;transform:none}}
 @keyframes sp-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-body.done .sp-bg,body.done .sp-band,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name,body.done .sp-btns .btn{animation-duration:0s!important;animation-delay:0s!important}
+body.done .sp-bg,body.done .sp-photo,body.done .sp-lines span,body.done .sp-deer,body.done .sp-name,body.done .sp-btns .btn{animation-duration:0s!important;animation-delay:0s!important}
 body.done .sp-deer .sp-logo{animation-delay:0s!important}
-@media (prefers-reduced-motion: reduce){.sp *, .sp-bg, .sp-band, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
+@media (prefers-reduced-motion: reduce){.sp *, .sp-bg, .sp-photo, .sp-lines span{animation-duration:0s!important;animation-delay:0s!important}}
 /* Installations-Hinweis */
 .ins{position:fixed;inset:0;z-index:30;background:rgba(5,7,10,.78);display:flex;align-items:flex-end;justify-content:center;padding:12px 12px calc(12px + env(safe-area-inset-bottom))}
 .ins[hidden]{display:none}
@@ -58,16 +63,23 @@ body.done .sp-deer .sp-logo{animation-delay:0s!important}
 .ins-box p{color:var(--muted);margin:0 0 14px;line-height:1.5}
 .ins-box ol{margin:0 0 18px;padding-left:22px;line-height:1.7}
 .ins-box li b{color:var(--lime)}
+.ins-box{max-height:calc(100vh - 40px);overflow-y:auto}
+.ins-sec{border:1px solid var(--line);border-radius:16px;padding:14px 16px 4px;margin:0 0 12px}
+.ins-sec.me{border-color:var(--lime)}
+.ins-sec h3{margin:0 0 6px;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--text)}
+.ins-sec ol{margin:0 0 10px;padding-left:20px;line-height:1.6;color:var(--muted)}
+.ins-warn{border:1px solid var(--bad);border-radius:14px;padding:12px 14px;color:var(--text)!important}
+.ins-box .btn{min-height:50px;font-size:15px}
 </style>
 </head>
 <body class="splash">
 <div class="sp-bg" aria-hidden="true"></div>
-<div class="sp-band" aria-hidden="true"></div>
+<div class="sp-photo" role="img" aria-label="Fahrschulauto Skoda Enyaq von On Track"></div>
 <div class="sp-lines" aria-hidden="true">
   <span style="--h:6px;--c:var(--lime);top:9%;--t:.7s"></span>
   <span style="--h:3px;--c:var(--lime-d);top:13%;--t:.85s"></span>
   <span style="--h:2px;--c:var(--line);top:5%;--t:1s"></span>
-  <span style="--h:6px;--c:var(--lime);top:86%;--t:1.1s;z-index:1"></span>
+  <span style="--h:6px;--c:var(--lime);top:82%;--t:1.1s"></span>
 </div>
 
 <main class="sp">
@@ -1032,16 +1044,36 @@ body.done .sp-deer .sp-logo{animation-delay:0s!important}
 </div>
   <div class="sp-btns">
     <a class="btn" href="auswahl.html">ZUR QUIZAUSWAHL</a>
-    <button id="btn-install" class="btn" type="button">QUIZ ALS APP INSTALLIEREN</button>
+    <button id="btn-install" class="btn" type="button">ZUM HOMESCREEN HINZUFÜGEN</button>
+    <a class="btn" href="https://www.ontrack-fahr.schule" target="_blank" rel="noopener">ZUR WEBSITE</a>
   </div>
 </main>
 
 <div id="ins" class="ins" hidden>
   <div class="ins-box" role="dialog" aria-modal="true" aria-labelledby="ins-h">
-    <h2 id="ins-h">APP INSTALLIEREN</h2>
-    <p id="ins-p"></p>
-    <ol id="ins-steps"></ol>
-    <button id="ins-close" class="btn" type="button">VERSTANDEN</button>
+    <h2 id="ins-h">ZUM HOMESCREEN</h2>
+    <p>So legst du das Quiz als App auf deinen Startbildschirm:</p>
+    <button id="ins-now" class="btn" type="button" hidden style="margin-bottom:16px">JETZT HINZUFÜGEN</button>
+    <div id="ins-list">
+      <section class="ins-sec" data-b="safari">
+        <h3>Safari (iPhone &amp; iPad)</h3>
+        <ol>
+          <li>Unten auf das <b>Teilen-Symbol</b> tippen (Quadrat mit Pfeil nach oben)</li>
+          <li>Nach unten scrollen und <b>„Zum Home-Bildschirm“</b> wählen</li>
+          <li>Oben rechts auf <b>„Hinzufügen“</b> tippen</li>
+        </ol>
+      </section>
+      <section class="ins-sec" data-b="chrome">
+        <h3>Google Chrome</h3>
+        <ol>
+          <li><b>Android:</b> Oben rechts auf <b>⋮</b> tippen</li>
+          <li><b>„Zum Startbildschirm hinzufügen“</b> bzw. <b>„App installieren“</b> wählen und bestätigen</li>
+          <li><b>iPhone:</b> Oben rechts auf das <b>Teilen-Symbol</b> tippen, dann <b>„Zum Home-Bildschirm“</b></li>
+        </ol>
+      </section>
+    </div>
+    <p id="ins-inapp" class="ins-warn" hidden>Du bist im Browser von Instagram, WhatsApp o. Ä. Tippe dort oben rechts auf <b>•••</b> und wähle <b>„Im Browser öffnen“</b>. Danach geht es wie oben beschrieben.</p>
+    <button id="ins-close" class="btn ghost" type="button">SCHLIESSEN</button>
   </div>
 </div>
 
@@ -1053,43 +1085,21 @@ setTimeout(() => { const s = document.querySelector(".sp-skip"); if (s) s.remove
   const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   const isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   const inApp = /Instagram|FBAN|FBAV|FB_IAB|Line\/|WhatsApp|TikTok|Snapchat/i.test(ua);
-  const iosOther = isIOS && /CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
-  const isAndroid = /Android/.test(ua);
+  const isChrome = /CriOS|Chrome\//.test(ua) && !/Edg|OPR|SamsungBrowser/.test(ua);
   let deferred = null;
-
-  if (standalone) { btn.textContent = "APP IST INSTALLIERT ✓"; btn.disabled = true; }
-
+  if (standalone) { btn.textContent = "IST AUF DEM HOMESCREEN ✓"; btn.disabled = true; }
   window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; });
-  window.addEventListener("appinstalled", () => { btn.textContent = "APP IST INSTALLIERT ✓"; btn.disabled = true; });
+  window.addEventListener("appinstalled", () => { btn.textContent = "IST AUF DEM HOMESCREEN ✓"; btn.disabled = true; });
 
-  const box = document.getElementById("ins"), p = document.getElementById("ins-p"), ol = document.getElementById("ins-steps");
-  function show(text, steps) {
-    p.textContent = text;
-    ol.innerHTML = steps.map(s => "<li>" + s + "</li>").join("");
-    box.hidden = false;
-  }
+  const box = document.getElementById("ins"), now = document.getElementById("ins-now"), list = document.getElementById("ins-list");
+  // passenden Browser zuerst zeigen und hervorheben
+  const mine = isChrome ? "chrome" : (isIOS ? "safari" : null);
+  if (mine) { const s = list.querySelector('[data-b="' + mine + '"]'); s.classList.add("me"); list.prepend(s); }
+  document.getElementById("ins-inapp").hidden = !inApp;
   document.getElementById("ins-close").onclick = () => { box.hidden = true; };
   box.addEventListener("click", (e) => { if (e.target === box) box.hidden = true; });
-
-  btn.addEventListener("click", async () => {
-    if (deferred) { deferred.prompt(); await deferred.userChoice; deferred = null; return; }
-    if (inApp) {
-      show("Du bist gerade im Browser einer anderen App (z. B. Instagram oder WhatsApp). Dort kann man nichts installieren.",
-        ["Tippe oben rechts auf <b>•••</b> bzw. <b>⋮</b>", "Wähle <b>„In Safari öffnen“</b> bzw. <b>„Im Browser öffnen“</b>", "Tippe dort noch einmal auf <b>„Quiz als App installieren“</b>"]);
-    } else if (iosOther) {
-      show("Auf dem iPhone und iPad klappt die Installation am zuverlässigsten mit Safari.",
-        ["Kopiere die Adresse dieser Seite", "Öffne sie in <b>Safari</b>", "Tippe dort noch einmal auf <b>„Quiz als App installieren“</b>"]);
-    } else if (isIOS) {
-      show("So legst du das Quiz als App auf deinen Home-Bildschirm:",
-        ["Tippe in Safari auf das <b>Teilen-Symbol</b> (Quadrat mit Pfeil nach oben)", "Scrolle nach unten und wähle <b>„Zum Home-Bildschirm“</b>", "Tippe oben rechts auf <b>„Hinzufügen“</b>"]);
-    } else if (isAndroid) {
-      show("So installierst du das Quiz als App:",
-        ["Tippe in Chrome oben rechts auf <b>⋮</b>", "Wähle <b>„App installieren“</b> oder <b>„Zum Startbildschirm hinzufügen“</b>", "Bestätige mit <b>„Installieren“</b>"]);
-    } else {
-      show("Am Computer kannst du das Quiz über die Adressleiste installieren:",
-        ["Klicke in Chrome oder Edge rechts in der Adressleiste auf das <b>Installieren-Symbol</b>", "Bestätige mit <b>„Installieren“</b>", "Am besten geht es aber auf dem Handy"]);
-    }
-  });
+  now.onclick = async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice; deferred = null; box.hidden = true; };
+  btn.addEventListener("click", () => { now.hidden = !deferred; box.hidden = false; });
 })();
 </script>
 </body>
