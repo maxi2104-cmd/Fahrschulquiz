@@ -3087,8 +3087,8 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wozu dienen Dauerbremsen am Lkw?",
   "answers": [
    "Nur für Notbremsungen",
-   "Zum Bremsen des Anhängers beim Abkuppeln",
    "Zum Festhalten des Fahrzeugs beim Parken",
+   "Zum Bremsen des Anhängers beim Abkuppeln",
    "Zum verschleißfreien Bremsen und zur Entlastung der Betriebsbremse, z. B. bei langen Gefällen"
   ],
   "correct": 3,
@@ -3098,24 +3098,24 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "DAUERBREMSE?",
   "text": "Was soll eine Dauerbremse bei langen Bergabfahrten vor allem verhindern?",
   "answers": [
-   "Einfrieren der Druckluftanlage",
    "Überhitzung der Betriebsbremse und Fading",
    "Blockieren der Räder",
+   "Einfrieren der Druckluftanlage",
    "Zu hohen Kraftstoffverbrauch"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Wird nur mit der Betriebsbremse gebremst, überhitzt sie und verliert Wirkung (Fading)."
  },
  {
   "title": "ZWEI GRUPPEN",
   "text": "In welche zwei Gruppen teilt man Dauerbremsen ein?",
   "answers": [
-   "Motorbremsen und Retarder",
-   "Trommel- und Scheibenbremsen",
    "Betriebs- und Feststellbremsen",
+   "Trommel- und Scheibenbremsen",
+   "Motorbremsen und Retarder",
    "Einkreis- und Zweikreisbremsen"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Motorbremsen wirken über den Motor, Retarder sind eigene Bauteile im Antriebsstrang."
  },
  {
@@ -3134,36 +3134,36 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "MOTORBREMSE",
   "text": "Was muss der Fahrer beachten, damit die Motorbremse gut wirkt?",
   "answers": [
+   "Rechtzeitig herunterschalten, damit die Drehzahl hoch ist",
    "Die Kupplung treten",
-   "Möglichst hoch schalten",
    "Die Feststellbremse leicht anziehen",
-   "Rechtzeitig herunterschalten, damit die Drehzahl hoch ist"
+   "Möglichst hoch schalten"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Weil Motorbremsen drehzahlabhängig sind, muss man rechtzeitig herunterschalten."
  },
  {
   "title": "AUSPUFFKLAPPE",
   "text": "Wie funktioniert die Auspuffklappenbremse (Motorstaubremse)?",
   "answers": [
+   "Eine Klappe im Abgasstrang schließt, der Motor arbeitet gegen den Abgasgegendruck",
    "Öl wird in einen Rotor gepumpt",
    "Das Auslassventil öffnet kurz vor dem oberen Totpunkt",
-   "Elektromagnete erzeugen Wirbelströme",
-   "Eine Klappe im Abgasstrang schließt, der Motor arbeitet gegen den Abgasgegendruck"
+   "Elektromagnete erzeugen Wirbelströme"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Auspuffklappenbremse: Klappe im Abgasstrang, der Motor muss gegen den Gegendruck arbeiten."
  },
  {
   "title": "SCHWÄCHSTE?",
   "text": "Welche Dauerbremse hat die geringste Bremsleistung, ist aber einfach und günstig?",
   "answers": [
-   "Sekundärretarder",
    "Auspuffklappenbremse",
+   "Dekompressionsbremse",
    "Konstantdrosselbremse",
-   "Dekompressionsbremse"
+   "Sekundärretarder"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Die Auspuffklappenbremse allein hat die geringste Bremsleistung."
  },
  {
@@ -3171,9 +3171,9 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wie funktioniert die Konstantdrosselbremse (KD-Bremse)?",
   "answers": [
    "Ein zusätzliches Ventil im Zylinderkopf lässt verdichtete Luft über eine Drossel ab",
-   "Eine Klappe im Abgasstrang schließt allein",
    "Kühlmittel wird in einen Rotor geleitet",
-   "Wirbelströme bremsen die Gelenkwelle"
+   "Wirbelströme bremsen die Gelenkwelle",
+   "Eine Klappe im Abgasstrang schließt allein"
   ],
   "correct": 0,
   "explain": "KD-Bremse: zusätzliches Ventil im Zylinderkopf, meist kombiniert mit der Auspuffklappe."
@@ -3182,9 +3182,9 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "KD-BREMSE",
   "text": "Bei welchem Hersteller ist die Konstantdrosselbremse typisch?",
   "answers": [
-   "Voith",
    "Telma",
    "MAN",
+   "Voith",
    "Mercedes-Benz"
   ],
   "correct": 3,
@@ -3194,36 +3194,36 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "DEKOMPRESSION",
   "text": "Wie funktioniert eine Dekompressionsbremse (z. B. „Jake Brake“)?",
   "answers": [
-   "Das Auslassventil öffnet kurz vor dem oberen Totpunkt, die Verdichtungsarbeit geht verloren",
+   "Öl bremst einen Rotor im Getriebe",
    "Elektromagnete bremsen Rotorscheiben",
    "Eine Klappe im Abgasstrang wird geschlossen",
-   "Öl bremst einen Rotor im Getriebe"
+   "Das Auslassventil öffnet kurz vor dem oberen Totpunkt, die Verdichtungsarbeit geht verloren"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Die verdichtete Luft drückt den Kolben nicht wieder nach unten, die Energie geht verloren."
  },
  {
   "title": "DEKOMPRESSION",
   "text": "Welcher Nachteil wird der Dekompressionsbremse zugeschrieben?",
   "answers": [
-   "Sie belastet das Kühlsystem am stärksten",
    "Sie braucht sehr viel Strom",
+   "Sie ist laut",
    "Sie hat kaum Bremsleistung",
-   "Sie ist laut"
+   "Sie belastet das Kühlsystem am stärksten"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Die Dekompressionsbremse hat eine hohe Bremsleistung, ist aber laut."
  },
  {
   "title": "EVB",
   "text": "Wie funktioniert die Abgasventilbremse (EVB, z. B. bei MAN)?",
   "answers": [
-   "Das Auslassventil wird durch den Abgasgegendruck leicht offen gehalten, zusammen mit einer Auspuffklappe",
-   "Wirbelströme entstehen in Rotorscheiben",
    "Nur eine Klappe im Abgasstrang schließt",
-   "Kühlmittel dient als Arbeitsmedium"
+   "Kühlmittel dient als Arbeitsmedium",
+   "Wirbelströme entstehen in Rotorscheiben",
+   "Das Auslassventil wird durch den Abgasgegendruck leicht offen gehalten, zusammen mit einer Auspuffklappe"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "EVB (Exhaust Valve Brake): Weiterentwicklung der Staubremse mit mehr Leistung."
  },
  {
@@ -3231,9 +3231,9 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Welche Dauerbremse gehört NICHT zu den Motorbremsen?",
   "answers": [
    "Sekundärretarder",
-   "Auspuffklappenbremse",
    "Dekompressionsbremse",
-   "Konstantdrosselbremse"
+   "Konstantdrosselbremse",
+   "Auspuffklappenbremse"
   ],
   "correct": 0,
   "explain": "Retarder sind eigene Bauteile im Antriebsstrang, keine Motorbremsen."
@@ -3242,8 +3242,8 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "PRIMÄRRETARDER",
   "text": "Wo sitzt ein Primärretarder?",
   "answers": [
-   "An der Hinterachse des Anhängers",
    "Im Abgasstrang",
+   "An der Hinterachse des Anhängers",
    "Hinter dem Getriebe an der Gelenkwelle",
    "Vor dem Getriebe, auf der Motorseite"
   ],
@@ -3255,9 +3255,9 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wann bremst ein Primärretarder besonders gut?",
   "answers": [
    "Nur im Stand",
-   "Nur bei ausgekuppeltem Motor",
+   "Nur bei hohem Tempo auf der Autobahn",
    "Schon bei niedriger Geschwindigkeit, z. B. im Verteilerverkehr",
-   "Nur bei hohem Tempo auf der Autobahn"
+   "Nur bei ausgekuppeltem Motor"
   ],
   "correct": 2,
   "explain": "Weil er von der Motordrehzahl abhängt, wirkt er auch bei langsamer Fahrt gut."
@@ -3266,36 +3266,36 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "SEKUNDÄRRETARDER",
   "text": "Wo sitzt ein Sekundärretarder?",
   "answers": [
-   "Im Zylinderkopf",
    "Hinter dem Getriebe an der Gelenkwelle",
    "Vor dem Getriebe am Motor",
-   "Im Abgasstrang"
+   "Im Abgasstrang",
+   "Im Zylinderkopf"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Sekundärretarder: hinter dem Getriebe an der Gelenkwelle."
  },
  {
   "title": "SEKUNDÄRRETARDER",
   "text": "Wovon hängt die Wirkung eines Sekundärretarders ab?",
   "answers": [
+   "Von der Fahrgeschwindigkeit",
    "Von der Motordrehzahl",
-   "Von der Batteriespannung",
    "Vom eingelegten Gang allein",
-   "Von der Fahrgeschwindigkeit"
+   "Von der Batteriespannung"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Sekundärretarder wirken abhängig von der Fahrgeschwindigkeit: stark bei hohem Tempo, schwächer bei langsamer Fahrt."
  },
  {
   "title": "SEKUNDÄRRETARDER",
   "text": "Wann lässt die Wirkung eines Sekundärretarders nach?",
   "answers": [
-   "Bei hohem Tempo",
-   "Bei hoher Motordrehzahl",
+   "Bei kaltem Motor",
    "Bei langsamer Fahrt",
-   "Bei kaltem Motor"
+   "Bei hoher Motordrehzahl",
+   "Bei hohem Tempo"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Der Sekundärretarder ist im Fernverkehr bei hohem Tempo stark, bei langsamer Fahrt lässt er nach."
  },
  {
@@ -3303,9 +3303,9 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Was für eine Dauerbremse ist ein Intarder?",
   "answers": [
    "Ein hydrodynamischer Sekundärretarder",
-   "Eine Dekompressionsbremse",
+   "Eine Auspuffklappenbremse",
    "Eine Wirbelstrombremse",
-   "Eine Auspuffklappenbremse"
+   "Eine Dekompressionsbremse"
   ],
   "correct": 0,
   "explain": "Der Intarder ist ein hydrodynamischer Sekundärretarder hinter dem Getriebe."
@@ -3314,12 +3314,12 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "ARBEITSMEDIUM",
   "text": "Welches Arbeitsmedium nutzt ein klassischer hydrodynamischer Sekundärretarder?",
   "answers": [
-   "Druckluft",
    "Abgas",
    "Öl, das über einen Wärmetauscher gekühlt wird",
-   "Elektrischen Strom"
+   "Elektrischen Strom",
+   "Druckluft"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Hydrodynamische Retarder bremsen über Flüssigkeitsreibung, beim Sekundärretarder mit Öl."
  },
  {
@@ -3328,8 +3328,8 @@ export const FB_TECHNIK_QUESTIONS = [
   "answers": [
    "Er sitzt im Abgasstrang",
    "Er nutzt direkt das Kühlmittel des Motors als Arbeitsmedium",
-   "Er braucht einen eigenen Ölkreislauf",
-   "Er arbeitet mit Elektromagneten"
+   "Er arbeitet mit Elektromagneten",
+   "Er braucht einen eigenen Ölkreislauf"
   ],
   "correct": 1,
   "explain": "Der Wasserretarder ist hydrodynamisch und nutzt das Kühlmittel statt Öl."
@@ -3338,22 +3338,22 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "WASSERRETARDER",
   "text": "Welche Vor- und Nachteile hat der Wasserretarder?",
   "answers": [
-   "Günstig, hat aber die geringste Bremsleistung",
    "Sehr leise, braucht aber viel Strom",
-   "Kein eigener Ölkreislauf und leichter, belastet aber das Kühlsystem stark",
-   "Schnelles Ansprechen, aber sehr schwer"
+   "Günstig, hat aber die geringste Bremsleistung",
+   "Schnelles Ansprechen, aber sehr schwer",
+   "Kein eigener Ölkreislauf und leichter, belastet aber das Kühlsystem stark"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Der Wasserretarder spart den Ölkreislauf, das Kühlsystem muss aber die Bremswärme aufnehmen."
  },
  {
   "title": "WIRBELSTROM",
   "text": "Wie funktioniert ein elektrodynamischer Retarder (Wirbelstrombremse, z. B. Telma)?",
   "answers": [
-   "Öl wird in einen Rotor gepumpt",
    "Eine Klappe schließt den Abgasstrang",
+   "Das Auslassventil wird offen gehalten",
    "Elektromagnete erzeugen Wirbelströme in Rotorscheiben auf der Gelenkwelle",
-   "Das Auslassventil wird offen gehalten"
+   "Öl wird in einen Rotor gepumpt"
   ],
   "correct": 2,
   "explain": "Elektrodynamischer Retarder: Magnetfelder bremsen die Rotorscheiben über Wirbelströme."
@@ -3374,12 +3374,12 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "WIRBELSTROM",
   "text": "Welche Nachteile hat der elektrodynamische Retarder?",
   "answers": [
-   "Belastet das Kühlsystem am stärksten",
-   "Schwer, hoher Strombedarf, Leistungsverlust bei Hitze",
    "Wirkt nur bei hoher Motordrehzahl",
-   "Sehr laut und langsames Ansprechen"
+   "Sehr laut und langsames Ansprechen",
+   "Schwer, hoher Strombedarf, Leistungsverlust bei Hitze",
+   "Belastet das Kühlsystem am stärksten"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Die Wirbelstrombremse spricht sehr schnell an, ist aber schwer, braucht viel Strom und verliert bei Hitze an Leistung."
  },
  {
@@ -3387,47 +3387,47 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wohin geben hydrodynamische Retarder die Bremswärme ab?",
   "answers": [
    "An die Batterie",
+   "An die Bremsscheiben",
    "An das Kühlsystem",
-   "Direkt an die Luft",
-   "An die Bremsscheiben"
+   "Direkt an die Luft"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Hydrodynamische Retarder geben die Wärme über das Kühlsystem ab."
  },
  {
   "title": "WELCHE HÄNGEN AB?",
   "text": "Welche Dauerbremsen hängen von der Fahrgeschwindigkeit ab?",
   "answers": [
+   "Auspuffklappe und KD-Bremse",
    "Nur die Dekompressionsbremse",
    "Sekundärretarder und Wirbelstrombremse",
-   "Auspuffklappe und KD-Bremse",
    "Motorbremsen und Primärretarder"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Motorbremsen und Primärretarder hängen von der Motordrehzahl ab, Sekundär- und Wirbelstromretarder von der Fahrgeschwindigkeit."
  },
  {
   "title": "WIRKPRINZIP",
   "text": "Worüber bremsen hydrodynamische Retarder?",
   "answers": [
-   "Über Flüssigkeitsreibung",
+   "Über Magnetfelder",
    "Über Abgasgegendruck",
-   "Über Reibbeläge",
-   "Über Magnetfelder"
+   "Über Flüssigkeitsreibung",
+   "Über Reibbeläge"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Hydrodynamische Retarder bremsen über Flüssigkeitsreibung, elektrodynamische über Magnetfelder."
  },
  {
   "title": "PFLICHT",
   "text": "Ab welcher zGm muss ein Kraftomnibus nach § 41 Abs. 15 StVZO eine Dauerbremse haben?",
   "answers": [
+   "Über 9 t",
    "Über 3,5 t",
    "Über 7,5 t",
-   "Über 5,5 t",
-   "Über 9 t"
+   "Über 5,5 t"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "§ 41 Abs. 15 StVZO: Kraftomnibusse über 5,5 t zGm müssen eine Dauerbremse haben."
  },
  {
@@ -3447,71 +3447,71 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Welche Kontrolle gehört zum Luftpresser?",
   "answers": [
    "Staubmanschetten prüfen",
+   "Luftfilterkontrollanzeige beobachten, Leitungsanschlüsse auf Dichtheit und Keilriemenspannung prüfen",
    "Granulatkartusche prüfen",
-   "Abschaltdruck am Typenschild ablesen",
-   "Luftfilterkontrollanzeige beobachten, Leitungsanschlüsse auf Dichtheit und Keilriemenspannung prüfen"
+   "Abschaltdruck am Typenschild ablesen"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Luftpresser: Luftfilterkontrollanzeige beobachten, Anschlüsse auf Dichtheit prüfen, Keilriemenspannung prüfen, bei eigener Ölschmierung Ölstand prüfen, Fülldauer beachten."
  },
  {
   "title": "LUFTPRESSER",
   "text": "Wann muss beim Luftpresser der Ölstand geprüft werden?",
   "answers": [
+   "Nur im Winter",
    "Wenn er eine eigene Ölschmierung hat",
-   "Nur nach einem Kartuschenwechsel",
    "Nie, er ist wartungsfrei",
-   "Nur im Winter"
+   "Nur nach einem Kartuschenwechsel"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Bei eigener Ölschmierung des Luftpressers den Ölstand prüfen."
  },
  {
   "title": "LUFTPRESSER",
   "text": "Welche Pflege braucht der Luftpresser?",
   "answers": [
-   "Mit Frostschutzmittel befüllen",
    "Täglich entwässern",
-   "Bremseinstellung nachstellen",
-   "Luftfilter reinigen und Kühlrippen sauber halten"
+   "Luftfilter reinigen und Kühlrippen sauber halten",
+   "Mit Frostschutzmittel befüllen",
+   "Bremseinstellung nachstellen"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Luftpresser: Luftfilter reinigen, Betriebsanleitung beachten, Kühlrippen sauber halten."
  },
  {
   "title": "LUFTPRESSER",
   "text": "Worauf achtet man beim Luftpresser zusätzlich während des Befüllens?",
   "answers": [
-   "Auf die Farbe der Luft",
    "Auf die Fülldauer",
    "Auf die Außentemperatur",
-   "Auf die Belagstärke"
+   "Auf die Belagstärke",
+   "Auf die Farbe der Luft"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Beim Luftpresser die Fülldauer beachten."
  },
  {
   "title": "DRUCKREGLER",
   "text": "Was wird am Druckregler kontrolliert?",
   "answers": [
-   "Der Flüssigkeitsstand",
    "Die Keilriemenspannung",
    "Der Abschaltdruck – ablesbar an den Zeigern des Druckmessers",
-   "Die Belagstärke"
+   "Die Belagstärke",
+   "Der Flüssigkeitsstand"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Druckregler: Abschaltdruck kontrollieren, das Erreichen lässt sich am Druckmesser ablesen. Wartung: eventuell vorhandenen Filter reinigen."
  },
  {
   "title": "FROSTSCHUTZ",
   "text": "Was kontrolliert man an der Frostschutzeinrichtung?",
   "answers": [
-   "Die Einstellung auf Sommer- oder Winterbetrieb und im Winter täglich den Flüssigkeitsstand",
-   "Das Typenschild",
    "Nur einmal im Jahr den Füllstand",
-   "Die Keilriemenspannung"
+   "Das Typenschild",
+   "Die Keilriemenspannung",
+   "Die Einstellung auf Sommer- oder Winterbetrieb und im Winter täglich den Flüssigkeitsstand"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Frostschutzeinrichtung: Sommer-/Winterbetrieb kontrollieren, Flüssigkeitsstand im Winter täglich prüfen."
  },
  {
@@ -3519,11 +3519,11 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Was gilt für Frostschutzpumpen im Sommer?",
   "answers": [
    "Sie werden im Sommer entleert",
+   "Sie müssen auch im Sommer mit Frostschutzmittel befüllt sein",
    "Sie werden im Sommer ausgebaut",
-   "Sie werden im Sommer mit Wasser befüllt",
-   "Sie müssen auch im Sommer mit Frostschutzmittel befüllt sein"
+   "Sie werden im Sommer mit Wasser befüllt"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Frostschutzpumpen müssen auch im Sommer mit Frostschutzmittel befüllt sein."
  },
  {
@@ -3542,48 +3542,48 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "LUFTTROCKNER",
   "text": "Wie prüft man die Funktion des Lufttrockners?",
   "answers": [
-   "Am Luftfilter des Luftpressers",
    "Am Bremspedal",
    "An den Entwässerungsventilen der Vorratsbehälter",
+   "Am Luftfilter des Luftpressers",
    "An der Keilriemenspannung"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Die Funktion des Lufttrockners wird an den Entwässerungsventilen der Vorratsbehälter überprüft."
  },
  {
   "title": "LUFTTROCKNER",
   "text": "Was ist zu tun, wenn sich in den Vorratsbehältern Wasser angesammelt hat?",
   "answers": [
+   "Den Druckregler nachstellen",
    "Nichts, das ist normal",
-   "Die Kartusche des Lufttrockners muss ausgetauscht werden",
    "Frostschutzmittel nachfüllen",
-   "Den Druckregler nachstellen"
+   "Die Kartusche des Lufttrockners muss ausgetauscht werden"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Hat sich Wasser angesammelt, muss die Kartusche ausgetauscht werden."
  },
  {
   "title": "LUFTTROCKNER",
   "text": "Wann werden die Granulatkartuschen des Lufttrockners getauscht?",
   "answers": [
-   "Einmal im Monat",
-   "Nach Vorschriften des Herstellers",
+   "Nur wenn sie sichtbar kaputt sind",
    "Nie",
-   "Nur wenn sie sichtbar kaputt sind"
+   "Einmal im Monat",
+   "Nach Vorschriften des Herstellers"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Wartung Lufttrockner: Austausch der Granulatkartuschen nach Vorschrift des Herstellers, Betriebsanleitung beachten."
  },
  {
   "title": "LUFTBEHÄLTER",
   "text": "Worauf werden Luftbehälter bei der Sichtprüfung kontrolliert?",
   "answers": [
-   "Auf Verformung, Risse, Korrosion und das Vorhandensein des Typenschildes",
-   "Auf den Ölstand",
    "Auf die Keilriemenspannung",
-   "Auf die Belagstärke"
+   "Auf den Ölstand",
+   "Auf die Belagstärke",
+   "Auf Verformung, Risse, Korrosion und das Vorhandensein des Typenschildes"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Luftbehälter: Sichtprüfung auf Verformung, Risse, Korrosion und Typenschild."
  },
  {
@@ -3591,43 +3591,43 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Welche Pflege brauchen Luftbehälter?",
   "answers": [
    "Nachstellen lassen",
-   "Regelmäßig entwässern (wenn möglich)",
    "Mit Frostschutz befüllen",
+   "Regelmäßig entwässern (wenn möglich)",
    "Luftfilter reinigen"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Luftbehälter regelmäßig entwässern, wenn möglich."
  },
  {
   "title": "MEMBRANZYLINDER",
   "text": "Was haben Fahrzeuge mit Membran-Bremszylinder meist?",
   "answers": [
-   "Automatische Gestängesteller",
-   "Keine Staubmanschetten",
    "Eine Auflaufbremse",
-   "Hydraulische Bremsen"
+   "Hydraulische Bremsen",
+   "Keine Staubmanschetten",
+   "Automatische Gestängesteller"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Fahrzeuge mit Membran-Bremszylinder haben meist automatische Gestängesteller."
  },
  {
   "title": "MEMBRANZYLINDER",
   "text": "Welche Kontrollen sind bei Membran-Bremszylindern besonders wichtig?",
   "answers": [
-   "Ölstand und Luftfilter prüfen",
-   "Frostschutz im Sommer ablassen",
    "Typenschild erneuern",
-   "Belagstärke kontrollieren und Staubmanschetten prüfen"
+   "Belagstärke kontrollieren und Staubmanschetten prüfen",
+   "Frostschutz im Sommer ablassen",
+   "Ölstand und Luftfilter prüfen"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Membran-Bremszylinder: Kontrolle der Belagstärke besonders wichtig, Staubmanschetten überprüfen."
  },
  {
   "title": "NACHSTELLEN",
   "text": "Was ist zu tun, wenn keine automatischen Gestängesteller vorhanden sind?",
   "answers": [
-   "Den Abschaltdruck erhöhen",
    "Die Bremsbeläge monatlich tauschen",
+   "Den Abschaltdruck erhöhen",
    "Die Bremseinstellung regelmäßig nachstellen lassen",
    "Nichts, die Bremse stellt sich selbst ein"
   ],
@@ -3638,24 +3638,24 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "BREMSBELÄGE",
   "text": "Wie dick müssen Bremsbeläge an der Druckluftbremse mindestens sein?",
   "answers": [
-   "3 mm",
-   "8 mm",
+   "5 mm",
    "1,6 mm",
-   "5 mm"
+   "8 mm",
+   "3 mm"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Die Stärke der Bremsbeläge regelmäßig an allen Rädern kontrollieren. Mindeststärke 5 mm."
  },
  {
   "title": "BREMSBELÄGE",
   "text": "Was ist zu tun, wenn die Mindestbelagstärke erreicht ist?",
   "answers": [
-   "Bei der nächsten HU erneuern",
    "Nur an der Vorderachse erneuern",
    "Die Bremsbeläge sofort erneuern",
+   "Bei der nächsten HU erneuern",
    "Nachstellen reicht"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Bei Erreichen der Mindestbelagstärke müssen die Beläge sofort erneuert werden."
  },
  {
@@ -3663,8 +3663,8 @@ export const FB_TECHNIK_QUESTIONS = [
   "text": "Wie läuft die Dichtheitsprüfung der Druckluftbeschaffungsanlage ab?",
   "answers": [
    "Motor laufen lassen, bis der Druckregler abschaltet, dann Motor abstellen und Druckabfall beobachten",
-   "Nur das Typenschild prüfen",
    "Bremspedal treten und Motor laufen lassen",
+   "Nur das Typenschild prüfen",
    "Luftbehälter entleeren und neu befüllen"
   ],
   "correct": 0,
@@ -3674,25 +3674,85 @@ export const FB_TECHNIK_QUESTIONS = [
   "title": "DICHTHEIT",
   "text": "Wann gilt die Druckluftbeschaffungsanlage als dicht?",
   "answers": [
-   "Wenn der Druckabfall in 10 Minuten nicht mehr als 0,1 bar beträgt",
-   "Wenn der Druckabfall in 3 Minuten höchstens 0,3 bar beträgt",
    "Wenn der Druck in 1 Minute nicht fällt",
-   "Wenn der Druckabfall in 10 Minuten höchstens 1 bar beträgt"
+   "Wenn der Druckabfall in 3 Minuten höchstens 0,3 bar beträgt",
+   "Wenn der Druckabfall in 10 Minuten höchstens 1 bar beträgt",
+   "Wenn der Druckabfall in 10 Minuten nicht mehr als 0,1 bar beträgt"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Druckluftbeschaffungsanlage: dicht bei höchstens 0,1 bar Druckabfall in 10 Minuten."
  },
  {
   "title": "BETRIEBSBREMSE",
   "text": "Wie viel Druckabfall ist bei der Dichtheitsprüfung der Betriebsbremsanlage zulässig?",
   "answers": [
-   "Gar keiner",
-   "Bei Teilbremsung (ca. ½ Pedalweg) höchstens 0,3 bar nach 3 Minuten",
    "Bei Vollbremsung höchstens 0,1 bar nach 10 Minuten",
-   "Bei Teilbremsung höchstens 1 bar nach 1 Minute"
+   "Bei Teilbremsung höchstens 1 bar nach 1 Minute",
+   "Bei Teilbremsung (ca. ½ Pedalweg) höchstens 0,3 bar nach 3 Minuten",
+   "Gar keiner"
+  ],
+  "correct": 2,
+  "explain": "Betriebsbremsanlage: Bei einer Teilbremsung (ca. ½ Pedalweg) darf der Druckabfall nach 3 Minuten höchstens 0,3 bar betragen."
+ },
+ {
+  "title": "KUPPLUNGSKÖPFE",
+  "text": "Wofür stehen die Kupplungsköpfe gelb und rot an der Zweileitungs-Druckluftbremse?",
+  "answers": [
+   "Gelb = Vorratsleitung, rot = Bremsleitung",
+   "Gelb = Feststellbremse, rot = Betriebsbremse",
+   "Gelb = Druckluft für Nebenverbraucher, rot = Bremsleitung",
+   "Gelb = Bremsleitung (Steuerleitung), rot = Vorratsleitung"
+  ],
+  "correct": 3,
+  "explain": "Gelber Kupplungskopf: Bremsleitung (Steuerleitung). Roter Kupplungskopf: Vorratsleitung."
+ },
+ {
+  "title": "ABRISS ROT",
+  "text": "Was passiert, wenn die rote Leitung (Vorratsleitung) abreißt?",
+  "answers": [
+   "Nur das Zugfahrzeug bremst automatisch",
+   "Der Anhänger bremst erst beim nächsten Tritt auf das Bremspedal",
+   "Der Anhänger bremst sofort automatisch (Notbremsung)",
+   "Nichts, der Anhänger fährt ungebremst weiter"
+  ],
+  "correct": 2,
+  "explain": "Fällt der Druck in der Vorratsleitung ab, leitet das Anhängerbremsventil sofort eine automatische Vollbremsung des Anhängers ein."
+ },
+ {
+  "title": "ABRISS GELB",
+  "text": "Was passiert, wenn die gelbe Leitung (Bremsleitung) abreißt?",
+  "answers": [
+   "Beim nächsten Betätigen der Bremse wird die Vorratsleitung entlüftet und der Anhänger bremst automatisch",
+   "Der Anhänger bremst sofort voll, auch ohne Bremsbetätigung",
+   "Die Feststellbremse des Zugfahrzeugs fällt ein",
+   "Nichts, der Anhänger bremst nie mehr"
+  ],
+  "correct": 0,
+  "explain": "Bei Abriss der gelben Bremsleitung passiert zunächst nichts. Beim nächsten Bremsen entweicht die Steuerluft, das Anhängersteuerventil senkt den Druck in der roten Vorratsleitung ab, und der Anhänger bremst automatisch."
+ },
+ {
+  "title": "ABRISS GELB",
+  "text": "Welches Ventil sorgt bei einem Abriss der gelben Bremsleitung dafür, dass der Anhänger trotzdem gebremst wird?",
+  "answers": [
+   "Das Anhängersteuerventil am Zugfahrzeug",
+   "Der Druckregler",
+   "Das Entwässerungsventil am Luftbehälter",
+   "Der Lufttrockner"
+  ],
+  "correct": 0,
+  "explain": "Das Anhängersteuerventil am Zugfahrzeug senkt bei Bremsbetätigung den Druck in der Vorratsleitung ab. Dadurch bremst der Anhänger automatisch."
+ },
+ {
+  "title": "UNTERSCHIED",
+  "text": "Was ist der Unterschied zwischen einem Abriss der roten und der gelben Leitung?",
+  "answers": [
+   "Bei beiden bremst der Anhänger nie",
+   "Rot: Anhänger bremst sofort. Gelb: Anhänger bremst erst beim nächsten Betätigen der Bremse",
+   "Rot: Anhänger bremst erst beim Bremsen. Gelb: sofort",
+   "Bei beiden bremst nur das Zugfahrzeug"
   ],
   "correct": 1,
-  "explain": "Betriebsbremsanlage: Bei einer Teilbremsung (ca. ½ Pedalweg) darf der Druckabfall nach 3 Minuten höchstens 0,3 bar betragen."
+  "explain": "Abriss rot (Vorrat): sofortige automatische Bremsung. Abriss gelb (Bremse): automatische Bremsung erst beim nächsten Bremsen über das Anhängersteuerventil."
  }
 ];
 
@@ -3702,60 +3762,60 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "GÜTERKRAFTVERKEHR?",
   "text": "Was ist Güterkraftverkehr nach § 1 GüKG?",
   "answers": [
-   "Jede Beförderung von Gütern mit Fahrzeugen über 7,5 t",
-   "Nur die Beförderung von Gütern mit Anhänger",
    "Die geschäftsmäßige oder entgeltliche Beförderung von Gütern mit Kraftfahrzeugen",
-   "Die entgeltliche Beförderung von Personen"
+   "Jede Beförderung von Gütern mit Fahrzeugen über 7,5 t",
+   "Die entgeltliche Beförderung von Personen",
+   "Nur die Beförderung von Gütern mit Anhänger"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "§ 1 GüKG: Güterkraftverkehr ist die geschäftsmäßige oder entgeltliche Beförderung von Gütern mit Kraftfahrzeugen."
  },
  {
   "title": "PARAGRAF?",
   "text": "Wo ist der Begriff Güterkraftverkehr bestimmt?",
   "answers": [
-   "§ 3 GüKG",
    "§ 9 GüKG",
-   "§ 1 GüKG",
-   "§ 15a GüKG"
+   "§ 3 GüKG",
+   "§ 15a GüKG",
+   "§ 1 GüKG"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Die Begriffsbestimmung steht in § 1 GüKG."
  },
  {
   "title": "TONNEN?",
   "text": "Welche Tonnenbegrenzung enthält das GüKG selbst?",
   "answers": [
-   "3,5 t",
-   "Keine",
    "7,5 t",
-   "2,5 t"
+   "3,5 t",
+   "2,5 t",
+   "Keine"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Das GüKG selbst enthält keine Tonnenbegrenzung. Die Ausnahme für kleinere Fahrzeuge steht in § 2 Abs. 1 Nr. 10 GüKG."
  },
  {
   "title": "AUSNAHME",
   "text": "Welche Fahrzeuge nimmt § 2 Abs. 1 Nr. 10 GüKG grundsätzlich vom Anwendungsbereich aus?",
   "answers": [
-   "Fahrzeuge bis einschließlich 3,5 t zGm, soweit keine Sonderregelung greift",
-   "Alle Fahrzeuge im Werkverkehr",
+   "Fahrzeuge bis einschließlich 7,5 t zGm",
    "Fahrzeuge bis einschließlich 2,5 t zGm ohne Ausnahme",
-   "Fahrzeuge bis einschließlich 7,5 t zGm"
+   "Fahrzeuge bis einschließlich 3,5 t zGm, soweit keine Sonderregelung greift",
+   "Alle Fahrzeuge im Werkverkehr"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "§ 2 Abs. 1 Nr. 10 GüKG nimmt die Beförderung mit Fahrzeugen bis einschließlich 3,5 t zGm grundsätzlich aus, soweit keine Sonderregelung greift."
  },
  {
   "title": "PARAGRAF?",
   "text": "Welche Vorschrift nimmt Fahrzeuge bis einschließlich 3,5 t zGm grundsätzlich vom GüKG aus?",
   "answers": [
-   "§ 3 GüKG",
    "§ 15a GüKG",
    "§ 2 Abs. 1 Nr. 10 GüKG",
-   "§ 1 Abs. 2 GüKG"
+   "§ 1 Abs. 2 GüKG",
+   "§ 3 GüKG"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "§ 2 Abs. 1 Nr. 10 GüKG enthält die Ausnahme bis einschließlich 3,5 t zGm."
  },
  {
@@ -3763,11 +3823,11 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wann liegt gewerblicher Güterkraftverkehr vor?",
   "answers": [
    "Wenn das Fahrzeug über 7,5 t wiegt",
+   "Wenn eigenes Personal fährt",
    "Wenn die Beförderung nicht als Werkverkehr einzuordnen ist",
-   "Nur bei grenzüberschreitenden Fahrten",
-   "Wenn eigenes Personal fährt"
+   "Nur bei grenzüberschreitenden Fahrten"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Gewerblicher Güterkraftverkehr liegt vor, wenn die Beförderung nicht als Werkverkehr einzuordnen ist."
  },
  {
@@ -3775,23 +3835,23 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Gewichtsschwelle gilt im nationalen gewerblichen Güterkraftverkehr grundsätzlich?",
   "answers": [
    "Über 2,5 t zGm",
-   "Über 3,5 t zGm",
    "Über 12 t zGm",
-   "Über 7,5 t zGm"
+   "Über 7,5 t zGm",
+   "Über 3,5 t zGm"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Nationaler Verkehr: grundsätzlich über 3,5 t zGm."
  },
  {
   "title": "SCHWELLE?",
   "text": "Welche Gewichtsschwelle gilt im grenzüberschreitenden Verkehr und bei Kabotage?",
   "answers": [
-   "Über 2,5 t zGm",
-   "Über 7,5 t zGm",
    "Keine Schwelle",
-   "Über 3,5 t zGm"
+   "Über 2,5 t zGm",
+   "Über 3,5 t zGm",
+   "Über 7,5 t zGm"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Grenzüberschreitender Verkehr und Kabotage: über 2,5 t zGm."
  },
  {
@@ -3799,71 +3859,71 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Worauf geht die 2,5-t-Schwelle im grenzüberschreitenden Verkehr zurück?",
   "answers": [
    "Auf § 9 GüKG",
-   "Auf das Mobilitätspaket I",
+   "Auf die Fahrerlaubnis-Verordnung",
    "Auf die CEMT-Regeln",
-   "Auf die Fahrerlaubnis-Verordnung"
+   "Auf das Mobilitätspaket I"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Die Schwelle von über 2,5 t zGm im grenzüberschreitenden Verkehr und bei Kabotage stammt aus dem Mobilitätspaket I."
  },
  {
   "title": "WERKVERKEHR?",
   "text": "Was ist Werkverkehr?",
   "answers": [
-   "Güterkraftverkehr für eigene Zwecke eines Unternehmens, wenn die Voraussetzungen des § 1 Abs. 2 GüKG erfüllt sind",
+   "Güterkraftverkehr mit Fahrzeugen bis 3,5 t",
    "Güterkraftverkehr gegen Entgelt für fremde Auftraggeber",
-   "Jeder Transport innerhalb eines Werksgeländes",
-   "Güterkraftverkehr mit Fahrzeugen bis 3,5 t"
+   "Güterkraftverkehr für eigene Zwecke eines Unternehmens, wenn die Voraussetzungen des § 1 Abs. 2 GüKG erfüllt sind",
+   "Jeder Transport innerhalb eines Werksgeländes"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Werkverkehr ist Güterkraftverkehr für eigene Zwecke des Unternehmens nach § 1 Abs. 2 GüKG."
  },
  {
   "title": "WERKVERKEHR?",
   "text": "Welche Voraussetzung gehört NICHT zum Werkverkehr?",
   "answers": [
-   "Die Beförderung ist nur eine Hilfstätigkeit",
    "Die Güter gehören einem fremden Auftraggeber",
    "Es fährt eigenes Personal",
+   "Die Beförderung ist nur eine Hilfstätigkeit",
    "Die Güter sind Eigentum des Unternehmens"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Werkverkehr: Güter sind Eigentum des Unternehmens, bestimmter Beförderungszweck, eigenes Personal, Beförderung nur als Hilfstätigkeit."
  },
  {
   "title": "PERSONAL?",
   "text": "Wer muss im Werkverkehr fahren?",
   "answers": [
-   "Nur der Unternehmer selbst",
    "Beliebiges Leihpersonal",
    "Ein beauftragter Frachtführer",
-   "Eigenes Personal des Unternehmens"
+   "Eigenes Personal des Unternehmens",
+   "Nur der Unternehmer selbst"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Eine Voraussetzung des Werkverkehrs ist eigenes Personal."
  },
  {
   "title": "HILFSTÄTIGKEIT",
   "text": "Welche Rolle darf die Beförderung beim Werkverkehr spielen?",
   "answers": [
-   "Egal, jede Rolle ist erlaubt",
-   "Eine entgeltliche Dienstleistung für Dritte",
+   "Die Haupttätigkeit des Unternehmens",
    "Nur eine Hilfstätigkeit",
-   "Die Haupttätigkeit des Unternehmens"
+   "Eine entgeltliche Dienstleistung für Dritte",
+   "Egal, jede Rolle ist erlaubt"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Im Werkverkehr ist die Beförderung nur eine Hilfstätigkeit des Unternehmens."
  },
  {
   "title": "ZWECK?",
   "text": "Welchem Zweck muss die Beförderung im Werkverkehr dienen?",
   "answers": [
-   "Der Kabotage im Ausland",
+   "Der Auslieferung an fremde Kunden gegen Fracht",
    "Der Beförderung von Personen",
-   "Der Anlieferung zum Unternehmen oder dem Eigengebrauch außerhalb des Unternehmens",
-   "Der Auslieferung an fremde Kunden gegen Fracht"
+   "Der Kabotage im Ausland",
+   "Der Anlieferung zum Unternehmen oder dem Eigengebrauch außerhalb des Unternehmens"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Beförderungszweck im Werkverkehr: Anlieferung zum Unternehmen oder Eigengebrauch außerhalb des Unternehmens."
  },
  {
@@ -3872,58 +3932,58 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "Ja, eine CEMT-Genehmigung",
    "Nur bei Fahrzeugen bis 3,5 t",
-   "Nein, Werkverkehr ist nach § 9 GüKG erlaubnisfrei",
-   "Ja, immer eine Gemeinschaftslizenz"
+   "Ja, immer eine Gemeinschaftslizenz",
+   "Nein, Werkverkehr ist nach § 9 GüKG erlaubnisfrei"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Werkverkehr ist nach § 9 GüKG güterkraftverkehrsrechtlich erlaubnisfrei."
  },
  {
   "title": "ANMELDUNG?",
   "text": "Was gilt für Werkverkehr mit Fahrzeugen oder Kombinationen über 3,5 t zGm?",
   "answers": [
-   "CEMT-Genehmigung",
-   "Gemeinschaftslizenz nach § 3 GüKG",
+   "Anmeldepflicht beim Bundesamt nach § 15a GüKG",
    "Keine Pflichten",
-   "Anmeldepflicht beim Bundesamt nach § 15a GüKG"
+   "Gemeinschaftslizenz nach § 3 GüKG",
+   "CEMT-Genehmigung"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Werkverkehr über 3,5 t zGm muss nach § 15a GüKG beim Bundesamt angemeldet werden."
  },
  {
   "title": "GEMEINSCHAFTSLIZENZ",
   "text": "Seit wann gilt die aktuelle Rechtslage zur Gemeinschaftslizenz laut Unterlage?",
   "answers": [
-   "Seit dem 27.02.2026",
+   "Seit dem 01.01.2018",
    "Seit dem 01.01.2024",
-   "Seit dem 26.02.2025",
-   "Seit dem 01.01.2018"
+   "Seit dem 27.02.2026",
+   "Seit dem 26.02.2025"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Aktuelle Rechtslage zur Gemeinschaftslizenz seit 27.02.2026."
  },
  {
   "title": "GEMEINSCHAFTSLIZENZ",
   "text": "Was benötigt ein Unternehmer mit Sitz im Inland seit 2026 grundsätzlich für gewerblichen Güterkraftverkehr?",
   "answers": [
+   "Eine Erlaubnisurkunde nach altem Recht",
    "Nur eine Anmeldung beim Bundesamt",
    "Eine von einer inländischen Behörde erteilte Gemeinschaftslizenz",
-   "Eine Erlaubnisurkunde nach altem Recht",
    "Eine CEMT-Genehmigung"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Seit 2026 braucht, wer gewerblichen Güterkraftverkehr durchführt, grundsätzlich eine Gemeinschaftslizenz (§ 3 GüKG)."
  },
  {
   "title": "PARAGRAF?",
   "text": "In welchem Paragrafen des GüKG ist die Gemeinschaftslizenz geregelt?",
   "answers": [
-   "§ 15a GüKG",
-   "§ 1 GüKG",
+   "§ 9 GüKG",
    "§ 3 GüKG",
-   "§ 9 GüKG"
+   "§ 15a GüKG",
+   "§ 1 GüKG"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Gemeinschaftslizenz: § 3 GüKG."
  },
  {
@@ -3931,47 +3991,47 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie lange ist eine Gemeinschaftslizenz gültig?",
   "answers": [
    "Bis zu 5 Jahre",
+   "Bis zu 10 Jahre",
    "Unbefristet",
-   "Bis zu 15 Jahre",
-   "Bis zu 10 Jahre"
+   "Bis zu 15 Jahre"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Gültigkeit der Gemeinschaftslizenz: bis zu 10 Jahre."
  },
  {
   "title": "VORAUSSETZUNGEN",
   "text": "Welche Voraussetzungen gelten für die Gemeinschaftslizenz?",
   "answers": [
-   "Mitgliedschaft in einem Verband und Versicherung",
-   "Führerschein CE, Berufserfahrung und Wohnsitz",
+   "Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung",
    "Mindestens drei Lkw und eine Werkstatt",
-   "Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung"
+   "Führerschein CE, Berufserfahrung und Wohnsitz",
+   "Mitgliedschaft in einem Verband und Versicherung"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Voraussetzungen: Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit, fachliche Eignung."
  },
  {
   "title": "VORAUSSETZUNGEN",
   "text": "Welche ist KEINE Voraussetzung für die Gemeinschaftslizenz?",
   "answers": [
-   "Zuverlässigkeit",
-   "Fachliche Eignung",
    "Der Unternehmer muss selbst die Fahrerlaubnis CE besitzen",
+   "Fachliche Eignung",
+   "Zuverlässigkeit",
    "Finanzielle Leistungsfähigkeit"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Genannt werden Niederlassung, Zuverlässigkeit, finanzielle Leistungsfähigkeit und fachliche Eignung."
  },
  {
   "title": "MITFÜHREN?",
   "text": "Was muss bei der Güterbeförderung im Fahrzeug mitgeführt werden?",
   "answers": [
-   "Das Original der Gemeinschaftslizenz",
+   "Eine beglaubigte Kopie der Gemeinschaftslizenz",
    "Der Nachweis der Fachkundeprüfung",
-   "Die Anmeldebestätigung nach § 15a",
-   "Eine beglaubigte Kopie der Gemeinschaftslizenz"
+   "Das Original der Gemeinschaftslizenz",
+   "Die Anmeldebestätigung nach § 15a"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Für die eingesetzten Kraftfahrzeuge werden beglaubigte Kopien der Gemeinschaftslizenz ausgegeben, die mitzuführen sind."
  },
  {
@@ -3979,47 +4039,47 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Werden noch neue Erlaubnisse nach der bis zum 26.02.2026 geltenden Fassung des § 3 GüKG erteilt?",
   "answers": [
    "Nein, und bestehende Erlaubnisse sind sofort ungültig",
-   "Ja, wahlweise zur Gemeinschaftslizenz",
+   "Nein, bestehende Erlaubnisse genießen aber Bestandsschutz",
    "Ja, aber nur für Fahrzeuge bis 7,5 t",
-   "Nein, bestehende Erlaubnisse genießen aber Bestandsschutz"
+   "Ja, wahlweise zur Gemeinschaftslizenz"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Neue Erlaubnisse nach altem Recht werden nicht mehr erteilt. Bestehende Erlaubnisse genießen Bestandsschutz."
  },
  {
   "title": "BESTANDSSCHUTZ",
   "text": "Wie lange bleibt eine befristete Erlaubnis nach altem Recht gültig?",
   "answers": [
+   "Bis zum 27.02.2036",
    "Bis zum 26.02.2026",
    "Bis zum Ablauf ihrer Befristung",
-   "Noch 10 Jahre ab Ausstellung",
-   "Bis zum 27.02.2036"
+   "Noch 10 Jahre ab Ausstellung"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Befristete Erlaubnisse bleiben bis zum Ablauf ihrer Befristung gültig."
  },
  {
   "title": "BESTANDSSCHUTZ",
   "text": "Bis wann bleibt eine unbefristete Erlaubnis nach altem Recht gültig?",
   "answers": [
-   "Bis zum 27.02.2036",
-   "Bis zum 31.12.2030",
+   "Bis zum 27.02.2026",
    "Unbegrenzt",
-   "Bis zum 27.02.2026"
+   "Bis zum 31.12.2030",
+   "Bis zum 27.02.2036"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Unbefristete Erlaubnisse bleiben bis zum 27.02.2036 gültig."
  },
  {
   "title": "FINANZEN",
   "text": "Welches Eigenkapital muss für das erste Kfz über 3,5 t zGm nachgewiesen werden?",
   "answers": [
-   "1.800 €",
-   "900 €",
+   "9.000 €",
    "5.000 €",
-   "9.000 €"
+   "900 €",
+   "1.800 €"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Finanzielle Leistungsfähigkeit über 3,5 t zGm: 1. Kfz 9.000 €, jedes weitere 5.000 €."
  },
  {
@@ -4028,34 +4088,34 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "900 €",
    "9.000 €",
-   "5.000 €",
-   "1.800 €"
+   "1.800 €",
+   "5.000 €"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Über 3,5 t zGm: jedes weitere Kfz 5.000 €."
  },
  {
   "title": "FINANZEN",
   "text": "Welcher Betrag gilt für das erste Kfz von 2,5 bis 3,5 t zGm?",
   "answers": [
+   "5.000 €",
    "900 €",
    "1.800 €",
-   "9.000 €",
-   "5.000 €"
+   "9.000 €"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Von 2,5 bis 3,5 t zGm: 1. Kfz 1.800 €, jedes weitere 900 €."
  },
  {
   "title": "FINANZEN",
   "text": "Welcher Betrag gilt für jedes weitere Kfz von 2,5 bis 3,5 t zGm?",
   "answers": [
-   "1.800 €",
    "900 €",
    "5.000 €",
+   "1.800 €",
    "500 €"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Von 2,5 bis 3,5 t zGm: jedes weitere Kfz 900 €."
  },
  {
@@ -4064,8 +4124,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "15.000 €",
    "19.000 €",
-   "14.000 €",
-   "27.000 €"
+   "27.000 €",
+   "14.000 €"
   ],
   "correct": 1,
   "explain": "9.000 € für das erste Kfz + 2 × 5.000 € für die weiteren = 19.000 €."
@@ -4074,9 +4134,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "ZUVERLÄSSIGKEIT",
   "text": "Wie wird die persönliche Zuverlässigkeit des Unternehmers geprüft?",
   "answers": [
-   "Durch einen Test beim Bundesamt",
    "Durch eine praktische Fahrprüfung",
    "Durch eine Selbstauskunft ohne Nachweis",
+   "Durch einen Test beim Bundesamt",
    "Anhand der gesetzlich vorgesehenen Register- und Behördenauskünfte"
   ],
   "correct": 3,
@@ -4087,11 +4147,11 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welches Beispiel nennt die Unterlage gegen die Zuverlässigkeit eines Unternehmers?",
   "answers": [
    "Ein abgelaufener TÜV",
+   "Ein Fahrzeug ohne Winterreifen",
    "Ein Punkt in Flensburg",
-   "Eine Vorstrafe wegen Steuerhinterziehung",
-   "Ein Fahrzeug ohne Winterreifen"
+   "Eine Vorstrafe wegen Steuerhinterziehung"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Der Unternehmer dürfte zum Beispiel nicht wegen Steuerhinterziehung vorbestraft sein."
  },
  {
@@ -4099,9 +4159,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie wird die fachliche Eignung grundsätzlich nachgewiesen?",
   "answers": [
    "Durch die Fachkundeprüfung oder eine anerkannte gleichwertige Qualifikation",
-   "Durch den Führerschein CE",
    "Durch fünf Jahre Fahrpraxis",
-   "Durch eine Bescheinigung der Hausbank"
+   "Durch eine Bescheinigung der Hausbank",
+   "Durch den Führerschein CE"
   ],
   "correct": 0,
   "explain": "Fachliche Eignung: Fachkundeprüfung bzw. anerkannte gleichwertige Qualifikation. Für langjährige Unternehmer können Übergangsregelungen gelten."
@@ -4110,9 +4170,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "INTERNATIONAL",
   "text": "Wofür berechtigt die Gemeinschaftslizenz im internationalen Verkehr?",
   "answers": [
-   "Nur zum Verkehr innerhalb Deutschlands",
-   "Zur Kabotage in jedem CEMT-Staat",
    "Zum Verkehr in alle Staaten der Welt",
+   "Zur Kabotage in jedem CEMT-Staat",
+   "Nur zum Verkehr innerhalb Deutschlands",
    "Zum grenzüberschreitenden Güterkraftverkehr im Rahmen der europäischen Vorschriften, innerhalb der europäischen Grenzen"
   ],
   "correct": 3,
@@ -4122,8 +4182,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "DRITTSTAATEN",
   "text": "Was kann für Fahrten in Drittstaaten zusätzlich erforderlich sein?",
   "answers": [
-   "Eine zweite Gemeinschaftslizenz",
    "Nichts, die Gemeinschaftslizenz reicht immer",
+   "Eine zweite Gemeinschaftslizenz",
    "Eine Anmeldung nach § 15a GüKG",
    "Eine CEMT- oder eine bilaterale Genehmigung"
   ],
@@ -4134,60 +4194,60 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "CEMT",
   "text": "Wozu berechtigt eine CEMT-Genehmigung?",
   "answers": [
-   "Zum Werkverkehr ohne Anmeldung",
-   "Zur Kabotage in jedem CEMT-Mitgliedsstaat",
    "Zur Personenbeförderung",
-   "Zu bestimmten grenzüberschreitenden Güterbeförderungen zwischen CEMT-Mitgliedsstaaten"
+   "Zum Werkverkehr ohne Anmeldung",
+   "Zu bestimmten grenzüberschreitenden Güterbeförderungen zwischen CEMT-Mitgliedsstaaten",
+   "Zur Kabotage in jedem CEMT-Mitgliedsstaat"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "CEMT-Genehmigungen ermöglichen bestimmte grenzüberschreitende Beförderungen zwischen CEMT-Mitgliedsstaaten."
  },
  {
   "title": "CEMT",
   "text": "Berechtigt eine CEMT-Genehmigung zur Kabotage innerhalb eines CEMT-Mitgliedsstaates?",
   "answers": [
-   "Grundsätzlich nicht",
+   "Ja, bis zu 3 Fahrten",
    "Nur mit Fahrzeugen über 3,5 t",
-   "Ja, unbegrenzt",
-   "Ja, bis zu 3 Fahrten"
+   "Grundsätzlich nicht",
+   "Ja, unbegrenzt"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "CEMT-Genehmigungen berechtigen grundsätzlich nicht zur Kabotage, also zum Binnenverkehr innerhalb eines CEMT-Mitgliedsstaates."
  },
  {
   "title": "KABOTAGE?",
   "text": "Was ist mit Kabotage gemeint?",
   "answers": [
-   "Werkverkehr mit eigenem Personal",
    "Transport zwischen zwei Nachbarstaaten",
-   "Transport über See",
-   "Binnenverkehr innerhalb eines Staates"
+   "Werkverkehr mit eigenem Personal",
+   "Binnenverkehr innerhalb eines Staates",
+   "Transport über See"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Die Unterlage erklärt Kabotage als Binnenverkehr innerhalb eines (CEMT-Mitglieds-)Staates."
  },
  {
   "title": "CEMT",
   "text": "Was gilt für die Anzahl der CEMT-Genehmigungen?",
   "answers": [
+   "Sie ist begrenzt",
    "Pro Lkw gibt es immer eine",
    "Jeder Unternehmer erhält automatisch eine",
-   "Sie ist unbegrenzt",
-   "Sie ist begrenzt"
+   "Sie ist unbegrenzt"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Die Anzahl der CEMT-Genehmigungen ist begrenzt."
  },
  {
   "title": "BEHÖRDE?",
   "text": "Welche Behörde ist für CEMT-Genehmigungen zuständig?",
   "answers": [
-   "Kraftfahrt-Bundesamt (KBA)",
    "Bundesamt für Logistik und Mobilität (BALM)",
-   "Die örtliche Straßenverkehrsbehörde",
-   "Die IHK"
+   "Die IHK",
+   "Kraftfahrt-Bundesamt (KBA)",
+   "Die örtliche Straßenverkehrsbehörde"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Zuständige Behörde für CEMT-Genehmigungen: Bundesamt für Logistik und Mobilität (BALM)."
  },
  {
@@ -4195,59 +4255,59 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Was ist Dreiländerverkehr?",
   "answers": [
    "Binnenverkehr in einem fremden Staat",
-   "Grenzüberschreitender Verkehr durch einen Frachtführer, der in keinem der beiden Länder seinen Sitz hat",
+   "Werkverkehr über drei Standorte",
    "Verkehr durch genau drei Länder mit einem Lkw",
-   "Werkverkehr über drei Standorte"
+   "Grenzüberschreitender Verkehr durch einen Frachtführer, der in keinem der beiden Länder seinen Sitz hat"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Dreiländerverkehr = grenzüberschreitender Verkehr durch einen Frachtführer, der in keinem der beiden Länder seinen Sitz hat."
  },
  {
   "title": "DREILÄNDERVERKEHR",
   "text": "Ist Dreiländerverkehr mit einer CEMT-Genehmigung möglich?",
   "answers": [
-   "Nein, niemals",
-   "Nur mit zusätzlicher Anmeldung nach § 15a",
    "Er kann im Rahmen der CEMT-Regeln zulässig sein",
-   "Ja, ohne jede Einschränkung"
+   "Ja, ohne jede Einschränkung",
+   "Nur mit zusätzlicher Anmeldung nach § 15a",
+   "Nein, niemals"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Dreiländerverkehr kann im Rahmen der CEMT-Regeln zulässig sein."
  },
  {
   "title": "BILATERAL",
   "text": "Wann kann eine bilaterale Drittstaatengenehmigung erforderlich sein?",
   "answers": [
-   "Wenn der Staat nicht durch eine CEMT-Genehmigung abgedeckt ist und ein bilaterales Abkommen oder eine nationale Regelung gilt",
-   "Bei Werkverkehr über 3,5 t",
    "Bei jeder Fahrt innerhalb der EU",
-   "Nur bei Kabotage in Deutschland"
+   "Nur bei Kabotage in Deutschland",
+   "Bei Werkverkehr über 3,5 t",
+   "Wenn der Staat nicht durch eine CEMT-Genehmigung abgedeckt ist und ein bilaterales Abkommen oder eine nationale Regelung gilt"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Bilaterale Genehmigungen gelten, wenn ein Staat nicht durch CEMT abgedeckt ist und ein bilaterales Abkommen oder eine nationale Regelung Anwendung findet."
  },
  {
   "title": "BILATERAL",
   "text": "Welche Arten von bilateralen Drittstaatengenehmigungen gibt es?",
   "answers": [
-   "CEMT-, Kabotage- oder Werkverkehrsgenehmigung",
    "Gemeinschaftslizenz, Erlaubnisurkunde oder Anmeldung",
    "Zeitgenehmigung, Einzelfahrtengenehmigung oder Mehrfahrtengenehmigung",
-   "Tages-, Wochen- oder Monatsvignette"
+   "Tages-, Wochen- oder Monatsvignette",
+   "CEMT-, Kabotage- oder Werkverkehrsgenehmigung"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Bilaterale Genehmigungen: Zeitgenehmigung, Einzelfahrtengenehmigung oder Mehrfahrtengenehmigung."
  },
  {
   "title": "BILATERAL",
   "text": "Was gilt bei bilateralen Genehmigungen für Dreiländerverkehr und Kabotage?",
   "answers": [
-   "Sie sind immer verboten",
-   "Sie sind immer erlaubt",
    "Sie sind nur mit CEMT erlaubt",
-   "Sie können je nach Staat erlaubt oder verboten sein"
+   "Sie sind immer verboten",
+   "Sie können je nach Staat erlaubt oder verboten sein",
+   "Sie sind immer erlaubt"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Die Bedingungen können von Staat zu Staat abweichen. Dreiländerverkehr und Kabotage können erlaubt oder verboten sein."
  },
  {
@@ -4266,21 +4326,21 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "DOLLY",
   "text": "Was ist ein Dollyanhänger?",
   "answers": [
-   "Ein kurzer Anhänger mit Sattelkupplung, um einen Sattelauflieger an ein Zugfahrzeug ohne eigene Sattelkupplung anzuhängen",
-   "Ein Anhänger mit Starrdeichsel für Kleinlasten",
    "Eine Sattelzugmaschine ohne Aufbau",
-   "Ein Schwerlastauflieger mit Lenkachse"
+   "Ein Schwerlastauflieger mit Lenkachse",
+   "Ein Anhänger mit Starrdeichsel für Kleinlasten",
+   "Ein kurzer Anhänger mit Sattelkupplung, um einen Sattelauflieger an ein Zugfahrzeug ohne eigene Sattelkupplung anzuhängen"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Ein Dolly ist ein kurzer Anhänger mit Sattelkupplung. Er ermöglicht es, einen Sattelauflieger an ein Zugfahrzeug ohne eigene Sattelkupplung anzuhängen."
  },
  {
   "title": "DOLLY",
   "text": "Wofür werden „Untersetzachsen“ (Dollys) z. B. verwendet?",
   "answers": [
-   "Als Ersatz für den Lufttrockner",
-   "Um Anhänger ohne Bremse zu ziehen",
    "Um die Achslast der Zugmaschine zu erhöhen",
+   "Um Anhänger ohne Bremse zu ziehen",
+   "Als Ersatz für den Lufttrockner",
    "Um Lang-Lkw („Gigaliner“) zusammenzustellen"
   ],
   "correct": 3,
@@ -4290,24 +4350,24 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BREITE?",
   "text": "Wie breit darf ein Fahrzeug höchstens sein?",
   "answers": [
+   "2,50 m",
    "2,55 m",
    "2,60 m",
-   "2,40 m",
-   "2,50 m"
+   "2,40 m"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Höchstzulässige Fahrzeugbreite: 2,55 m, mit Kühlaufbau 2,60 m."
  },
  {
   "title": "BREITE?",
   "text": "Wie breit darf ein Fahrzeug mit Kühlaufbau höchstens sein?",
   "answers": [
+   "2,50 m",
    "2,60 m",
    "2,55 m",
-   "2,50 m",
    "2,65 m"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Fahrzeugbreite mit Kühlaufbau: 2,60 m."
  },
  {
@@ -4315,33 +4375,33 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie hoch darf ein Fahrzeug höchstens sein?",
   "answers": [
    "4,50 m",
-   "3,80 m",
+   "4,00 m",
    "4,20 m",
-   "4,00 m"
+   "3,80 m"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Höchstzulässige Fahrzeughöhe: 4,00 m."
  },
  {
   "title": "BEGRENZUNGSLEUCHTEN",
   "text": "Ein Anhänger ist breiter als das Zugfahrzeug. Ab wann braucht er eigene Begrenzungsleuchten?",
   "answers": [
-   "Nie, das Zugfahrzeug reicht",
-   "Immer, sobald er breiter ist",
+   "Wenn er mehr als 10 cm breiter ist",
    "Wenn er seitlich mehr als 40 cm über die Begrenzungsleuchten des Zugfahrzeugs hinausragt",
-   "Wenn er mehr als 10 cm breiter ist"
+   "Immer, sobald er breiter ist",
+   "Nie, das Zugfahrzeug reicht"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Ragt der Anhänger seitlich mehr als 40 cm über die Begrenzungsleuchten des Zugfahrzeugs hinaus, muss er eigene Begrenzungsleuchten haben."
  },
  {
   "title": "LÄNGE?",
   "text": "Wie lang darf ein Kraftfahrzeug (außer Zugmaschinen) mit Anhänger höchstens sein?",
   "answers": [
-   "16,50 m",
+   "18,75 m",
    "18,00 m",
-   "15,50 m",
-   "18,75 m"
+   "16,50 m",
+   "15,50 m"
   ],
   "correct": 1,
   "explain": "Länge von Kraftfahrzeugen – außer Zugmaschinen – mit Anhänger: 18,00 m."
@@ -4350,9 +4410,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "LÄNGE?",
   "text": "Wie lang dürfen Zugmaschinen mit Anhängern höchstens sein?",
   "answers": [
+   "16,50 m",
    "18,00 m",
    "20,75 m",
-   "16,50 m",
    "18,75 m"
   ],
   "correct": 3,
@@ -4362,10 +4422,10 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BESONDERE BAUART",
   "text": "Wie lang dürfen Lastkraftwagenzüge besonderer Bauart höchstens sein?",
   "answers": [
-   "16,40 m",
    "25,25 m",
+   "18,00 m",
    "18,75 m",
-   "18,00 m"
+   "16,40 m"
   ],
   "correct": 2,
   "explain": "Lastkraftwagenzüge bei besonderer Bauart: 18,75 m."
@@ -4374,12 +4434,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "SYSTEMLÄNGE",
   "text": "Welche Systemlänge darf beim Lastkraftwagenzug besonderer Bauart nicht überschritten werden?",
   "answers": [
-   "16,50 m",
+   "16,40 m",
    "15,65 m",
    "18,75 m",
-   "16,40 m"
+   "16,50 m"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Teillängen bei besonderer Bauart: Systemlänge 16,40 m, Ladelänge (X1 + X2) 15,65 m."
  },
  {
@@ -4387,9 +4447,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Ladelänge (X1 + X2) darf beim Lastkraftwagenzug besonderer Bauart nicht überschritten werden?",
   "answers": [
    "15,65 m",
+   "16,40 m",
    "15,50 m",
-   "7,825 m",
-   "16,40 m"
+   "7,825 m"
   ],
   "correct": 0,
   "explain": "Ladelänge (X1 + X2): höchstens 15,65 m."
@@ -4398,24 +4458,24 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "TEILLÄNGEN",
   "text": "Wie lang ist jede der beiden Ladelängen X1 und X2, wenn die Maße ganz ausgenutzt werden?",
   "answers": [
-   "7,825 m",
-   "8,20 m",
+   "7,50 m",
    "7,65 m",
-   "7,50 m"
+   "7,825 m",
+   "8,20 m"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Ganz ausgenutzt: Ladelänge X1 7,825 m und X2 7,825 m, zusammen 15,65 m."
  },
  {
   "title": "TEILLÄNGEN",
   "text": "Welche Länge ergibt sich für das Fahrerhaus, wenn beim Lkw-Zug besonderer Bauart alle Maße ausgenutzt werden?",
   "answers": [
-   "2,35 m",
    "0,75 m",
-   "2,55 m",
-   "2,04 m"
+   "2,35 m",
+   "2,04 m",
+   "2,55 m"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Werden die Maße ganz ausgenutzt: Länge Fahrerhaus 2,35 m."
  },
  {
@@ -4435,11 +4495,11 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie lang dürfen Sattelzüge allgemein höchstens sein?",
   "answers": [
    "16,40 m",
-   "15,50 m",
    "18,75 m",
-   "16,50 m"
+   "16,50 m",
+   "15,50 m"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Länge von Sattelzügen allgemein: 15,50 m."
  },
  {
@@ -4447,35 +4507,35 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie lang darf ein Sattelzug besonderer Bauart höchstens sein?",
   "answers": [
    "18,00 m",
-   "15,50 m",
+   "16,50 m",
    "18,75 m",
-   "16,50 m"
+   "15,50 m"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Sattelzuglänge bei besonderer Bauart: 16,50 m."
  },
  {
   "title": "SATTELZAPFEN",
   "text": "Welcher Abstand vom Sattelzapfen bis zur hinteren Begrenzung ist beim Sattelzug besonderer Bauart höchstens erlaubt?",
   "answers": [
+   "12 m",
    "13,60 m",
-   "2,04 m",
    "10 m",
-   "12 m"
+   "2,04 m"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Besondere Bauart: Abstand Sattelzapfen bis hintere Begrenzung max. 12 m, vorderer Überhangradius max. 2,04 m."
  },
  {
   "title": "ÜBERHANG",
   "text": "Wie groß darf der vordere Überhangradius beim Sattelzug besonderer Bauart höchstens sein?",
   "answers": [
-   "2,04 m",
-   "2,35 m",
    "2,55 m",
-   "1,50 m"
+   "1,50 m",
+   "2,04 m",
+   "2,35 m"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Vorderer Überhangradius beim Sattelzug besonderer Bauart: max. 2,04 m."
  },
  {
@@ -4483,9 +4543,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Was gilt für Breite und Höhe, wenn Ladung über die Fahrzeugumrisse hinausragt?",
   "answers": [
    "Die zulässigen Werte für Breite und Höhe dürfen nicht überschritten werden",
-   "Sie dürfen um 50 cm überschritten werden",
+   "Nur die Höhe ist begrenzt",
    "Es gelten keine Grenzen",
-   "Nur die Höhe ist begrenzt"
+   "Sie dürfen um 50 cm überschritten werden"
   ],
   "correct": 0,
   "explain": "Ragt Ladung über die Fahrzeugumrisse hinaus, dürfen die zulässigen Werte für Breite und Höhe nicht überschritten werden."
@@ -4494,48 +4554,48 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "NACH VORN",
   "text": "Wie weit darf Ladung nach vorn überstehen?",
   "answers": [
+   "Bis 2,5 m Höhe gar nicht, ab 2,5 m Höhe höchstens 50 cm",
    "Immer höchstens 1,5 m",
    "Immer höchstens 1 m",
-   "Bis 2,5 m Höhe höchstens 50 cm, darüber gar nicht",
-   "Bis 2,5 m Höhe gar nicht, ab 2,5 m Höhe höchstens 50 cm"
+   "Bis 2,5 m Höhe höchstens 50 cm, darüber gar nicht"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Nach vorn darf Ladung bis zu einer Höhe von 2,5 m nicht über das Fahrzeug (bei Zügen über das Zugfahrzeug) hinausragen. Ab 2,5 m Höhe höchstens 50 cm."
  },
  {
   "title": "NACH HINTEN",
   "text": "Wie weit darf Ladung nach hinten über die Ladefläche hinausragen?",
   "answers": [
-   "Gar nicht",
-   "Bis 1,5 m, bei Fahrtstrecken unter 100 km bis 3 m",
+   "Bis 0,5 m, bei kurzen Strecken bis 1 m",
    "Immer bis 3 m",
-   "Bis 0,5 m, bei kurzen Strecken bis 1 m"
+   "Gar nicht",
+   "Bis 1,5 m, bei Fahrtstrecken unter 100 km bis 3 m"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Nach hinten bis 1,5 m, bei Fahrtstrecken unter 100 km sogar bis 3 m."
  },
  {
   "title": "NACH HINTEN",
   "text": "Welche Gesamtzuglänge darf mit nach hinten überstehender Ladung nicht überschritten werden?",
   "answers": [
-   "18,75 m",
-   "20,75 m",
+   "18,00 m",
    "25,25 m",
-   "18,00 m"
+   "18,75 m",
+   "20,75 m"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Auch mit überstehender Ladung darf eine Gesamtzuglänge von 20,75 m nicht überschritten werden."
  },
  {
   "title": "ÜBERLÄNGE",
   "text": "Wie werden Fahrzeugkombinationen mit Überlänge in Deutschland zugelassen und wie heißen sie?",
   "answers": [
-   "Durch eine CEMT-Genehmigung – Schwerlastzug",
    "Durch § 15a GüKG – Werkverkehrszug",
    "Durch eine Ausnahmeverordnung – Lang-Lkw, EuroCombi oder Gigaliner",
-   "Gar nicht, sie sind verboten"
+   "Gar nicht, sie sind verboten",
+   "Durch eine CEMT-Genehmigung – Schwerlastzug"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Durch eine Ausnahmeverordnung sind bestimmte Fahrzeuge mit Überlänge (Lang-Lkw, Euro-Combi, Giga-Liner) zugelassen."
  },
  {
@@ -4544,34 +4604,34 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "18,75 m",
    "20,75 m",
-   "25,25 m",
-   "24,00 m"
+   "24,00 m",
+   "25,25 m"
   ],
-  "correct": 2,
+  "correct": 3,
   "explain": "Die Länge der Fahrzeugkombination darf 25,25 m nicht überschreiten."
  },
  {
   "title": "LANG-LKW",
   "text": "Darf die Ladung beim Lang-Lkw nach hinten überstehen?",
   "answers": [
-   "Ja, bis 3 m auf Strecken unter 100 km",
-   "Ja, bis 1,5 m",
+   "Ja, bis 50 cm",
    "Nein",
-   "Ja, bis 50 cm"
+   "Ja, bis 3 m auf Strecken unter 100 km",
+   "Ja, bis 1,5 m"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Beim Lang-Lkw darf die Ladung nicht nach hinten überstehen."
  },
  {
   "title": "LANG-LKW",
   "text": "Welche Gesamtmasse gilt für den Lang-Lkw?",
   "answers": [
-   "44 t, im kombinierten Verkehr bis 48 t",
    "40 t, im kombinierten Verkehr bis 44 t",
+   "36 t",
    "60 t",
-   "36 t"
+   "44 t, im kombinierten Verkehr bis 48 t"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Die höchstzulässige Gesamtmasse beträgt 40 t, im kombinierten Verkehr bis 44 t."
  },
  {
@@ -4590,60 +4650,60 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "ACHSLAST?",
   "text": "Was ist die Achslast?",
   "answers": [
-   "Das Leergewicht einer Achse",
-   "Die Gesamtlast, die von den Rädern einer Achse oder Achsgruppe auf die Fahrbahn übertragen wird",
    "Die Nutzlast eines Anhängers",
-   "Die Last auf der Sattelkupplung"
+   "Die Last auf der Sattelkupplung",
+   "Das Leergewicht einer Achse",
+   "Die Gesamtlast, die von den Rädern einer Achse oder Achsgruppe auf die Fahrbahn übertragen wird"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Die Achslast ist die Gesamtlast, die von den Rädern einer Achse oder einer Achsgruppe auf die Fahrbahn übertragen wird."
  },
  {
   "title": "EINZELACHSE",
   "text": "Welche Achslast ist für eine Einzelachse höchstens zulässig?",
   "answers": [
-   "11,5 t",
-   "8 t",
    "10 t",
-   "12 t"
+   "8 t",
+   "12 t",
+   "11,5 t"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Einzelachse: 10 t, angetriebene Einzelachse: 11,5 t."
  },
  {
   "title": "EINZELACHSE",
   "text": "Welche Achslast ist für eine angetriebene Einzelachse höchstens zulässig?",
   "answers": [
-   "10 t",
    "13 t",
+   "11,5 t",
    "11 t",
-   "11,5 t"
+   "10 t"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Angetriebene Einzelachse: 11,5 t."
  },
  {
   "title": "DOPPELACHSE KFZ",
   "text": "Welche Achslast gilt für eine Kfz-Doppelachse mit einem Achsabstand von 1,3 m bis weniger als 1,8 m?",
   "answers": [
-   "20,0 t",
    "18,0 t",
-   "19,0 t",
-   "16,0 t"
+   "16,0 t",
+   "20,0 t",
+   "19,0 t"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Kfz-Doppelachse: unter 1,0 m 11,5 t, 1,0 bis unter 1,3 m 16 t, 1,3 bis unter 1,8 m 18 t, mit Antriebsachse, Doppelbereifung und Luftfederung 19 t."
  },
  {
   "title": "DOPPELACHSE KFZ",
   "text": "Wann darf eine Kfz-Doppelachse 19 t tragen?",
   "answers": [
-   "Bei Antriebsachse mit Doppelbereifung und Luftfederung",
+   "Bei einem Achsabstand unter 1,0 m",
    "Bei jedem Achsabstand über 1,8 m",
-   "Nur im kombinierten Verkehr",
-   "Bei einem Achsabstand unter 1,0 m"
+   "Bei Antriebsachse mit Doppelbereifung und Luftfederung",
+   "Nur im kombinierten Verkehr"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "19,0 t gelten bei Antriebsachse mit Doppelbereifung und Luftfederung."
  },
  {
@@ -4662,60 +4722,60 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "DOPPELACHSE ANH.",
   "text": "Welche Achslast gilt für eine Anhänger-Doppelachse mit einem Achsabstand von 1,8 m oder mehr?",
   "answers": [
-   "24,0 t",
    "19,0 t",
    "18,0 t",
-   "20,0 t"
+   "20,0 t",
+   "24,0 t"
   ],
-  "correct": 3,
+  "correct": 2,
   "explain": "Anhänger-Doppelachse: unter 1,0 m 11 t, 1,0 bis unter 1,3 m 16 t, 1,3 bis unter 1,8 m 18 t, ab 1,8 m 20 t."
  },
  {
   "title": "DOPPELACHSE ANH.",
   "text": "Welche Achslast gilt für eine Anhänger-Doppelachse mit einem Achsabstand von weniger als 1,0 m?",
   "answers": [
-   "16,0 t",
    "11,0 t",
-   "10,0 t",
-   "11,5 t"
+   "11,5 t",
+   "16,0 t",
+   "10,0 t"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Anhänger-Doppelachse unter 1,0 m Achsabstand: 11,0 t."
  },
  {
   "title": "DOPPELACHSE",
   "text": "Welche Achslast gilt für eine Doppelachse (Kfz und Anhänger) mit 1,0 m bis weniger als 1,3 m Achsabstand?",
   "answers": [
-   "16,0 t",
-   "20,0 t",
+   "11,5 t",
    "18,0 t",
-   "11,5 t"
+   "16,0 t",
+   "20,0 t"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Bei 1,0 bis unter 1,3 m Achsabstand gelten für Kfz- und Anhänger-Doppelachse 16 t."
  },
  {
   "title": "DREIFACHACHSE",
   "text": "Welche Achslast gilt für eine Dreifachachse mit einem Achsabstand von nicht mehr als 1,3 m?",
   "answers": [
-   "24 t",
-   "18 t",
+   "27 t",
    "21 t",
-   "27 t"
+   "18 t",
+   "24 t"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Dreifachachse: bis 1,3 m Achsabstand 21 t, über 1,3 m bis 1,4 m 24 t."
  },
  {
   "title": "DREIFACHACHSE",
   "text": "Welche Achslast gilt für eine Dreifachachse mit einem Achsabstand von mehr als 1,3 m und nicht mehr als 1,4 m?",
   "answers": [
+   "21 t",
    "20 t",
-   "24 t",
    "27 t",
-   "21 t"
+   "24 t"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Dreifachachse über 1,3 m bis 1,4 m Achsabstand: 24 t."
  },
  {
@@ -4723,8 +4783,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Gesamtmasse gilt für Kraftfahrzeuge (außer Kraftomnibusse) und Anhänger mit nicht mehr als zwei Achsen?",
   "answers": [
    "18 t",
-   "20 t",
    "16 t",
+   "20 t",
    "24 t"
   ],
   "correct": 0,
@@ -4734,33 +4794,33 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für Anhänger mit mehr als zwei Achsen?",
   "answers": [
-   "26 t",
-   "18 t",
+   "20 t",
    "24 t",
-   "20 t"
+   "18 t",
+   "26 t"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Anhänger mit mehr als zwei Achsen: 24 t."
  },
  {
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für Fahrzeugkombinationen mit weniger als vier Achsen?",
   "answers": [
-   "24 t",
-   "32 t",
    "28 t",
-   "36 t"
+   "32 t",
+   "36 t",
+   "24 t"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Fahrzeugkombinationen mit weniger als vier Achsen: 28 t."
  },
  {
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für ein zweiachsiges Kraftfahrzeug mit zweiachsigem Anhänger?",
   "answers": [
+   "35 t",
    "28 t",
    "40 t",
-   "35 t",
    "36 t"
   ],
   "correct": 3,
@@ -4770,20 +4830,20 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "SATTELZUG 2+2",
   "text": "Wann darf eine zweiachsige Sattelzugmaschine mit zweiachsigem Sattelanhänger 38 t statt 36 t wiegen?",
   "answers": [
-   "Immer im kombinierten Verkehr",
    "Bei Antriebsachse mit Doppelbereifung und Luftfederung und einem Sattelanhänger mit mehr als 1,8 m Achsabstand",
-   "Wenn der Auflieger kürzer als 12 m ist",
-   "Bei jedem Sattelzug mit Luftfederung am Auflieger"
+   "Immer im kombinierten Verkehr",
+   "Bei jedem Sattelzug mit Luftfederung am Auflieger",
+   "Wenn der Auflieger kürzer als 12 m ist"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Zweiachsige SZM mit zweiachsigem Sattelanhänger: 36 t, 38 t bei Antriebsachse mit Doppelbereifung und Luftfederung und Sattelanhänger mit mehr als 1,8 m Achsabstand."
  },
  {
   "title": "VIER ACHSEN",
   "text": "Andere Fahrzeugkombinationen mit vier Achsen: Welche Gesamtmasse gilt bei einem Zugfahrzeug mit 25 t bzw. 26 t?",
   "answers": [
-   "28 t bzw. 36 t",
    "40 t bzw. 44 t",
+   "28 t bzw. 36 t",
    "36 t bzw. 38 t",
    "35 t bzw. 36 t"
   ],
@@ -4794,36 +4854,36 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "GESAMTMASSE",
   "text": "Welche Gesamtmasse gilt für Fahrzeugkombinationen mit mehr als vier Achsen (kein kombinierter Verkehr)?",
   "answers": [
-   "40 t",
-   "38 t",
    "36 t",
-   "44 t"
+   "44 t",
+   "40 t",
+   "38 t"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Fahrzeugkombinationen mit mehr als vier Achsen, kein kombinierter Verkehr: 40 t."
  },
  {
   "title": "KOMBINIERTER VERKEHR",
   "text": "Welche Gesamtmasse gilt im kombinierten Verkehr für Kombinationen mit mehr als vier Achsen?",
   "answers": [
-   "48 t",
-   "42 t",
    "44 t",
+   "42 t",
+   "48 t",
    "40 t"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Kombinierter Verkehr: Kombinationen mit mehr als vier Achsen max. 44 t, mit oder ohne 40-Fuß-ISO-Container, auch Lang-Lkw."
  },
  {
   "title": "KOMBINIERTER VERKEHR",
   "text": "Welche Gesamtmasse gilt im kombinierten Verkehr für Anhänger mit nicht mehr als zwei Achsen?",
   "answers": [
+   "24 t",
    "20 t",
    "18 t",
-   "22 t",
-   "24 t"
+   "22 t"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Kombinierter Verkehr: Anhänger mit nicht mehr als zwei Achsen max. 20 t."
  },
  {
@@ -4831,8 +4891,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Verkehrsarten zählen zum kombinierten Verkehr?",
   "answers": [
    "Nur Schiene/Straße",
-   "Straße/Luft",
    "Werkverkehr und gewerblicher Verkehr",
+   "Straße/Luft",
    "Schiene/Straße, Binnenwasserstraße/Straße, See/Straße"
   ],
   "correct": 3,
@@ -4854,20 +4914,20 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "SATTELZUG-FORMEL",
   "text": "Wie berechnet man die zulässige Gesamtmasse eines Sattelzugs?",
   "answers": [
-   "zGM Zugmaschine + zGM Auflieger − niedrigerer Wert von Sattellast oder Aufliegelast",
    "zGM Zugmaschine + zGM Auflieger − höherer Wert von Sattellast oder Aufliegelast",
    "zGM Zugmaschine + zGM Auflieger",
-   "zGM Auflieger + Sattellast"
+   "zGM Auflieger + Sattellast",
+   "zGM Zugmaschine + zGM Auflieger − niedrigerer Wert von Sattellast oder Aufliegelast"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Formel: zGM SZM + zGM Auflieger − höherer Wert von Sattellast oder Aufliegelast = zGM Sattelzug."
  },
  {
   "title": "SATTELLAST",
   "text": "Was ist die Sattellast?",
   "answers": [
-   "Der Teil der Aufliegermasse, der am Königszapfen wirkt",
    "Die Achslast der Hinterachse",
+   "Der Teil der Aufliegermasse, der am Königszapfen wirkt",
    "Die Nutzlast der Sattelzugmaschine – die Masse, die auf der Sattelkupplung lasten darf",
    "Die Leermasse des Aufliegers"
   ],
@@ -4878,70 +4938,70 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "AUFLIEGELAST",
   "text": "Was ist die Aufliegelast?",
   "answers": [
-   "Die gesamte Nutzlast des Aufliegers",
-   "Der Teil der Gesamtmasse des Aufliegers, der am Königszapfen auf die Sattelzugmaschine wirkt",
    "Die Masse, die auf der Sattelkupplung lasten darf",
-   "Die Stützlast eines Zentralachsanhängers"
+   "Die Stützlast eines Zentralachsanhängers",
+   "Die gesamte Nutzlast des Aufliegers",
+   "Der Teil der Gesamtmasse des Aufliegers, der am Königszapfen auf die Sattelzugmaschine wirkt"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Aufliegelast = der Teil der Gesamtmasse des Sattelaufliegers, der am Königszapfen auf die Sattelzugmaschine wirkt."
  },
  {
   "title": "RECHNEN!",
   "text": "SZM 18 t zGM, Auflieger 34 t zGM, Sattellast 9 t, Aufliegelast 10 t. Welche zGM ergibt die Formel, und was ist erlaubt?",
   "answers": [
-   "52 t, erlaubt 40 t",
-   "42 t errechnet, erlaubt sind nur 40 t",
+   "43 t, erlaubt 44 t",
    "41 t, alles erlaubt",
-   "43 t, erlaubt 44 t"
+   "52 t, erlaubt 40 t",
+   "42 t errechnet, erlaubt sind nur 40 t"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "18 t + 34 t − 10 t (höherer Wert) = 42 t. Erlaubt sind nur 40 t, die Nutzlast des Aufliegers darf nicht voll ausgenutzt werden."
  },
  {
   "title": "RECHNEN!",
   "text": "SZM 24 t zGM, Auflieger 30 t zGM, Sattellast 14 t, Aufliegelast 10 t. Welche zGM hat der Sattelzug?",
   "answers": [
+   "40 t",
    "44 t",
    "38 t",
-   "54 t",
-   "40 t"
+   "54 t"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "24 t + 30 t − 14 t (höherer Wert: Sattellast) = 40 t. Die Fahrzeuge wurden geschickt kombiniert."
  },
  {
   "title": "RECHNEN!",
   "text": "SZM 17 t zGM, Auflieger 31 t zGM, Sattellast und Aufliegelast je 9 t. Welche zGM hat der Sattelzug?",
   "answers": [
+   "40 t",
    "39 t",
-   "30 t",
    "48 t",
-   "40 t"
+   "30 t"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "17 t + 31 t − 9 t = 39 t. Die Grenze von 40 t wird nicht erreicht."
  },
  {
   "title": "KABOTAGE",
   "text": "Was ist Kabotage laut BALM-Faltblatt?",
   "answers": [
-   "Eine Transportdienstleistung innerhalb eines Landes durch ein Unternehmen, das in diesem Staat weder Sitz noch Niederlassung hat",
    "Werkverkehr mit eigenem Personal im Ausland",
-   "Jeder Transport über eine Staatsgrenze",
-   "Ein Transport im eigenen Heimatstaat"
+   "Ein Transport im eigenen Heimatstaat",
+   "Eine Transportdienstleistung innerhalb eines Landes durch ein Unternehmen, das in diesem Staat weder Sitz noch Niederlassung hat",
+   "Jeder Transport über eine Staatsgrenze"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Kabotage ist das Erbringen einer Transportdienstleistung innerhalb eines Landes durch ein Transportunternehmen, das in diesem Staat weder Sitz noch Niederlassung hat."
  },
  {
   "title": "KABOTAGE ODER NICHT?",
   "text": "Ein italienisches Transportunternehmen befördert eine Sendung von München nach Köln. Was ist das?",
   "answers": [
-   "Werkverkehr",
+   "Transitverkehr ohne Genehmigung",
    "Kabotage",
    "Grenzüberschreitender Transport",
-   "Transitverkehr ohne Genehmigung"
+   "Werkverkehr"
   ],
   "correct": 1,
   "explain": "München nach Köln ist ein Transport innerhalb Deutschlands durch ein Unternehmen ohne Sitz in Deutschland, also Kabotage."
@@ -4952,8 +5012,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "Grenzüberschreitender Transport, keine Kabotage",
    "Kabotage",
-   "Transitkabotage",
-   "Anschlusskabotage"
+   "Anschlusskabotage",
+   "Transitkabotage"
   ],
   "correct": 0,
   "explain": "München nach Prag überschreitet eine Grenze, das ist grenzüberschreitender Transport und keine Kabotage."
@@ -4962,12 +5022,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "RECHTSGRUNDLAGE",
   "text": "Nach welcher Verordnung richten sich die Voraussetzungen der Kabotage?",
   "answers": [
-   "Verordnung (EG) Nr. 561/2006",
    "Anlage 7 FeV",
    "Verordnung (EG) Nr. 1072/2009",
+   "Verordnung (EG) Nr. 561/2006",
    "§ 15a GüKG"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Voraussetzungen und Bedingungen der Kabotage nach Verordnung (EG) Nr. 1072/2009."
  },
  {
@@ -4975,9 +5035,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Welche Voraussetzung gehört NICHT zur Kabotage nach VO (EG) Nr. 1072/2009?",
   "answers": [
    "Das Unternehmen braucht eine Niederlassung im Aufnahmestaat",
+   "Sitz des Unternehmens in EU/EWR",
    "Gültige Gemeinschaftslizenz",
-   "Einsatz desselben Kraftfahrzeugs",
-   "Sitz des Unternehmens in EU/EWR"
+   "Einsatz desselben Kraftfahrzeugs"
   ],
   "correct": 0,
   "explain": "Voraussetzungen: Sitz in EU/EWR, gültige Gemeinschaftslizenz, vorherige grenzüberschreitende Beförderung mit vollständiger Entladung im Aufnahmestaat, dasselbe Kfz, Belege mitführen."
@@ -4986,22 +5046,22 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "AUFNAHMESTAAT",
   "text": "Was ist der Aufnahmestaat?",
   "answers": [
-   "Der Staat, in dem der Fahrer wohnt",
-   "Der Staat, in dem das Unternehmen seinen Sitz hat",
+   "Jeder Staat, durch den der Lkw fährt",
    "Der EU-/EWR-Staat, in dem die grenzüberschreitende Beförderung vollständig entladen wurde und in dem das Unternehmen nicht ansässig ist",
-   "Jeder Staat, durch den der Lkw fährt"
+   "Der Staat, in dem das Unternehmen seinen Sitz hat",
+   "Der Staat, in dem der Fahrer wohnt"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Aufnahmestaat = EU-/EWR-Staat mit vollständiger Entladung der grenzüberschreitenden Beförderung, in dem das Unternehmen nicht ansässig ist."
  },
  {
   "title": "VORAUSSETZUNG",
   "text": "Was muss vor einer Kabotagebeförderung erfolgt sein?",
   "answers": [
-   "Eine Anmeldung nach § 15a GüKG",
+   "Eine Leerfahrt im Heimatstaat",
    "Eine Teilentladung im Aufnahmestaat",
    "Eine grenzüberschreitende Beförderung mit vollständiger Entladung im Aufnahmestaat",
-   "Eine Leerfahrt im Heimatstaat"
+   "Eine Anmeldung nach § 15a GüKG"
   ],
   "correct": 2,
   "explain": "Voraussetzung ist eine grenzüberschreitende Beförderung mit vollständiger Entladung in einem EU-/EWR-Staat, in dem das Unternehmen nicht ansässig ist."
@@ -5010,12 +5070,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BELEGE",
   "text": "Welche Belege müssen bei der Kabotage mitgeführt werden?",
   "answers": [
+   "Nur die Fahrerkarte",
    "Belege für die grenzüberschreitende Beförderung sowie für jede Kabotagebeförderung",
    "Keine, die Gemeinschaftslizenz reicht",
-   "Nur der Beleg für die letzte Kabotagefahrt",
-   "Nur die Fahrerkarte"
+   "Nur der Beleg für die letzte Kabotagefahrt"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Mitzuführen sind Belege für die grenzüberschreitende Beförderung sowie für jede Kabotagebeförderung."
  },
  {
@@ -5034,12 +5094,12 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "ANSCHLUSSKABOTAGE",
   "text": "Wie viele Kabotagebeförderungen sind bei der Anschlusskabotage höchstens erlaubt, und in welcher Zeit?",
   "answers": [
-   "3 innerhalb von 7 Tagen",
    "3 innerhalb von 3 Tagen",
-   "1 innerhalb von 3 Tagen",
-   "7 innerhalb von 3 Tagen"
+   "7 innerhalb von 3 Tagen",
+   "3 innerhalb von 7 Tagen",
+   "1 innerhalb von 3 Tagen"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Anschlusskabotage: nach vollständiger Entladung im Aufnahmestaat maximal drei Kabotagebeförderungen innerhalb von sieben Tagen („3 in 7“-Regel)."
  },
  {
@@ -5058,48 +5118,48 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BEISPIEL",
   "text": "Ein deutsches Unternehmen entlädt in Madrid vollständig. Was ist per Anschlusskabotage in Spanien erlaubt?",
   "answers": [
-   "Gar keine Beförderung",
    "Drei Binnenbeförderungen innerhalb von sieben Tagen",
+   "Eine Beförderung innerhalb von drei Tagen",
    "Unbegrenzt viele Fahrten für eine Woche",
-   "Eine Beförderung innerhalb von drei Tagen"
+   "Gar keine Beförderung"
   ],
-  "correct": 1,
+  "correct": 0,
   "explain": "Nach vollständiger Entladung in Madrid sind im Aufnahmestaat Spanien noch drei Binnenbeförderungen innerhalb von sieben Tagen erlaubt."
  },
  {
   "title": "TRANSITKABOTAGE",
   "text": "Welche Regel gilt für die Transitkabotage?",
   "answers": [
+   "„1 in 7“ – eine Beförderung pro Woche",
    "„3 in 7“ – drei Beförderungen in sieben Tagen pro Staat",
    "„1 in 3“ – in jedem Staat eine der insgesamt drei Kabotagebeförderungen innerhalb von drei Tagen",
-   "„4 in 4“ – vier Beförderungen in vier Tagen",
-   "„1 in 7“ – eine Beförderung pro Woche"
+   "„4 in 4“ – vier Beförderungen in vier Tagen"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Transitkabotage: in jedem Staat jeweils eine der insgesamt drei Kabotagebeförderungen innerhalb von drei Tagen („1 in 3“-Regel)."
  },
  {
   "title": "TRANSITKABOTAGE",
   "text": "Unter welcher Bedingung dürfen Kabotagebeförderungen auch in anderen EU-/EWR-Staaten durchgeführt werden?",
   "answers": [
+   "Nur mit CEMT-Genehmigung",
    "Wenn der Lkw jeweils unbeladen über die Grenze in diesen Staat fährt",
-   "Wenn der Lkw beladen über die Grenze fährt",
    "Wenn der Fahrer gewechselt wird",
-   "Nur mit CEMT-Genehmigung"
+   "Wenn der Lkw beladen über die Grenze fährt"
   ],
-  "correct": 0,
+  "correct": 1,
   "explain": "Transitkabotage: Der Lkw fährt jeweils unbeladen (Leerfahrt) über die Grenze in einen anderen EU-/EWR-Staat."
  },
  {
   "title": "TRANSITKABOTAGE",
   "text": "In welchem Zeitraum nach der grenzüberschreitenden Beförderung ist Transitkabotage möglich?",
   "answers": [
-   "Innerhalb von sieben Tagen",
-   "Innerhalb von drei Tagen",
    "Innerhalb eines Monats",
-   "Innerhalb von vier Tagen"
+   "Innerhalb von vier Tagen",
+   "Innerhalb von drei Tagen",
+   "Innerhalb von sieben Tagen"
   ],
-  "correct": 0,
+  "correct": 3,
   "explain": "Innerhalb von sieben Tagen nach abgeschlossener grenzüberschreitender Beförderung dürfen die Kabotagebeförderungen auch in anderen EU-/EWR-Staaten erfolgen."
  },
  {
@@ -5107,35 +5167,35 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Deutsches Unternehmen, vollständige Entladung in Madrid. Was ist per Transitkabotage möglich?",
   "answers": [
    "Drei Kabotagebeförderungen in Frankreich",
-   "Unbegrenzt viele Fahrten in Belgien",
    "Jeweils eine Kabotagebeförderung in Frankreich, Belgien und den Niederlanden",
-   "Keine, Transitkabotage gibt es nicht"
+   "Keine, Transitkabotage gibt es nicht",
+   "Unbegrenzt viele Fahrten in Belgien"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Nach Entladung in Madrid kann das Unternehmen jeweils eine Kabotagebeförderung in Frankreich, Belgien und den Niederlanden durchführen."
  },
  {
   "title": "KOMBINATION",
   "text": "Dürfen Anschluss- und Transitkabotage kombiniert werden?",
   "answers": [
-   "Ja, sofern die jeweiligen Voraussetzungen erfüllt sind",
+   "Nein, nie",
    "Nur mit CEMT-Genehmigung",
-   "Ja, dann sind 6 Beförderungen erlaubt",
-   "Nein, nie"
+   "Ja, sofern die jeweiligen Voraussetzungen erfüllt sind",
+   "Ja, dann sind 6 Beförderungen erlaubt"
   ],
-  "correct": 0,
+  "correct": 2,
   "explain": "Die Kombination von Anschluss- und Transitkabotage ist zulässig, sofern die jeweiligen Voraussetzungen erfüllt sind."
  },
  {
   "title": "KOMBINATION",
   "text": "Nach Entladung in Madrid: Welche Kombination ist laut Faltblatt zulässig?",
   "answers": [
+   "Drei in Spanien und zwei in Frankreich",
    "Drei in Frankreich, ohne Leerfahrt",
    "Zwei Kabotagebeförderungen in Spanien und eine in Frankreich",
-   "Drei in Spanien und zwei in Frankreich",
    "Vier in Spanien"
   ],
-  "correct": 1,
+  "correct": 2,
   "explain": "Zulässig ist z. B. eine in Spanien, eine in Frankreich und eine in Belgien, oder zwei in Spanien und die dritte in Frankreich. Insgesamt bleiben es drei."
  },
  {
@@ -5143,23 +5203,23 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie lange dauert die „Abkühl-Phase“ (Cooling-Off-Phase) nach der Kabotage?",
   "answers": [
    "Drei Tage",
-   "Vier Tage",
+   "Zwei Wochen",
    "Sieben Tage",
-   "Zwei Wochen"
+   "Vier Tage"
   ],
-  "correct": 1,
+  "correct": 3,
   "explain": "Um erneut Kabotage in diesem Mitgliedstaat durchführen zu dürfen, muss eine Abkühlphase von vier Tagen eingehalten werden."
  },
  {
   "title": "ABKÜHLPHASE",
   "text": "Seit wann gilt die Abkühlphase nach der Kabotage?",
   "answers": [
-   "Seit dem 27.02.2026",
    "Seit dem 21.05.2022",
+   "Seit dem 21.02.2022",
    "Seit dem 01.01.2020",
-   "Seit dem 21.02.2022"
+   "Seit dem 27.02.2026"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Ab dem 21.02.2022 gilt die „Abkühlphase“ nach der Kabotage."
  },
  {
@@ -5168,8 +5228,8 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "answers": [
    "Für weitere Kabotage mit demselben Fahrzeug in demselben Mitgliedstaat",
    "Für alle Fahrzeuge des Unternehmens in der ganzen EU",
-   "Für den Fahrer, der vier Tage Pause machen muss",
-   "Nur für grenzüberschreitende Fahrten"
+   "Nur für grenzüberschreitende Fahrten",
+   "Für den Fahrer, der vier Tage Pause machen muss"
   ],
   "correct": 0,
   "explain": "Nach den maximal zulässigen Kabotagefahrten bzw. nach Ablauf der Frist ist mit demselben Fahrzeug in diesem Mitgliedstaat keine weitere Kabotage erlaubt, bis vier Tage Abkühlphase eingehalten sind."
@@ -5179,9 +5239,9 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Was muss ein Unternehmer zusätzlich vorlegen, wenn das Fahrzeug innerhalb von vier Tagen vor der grenzüberschreitenden Beförderung schon im Aufnahmestaat war?",
   "answers": [
    "Eine Bescheinigung der Abkühlphase vom BALM",
-   "Eine CEMT-Genehmigung",
+   "Nichts Zusätzliches",
    "Eindeutige Belege für alle Beförderungen, die in diesem Zeitraum durchgeführt wurden",
-   "Nichts Zusätzliches"
+   "Eine CEMT-Genehmigung"
   ],
   "correct": 2,
   "explain": "Ab 21.02.2022: War das Kfz innerhalb von vier Tagen vor der grenzüberschreitenden Beförderung im Aufnahmestaat, müssen eindeutige Belege für alle Beförderungen in diesem Zeitraum vorgelegt werden."
@@ -5191,11 +5251,11 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Wie dürfen die Belege bei einer Straßenkontrolle vorgezeigt werden?",
   "answers": [
    "Nur im Original auf Papier",
-   "Nur per Post innerhalb von 14 Tagen",
+   "Auf Verlangen persönlich oder alternativ digital in geeigneter Form",
    "Nur durch den Unternehmer selbst",
-   "Auf Verlangen persönlich oder alternativ digital in geeigneter Form"
+   "Nur per Post innerhalb von 14 Tagen"
   ],
-  "correct": 3,
+  "correct": 1,
   "explain": "Die Belege sind auf Verlangen persönlich vorzuzeigen, alternativ digital in geeigneter Form."
  },
  {
@@ -5203,33 +5263,33 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "text": "Was darf das Fahrpersonal tun, wenn die Belege bei der Kontrolle nicht im Fahrzeug sind?",
   "answers": [
    "Nichts, die Fahrt muss sofort enden",
-   "Die Belege später nachreichen, ohne Frist",
    "Kontakt mit anderen Personen oder Stellen aufnehmen, damit die Belege vor Abschluss der Kontrolle bereitgestellt werden",
+   "Die Belege später nachreichen, ohne Frist",
    "Die Kontrolle abbrechen"
   ],
-  "correct": 2,
+  "correct": 1,
   "explain": "Das Fahrpersonal darf Kontakt aufnehmen, wenn die Belege dort vorliegen und vor Abschluss der Kontrolle bereitgestellt werden können. Sonst können weitere Überprüfungsschritte folgen."
  },
  {
   "title": "EINGANGSSCHWELLE",
   "text": "Ab dem 21.05.2022 wurde die Eingangsschwelle für den grenzüberschreitenden gewerblichen Güterverkehr herabgesetzt – von wie viel auf wie viel?",
   "answers": [
+   "Von 3,5 t auf 2,5 t",
    "Von 7,5 t auf 3,5 t",
    "Von 12 t auf 7,5 t",
-   "Von 2,5 t auf 1,5 t",
-   "Von 3,5 t auf 2,5 t"
+   "Von 2,5 t auf 1,5 t"
   ],
-  "correct": 3,
+  "correct": 0,
   "explain": "Ab dem 21.05.2022 wird die Eingangsschwelle von 3,5 Tonnen auf 2,5 Tonnen herabgesetzt."
  },
  {
   "title": "EINGANGSSCHWELLE",
   "text": "Was ist seit dem 21.05.2022 bei Fahrzeugen über 2,5 t zGM im grenzüberschreitenden gewerblichen Güterverkehr in der EU erforderlich?",
   "answers": [
-   "Eine Anmeldung nach § 15a GüKG",
+   "Eine CEMT-Genehmigung",
    "Eine Gemeinschaftslizenz",
-   "Keine Genehmigung",
-   "Eine CEMT-Genehmigung"
+   "Eine Anmeldung nach § 15a GüKG",
+   "Keine Genehmigung"
   ],
   "correct": 1,
   "explain": "Ab 21.05.2022 ist für Kfz inkl. Anhänger über 2,5 t zGM im grenzüberschreitenden gewerblichen Güterverkehr auf EU-Wegstrecken eine Gemeinschaftslizenz erforderlich."
@@ -5238,10 +5298,10 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "BIS 2,5 T",
   "text": "Was ändert sich für Fahrzeuge inklusive Anhänger mit einer zGM bis 2,5 t?",
   "answers": [
+   "Sie dürfen keine Kabotage mehr fahren",
    "Sie brauchen jetzt eine Gemeinschaftslizenz",
-   "Sie brauchen eine CEMT-Genehmigung",
    "Nichts, es ergeben sich keine Änderungen",
-   "Sie dürfen keine Kabotage mehr fahren"
+   "Sie brauchen eine CEMT-Genehmigung"
   ],
   "correct": 2,
   "explain": "Für Kfz inklusive Anhänger mit einer zGM bis 2,5 t ergeben sich keine Änderungen."
@@ -5250,25 +5310,349 @@ export const VERKEHRSRECHT_QUESTIONS = [
   "title": "VERORDNUNG",
   "text": "In welcher Verordnung sind die neuen Kabotagebestimmungen im Detail hinterlegt?",
   "answers": [
+   "Verordnung (EU) 2020/1055",
    "Verordnung (EU) 2016/403",
    "Verordnung (EG) Nr. 561/2006",
-   "Verordnung (EU) 2020/1055",
    "Richtlinie 2003/59/EG"
   ],
-  "correct": 2,
+  "correct": 0,
   "explain": "Die neuen Kabotagebestimmungen stehen in der Verordnung (EU) 2020/1055. Sie ändert insbesondere die Verordnungen (EG) Nr. 1071/2009 und Nr. 1072/2009."
  },
  {
   "title": "STICHTAGE",
   "text": "An welchen beiden Stichtagen traten die neuen Kabotageregeln in Kraft?",
   "answers": [
-   "21.02.2021 und 21.05.2021",
-   "01.01.2022 und 01.07.2022",
+   "21.02.2022 und 21.05.2022",
    "27.02.2026 und 27.02.2036",
-   "21.02.2022 und 21.05.2022"
+   "21.02.2021 und 21.05.2021",
+   "01.01.2022 und 01.07.2022"
+  ],
+  "correct": 0,
+  "explain": "Ab dem 21.02.2022 bzw. 21.05.2022 gelten die neuen Regeln im Bereich der Kabotage."
+ },
+ {
+  "title": "INNERORTS",
+  "text": "Welche Höchstgeschwindigkeit gilt innerhalb geschlossener Ortschaften?",
+  "answers": [
+   "60 km/h für Krafträder, sonst 50 km/h",
+   "50 km/h für alle Kraftfahrzeuge",
+   "30 km/h für alle Kraftfahrzeuge",
+   "50 km/h, für Lkw über 7,5 t 30 km/h"
+  ],
+  "correct": 1,
+  "explain": "Innerhalb geschlossener Ortschaften gilt 50 km/h für alle Kraftfahrzeuge."
+ },
+ {
+  "title": "KRAFTRAD",
+  "text": "Welche Höchstgeschwindigkeit gilt für Krafträder außerhalb geschlossener Ortschaften und auf der Autobahn?",
+  "answers": [
+   "agO 100 km/h, BAB 130 km/h",
+   "agO 100 km/h, BAB ohne Begrenzung",
+   "agO 80 km/h, BAB 100 km/h",
+   "agO 60 km/h, BAB 80 km/h"
+  ],
+  "correct": 1,
+  "explain": "Krafträder: agO 100 km/h, auf BAB und Kraftfahrstraßen ohne Begrenzung."
+ },
+ {
+  "title": "KRAFTRAD + ANH.",
+  "text": "Wie schnell darf ein Kraftrad mit Anhänger außerorts und auf der Autobahn fahren?",
+  "answers": [
+   "80 km/h und 100 km/h",
+   "60 km/h und 80 km/h",
+   "60 km/h und 60 km/h",
+   "80 km/h und 80 km/h"
+  ],
+  "correct": 2,
+  "explain": "Kraftrad mit Anhänger: agO 60 km/h, BAB 60 km/h."
+ },
+ {
+  "title": "PKW",
+  "text": "Welche Höchstgeschwindigkeit gilt für Pkw außerhalb geschlossener Ortschaften?",
+  "answers": [
+   "90 km/h",
+   "80 km/h",
+   "120 km/h",
+   "100 km/h"
   ],
   "correct": 3,
-  "explain": "Ab dem 21.02.2022 bzw. 21.05.2022 gelten die neuen Regeln im Bereich der Kabotage."
+  "explain": "Pkw: agO 100 km/h, BAB ohne Begrenzung."
+ },
+ {
+  "title": "PKW + ANH.",
+  "text": "Wie schnell darf ein Pkw mit Anhänger außerorts und auf der Autobahn grundsätzlich fahren?",
+  "answers": [
+   "60 km/h und 80 km/h",
+   "80 km/h und 100 km/h",
+   "100 km/h und 100 km/h",
+   "80 km/h und 80 km/h"
+  ],
+  "correct": 3,
+  "explain": "Pkw mit Anhänger: agO 80 km/h, BAB 80 km/h."
+ },
+ {
+  "title": "100ER-PLAKETTE",
+  "text": "Was ermöglicht die „100 km/h Plakette“ bei Pkw, Lkw bis 3,5 t und Wohnmobilen bis 3,5 t mit Anhänger?",
+  "answers": [
+   "120 km/h auf der Autobahn",
+   "100 km/h auch innerorts",
+   "100 km/h auf allen Landstraßen",
+   "100 km/h auf Autobahn und Kraftfahrstraße statt 80 km/h"
+  ],
+  "correct": 3,
+  "explain": "Bei diesen Gespannen gilt grundsätzlich 80/80 km/h. Mit 100-km/h-Plakette sind auf BAB und Kraftfahrstraße 100 km/h möglich."
+ },
+ {
+  "title": "LKW BIS 3,5 T",
+  "text": "Welche Höchstgeschwindigkeit gilt für Lkw bis 3,5 t zGm auf der Autobahn?",
+  "answers": [
+   "80 km/h",
+   "100 km/h",
+   "120 km/h",
+   "Keine Begrenzung"
+  ],
+  "correct": 3,
+  "explain": "Lkw bis 3,5 t zGm: agO 100 km/h, BAB ohne Begrenzung."
+ },
+ {
+  "title": "LKW BIS 3,5 T",
+  "text": "Wie schnell darf ein Lkw bis 3,5 t zGm außerorts fahren?",
+  "answers": [
+   "60 km/h",
+   "100 km/h",
+   "80 km/h",
+   "90 km/h"
+  ],
+  "correct": 1,
+  "explain": "Lkw bis 3,5 t zGm: agO 100 km/h."
+ },
+ {
+  "title": "LKW 3,5–7,5 T",
+  "text": "Welche Höchstgeschwindigkeit gilt für Lkw von 3,5 t bis 7,5 t zGm außerorts und auf der Autobahn?",
+  "answers": [
+   "100 km/h und ohne Begrenzung",
+   "80 km/h und 100 km/h",
+   "80 km/h und 80 km/h",
+   "60 km/h und 80 km/h"
+  ],
+  "correct": 2,
+  "explain": "Lkw 3,5 bis 7,5 t zGm: agO 80 km/h, BAB 80 km/h."
+ },
+ {
+  "title": "LKW 3,5–7,5 T + ANH.",
+  "text": "Wie schnell darf ein Lkw von 3,5 t bis 7,5 t zGm mit Anhänger außerorts fahren?",
+  "answers": [
+   "60 km/h",
+   "100 km/h",
+   "80 km/h",
+   "70 km/h"
+  ],
+  "correct": 0,
+  "explain": "Lkw 3,5 bis 7,5 t zGm mit Anhänger: agO 60 km/h, BAB 80 km/h."
+ },
+ {
+  "title": "LKW ÜBER 7,5 T",
+  "text": "Welche Höchstgeschwindigkeit gilt für Lkw über 7,5 t zGm (auch mit Anhänger)?",
+  "answers": [
+   "agO 80 km/h, BAB 100 km/h",
+   "agO 60 km/h, BAB 80 km/h",
+   "agO 80 km/h, BAB 80 km/h",
+   "agO 60 km/h, BAB 60 km/h"
+  ],
+  "correct": 1,
+  "explain": "Lkw über 7,5 t zGm, auch mit Anhänger: agO 60 km/h, BAB 80 km/h."
+ },
+ {
+  "title": "WOHNMOBIL",
+  "text": "Welche Höchstgeschwindigkeit gilt für Wohnmobile bis 3,5 t zGm außerorts und auf der Autobahn?",
+  "answers": [
+   "agO 100 km/h, BAB 100 km/h",
+   "agO 100 km/h, BAB ohne Begrenzung",
+   "agO 80 km/h, BAB 80 km/h",
+   "agO 80 km/h, BAB 100 km/h"
+  ],
+  "correct": 1,
+  "explain": "Wohnmobile bis 3,5 t zGm: agO 100 km/h, BAB ohne Begrenzung."
+ },
+ {
+  "title": "WOHNMOBIL",
+  "text": "Wie schnell darf ein Wohnmobil bis 7,5 t zGm außerorts und auf der Autobahn fahren?",
+  "answers": [
+   "agO 60 km/h, BAB 80 km/h",
+   "agO 80 km/h, BAB 80 km/h",
+   "agO 100 km/h, BAB ohne Begrenzung",
+   "agO 80 km/h, BAB 100 km/h"
+  ],
+  "correct": 3,
+  "explain": "Wohnmobil bis 7,5 t zGm: agO 80 km/h, BAB 100 km/h (12. Ausnahmeverordnung zur StVO)."
+ },
+ {
+  "title": "RECHTSGRUNDLAGE",
+  "text": "Worauf beruhen die 100 km/h auf der Autobahn für Wohnmobile bis 7,5 t zGm?",
+  "answers": [
+   "Auf der 12. Ausnahmeverordnung zur StVO",
+   "Auf Anlage 7 FeV",
+   "Auf § 3 Abs. 3 Nr. 2b StVO",
+   "Auf der 100-km/h-Plakette"
+  ],
+  "correct": 0,
+  "explain": "Wohnmobile bis 7,5 t zGm: BAB 100 km/h nach der 12. Ausnahmeverordnung zur StVO."
+ },
+ {
+  "title": "WOHNMOBIL",
+  "text": "Welche Höchstgeschwindigkeit gilt für Wohnmobile über 7,5 t zGm?",
+  "answers": [
+   "agO 80 km/h, BAB 80 km/h",
+   "agO 80 km/h, BAB 100 km/h",
+   "agO 60 km/h, BAB 60 km/h",
+   "agO 60 km/h, BAB 80 km/h"
+  ],
+  "correct": 3,
+  "explain": "Wohnmobil über 7,5 t zGm: agO 60 km/h, BAB 80 km/h."
+ },
+ {
+  "title": "WOHNMOBIL + ANH.",
+  "text": "Wie schnell darf ein Wohnmobil bis 3,5 t zGm mit Anhänger grundsätzlich fahren?",
+  "answers": [
+   "agO 80 km/h, BAB 100 km/h ohne Plakette",
+   "agO 60 km/h, BAB 80 km/h",
+   "agO 80 km/h, BAB 80 km/h – mit 100-km/h-Plakette mehr",
+   "agO 100 km/h, BAB ohne Begrenzung"
+  ],
+  "correct": 2,
+  "explain": "Wohnmobil bis 3,5 t zGm mit Anhänger: 80/80 km/h, mit 100-km/h-Plakette."
+ },
+ {
+  "title": "WOHNMOBIL + ANH.",
+  "text": "Welche Höchstgeschwindigkeit gilt für ein Wohnmobil über 3,5 t zGm mit Anhänger?",
+  "answers": [
+   "agO 80 km/h, BAB 100 km/h",
+   "agO 80 km/h, BAB 80 km/h",
+   "agO 60 km/h, BAB 80 km/h",
+   "agO 60 km/h, BAB 60 km/h"
+  ],
+  "correct": 2,
+  "explain": "Wohnmobil über 3,5 t zGm mit Anhänger: agO 60 km/h, BAB 80 km/h (§ 3 Abs. 3 Nr. 2b StVO)."
+ },
+ {
+  "title": "PARAGRAF?",
+  "text": "Welche Vorschrift nennt die Tabelle für Wohnmobile über 3,5 t zGm mit Anhänger?",
+  "answers": [
+   "§ 3 Abs. 3 Nr. 2b StVO",
+   "§ 41 Abs. 15 StVZO",
+   "§ 18 Abs. 5 StVO",
+   "12. Ausnahmeverordnung zur StVO"
+  ],
+  "correct": 0,
+  "explain": "Wohnmobil über 3,5 t zGm mit Anhänger: 60/80 km/h, § 3 Abs. 3 Nr. 2b StVO."
+ },
+ {
+  "title": "KOM",
+  "text": "Welche Höchstgeschwindigkeit gilt für Kraftomnibusse (auch mit Gepäckanhänger)?",
+  "answers": [
+   "agO 60 km/h, BAB 80 km/h",
+   "agO 100 km/h, BAB 100 km/h",
+   "agO 80 km/h, BAB 80 km/h",
+   "agO 80 km/h, BAB 100 km/h"
+  ],
+  "correct": 2,
+  "explain": "KOM, auch mit Gepäckanhänger: agO 80 km/h, BAB 80 km/h. KOM ohne Anhänger eventuell 100 km/h."
+ },
+ {
+  "title": "KOM",
+  "text": "Welche Besonderheit nennt die Tabelle für Kraftomnibusse ohne Anhänger?",
+  "answers": [
+   "Keine Begrenzung auf der Autobahn",
+   "Immer nur 60 km/h",
+   "Eventuell 100 km/h",
+   "130 km/h Richtgeschwindigkeit"
+  ],
+  "correct": 2,
+  "explain": "Kraftomnibusse ohne Anhänger: eventuell 100 km/h."
+ },
+ {
+  "title": "KOM STEHPLÄTZE",
+  "text": "Wie schnell darf ein Kraftomnibus mit Stehplätzen bei Fahrgastbeförderung fahren?",
+  "answers": [
+   "agO 80 km/h, BAB 80 km/h",
+   "agO 50 km/h, BAB 60 km/h",
+   "agO 60 km/h, BAB 60 km/h",
+   "agO 60 km/h, BAB 80 km/h"
+  ],
+  "correct": 2,
+  "explain": "KOM mit Stehplätzen bei Fahrgastbeförderung: agO 60 km/h, BAB 60 km/h."
+ },
+ {
+  "title": "ZUGMASCHINE",
+  "text": "Welche Höchstgeschwindigkeit gilt für Zugmaschinen bis 7,5 t zGm?",
+  "answers": [
+   "agO 60 km/h, BAB 80 km/h",
+   "agO 60 km/h, BAB 60 km/h",
+   "agO 100 km/h, BAB ohne Begrenzung",
+   "agO 80 km/h, BAB 80 km/h"
+  ],
+  "correct": 3,
+  "explain": "Zugmaschinen bis 7,5 t zGm: agO 80 km/h, BAB 80 km/h."
+ },
+ {
+  "title": "ZUGMASCHINE",
+  "text": "Welche Höchstgeschwindigkeit gilt für Zugmaschinen über 7,5 t zGm oder mit einem Anhänger?",
+  "answers": [
+   "agO 60 km/h, BAB 80 km/h",
+   "agO 80 km/h, BAB 100 km/h",
+   "agO 60 km/h, BAB 60 km/h",
+   "agO 80 km/h, BAB 80 km/h"
+  ],
+  "correct": 0,
+  "explain": "Zugmaschinen über 7,5 t zGm und Zugmaschinen mit einem Anhänger: agO 60 km/h, BAB 80 km/h."
+ },
+ {
+  "title": "KRAFTFAHRSTRASSE",
+  "text": "Für welche Kraftfahrstraßen gelten die Werte der Spalte „BAB und Kraftfahrstraße“?",
+  "answers": [
+   "Für alle Bundesstraßen",
+   "Für Kraftfahrstraßen mit Fahrbahnen, die durch Mittelstreifen oder bauliche Einrichtungen getrennt sind",
+   "Für alle Kraftfahrstraßen",
+   "Nur für Kraftfahrstraßen mit drei Fahrstreifen"
+  ],
+  "correct": 1,
+  "explain": "Gemeint sind Kraftfahrstraßen mit Fahrbahnen, die durch Mittelstreifen oder bauliche Einrichtungen getrennt sind."
+ },
+ {
+  "title": "WELCHES FAHRZEUG?",
+  "text": "Welches Fahrzeug darf außerhalb geschlossener Ortschaften 100 km/h fahren?",
+  "answers": [
+   "Lkw von 3,5 bis 7,5 t zGm",
+   "Wohnmobil bis 7,5 t zGm",
+   "Wohnmobil bis 3,5 t zGm",
+   "Kraftomnibus mit Gepäckanhänger"
+  ],
+  "correct": 2,
+  "explain": "100 km/h agO dürfen Krafträder, Pkw, Lkw bis 3,5 t und Wohnmobile bis 3,5 t zGm."
+ },
+ {
+  "title": "WELCHES FAHRZEUG?",
+  "text": "Welches Fahrzeug darf auch auf der Autobahn nur 60 km/h fahren?",
+  "answers": [
+   "Lkw über 7,5 t zGm",
+   "Pkw mit Anhänger",
+   "Kraftrad mit Anhänger",
+   "Zugmaschine mit einem Anhänger"
+  ],
+  "correct": 2,
+  "explain": "Kraftrad mit Anhänger (und KOM mit Stehplätzen bei Fahrgastbeförderung): 60 km/h auch auf BAB."
+ },
+ {
+  "title": "WELCHES FAHRZEUG?",
+  "text": "Welches Fahrzeug darf auf der Autobahn 100 km/h fahren, außerorts aber nur 80 km/h?",
+  "answers": [
+   "Lkw von 3,5 bis 7,5 t zGm",
+   "Zugmaschine bis 7,5 t zGm",
+   "Wohnmobil über 7,5 t zGm",
+   "Wohnmobil bis 7,5 t zGm"
+  ],
+  "correct": 3,
+  "explain": "Wohnmobil bis 7,5 t zGm: agO 80 km/h, BAB 100 km/h nach der 12. Ausnahmeverordnung zur StVO."
  }
 ];
 

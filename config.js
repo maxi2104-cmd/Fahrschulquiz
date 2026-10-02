@@ -695,6 +695,34 @@ export const TECHNIKB_QUESTIONS = [
     answers: ["Damit es besser riecht", "Damit es nicht einfriert", "Damit die Scheibe schneller trocknet", "Das ist nur Deko"],
     correct: 1,
     explain: "Ohne Frostschutz friert das Waschwasser ein, und du hast keine freie Sicht mehr."
+  },
+  {
+    title: "LANE ASSIST?",
+    text: "Wie schaltest du beim Enyaq den Lane Assist (Spurhalteassistent) aus?",
+    answers: ["Den Warnblinkschalter 3 Sekunden gedrückt halten", "Den Blinkerhebel nach vorne drücken", "Den Shortcut auf dem Display herunterziehen und das Symbol Lane Assist drücken", "Den Hebel unter dem Blinkerhebel zu dir heranziehen", "Die Taste am Lichtdrehschalter drücken"],
+    correct: 2,
+    explain: "Beim Enyaq ziehst du die Shortcut-Leiste auf dem Display herunter und tippst auf das Symbol Lane Assist."
+  },
+  {
+    title: "ACC EINSCHALTEN?",
+    text: "Wie aktivierst du beim Enyaq den adaptiven Geschwindigkeitsregelautomaten (ACC)?",
+    answers: ["Den Blinkerhebel zu dir heranziehen", "Den Hebel unter dem Blinkerhebel zu dir heranziehen", "Den Shortcut auf dem Display herunterziehen", "Den Lichtdrehschalter auf AUTO stellen"],
+    correct: 1,
+    explain: "Den Hebel unter dem Blinkerhebel zu dir heranziehen. Den Blinkerhebel heranzuziehen wäre die Lichthupe."
+  },
+  {
+    title: "ACC-TEMPO?",
+    text: "Wie stellst du beim ACC die gewünschte Geschwindigkeit ein?",
+    answers: ["Hebel nach unten = schneller, nach oben = langsamer", "Hebel nach vorne = schneller, nach hinten = langsamer", "Nur mit dem Gaspedal, der Hebel kann das nicht", "Hebel nach oben = schneller, nach unten = langsamer"],
+    correct: 3,
+    explain: "Hebel nach oben drücken: schneller. Hebel nach unten drücken: langsamer."
+  },
+  {
+    title: "ACC-ABSTAND?",
+    text: "Wofür ist der kleine Schalter oben auf dem ACC-Hebel?",
+    answers: ["Abstand: nach links weniger Abstand, nach rechts mehr Abstand", "Abstand: nach links mehr Abstand, nach rechts weniger Abstand", "Er schaltet den Lane Assist ein und aus", "Er stellt die Geschwindigkeit in 10er-Schritten ein"],
+    correct: 0,
+    explain: "Mit dem kleinen Schalter oben auf dem Hebel stellst du den Abstand zum Vorausfahrenden ein: nach links weniger, nach rechts mehr Abstand."
   }
 ];
 

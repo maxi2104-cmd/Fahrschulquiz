@@ -119,3 +119,21 @@ body.lk-open{overflow:hidden}
 .lk-a{margin:0 0 8px;padding:10px 12px;border-radius:10px;background:#e9f8ef;color:#10532f;font-weight:600;line-height:1.45;display:flex;flex-direction:column;gap:4px}
 .lk-e{margin:0;font-size:14px;line-height:1.55;color:#343a44}
 .lk-card mark{background:#f3f7c7;color:inherit;border-radius:3px;padding:0 1px}
+
+/* Logo im Hintergrund der Karte */
+.card{position:relative;isolation:isolate}
+.card::before{content:"";position:absolute;z-index:-1;left:50%;top:46%;width:min(560px,94%);aspect-ratio:295/285;transform:translate(-50%,-50%);background:var(--lime);opacity:.09;pointer-events:none;
+  -webkit-mask:url(logo.svg) center/contain no-repeat;mask:url(logo.svg) center/contain no-repeat}
+
+/* Logo-Konfetti */
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.confetti i{position:absolute;top:-60px;left:var(--x);width:var(--s);aspect-ratio:190/212;background:var(--c);
+  -webkit-mask:url(logo-emblem.svg) center/contain no-repeat;mask:url(logo-emblem.svg) center/contain no-repeat;
+  animation:logo-fall var(--d) cubic-bezier(.25,.6,.45,1) var(--delay) forwards;opacity:0}
+@keyframes logo-fall{
+  0%{opacity:1;transform:translate3d(0,0,0) rotate(0)}
+  25%{transform:translate3d(calc(var(--dx) * .4),28vh,0) rotate(calc(var(--r) * .3))}
+  60%{transform:translate3d(calc(var(--dx) * -.3),68vh,0) rotate(calc(var(--r) * .7))}
+  90%{opacity:1}
+  100%{opacity:0;transform:translate3d(var(--dx),110vh,0) rotate(var(--r))}
+}

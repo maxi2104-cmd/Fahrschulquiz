@@ -21,10 +21,28 @@ let player = { first: "", last: "" };
 let idx = 0, points = 0, correctCount = 0, log = [];
 let game = []; // Indizes der Fragen dieses Spiels
 
+// Fragenauswahl: Auf jedem Gerät kommen zuerst alle noch nicht gesehenen Fragen dran.
+// Erst wenn der ganze Fragenpool durch ist, beginnt ein neuer Durchgang.
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 function pickQuestions() {
-  const ids = QUESTIONS.map((_, i) => i);
-  for (let i = ids.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [ids[i], ids[j]] = [ids[j], ids[i]]; }
-  return ids.slice(0, Math.min(PER_GAME, ids.length));
+  const n = Math.min(PER_GAME, QUESTIONS.length);
+  const key = "seen_" + QUIZ + "_" + QUESTIONS.length;
+  let seen = [];
+  try { seen = JSON.parse(localStorage.getItem(key) || "[]").filter(i => i < QUESTIONS.length); } catch (e) { seen = []; }
+  const seenSet = new Set(seen);
+  const fresh = shuffle(QUESTIONS.map((_, i) => i).filter(i => !seenSet.has(i)));
+  let picked;
+  if (fresh.length >= n) {
+    picked = fresh.slice(0, n);
+    seen = seen.concat(picked);
+  } else {
+    // Rest des Durchgangs + Auffüllen mit Fragen, die am längsten her sind
+    const fill = seen.slice(0, n - fresh.length);
+    picked = shuffle(fresh.concat(fill));
+    seen = picked.slice();          // neuer Durchgang beginnt
+  }
+  try { localStorage.setItem(key, JSON.stringify(seen)); } catch (e) {}
+  return picked;
 }
 let timer = null, startedAt = 0, locked = false;
 
@@ -89,7 +107,7 @@ function renderQuestion() {
   q.answers.forEach((txt, i) => {
     const b = document.createElement("button");
     b.className = "ans";
-    const l = document.createElement("span"); l.className = "l"; l.textContent = "ABCD"[i];
+    const l = document.createElement("span"); l.className = "l"; l.textContent = "ABCDE"[i];
     const t = document.createElement("span"); t.textContent = txt;
     b.append(l, t);
     b.addEventListener("click", () => answer(i));
@@ -122,6 +140,7 @@ function answer(choice) {
   const secs = (performance.now() - startedAt) / 1000;
   const used = TIMED ? Math.min(SECONDS_PER_QUESTION, secs) : Math.min(secs, 3600);
   const ok = choice === q.correct;
+  confetti(ok);
   let gained = 0;
   if (ok) {
     gained = TIMED
@@ -184,6 +203,26 @@ async function finish() {
   loadBoard("board2", lbId);
 }
 
+// ---------- Logo-Konfetti: grün bei richtig, rot bei falsch ----------
+function confetti(ok) {
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const box = document.createElement("div");
+  box.className = "confetti";
+  const count = reduce ? 0 : (ok ? 68 : 52);
+  const color = ok ? "var(--lime)" : "var(--bad)";
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement("i");
+    const s = 22 + Math.random() * 20;
+    p.style.cssText =
+      `--x:${Math.random() * 100}vw;--s:${s}px;--c:${color};` +
+      `--d:${2.6 + Math.random() * 1.6}s;--delay:${Math.random() * .6}s;` +
+      `--dx:${(Math.random() * 2 - 1) * 90}px;--r:${(Math.random() * 2 - 1) * 540}deg`;
+    box.appendChild(p);
+  }
+  document.body.appendChild(box);
+  setTimeout(() => box.remove(), 5200);
+}
+
 // ---------- Auswertung: falsch beantwortete Fragen ----------
 function el(tag, cls, text) {
   const e = document.createElement(tag);
@@ -210,9 +249,9 @@ function renderReview() {
       body.appendChild(el("p", "rv-q", q.text));
       const mine = el("div", "rv-ans rv-bad");
       mine.append(el("span", "rv-tag", "DEINE ANTWORT"),
-        el("span", "", a.chosen === -1 ? "Keine Antwort (Zeit abgelaufen)" : "ABCD"[a.chosen] + " · " + q.answers[a.chosen]));
+        el("span", "", a.chosen === -1 ? "Keine Antwort (Zeit abgelaufen)" : "ABCDE"[a.chosen] + " · " + q.answers[a.chosen]));
       const right = el("div", "rv-ans rv-ok");
-      right.append(el("span", "rv-tag", "RICHTIG"), el("span", "", "ABCD"[q.correct] + " · " + q.answers[q.correct]));
+      right.append(el("span", "rv-tag", "RICHTIG"), el("span", "", "ABCDE"[q.correct] + " · " + q.answers[q.correct]));
       body.append(mine, right);
       const text = q.detail || q.explain;
       if (text) {
