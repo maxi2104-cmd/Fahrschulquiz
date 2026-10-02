@@ -206,21 +206,25 @@ async function finish() {
 // ---------- Logo-Konfetti: grün bei richtig, rot bei falsch ----------
 function confetti(ok) {
   const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) return;
   const box = document.createElement("div");
   box.className = "confetti";
-  const count = reduce ? 0 : (ok ? 68 : 52);
-  const color = ok ? "var(--lime)" : "var(--bad)";
+  const count = ok ? 68 : 52;
+  const img = ok ? "url(logo-emblem-green.svg)" : "url(logo-emblem-red.svg)";
+  const rnd = (a, b) => a + Math.random() * (b - a);
   for (let i = 0; i < count; i++) {
     const p = document.createElement("i");
-    const s = 22 + Math.random() * 20;
     p.style.cssText =
-      `--x:${Math.random() * 100}vw;--s:${s}px;--c:${color};` +
-      `--d:${2.6 + Math.random() * 1.6}s;--delay:${Math.random() * .6}s;` +
-      `--dx:${(Math.random() * 2 - 1) * 90}px;--r:${(Math.random() * 2 - 1) * 540}deg`;
+      `--x:${rnd(-2, 98)}vw;--s:${rnd(22, 42)}px;--d:${rnd(3, 4.4)}s;--delay:${rnd(0, .7)}s;` +
+      `--sw:${rnd(12, 34)}px;--sd:${rnd(.9, 1.6)}s;` +
+      `--r:${Math.random() < .5 ? -360 : 360}deg;--rd:${rnd(2.2, 4.5)}s`;
+    const b = document.createElement("b");
+    b.style.backgroundImage = img;
+    p.appendChild(b);
     box.appendChild(p);
   }
   document.body.appendChild(box);
-  setTimeout(() => box.remove(), 5200);
+  setTimeout(() => box.remove(), 5600);
 }
 
 // ---------- Auswertung: falsch beantwortete Fragen ----------

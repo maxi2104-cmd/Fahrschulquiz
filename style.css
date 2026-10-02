@@ -125,15 +125,12 @@ body.lk-open{overflow:hidden}
 .card::before{content:"";position:absolute;z-index:-1;left:50%;top:46%;width:min(560px,94%);aspect-ratio:295/285;transform:translate(-50%,-50%);background:var(--lime);opacity:.09;pointer-events:none;
   -webkit-mask:url(logo.svg) center/contain no-repeat;mask:url(logo.svg) center/contain no-repeat}
 
-/* Logo-Konfetti */
+/* Logo-Konfetti: Fallen, Pendeln und Drehen getrennt = gleichmäßige Bewegung */
 .confetti{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
-.confetti i{position:absolute;top:-60px;left:var(--x);width:var(--s);aspect-ratio:190/212;background:var(--c);
-  -webkit-mask:url(logo-emblem.svg) center/contain no-repeat;mask:url(logo-emblem.svg) center/contain no-repeat;
-  animation:logo-fall var(--d) cubic-bezier(.25,.6,.45,1) var(--delay) forwards;opacity:0}
-@keyframes logo-fall{
-  0%{opacity:1;transform:translate3d(0,0,0) rotate(0)}
-  25%{transform:translate3d(calc(var(--dx) * .4),28vh,0) rotate(calc(var(--r) * .3))}
-  60%{transform:translate3d(calc(var(--dx) * -.3),68vh,0) rotate(calc(var(--r) * .7))}
-  90%{opacity:1}
-  100%{opacity:0;transform:translate3d(var(--dx),110vh,0) rotate(var(--r))}
-}
+.confetti i{position:absolute;top:-80px;left:var(--x);width:var(--s);aspect-ratio:190/212;will-change:transform,opacity;
+  animation:cf-fall var(--d) cubic-bezier(.33,.08,.62,.96) var(--delay) both}
+.confetti b{display:block;width:100%;height:100%;background:center/contain no-repeat;will-change:translate,rotate;
+  animation:cf-sway var(--sd) ease-in-out var(--delay) infinite alternate,cf-spin var(--rd) linear var(--delay) infinite}
+@keyframes cf-fall{from{transform:translate3d(0,0,0);opacity:1}85%{opacity:1}to{transform:translate3d(0,calc(100vh + 140px),0);opacity:0}}
+@keyframes cf-sway{from{translate:calc(var(--sw) * -1) 0}to{translate:var(--sw) 0}}
+@keyframes cf-spin{from{rotate:0deg}to{rotate:var(--r)}}
