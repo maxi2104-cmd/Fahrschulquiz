@@ -140,3 +140,10 @@ body.lk-open{overflow:hidden}
 .q-pic[hidden]{display:none}
 .q-pic svg{width:100%;max-width:300px;height:auto;max-height:190px}
 .rv-pic svg{max-height:140px}
+
+/* Kontakt auf der Ergebnisseite */
+.contact{display:flex;flex-direction:column;gap:10px;margin:6px 0 26px}
+.contact .btn{display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;box-sizing:border-box}
+.wa-btn{background:#1fa855;color:#fff;font-size:15px;letter-spacing:.12em;padding:0 14px}
+.wa-btn svg{width:28px;height:28px;flex:none}
+.mail-btn{min-height:50px;font-size:14px}

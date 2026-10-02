@@ -808,10 +808,16 @@ export const TECHNIKB_QUESTIONS = [
   }
 ];
 
+// ===== Kontakt auf der Ergebnisseite (nur Fahrschüler-Quizze) =====
+export const CONTACT = {
+  whatsapp: "4915227090400",          // Nummer ohne + und ohne Leerzeichen
+  email: "info@ontrack-fahr.schule"
+};
+
 // ===== Quiz-Übersicht =====
 // Fortbildung: kein Zeitlimit, 20 Fragen pro Spiel, 50 Punkte pro richtiger Antwort (max. 1.000)
 // repeat: true = beliebig oft spielbar (keine Sperre pro Runde)
-const FB = { timer: false, perGame: 20, pointsPerCorrect: 50, repeat: true, back: "fortbildung.html", backLabel: "Fortbildung" };
+const FB = { timer: false, perGame: 20, pointsPerCorrect: 50, repeat: true, contact: false, back: "fortbildung.html", backLabel: "Fortbildung" };
 
 const ALL_QUIZZES = {
   freitag: { label: "Freitags Frage", configDoc: "current", questions: QUESTIONS },
