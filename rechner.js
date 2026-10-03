@@ -176,3 +176,8 @@ export function mountRechner(hosts) {
     if (before) el.insertBefore(b, before); else el.appendChild(b);
   });
 }
+
+export function openRechner(tab) {
+  if (!modal) build();
+  modal._open(tab);
+}
