@@ -122,7 +122,6 @@ function tempo100() {
   else fehler.push(`Masseverhältnis: Der Anhänger darf höchstens ${x.toLocaleString("de-DE")} × ${fmt(leer)} kg = <b>${fmt(max)} kg</b> haben, hat aber ${fmt(anh)} kg. Das Zugfahrzeug müsste mindestens <b>${fmt(Math.ceil(minLeer))} kg</b> Leermasse haben.`);
 
   if (zgm && zgm > 3500) fehler.push("Das Zugfahrzeug darf höchstens 3.500 kg zulässige Gesamtmasse haben.");
-  if (x >= 1.1 && zgm && anh > zgm) fehler.push(`Beim Faktor ${x.toLocaleString("de-DE")} darf der Anhänger nicht schwerer sein als die zulässige Gesamtmasse des Zugfahrzeugs (${fmt(zgm)} kg).`);
   if (last && anh > last) fehler.push(`Der Anhänger ist schwerer als die zulässige Anhängelast (${fmt(last)} kg) – so darfst du gar nicht fahren.`);
   if (!q("#t-abs").checked) fehler.push("Das Zugfahrzeug braucht ABS.");
   if (!q("#t-plak").checked) fehler.push("Am Anhänger fehlt die gesiegelte Tempo-100-Plakette.");
