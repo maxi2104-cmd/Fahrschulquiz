@@ -24,8 +24,8 @@
     }
   ],
   "id": "./index.html",
-  "name": "On Track Quiz",
+  "name": "On Track App",
   "short_name": "On Track",
-  "description": "Lernquizze der Fahrschule On Track",
+  "description": "Die App der Fahrschule On Track: Quizze, Verkehrszeichen, Rechner und direkter Draht zum Fahrlehrer",
   "start_url": "./index.html"
 }
