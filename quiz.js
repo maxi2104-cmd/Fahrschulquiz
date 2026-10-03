@@ -3,6 +3,7 @@ import {
   doc, getDoc, collection, query, where, getDocs, writeBatch, serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { mountLookup } from "./lookup.js";
+import { mountRechner } from "./rechner.js";
 
 const QUIZ = document.body.dataset.quiz || "freitag";
 const $ = (id) => document.getElementById(id);
@@ -105,8 +106,8 @@ function renderQuestion() {
   // optionales Bild zur Frage (SVG, direkt in den Fragen hinterlegt)
   let pic = document.getElementById("q-pic");
   if (!pic) { pic = document.createElement("div"); pic.id = "q-pic"; pic.className = "q-pic"; $("q-text").before(pic); }
-  pic.innerHTML = q.svg || "";
-  pic.hidden = !q.svg;
+  pic.innerHTML = q.img ? `<img src="${q.img}" alt="Bild zur Frage">` : (q.svg || "");
+  pic.hidden = !(q.svg || q.img);
   $("q-explain").hidden = true;
   const box = $("q-answers"); box.innerHTML = "";
   q.answers.forEach((txt, i) => {
@@ -279,7 +280,7 @@ function renderReview() {
       const top = el("div", "rv-top");
       top.append(el("span", "rv-no", String(n + 1)), el("span", "rv-title", q.title));
       const body = el("div", "rv-body");
-      if (q.svg) { const pv = el("div", "q-pic rv-pic"); pv.innerHTML = q.svg; body.appendChild(pv); }
+      if (q.svg || q.img) { const pv = el("div", "q-pic rv-pic"); pv.innerHTML = q.img ? `<img src="${q.img}" alt="Bild zur Frage">` : q.svg; body.appendChild(pv); }
       body.appendChild(el("p", "rv-q", q.text));
       const mine = el("div", "rv-ans rv-bad");
       mine.append(el("span", "rv-tag", "DEINE ANTWORT"),
@@ -303,6 +304,12 @@ function renderReview() {
 
 // ---------- Nachschlagen (nur auf Start- und Ergebnisseite, nicht während der Fragen) ----------
 mountLookup([{ name: QZ.label, questions: QUESTIONS }], [
+  { el: $("screen-start"), before: document.querySelector("#screen-start .lb-title") },
+  { el: $("screen-end"), before: document.querySelector("#screen-end .lb-title") }
+]);
+
+// ---------- Rechner (nur im Anhänger Quiz) ----------
+if (QUIZ === "technik") mountRechner([
   { el: $("screen-start"), before: document.querySelector("#screen-start .lb-title") },
   { el: $("screen-end"), before: document.querySelector("#screen-end .lb-title") }
 ]);
