@@ -22,6 +22,7 @@ const ALLE = SCHILDER.map((s, i) => {
   return {
     i, f: s.f, n: s.n || "", nummer, kat, titel, info, jahr: s.j || "",
     src: ORDNER + encodeURIComponent(s.f),
+    thumb: ORDNER + "vorschau/" + encodeURIComponent(s.f),   // kleines Vorschaubild (max. 220 px)
     quelle: "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(commons),
     gruppe: s.n ? "n" + s.n : "s" + s.s,   // Varianten desselben Grundzeichens bilden einen Stapel
     nrKey: norm((s.n || "") + (s.v || "")).replace(/\s+/g, ""),
@@ -88,7 +89,7 @@ function kachel(s) {
   const nr = n > 1 && s.n ? kurz((parseFloat(s.n) >= 1000 ? "Zusatzzeichen " : "Zeichen ") + s.n) : kurz(s.nummer);
   const titel = n > 1 && s.info ? s.info.t : s.titel;
   return `<button type="button" class="sd-tile${n > 1 ? " stack" : ""}" data-i="${s.i}">
-    <span class="sd-img"><img src="${s.src}" alt="" loading="lazy" decoding="async">${n > 1 ? `<span class="sd-count" title="${n} Varianten">${n} ×</span>` : ""}</span>
+    <span class="sd-img"><img src="${s.thumb}" alt="" loading="lazy" decoding="async">${n > 1 ? `<span class="sd-count" title="${n} Varianten">${n} ×</span>` : ""}</span>
     <span class="sd-nr">${esc(nr || "–")}</span>
     <span class="sd-t">${esc(titel)}</span>
   </button>`;
@@ -130,7 +131,7 @@ function oeffnen(s, ersetzen) {
   body.innerHTML = `
     <div class="sd-big"><img src="${s.src}" alt="${esc(s.titel)}"></div>
     ${varianten.length > 1 ? `<p class="sd-var-h">${varianten.length} VARIANTEN – <span>${varianten.indexOf(s) + 1} von ${varianten.length}</span></p>
-      <div class="sd-var">${varianten.map(o => `<button type="button" class="sd-vt${o === s ? " on" : ""}" data-i="${o.i}" aria-label="${esc(o.nummer + " " + o.titel)}"><img src="${o.src}" alt="" loading="lazy"><small>${esc((o.nummer.match(/[-\s][^\s]*$|\sbis.*$/) || [""])[0].trim().replace(/^-/, "") || "Grund")}</small></button>`).join("")}</div>` : ""}
+      <div class="sd-var">${varianten.map(o => `<button type="button" class="sd-vt${o === s ? " on" : ""}" data-i="${o.i}" aria-label="${esc(o.nummer + " " + o.titel)}"><img src="${o.thumb}" alt=""><small>${esc((o.nummer.match(/[-\s][^\s]*$|\sbis.*$/) || [""])[0].trim().replace(/^-/, "") || "Grund")}</small></button>`).join("")}</div>` : ""}
     <span class="lk-set">${esc(k.name.toUpperCase())}</span>
     <h2 class="sd-h">${esc(s.titel)}</h2>
     <p class="sd-meta">${esc([s.nummer, s.jahr && "Ausführung " + s.jahr].filter(Boolean).join(" · "))}</p>
