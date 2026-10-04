@@ -11,7 +11,7 @@
     if (url.origin !== location.origin || (url.pathname === location.pathname && url.hash)) return;
     e.preventDefault();
     document.body.classList.add("leaving");
-    setTimeout(() => { location.href = url.href; }, 170);
+    setTimeout(() => { location.href = url.href; }, 290);
   });
   // Zurück-Taste (Seite aus dem Zwischenspeicher): wieder sichtbar machen
   addEventListener("pageshow", (e) => { if (e.persisted) document.body.classList.remove("leaving"); });

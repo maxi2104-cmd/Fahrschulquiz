@@ -353,15 +353,15 @@ button.an-pk:active{transform:scale(.98)}
 /* ===== Seitenübergänge ===== */
 /* Moderne Browser (Chrome, Edge, Safari ab iOS 18.2): native Überblendung beim Seitenwechsel */
 @view-transition { navigation: auto; }
-::view-transition-old(root){animation:vt-out .22s cubic-bezier(.4,0,1,1) both}
-::view-transition-new(root){animation:vt-in .36s cubic-bezier(0,0,.2,1) both}
-@keyframes vt-out{to{opacity:0;transform:scale(.96)}}
-@keyframes vt-in{from{opacity:0;transform:translateY(28px)}}
+::view-transition-old(root){animation:vt-out .4s cubic-bezier(.4,0,1,1) both}
+::view-transition-new(root){animation:vt-in .6s cubic-bezier(.16,1,.3,1) .12s both}
+@keyframes vt-out{to{opacity:0;transform:scale(.92)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(70px) scale(.98)}}
 /* Ältere Browser (siehe nav.js): nur Deckkraft, damit feste Elemente nicht verrutschen */
 @keyframes vt-fade-in{from{opacity:0}}
 @keyframes vt-fade-out{to{opacity:0}}
-html.no-vt body{animation:vt-fade-in .3s ease-out backwards}
-html.no-vt body.leaving{animation:vt-fade-out .18s ease-in forwards}
+html.no-vt body{animation:vt-fade-in .5s ease-out backwards}
+html.no-vt body.leaving{animation:vt-fade-out .3s ease-in forwards}
 @media (prefers-reduced-motion: reduce){
   ::view-transition-old(root),::view-transition-new(root){animation:none}
   html.no-vt body,html.no-vt body.leaving{animation:none}
