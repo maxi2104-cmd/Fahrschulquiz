@@ -23,6 +23,7 @@ const ALLE = SCHILDER.map((s, i) => {
     i, f: s.f, n: s.n || "", nummer, kat, titel, info, jahr: s.j || "",
     src: ORDNER + encodeURIComponent(s.f),
     quelle: "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(commons),
+    gruppe: s.n ? "n" + s.n : "s" + s.s,   // Varianten desselben Grundzeichens bilden einen Stapel
     nrKey: norm((s.n || "") + (s.v || "")).replace(/\s+/g, ""),
     titelKey: norm(titel + " " + (info ? info.t : "")),
     hay: norm([nummer, titel, info && info.t, info && info.e, katName[kat].name].join(" "))
@@ -35,7 +36,9 @@ const inp = $("sd-q"), grid = $("sd-grid"), info = $("sd-info"), chips = $("sd-c
 let filter = "alle", treffer = ALLE, gezeigt = 0;
 
 // Kategorie-Chips
-const anzahl = ALLE.reduce((m, s) => (m[s.kat] = (m[s.kat] || 0) + 1, m), {});
+// Stapel: Grundzeichen → alle Varianten
+const GRUPPEN = ALLE.reduce((m, s) => ((m[s.gruppe] = m[s.gruppe] || []).push(s), m), {});
+const anzahl = Object.values(GRUPPEN).reduce((m, g) => (m[g[0].kat] = (m[g[0].kat] || 0) + 1, m), {});
 chips.innerHTML = [`<button type="button" class="sd-chip on" data-k="alle">ALLE</button>`]
   .concat(KATEGORIEN.filter(k => anzahl[k.id]).map(k => `<button type="button" class="sd-chip" data-k="${k.id}">${k.kurz} <small>${anzahl[k.id]}</small></button>`))
   .join("");
@@ -64,22 +67,30 @@ function suchen() {
       return { s, p };
     }).filter(x => x.p).sort((a, b) => b.p - a.p || a.s.i - b.s.i).map(x => x.s);
   }
-  treffer = liste;
+  // nach Grundzeichen zusammenfassen – der beste Treffer liegt oben auf dem Stapel
+  const gesehen = new Set();
+  treffer = liste.filter(x => !gesehen.has(x.gruppe) && gesehen.add(x.gruppe));
+  const anzSchilder = liste.length;
   grid.innerHTML = "";
   gezeigt = 0;
+  const de = (n) => n.toLocaleString("de-DE");
   info.textContent = !worte.length
-    ? `${liste.length.toLocaleString("de-DE")} Schilder${filter === "alle" ? "" : " – " + katName[filter].name}`
-    : liste.length
-      ? `${liste.length.toLocaleString("de-DE")} Treffer für „${roh}“`
+    ? `${de(treffer.length)} Zeichen mit ${de(anzSchilder)} Varianten${filter === "alle" ? "" : " – " + katName[filter].name}`
+    : treffer.length
+      ? `${de(treffer.length)} ${treffer.length === 1 ? "Zeichen" : "Zeichen"} für „${roh}“ (${de(anzSchilder)} Varianten)`
       : `Keine Treffer für „${roh}“. Versuch ein anderes oder kürzeres Wort.`;
   weiter();
 }
 
 function kachel(s) {
-  return `<button type="button" class="sd-tile" data-i="${s.i}">
-    <span class="sd-img"><img src="${s.src}" alt="" loading="lazy" decoding="async"></span>
-    <span class="sd-nr">${esc(s.nummer.replace(/^Zusatzzeichen/, "Zusatz").replace(/^Zeichen /, "") || "–")}</span>
-    <span class="sd-t">${esc(s.titel)}</span>
+  const n = GRUPPEN[s.gruppe].length;
+  const kurz = (t) => t.replace(/^Zusatzzeichen/, "Zusatz").replace(/^Zeichen /, "");
+  const nr = n > 1 && s.n ? kurz((parseFloat(s.n) >= 1000 ? "Zusatzzeichen " : "Zeichen ") + s.n) : kurz(s.nummer);
+  const titel = n > 1 && s.info ? s.info.t : s.titel;
+  return `<button type="button" class="sd-tile${n > 1 ? " stack" : ""}" data-i="${s.i}">
+    <span class="sd-img"><img src="${s.src}" alt="" loading="lazy" decoding="async">${n > 1 ? `<span class="sd-count" title="${n} Varianten">${n} ×</span>` : ""}</span>
+    <span class="sd-nr">${esc(nr || "–")}</span>
+    <span class="sd-t">${esc(titel)}</span>
   </button>`;
 }
 
@@ -114,10 +125,12 @@ const body = modal.querySelector(".sd-body");
 
 function oeffnen(s, ersetzen) {
   const k = katName[s.kat];
-  const varianten = s.n ? ALLE.filter(o => o.n === s.n) : [];
+  const varianten = GRUPPEN[s.gruppe];
   const gehoert = s.info && s.n && s.titel !== s.info.t;
   body.innerHTML = `
     <div class="sd-big"><img src="${s.src}" alt="${esc(s.titel)}"></div>
+    ${varianten.length > 1 ? `<p class="sd-var-h">${varianten.length} VARIANTEN – <span>${varianten.indexOf(s) + 1} von ${varianten.length}</span></p>
+      <div class="sd-var">${varianten.map(o => `<button type="button" class="sd-vt${o === s ? " on" : ""}" data-i="${o.i}" aria-label="${esc(o.nummer + " " + o.titel)}"><img src="${o.src}" alt="" loading="lazy"><small>${esc((o.nummer.match(/[-\s][^\s]*$|\sbis.*$/) || [""])[0].trim().replace(/^-/, "") || "Grund")}</small></button>`).join("")}</div>` : ""}
     <span class="lk-set">${esc(k.name.toUpperCase())}</span>
     <h2 class="sd-h">${esc(s.titel)}</h2>
     <p class="sd-meta">${esc([s.nummer, s.jahr && "Ausführung " + s.jahr].filter(Boolean).join(" · "))}</p>
@@ -125,10 +138,10 @@ function oeffnen(s, ersetzen) {
       ${gehoert ? `<p class="sd-gruppe">${esc(s.info.t)}</p>` : ""}
       <p>${esc(s.info.e)}</p></div>` : ""}
     <div class="sd-box sd-kat"><span class="rv-tag">GUT ZU WISSEN: ${esc(k.name.toUpperCase())}</span><p>${esc(k.e)}</p></div>
-    ${varianten.length > 1 ? `<p class="lbl">ALLE VARIANTEN (${varianten.length})</p>
-      <div class="sd-var">${varianten.map(o => `<button type="button" class="sd-vt${o === s ? " on" : ""}" data-i="${o.i}" aria-label="${esc(o.nummer + " " + o.titel)}"><img src="${o.src}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
     <p class="rc-foot">Bild: <a href="${s.quelle}" target="_blank" rel="noopener">Wikimedia Commons</a>, gemeinfrei.</p>`;
   body.scrollTop = 0;
+  const on = body.querySelector(".sd-vt.on");   // gewählte Variante in den sichtbaren Bereich holen
+  if (on && !ersetzen) on.parentNode.scrollLeft = on.offsetLeft - 100;
   if (modal.hidden) {
     modal.hidden = false;
     document.body.classList.add("lk-open");
@@ -138,7 +151,7 @@ function oeffnen(s, ersetzen) {
 
 body.addEventListener("click", (e) => {
   const b = e.target.closest(".sd-vt");
-  if (b) oeffnen(ALLE[+b.dataset.i], true);
+  if (b) { const x = body.querySelector(".sd-var").scrollLeft; oeffnen(ALLE[+b.dataset.i], true); const v = body.querySelector(".sd-var"); if (v) v.scrollLeft = x; }
 });
 const zu = () => { modal.hidden = true; document.body.classList.remove("lk-open"); };
 // Schließen über die Zurück-Geste des Handys
