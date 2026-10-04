@@ -92,9 +92,10 @@ body.done .sp-deer .sp-logo,body.done .sp-ticker-track{animation-delay:0s!import
 @media (min-width: 700px) and (min-aspect-ratio: 1/1){.sp-ticker{top:calc(66% + 6px);transform:rotate(-5deg);height:38px}.sp-ticker-track span{font-size:19px}}
 /* Handy & Hochformat: Laufband waagerecht ganz oben, damit die Buttons es nicht verdecken */
 @media (max-width: 699px), (max-aspect-ratio: 1/1) {
-  .sp-ticker{left:0;width:100%;top:0;height:calc(34px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top);box-sizing:border-box;
-    transform:none;z-index:5;background:rgba(8,10,14,.88);border-bottom:2px solid var(--lime-d)}
-  .sp{padding-top:calc(50px + env(safe-area-inset-top))}
+  .sp-ticker{left:0;width:100%;top:calc(env(safe-area-inset-top) + 22px);height:40px;transform:none;z-index:5;
+    background:rgba(8,10,14,.92);border-top:2px solid var(--lime-d);border-bottom:2px solid var(--lime-d)}
+  .sp-ticker-track span{font-size:18px}
+  .sp{padding-top:calc(72px + env(safe-area-inset-top))}
 }
 /* Installations-Hinweis */
 .ins{position:fixed;inset:0;z-index:30;background:rgba(5,7,10,.78);display:flex;align-items:flex-end;justify-content:center;padding:12px 12px calc(12px + env(safe-area-inset-bottom))}
