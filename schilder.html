@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verkehrszeichen – On Track App</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14171d">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="On Track">
+<script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main class="card">
+  <header class="brand">
+    <div class="logo">ON TRACK</div>
+    <div class="sub">MAXIMILIAN HÖFLER · SINCE 2024</div>
+    <div class="dash"></div>
+  </header>
+  <section class="screen">
+    <h1 class="title">VERKEHRS­ZEICHEN.</h1>
+    <p class="lead">Such nach Namen, Nummer oder Stichwort und tipp ein Schild an, um die Erklärung zu sehen.</p>
+    <input id="sd-q" class="inp" type="search" placeholder="z. B. Vorfahrt, 274 oder Anlieger" autocomplete="off" enterkeyhint="search" aria-label="Verkehrszeichen suchen">
+    <div id="sd-chips" class="sd-chips" role="group" aria-label="Kategorie"></div>
+    <p id="sd-info" class="lk-info" aria-live="polite"></p>
+    <div id="sd-grid" class="sd-grid"></div>
+    <div id="sd-more" aria-hidden="true"></div>
+    <p class="rc-foot">Bilder: Wikimedia Commons, gemeinfrei. Erklärungen ohne Gewähr – maßgeblich ist die StVO. Einige Bilder zeigen ältere Ausführungen (Jahreszahl beim Schild).</p>
+    <a class="btn ghost home-btn" href="wissen.html">← ZURÜCK</a>
+  </section>
+  <footer class="foot">Fahrschule On Track</footer>
+</main>
+<script type="module" src="schilder.js"></script>
+</body>
+</html>

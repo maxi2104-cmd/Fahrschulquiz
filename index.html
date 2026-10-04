@@ -1086,7 +1086,7 @@ body.done .sp-deer .sp-logo,body.done .sp-ticker-track{animation-delay:0s!import
 <nav class="sp-btns" aria-label="Start">
   <a class="btn" href="auswahl.html"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span>ZUR QUIZ&shy;AUSWAHL</span></a>
   <button id="btn-install" class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg><span id="btn-install-t">ZUM HOME&shy;SCREEN HINZU&shy;FÜGEN</span></button>
-  <button id="btn-rechner" class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><rect x="8" y="5.5" width="8" height="4" rx="1"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16.5h.01M12 16.5h.01M15.5 16.5h.01"/></svg><span>ANHÄNGER&shy;RECHNER</span></button>
+  <a class="btn" href="wissen.html"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.5 19.5h19z"/><path d="M12 10v4.5M12 17h.01"/></svg><span>RECHNER &amp; SCHILDER</span></a>
   <a class="btn" href="https://www.ontrack-fahr.schule" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg><span>ZUR WEBSITE</span></a>
 </nav>
 <div id="ins" class="ins" hidden>
@@ -1142,10 +1142,6 @@ setTimeout(() => { const s = document.querySelector(".sp-skip"); if (s) s.remove
   now.onclick = async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice; deferred = null; box.hidden = true; };
   btn.addEventListener("click", () => { now.hidden = !deferred; box.hidden = false; });
 })();
-</script>
-<script type="module">
-import { openRechner } from "./rechner.js";
-document.getElementById("btn-rechner").addEventListener("click", () => openRechner());
 </script>
 </body>
 </html>

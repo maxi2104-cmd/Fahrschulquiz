@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rechner & Schilder – On Track App</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14171d">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="On Track">
+<script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+<link rel="stylesheet" href="style.css">
+<style>
+.pick{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.pick a,.pick button{display:block;width:100%;padding:24px 22px;border-radius:18px;background:var(--field);border:1px solid var(--line);color:var(--text);text-decoration:none;text-align:left;font:inherit;cursor:pointer;transition:border-color .15s,transform .1s}
+.pick a:hover,.pick button:hover{border-color:var(--lime)} .pick a:active,.pick button:active{transform:scale(.99)}
+.pick b{display:block;font-size:26px;font-weight:900;letter-spacing:.01em}
+.pick span{display:block;margin-top:6px;color:var(--muted);font-size:15px;line-height:1.5}
+.pick em{display:inline-block;margin-top:14px;font-style:normal;font-weight:900;font-size:13px;letter-spacing:.18em;color:var(--lime)}
+.home-btn{display:flex;align-items:center;justify-content:center;margin-top:22px;text-decoration:none;box-sizing:border-box}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main class="card">
+  <header class="brand">
+    <div class="logo">ON TRACK</div>
+    <div class="sub">MAXIMILIAN HÖFLER · SINCE 2024</div>
+    <div class="dash"></div>
+  </header>
+  <section class="screen">
+    <h1 class="title">RECHNER &amp;<br>SCHILDER.</h1>
+    <p class="lead">Praktische Helfer zum Nachschlagen – für die Theorie und für unterwegs.</p>
+    <nav class="pick">
+      <button type="button" id="open-rechner"><b>ANHÄNGER­RECHNER</b><span>Welche Führerscheinklasse brauchst du für dein Gespann? Und darfst du mit Anhänger 100 km/h fahren?</span><em>RECHNER ÖFFNEN</em></button>
+      <a href="schilder.html"><b>VERKEHRS­ZEICHEN</b><span>Über 1.000 Schilder mit Suche und Erklärung: Was bedeutet das Zeichen und was musst du tun?</span><em>SAMMLUNG ÖFFNEN</em></a>
+    </nav>
+    <a class="btn ghost home-btn" href="index.html">← ZUR STARTSEITE</a>
+  </section>
+  <footer class="foot">Fahrschule On Track</footer>
+</main>
+<script type="module">
+import { openRechner } from "./rechner.js";
+document.getElementById("open-rechner").addEventListener("click", () => openRechner());
+</script>
+</body>
+</html>

@@ -179,3 +179,33 @@ select.rc-i{appearance:auto;-webkit-appearance:menulist}
 .week-info b{display:block;font-size:22px;margin-top:10px;line-height:1.2}
 .week-info small{display:block;color:var(--muted);margin-top:6px;font-size:13px}
 #btn-start:disabled{opacity:.45;cursor:not-allowed}
+
+/* Schildersammlung */
+.home-btn{display:flex;align-items:center;justify-content:center;margin-top:22px;text-decoration:none;box-sizing:border-box}
+.sd-chips{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px -28px 0;padding:0 28px 4px;scrollbar-width:none}
+.sd-chips::-webkit-scrollbar{display:none}
+.sd-chip{flex:none;min-height:38px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--muted);font-weight:900;font-size:12px;letter-spacing:.1em;cursor:pointer}
+.sd-chip small{font-weight:700;opacity:.7;letter-spacing:0}
+.sd-chip.on{background:var(--lime);border-color:var(--lime);color:#11140a}
+.sd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+.sd-tile{display:flex;flex-direction:column;gap:4px;padding:0 0 8px;border:1px solid var(--line);border-radius:14px;background:var(--field);color:var(--text);text-align:left;cursor:pointer;overflow:hidden;font:inherit;transition:border-color .15s,transform .1s}
+@media (hover:hover){.sd-tile:hover{border-color:var(--lime)}} .sd-tile:active{transform:scale(.98)}
+.sd-img{display:grid;place-items:center;aspect-ratio:1;background:#fff;padding:10px}
+.sd-img img{max-width:100%;max-height:100%;object-fit:contain}
+.sd-nr{padding:0 8px;font-size:11px;font-weight:900;letter-spacing:.06em;color:var(--lime)}
+.sd-t{padding:0 8px;font-size:12px;line-height:1.3;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#sd-more{height:1px}
+.sd-panel{max-width:560px}
+.sd-big{display:grid;place-items:center;background:#fff;border-radius:16px;padding:22px;margin-bottom:14px}
+.sd-big img{max-width:100%;max-height:min(260px,34vh);object-fit:contain}
+.sd-h{margin:10px 0 4px;font-size:22px;line-height:1.25;font-weight:900}
+.sd-meta{margin:0 0 14px;color:var(--muted);font-size:13px;letter-spacing:.04em}
+.sd-box{background:#fff;color:#1a1e27;border-radius:14px;padding:14px 16px;margin:0 0 12px}
+.sd-box p{margin:6px 0 0;font-size:15px;line-height:1.55}
+.sd-box .sd-gruppe{font-weight:800}
+.sd-kat{background:#f1f3f5;color:#343a44}
+.sd-var{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.sd-vt{aspect-ratio:1;display:grid;place-items:center;padding:6px;border-radius:10px;border:2px solid transparent;background:#fff;cursor:pointer}
+.sd-vt.on{border-color:var(--lime)}
+.sd-vt img{max-width:100%;max-height:100%;object-fit:contain}
+.rc-foot a{color:var(--lime)}
