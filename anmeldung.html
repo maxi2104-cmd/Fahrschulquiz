@@ -29,14 +29,20 @@
 
     <a class="btn home-btn an-cta" href="https://fs0676.fso360-svc.de/" target="_blank" rel="noopener">JETZT VORANMELDEN →</a>
 
-    <h2 class="lbl lb-title">DIE PAKETE</h2>
-    <div class="an-list">
-      <div class="an-pk"><span class="an-tag">B / B197</span><b>Basic</b><p>Alles, was du für den Pkw-Führerschein brauchst – inklusive Theorie-Flatrate und einer Stunde im Fahrsimulator.</p></div>
-      <div class="an-pk hi"><span class="an-tag">B / B197</span><b>Fastlane</b><p>Für alle, die es eilig haben: garantiert schnelle Termine und Fahrsimulator-Flatrate.</p></div>
-      <div class="an-pk"><span class="an-tag">B + BE</span><b>Basic+</b><p>Pkw- und Anhängerführerschein in einem Paket – spart Zeit und Geld.</p></div>
-      <div class="an-pk"><span class="an-tag">BE</span><b>Trailer</b><p>Anhänger bis 3.500 kg – mit praktischer Prüfung.</p></div>
-      <div class="an-pk"><span class="an-tag">B96</span><b>Trailer B96</b><p>Gespanne bis 4.250 kg – mit Schulung, ohne Prüfung.</p></div>
-      <div class="an-pk"><span class="an-tag">AUFFRISCHUNG</span><b>Back On Track</b><p>Für alle, die länger nicht gefahren sind oder sich in bestimmten Situationen unsicher fühlen.</p></div>
+    <h2 class="lbl lb-title">WÄHLE DEIN PAKET</h2>
+    <div class="an-list" id="an-list" role="radiogroup" aria-label="Paket wählen">
+      <button type="button" class="an-pk" role="radio" aria-checked="false" data-p="Basic" data-k="B oder B197"><span class="an-tag">B / B197</span><b>Basic</b><p>Alles, was du für den Pkw-Führerschein brauchst – inklusive Theorie-Flatrate und einer Stunde im Fahrsimulator.</p></button>
+      <button type="button" class="an-pk" role="radio" aria-checked="false" data-p="Fastlane" data-k="B oder B197"><span class="an-tag">B / B197</span><b>Fastlane</b><p>Für alle, die es eilig haben: garantiert schnelle Termine und Fahrsimulator-Flatrate.</p></button>
+      <button type="button" class="an-pk" role="radio" aria-checked="false" data-p="Basic+" data-k="B und BE"><span class="an-tag">B + BE</span><b>Basic+</b><p>Pkw- und Anhängerführerschein in einem Paket – spart Zeit und Geld.</p></button>
+      <button type="button" class="an-pk" role="radio" aria-checked="false" data-p="Trailer (BE)" data-k="BE"><span class="an-tag">BE</span><b>Trailer</b><p>Anhänger bis 3.500 kg – mit praktischer Prüfung.</p></button>
+      <button type="button" class="an-pk" role="radio" aria-checked="false" data-p="Trailer B96" data-k="B96"><span class="an-tag">B96</span><b>Trailer B96</b><p>Gespanne bis 4.250 kg – mit Schulung, ohne Prüfung.</p></button>
+      <button type="button" class="an-pk" role="radio" aria-checked="false" data-p="Back On Track" data-k=""><span class="an-tag">AUFFRISCHUNG</span><b>Back On Track</b><p>Für alle, die länger nicht gefahren sind oder sich in bestimmten Situationen unsicher fühlen.</p></button>
+    </div>
+    <div id="an-wahl" class="an-wahl" hidden aria-live="polite">
+      <p class="an-wahl-t">Deine Wahl: <b id="an-name"></b></p>
+      <p class="hint" id="an-hint"></p>
+      <a class="btn" id="an-go" href="https://fs0676.fso360-svc.de/" target="_blank" rel="noopener">MIT DIESEM PAKET VORANMELDEN →</a>
+      <a class="btn wa-btn" id="an-wa" target="_blank" rel="noopener"><span>PER WHATSAPP ANFRAGEN</span></a>
     </div>
     <a class="btn ghost home-btn" href="https://www.ontrack-fahr.schule/angebot-und-preise/" target="_blank" rel="noopener">PREISE ANSEHEN</a>
 
@@ -60,5 +66,22 @@
   </section>
   <footer class="foot">Fahrschule On Track · Feldring 2–4 · 21376 Oelstorf</footer>
 </main>
+<script>
+// Paket antippen → auswählen und passende Buttons zeigen
+const list = document.getElementById("an-list"), wahl = document.getElementById("an-wahl");
+list.addEventListener("click", (e) => {
+  const b = e.target.closest(".an-pk"); if (!b) return;
+  list.querySelectorAll(".an-pk").forEach(x => { x.classList.toggle("sel", x === b); x.setAttribute("aria-checked", String(x === b)); });
+  const p = b.dataset.p, k = b.dataset.k;
+  document.getElementById("an-name").textContent = p;
+  document.getElementById("an-hint").textContent = k
+    ? `In der Voranmeldung wählst du zuerst die Filiale und gibst dann Klasse ${k} an. Das Paket „${p}“ kannst du bei den Anmerkungen eintragen oder wir besprechen es danach.`
+    : `Für „${p}“ meldest du dich am besten direkt bei uns – per WhatsApp oder E-Mail.`;
+  document.getElementById("an-go").hidden = !k;
+  document.getElementById("an-wa").href = "https://wa.me/4915227090400?text=" + encodeURIComponent(`Hallo, ich interessiere mich für das Paket „${p}“${k ? ` (Klasse ${k})` : ""} bei On Track. `);
+  wahl.hidden = false;
+  wahl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+});
+</script>
 </body>
 </html>

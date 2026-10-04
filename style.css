@@ -338,3 +338,14 @@ select.rc-i{appearance:auto;-webkit-appearance:menulist}
 .push-card b{display:block;font-size:16px}
 .push-card p{margin:6px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
 .push-card .btn{margin-top:12px;min-height:48px;font-size:14px;letter-spacing:.12em}
+button.an-pk{font:inherit;text-align:left;color:var(--text);cursor:pointer;width:100%;transition:border-color .15s,transform .1s,background .15s}
+button.an-pk:active{transform:scale(.98)}
+@media (hover:hover){button.an-pk:hover{border-color:var(--lime-d)}}
+.an-pk.sel{border:2px solid var(--lime);background:linear-gradient(160deg,#25301a,var(--field) 70%)}
+.an-pk.sel b::after{content:" ✓";color:var(--lime)}
+.an-wahl{margin:14px 0 6px;padding:16px;border-radius:16px;border:2px solid var(--lime);display:flex;flex-direction:column;gap:10px}
+.an-wahl[hidden]{display:none}
+.an-wahl .btn{display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:14px;letter-spacing:.1em;min-height:52px;text-align:center}
+.an-wahl .btn[hidden]{display:none}
+.an-wahl-t{margin:0;font-size:16px}.an-wahl-t b{color:var(--lime)}
+.an-wahl .hint{margin:0}
