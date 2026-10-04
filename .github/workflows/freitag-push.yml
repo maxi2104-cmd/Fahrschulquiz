@@ -1,0 +1,43 @@
+# Freitags-Push: schickt um 06:00 Uhr deutscher Zeit eine Nachricht, sobald das neue Quiz online ist.
+# GitHub rechnet in UTC – deshalb zwei Termine (Sommerzeit 04:00 UTC, Winterzeit 05:00 UTC);
+# das Skript prüft selbst, ob heute ein neues Quiz gestartet ist, und verschickt nur einmal.
+# Von Hand: Reiter „Actions“ → „Freitags-Push“ → „Run workflow“ (eigener Titel und Text an alle).
+name: Freitags-Push
+
+on:
+  schedule:
+    - cron: "2 4 * * 5"
+    - cron: "2 5 * * 5"
+  workflow_dispatch:
+    inputs:
+      titel:
+        description: "Titel (leer lassen = automatische Freitags-Nachricht)"
+        required: false
+      text:
+        description: "Text der Nachricht"
+        required: false
+      link:
+        description: "Seite, die beim Antippen geöffnet wird (z. B. freitag.html)"
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: firebase-admin installieren
+        working-directory: scripts
+        run: npm install --no-save --no-audit --no-fund firebase-admin@12
+      - name: Nachricht senden
+        run: node scripts/push-senden.mjs
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          TITEL: ${{ inputs.titel }}
+          TEXT: ${{ inputs.text }}
+          LINK: ${{ inputs.link }}
