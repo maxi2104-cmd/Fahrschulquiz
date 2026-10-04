@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meine Abzeichen – On Track App</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14171d">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="On Track">
+<script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main class="card">
+  <header class="brand">
+    <div class="logo">ON TRACK</div>
+    <div class="sub">MAXIMILIAN HÖFLER · SINCE 2024</div>
+    <div class="dash"></div>
+  </header>
+  <section class="screen">
+    <h1 class="title">MEINE<br>ABZEICHEN.</h1>
+    <p class="lead" id="ab-lead">Sammle Abzeichen mit Quizzen, Serien und der Schildersammlung.</p>
+    <div class="ab-sum"><b id="ab-count">0</b><span>von <span id="ab-total">0</span> Abzeichen</span><div class="ab-bar"><i id="ab-bar"></i></div></div>
+    <div id="ab-grid" class="ab-grid"></div>
+    <p class="rc-foot">Abzeichen werden nur auf diesem Gerät gespeichert. Wenn du den Browser-Speicher löschst oder das Handy wechselst, beginnst du von vorn.</p>
+    <a class="btn home-btn" href="auswahl.html">ZU DEN QUIZZEN</a>
+    <a class="btn ghost home-btn" href="index.html" style="margin-top:12px">← ZUR STARTSEITE</a>
+  </section>
+  <footer class="foot">Fahrschule On Track</footer>
+</main>
+<script type="module">
+import { stand } from "./abzeichen.js";
+const liste = stand(), erreicht = liste.filter(a => a.earned);
+document.getElementById("ab-count").textContent = erreicht.length;
+document.getElementById("ab-total").textContent = liste.length;
+document.getElementById("ab-bar").style.width = erreicht.length / liste.length * 100 + "%";
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+document.getElementById("ab-grid").innerHTML = liste.map(a => `
+  <div class="ab-item${a.earned ? " on" : ""}">
+    <span class="ab-icon" aria-hidden="true">${a.icon}</span>
+    <b>${esc(a.name)}</b>
+    <small>${esc(a.desc)}</small>
+    ${a.earned
+      ? `<em>✓ ${new Date(a.earned).toLocaleDateString("de-DE")}</em>`
+      : a.goal > 1 ? `<span class="ab-prog"><i style="width:${a.cur / a.goal * 100}%"></i></span><em>${a.cur.toLocaleString("de-DE")} / ${a.goal.toLocaleString("de-DE")}</em>` : `<em>noch offen</em>`}
+  </div>`).join("");
+</script>
+</body>
+</html>

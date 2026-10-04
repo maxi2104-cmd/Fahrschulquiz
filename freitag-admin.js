@@ -40,7 +40,34 @@ onAuthStateChanged(auth, async (user) => {
 async function load() {
   try { const s = await getDoc(doc(db, "config", "current")); cfg = s.exists() ? s.data() : {}; } catch (e) { cfg = {}; }
   render();
+  loadTicker();
 }
+
+// ---------- Laufband (config/ticker) ----------
+const TICKER_DEFAULT = "+++ Breaking News: Theoriekurs startet am 16. November, nur noch wenige Plätze frei. +++ Jetzt schnell einen Platz sichern!";
+let ticker = { text: TICKER_DEFAULT, on: true };
+async function loadTicker() {
+  try { const s = await getDoc(doc(db, "config", "ticker")); if (s.exists()) ticker = { ...ticker, ...s.data() }; } catch (e) {}
+  $("tk-text").value = ticker.text || "";
+  showTicker();
+}
+function showTicker() {
+  $("tk-on").setAttribute("aria-checked", String(ticker.on !== false));
+  $("tk-mode").textContent = ticker.on !== false ? "AN" : "AUS";
+  $("tk-prev").textContent = $("tk-text").value || "(leer)";
+  $("tk-info").textContent = ticker.updated ? `Zuletzt gespeichert: ${new Date(ticker.updated).toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" })}` : "";
+}
+async function saveTicker(changes, msg) {
+  const data = { ...changes, updated: new Date().toISOString() };
+  try { await setDoc(doc(db, "config", "ticker"), data, { merge: true }); ticker = { ...ticker, ...data }; showTicker(); toast(msg); }
+  catch (e) { alert("Fehler beim Speichern: " + e.message); }
+}
+$("tk-text").addEventListener("input", () => { $("tk-prev").textContent = $("tk-text").value || "(leer)"; });
+$("tk-save").addEventListener("click", () => saveTicker({ text: $("tk-text").value.trim() }, "Laufband gespeichert ✓"));
+$("tk-on").addEventListener("click", () => {
+  const on = ticker.on === false;
+  saveTicker({ on, text: $("tk-text").value.trim() }, on ? "Laufband ist an" : "Laufband ist aus");
+});
 
 const kurz = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("de-DE");
 const titel = (w) => `#${pad(w.nr)} · ${w.thema}`;

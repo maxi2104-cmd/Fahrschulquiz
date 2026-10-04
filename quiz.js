@@ -6,6 +6,7 @@ import { mountLookup } from "./lookup.js";
 import { mountRechner } from "./rechner.js";
 import { freitagsStand, naechstesQuiz, startText } from "./freitag-wochen.js";
 import { renderBanner, flyRank, shareResult } from "./freitag-extras.js";
+import { recordGame } from "./abzeichen.js";
 
 const QUIZ = document.body.dataset.quiz || "freitag";
 const $ = (id) => document.getElementById(id);
@@ -272,6 +273,7 @@ async function finish() {
     const would = all ? all.filter(r => r.points > points).length + 1 : null;
     $("end-status").innerHTML = "<b>Übungsrunde</b> – nur dein erster Versuch zählt fürs Ranking." +
       (would ? ` Mit diesem Ergebnis wärst du auf Platz ${would}.` : "");
+    recordGame({ quiz: QUIZ, round, points, correct: correctCount, total: game.length });
     return;
   }
 
@@ -307,6 +309,8 @@ async function finish() {
       flyRank(rank, all.length, document.querySelector("#board2 li.me"));
     }
   }
+  // Abzeichen erst nach der Platzierungs-Animation einblenden
+  setTimeout(() => recordGame({ quiz: QUIZ, round, points, correct: correctCount, total: game.length, rank: lastRank && lastRank.rank }), lastRank ? 3200 : 600);
 }
 
 // Teilen-Button (nur Freitags Frage)

@@ -1,6 +1,7 @@
 // ===== Schildersammlung: Suche, Filter und Erklärung =====
 import { SCHILDER } from "./schilder-daten.js";
 import { INFO, SONDER, KATEGORIEN, kategorie } from "./schilder-info.js";
+import { recordSign } from "./abzeichen.js";
 
 const ORDNER = "Verkehrszeichen/";
 const STUFE = 90; // so viele Kacheln werden auf einmal gezeichnet
@@ -125,6 +126,7 @@ document.body.appendChild(modal);
 const body = modal.querySelector(".sd-body");
 
 function oeffnen(s, ersetzen) {
+  recordSign(s.f);
   const k = katName[s.kat];
   const varianten = GRUPPEN[s.gruppe];
   const gehoert = s.info && s.n && s.titel !== s.info.t;

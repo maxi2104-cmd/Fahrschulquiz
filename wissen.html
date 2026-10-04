@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rechner & Schilder – On Track App</title>
+<title>Wissen & Helfer – On Track App</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#14171d">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -33,11 +33,14 @@
     <div class="dash"></div>
   </header>
   <section class="screen">
-    <h1 class="title">RECHNER &amp;<br>SCHILDER.</h1>
+    <h1 class="title">WISSEN &amp;<br>HELFER.</h1>
     <p class="lead">Praktische Helfer zum Nachschlagen – für die Theorie und für unterwegs.</p>
     <nav class="pick">
       <button type="button" id="open-rechner"><b>WELCHEN FÜHRER­SCHEIN BRAUCHE ICH?</b><span>Welche Führerscheinklasse brauchst du für dein Gespann? Und darfst du mit Anhänger 100 km/h fahren?</span><em>RECHNER ÖFFNEN</em></button>
       <a href="schilder.html"><b>SCHILDER­SAMMLUNG UND ERKLÄRUNG</b><span>Über 1.000 Schilder mit Suche und Erklärung: Was bedeutet das Zeichen und was musst du tun?</span><em>SAMMLUNG ÖFFNEN</em></a>
+      <button type="button" id="open-ff"><b>ANHALTEWEG-RECHNER</b><span>Reaktionsweg, Bremsweg, Anhalteweg und Abstand – für jede Geschwindigkeit mit den Faustformeln aus der Fahrschule.</span><em>RECHNER ÖFFNEN</em></button>
+      <a href="abfahrt.html"><b>ABFAHRT&shy;KONTROLLE</b><span>Die Checkliste vor dem Losfahren – für den Enyaq und fürs Gespann, mit Tipps zu jedem Punkt.</span><em>CHECKLISTE ÖFFNEN</em></a>
+      <a href="abzeichen.html"><b>MEINE ABZEICHEN</b><span>Serien, Bestleistungen und Sammelziele – schau, was du schon geschafft hast.</span><em>ABZEICHEN ANSEHEN</em></a>
     </nav>
     <a class="btn ghost home-btn" href="index.html">← ZUR STARTSEITE</a>
   </section>
@@ -45,7 +48,9 @@
 </main>
 <script type="module">
 import { openRechner } from "./rechner.js";
+import { openFaustformel } from "./faustformel.js";
 document.getElementById("open-rechner").addEventListener("click", () => openRechner());
+document.getElementById("open-ff").addEventListener("click", () => openFaustformel());
 </script>
 </body>
 </html>

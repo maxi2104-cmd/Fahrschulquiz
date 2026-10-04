@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abfahrtkontrolle – On Track App</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14171d">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="On Track">
+<script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main class="card">
+  <header class="brand">
+    <div class="logo">ON TRACK</div>
+    <div class="sub">MAXIMILIAN HÖFLER · SINCE 2024</div>
+    <div class="dash"></div>
+  </header>
+  <section class="screen">
+    <h1 class="title">ABFAHRT&shy;KONTROLLE.</h1>
+    <p class="lead">Bevor du losfährst: einmal ums Auto, unter die Haube und ins Cockpit. Hak alles ab – tipp auf einen Punkt, um zu sehen, worauf du achten musst.</p>
+    <div class="ak-tabs" role="tablist">
+      <button type="button" class="rc-tab on" data-l="auto" role="tab">PKW (ENYAQ)</button>
+      <button type="button" class="rc-tab" data-l="gespann" role="tab">MIT ANHÄNGER</button>
+    </div>
+    <div class="ak-prog"><div><i id="ak-bar"></i></div><span id="ak-count"></span></div>
+    <div id="ak-list"></div>
+    <div id="ak-done" class="ak-done" hidden><b>✅ Startklar!</b><span>Alles geprüft – gute Fahrt.</span></div>
+    <button id="ak-reset" class="btn ghost" type="button" style="margin-top:18px">ALLES ZURÜCKSETZEN</button>
+    <p class="rc-foot">Allgemeine Checkliste für die Fahrschule. Füllstände, Reifendruck und Prüfintervalle stehen in der Betriebsanleitung deines Fahrzeugs.</p>
+    <a class="btn ghost home-btn" href="wissen.html">← ZURÜCK</a>
+  </section>
+  <footer class="foot">Fahrschule On Track</footer>
+</main>
+<script type="module" src="abfahrt.js"></script>
+</body>
+</html>
