@@ -939,11 +939,11 @@
 			</g>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 68.8305 282.2784)" class="st0 st55 st56 st57">maximilian höfler</text>
+			<text x="152.5" y="282.2784" text-anchor="middle" class="st0 st55 st56 st57">Maximilian Höfler</text>
 		</g>
 		
 			<rect x="242.37" y="276.52" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -125.2751 254.142)" class="st0" width="3.54" height="3.54"/>
-		<text transform="matrix(1 0 0 1 0.3863 237.7293)" class="st0 st55 st56 st57">since                                    2024</text>
+		<text transform="matrix(1 0 0 1 0.3863 237.7293)" class="st0 st55 st56 st57">Since                                    2024</text>
 		<line class="st40" x1="0" y1="222.89" x2="45.48" y2="222.89"/>
 		<line class="st40" x1="0" y1="243.9" x2="45.48" y2="243.9"/>
 		<line class="st40" x1="250.02" y1="222.89" x2="295.49" y2="222.89"/>
