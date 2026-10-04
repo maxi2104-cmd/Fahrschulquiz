@@ -45,15 +45,15 @@ body.splash{padding:0;overflow:hidden;background:#000}
 .sp-btns{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 .sp-btns .btn{min-height:120px!important}
 .sp-btns .btn svg{width:40px!important;height:40px!important}
-.sp-btns{position:fixed;z-index:4;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:560px;margin:0 auto}
+.sp-btns{position:fixed;z-index:4;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:560px;margin:0 auto}
 .sp-btns .btn{margin:0;opacity:0;animation:btn-in .6s ease-out var(--d,0s) both,btn-pulse 2.2s ease-in-out calc(var(--d,0s) + 1s) infinite;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
   min-height:216px;padding:16px 6px;border-radius:24px;text-decoration:none;box-sizing:border-box;font-size:15px;line-height:1.25;letter-spacing:.06em;gap:14px;text-align:center;
   box-shadow:0 10px 28px rgba(0,0,0,.45);hyphens:manual}
 .sp-btns .btn svg{width:56px;height:56px;flex:none}
 .sp-btns .btn:hover,.sp-btns .btn:focus-visible{animation:btn-in .6s ease-out var(--d,0s) both,btn-hold .25s ease-out forwards}
 @keyframes btn-in{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
-@keyframes btn-pulse{0%,100%{scale:1}50%{scale:1.06}}
-@keyframes btn-hold{to{scale:1.1}}
+@keyframes btn-pulse{0%,100%{scale:1}50%{scale:1.03}}
+@keyframes btn-hold{to{scale:1.04}}
 @media (max-height:700px){.sp-btns .btn{min-height:96px!important}.sp-btns .btn svg{width:32px!important;height:32px!important}}
 .sp-btns .btn:disabled{opacity:.85}
 .sp-skip{position:fixed;inset:0;z-index:1;background:transparent;border:0}
@@ -73,7 +73,7 @@ body.done .sp-deer .sp-logo,body.done .sp-ticker-track{animation-delay:0s!import
     clip-path:polygon(0 calc(9vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%);-webkit-clip-path:polygon(0 calc(9vw + 5px),100% calc(.25vw + 5px),100% 100%,0 100%)}
   .sp{height:calc(66vh - 12.5vw + 10px);padding-top:calc(28px + env(safe-area-inset-top))}
   .sp-deer .sp-logo{max-width:min(60vw,560px)}
-  .sp-btns{left:50%;right:auto;max-width:none;width:min(980px,calc(100vw - 64px));transform:translateX(-50%);bottom:calc(32px + env(safe-area-inset-bottom));gap:16px}
+  .sp-btns{left:50%;right:auto;max-width:none;width:min(980px,calc(100vw - 64px));transform:translateX(-50%);bottom:calc(32px + env(safe-area-inset-bottom));gap:24px}
   .sp-btns{grid-template-columns:repeat(4,minmax(0,1fr))!important}
   .sp-btns .btn{min-height:220px!important;font-size:18px;border-radius:28px;letter-spacing:.08em}
   .sp-btns .btn svg{width:60px!important;height:60px!important}
