@@ -1,5 +1,5 @@
 import { app, db, QUIZZES } from "./config.js";
-import { WOCHEN } from "./freitag-wochen.js";
+import { WOCHEN, freitagsStand } from "./freitag-wochen.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { collection, onSnapshot, doc, setDoc, getDoc, deleteDoc }
@@ -12,6 +12,7 @@ let quiz = "freitag";
 const currentRounds = {};            // aktive Runde je Quiz
 const selectedRounds = {};           // gewählte Runde je Quiz
 const quizOf = (r) => r.quiz || "freitag";
+let freitagCfg = {};                 // config/current (für Automatik der Freitags Frage)
 
 // ---------- Login ----------
 $("btn-login").addEventListener("click", async () => {
@@ -36,7 +37,9 @@ onAuthStateChanged(auth, async (user) => {
     try {
       const c = await getDoc(doc(db, "config", qz.configDoc));
       if (c.exists() && c.data().round) currentRounds[id] = c.data().round;
+      if (qz.weekly && c.exists()) freitagCfg = c.data();
     } catch (e) { console.warn(e); }
+    if (qz.weekly) currentRounds[id] = freitagsStand(freitagCfg).round;   // bei Automatik nach Datum
     selectedRounds[id] = currentRounds[id];
   }
   unsub = onSnapshot(collection(db, "results"), (snap) => {
@@ -71,7 +74,8 @@ function render() {
     sel.appendChild(o);
   });
   sel.value = selected;
-  $("current-info").textContent = `Aktive Runde: ${currentRound}. Neue Ergebnisse erscheinen live.`;
+  const auto = QUIZZES[quiz].weekly && freitagsStand(freitagCfg).mode === "auto";
+  $("current-info").textContent = `Aktive Runde: ${currentRound}${auto ? " (Automatik)" : ""}. Neue Ergebnisse erscheinen live.`;
 
   const rows = mine.filter(r => r.round === selected).sort((a, b) => b.points - a.points);
   $("s-count").textContent = rows.length;
@@ -119,12 +123,19 @@ async function removeResult(r) {
 
 $("btn-new").addEventListener("click", async () => {
   const d = new Date();
+  const weekly = QUIZZES[quiz].weekly;
+  const st = weekly ? freitagsStand(freitagCfg) : null;
   let id = d.toISOString().slice(0, 10);
+  if (st && st.week) id = `Q${String(st.week.nr).padStart(2, "0")}-${id}`;   // Freitags Frage: Format Q<Nr>-<Datum>
   const currentRound = currentRounds[quiz];
   if (all.some(r => quizOf(r) === quiz && r.round === id) || id === currentRound) id += "-" + d.toTimeString().slice(0, 5).replace(":", "");
-  if (!confirm(`${QUIZZES[quiz].label}: Neue Runde „${id}“ starten? Die Bestenliste für die Schüler startet dann wieder leer. Alte Ergebnisse bleiben hier sichtbar.`)) return;
+  const autoHint = st && st.mode === "auto" ? "\n\nDie Automatik der Freitags Frage wird dafür ausgeschaltet. Wieder einschalten kannst du sie in der Freitags-Steuerung." : "";
+  if (!confirm(`${QUIZZES[quiz].label}: Neue Runde „${id}“ starten? Die Bestenliste für die Schüler startet dann wieder leer. Alte Ergebnisse bleiben hier sichtbar.${autoHint}`)) return;
   try {
-    await setDoc(doc(db, "config", QUIZZES[quiz].configDoc), { round: id }, { merge: true });
+    // Freitags Frage: Handbetrieb mit dem gerade aktiven Quiz, sonst würde die Automatik die Runde überschreiben
+    const data = weekly ? { round: id, mode: "manual", ...(st.week ? { set: st.week.nr } : {}) } : { round: id };
+    await setDoc(doc(db, "config", QUIZZES[quiz].configDoc), data, { merge: true });
+    if (weekly) freitagCfg = { ...freitagCfg, ...data };
     currentRounds[quiz] = id; selectedRounds[quiz] = id; render();
   } catch (e) { alert("Konnte keine neue Runde starten."); console.warn(e); }
 });

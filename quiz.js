@@ -4,7 +4,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { mountLookup } from "./lookup.js";
 import { mountRechner } from "./rechner.js";
-import { WOCHEN } from "./freitag-wochen.js";
+import { freitagsStand, naechstesQuiz, startText } from "./freitag-wochen.js";
 
 const QUIZ = document.body.dataset.quiz || "freitag";
 const $ = (id) => document.getElementById(id);
@@ -15,6 +15,7 @@ if (!QZ) {
 }
 let QUESTIONS = QZ.questions;
 let WEEK = null;   // aktives Wochen-Quiz (nur Freitags Frage)
+let CFG = {};      // config-Dokument der Freitags Frage (für die Automatik)
 const TIMED = QZ.timer !== false;
 const PER_GAME = QZ.perGame || QUESTIONS_PER_GAME;
 const show = (id) => ["screen-start", "screen-q", "screen-end"].forEach(s => $(s).hidden = s !== id);
@@ -54,13 +55,20 @@ let timer = null, startedAt = 0, locked = false;
 async function loadRound() {
   try {
     const snap = await getDoc(doc(db, "config", QUIZZES[QUIZ].configDoc));
-    if (snap.exists() && snap.data().round) round = snap.data().round;
-    if (QZ.weekly) {
-      const nr = snap.exists() ? snap.data().set : null;
-      WEEK = WOCHEN.find(w => w.nr === nr && w.fragen.length) || null;
-    }
+    CFG = snap.exists() ? snap.data() : {};
+    if (CFG.round) round = CFG.round;
   } catch (e) { console.warn(e); }
-  if (QZ.weekly) showWeek();
+  if (QZ.weekly) applyWeek();
+}
+
+// Freitags Frage: aktives Quiz und Ranking-Runde aus Datum bzw. Handsteuerung bestimmen.
+// Gibt true zurück, wenn sich die Runde seit dem letzten Aufruf geändert hat.
+function applyWeek() {
+  const st = freitagsStand(CFG);
+  const changed = st.round !== round || st.week !== WEEK;
+  WEEK = st.week; round = st.round;
+  showWeek();
+  return changed;
 }
 
 // Wochen-Quiz auf der Startseite anzeigen
@@ -78,7 +86,10 @@ function showWeek() {
     box.innerHTML = `<span class="wk-tag">FREITAGS FRAGE #${String(WEEK.nr).padStart(2, "0")}</span><b>${WEEK.thema}</b><small>Quiz vom ${d} · Ranking läuft bis nächsten Freitag</small>`;
     $("btn-start").disabled = false;
   } else {
-    box.innerHTML = `<span class="wk-tag">FREITAGS FRAGE</span><b>Das nächste Quiz startet am Freitag.</b><small>Schau dann wieder vorbei!</small>`;
+    const nx = CFG.mode === "manual" ? null : naechstesQuiz();   // im Handbetrieb gibt es keinen festen Termin
+    box.innerHTML = nx
+      ? `<span class="wk-tag">FREITAGS FRAGE</span><b>Das nächste Quiz startet am ${startText(nx)}.</b><small>Schau dann wieder vorbei!</small>`
+      : `<span class="wk-tag">FREITAGS FRAGE</span><b>Das nächste Quiz startet am Freitag.</b><small>Schau dann wieder vorbei!</small>`;
     $("btn-start").disabled = true;
   }
 }
@@ -110,6 +121,13 @@ $("btn-start").addEventListener("click", () => {
   const first = $("first").value.trim(), last = $("last").value.trim();
   const err = $("start-err");
   if (!first || !last) { err.textContent = "Bitte Vor- und Nachnamen eingeben."; err.hidden = false; return; }
+  // Seite stand über Freitag 06:00 Uhr offen? Dann erst das neue Quiz anzeigen.
+  if (QZ.weekly && applyWeek()) {
+    loadBoard("board");
+    err.textContent = "Inzwischen ist ein neues Quiz online – schau kurz drüber und starte dann.";
+    err.hidden = false;
+    return;
+  }
   if (!QZ.repeat && localStorage.getItem("played_" + QUIZ + "_" + round)) {
     err.textContent = `Du hast „${QZ.label}“ in dieser Runde auf diesem Gerät schon gespielt.`; err.hidden = false; return;
   }
@@ -346,4 +364,8 @@ if (QUIZ === "technik") mountRechner([
 (async () => {
   await loadRound();
   loadBoard("board");
+  // Freitags Frage: Startseite jede Minute prüfen, damit der Wechsel um 06:00 Uhr auch bei offener Seite ankommt
+  if (QZ.weekly) setInterval(() => {
+    if (!$("screen-start").hidden && applyWeek()) loadBoard("board");
+  }, 60000);
 })();

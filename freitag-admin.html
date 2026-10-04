@@ -30,6 +30,16 @@
 .wk-q li{margin-bottom:6px}.wk-q em{color:var(--lime);font-style:normal}
 @media (min-width:640px){.wk-btns{grid-template-columns:repeat(4,minmax(0,1fr))}}
 a.btn{display:flex;align-items:center;justify-content:center;text-decoration:none}
+.mode-row{display:flex;align-items:center;gap:12px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--line)}
+.mode-row .lbl{flex:1}
+.sw{position:relative;flex:none;width:58px;height:32px;border-radius:999px;border:0;background:#3a414d;cursor:pointer;transition:background .2s}
+.sw::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .2s}
+.sw[aria-checked="true"]{background:var(--lime)}
+.sw[aria-checked="true"]::after{transform:translateX(26px)}
+.sw:disabled{opacity:.5;cursor:default}
+#mode-txt{display:inline;font-size:14px;margin:0;letter-spacing:.12em;min-width:2.6em}
+.now .now-sub{margin:-8px 0 14px;letter-spacing:normal;font-weight:400;font-size:13px;color:var(--muted);line-height:1.5}
+.warn-txt{color:#e0a100!important}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--lime);color:#11140a;font-weight:900;padding:12px 20px;border-radius:999px;opacity:0;transition:opacity .25s;pointer-events:none}
 .toast.on{opacity:1}
 </style>
@@ -46,7 +56,13 @@ a.btn{display:flex;align-items:center;justify-content:center;text-decoration:non
   <section id="dash" hidden>
     <div class="a-head"><h1>FREITAGS FRAGE</h1><div style="display:flex;gap:8px"><a class="btn ghost" href="host.html" style="min-height:42px;font-size:12px;padding:0 14px">RANKING</a><button id="btn-logout" class="btn ghost" style="min-height:42px;font-size:12px;padding:0 14px">ABMELDEN</button></div></div>
     <div class="now">
+      <div class="mode-row">
+        <span class="lbl">AUTOMATIK (WECHSEL FREITAGS 06:00 UHR)</span>
+        <b id="mode-txt">–</b>
+        <button id="btn-mode" class="sw" type="button" role="switch" aria-checked="false" aria-label="Automatik an oder aus"></button>
+      </div>
       <span class="lbl">JETZT ONLINE</span><b id="now-txt">–</b>
+      <p class="now-sub" id="now-sub"></p>
       <button id="btn-next" class="btn">NÄCHSTES QUIZ ONLINE STELLEN</button>
       <p class="hint" id="next-txt" style="margin:10px 0 0;font-size:13px;color:var(--muted)"></p>
     </div>
