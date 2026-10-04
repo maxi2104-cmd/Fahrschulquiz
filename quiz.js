@@ -140,6 +140,11 @@ async function refreshStart() {
   }
   bannerData = { week: WEEK, rows: all || [], myId, auto: CFG.mode !== "manual" };
   renderBanner(box, bannerData);
+  // Freitags-Erinnerung (Push) – einmalig unter dem Banner
+  if (!$("push-card")) {
+    const pc = document.createElement("div"); pc.id = "push-card"; pc.hidden = true; box.after(pc);
+    import("./push.js").then(m => m.mountPushCard(pc)).catch(e => console.warn(e));
+  }
   // Hinweis, wenn auf diesem Gerät schon gespielt wurde
   let hint = $("first-hint");
   if (!hint) { hint = document.createElement("p"); hint.id = "first-hint"; hint.className = "hint first-hint"; $("btn-start").after(hint); }

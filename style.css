@@ -330,3 +330,11 @@ select.rc-i{appearance:auto;-webkit-appearance:menulist}
 .an-check li::before{content:"✓";position:absolute;left:14px;top:11px;width:20px;height:20px;border-radius:6px;background:var(--lime);color:#11140a;font-weight:900;font-size:13px;text-align:center;line-height:20px}
 .an-check b{color:var(--text)}
 .ff-panel .lk-list{overflow-x:hidden}
+
+/* Freitags-Erinnerung (Push) */
+.push-card{margin:-6px 0 18px;padding:14px 16px;border-radius:16px;border:1px dashed var(--line);background:var(--field)}
+.push-card[hidden]{display:none}
+.push-card.on{border-style:solid;border-color:var(--lime-d)}
+.push-card b{display:block;font-size:16px}
+.push-card p{margin:6px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+.push-card .btn{margin-top:12px;min-height:48px;font-size:14px;letter-spacing:.12em}
