@@ -5,6 +5,7 @@ import {
 import { mountLookup } from "./lookup.js";
 import { mountRechner } from "./rechner.js";
 import { freitagsStand, naechstesQuiz, startText } from "./freitag-wochen.js";
+import { renderBanner, flyRank, shareResult } from "./freitag-extras.js";
 
 const QUIZ = document.body.dataset.quiz || "freitag";
 const $ = (id) => document.getElementById(id);
@@ -24,6 +25,9 @@ let round = "start";
 let player = { first: "", last: "" };
 let idx = 0, points = 0, correctCount = 0, log = [];
 let game = []; // Indizes der Fragen dieses Spiels
+let practice = false;   // Freitags Frage: Wiederholung = Übungsrunde, zählt nicht fürs Ranking
+const FIRST_ONLY = !!QZ.weekly;
+const playedKey = () => "played_" + QUIZ + "_" + round;   // speichert die Ranking-ID des ersten Versuchs
 
 // Fragenauswahl: Auf jedem Gerät kommen zuerst alle noch nicht gesehenen Fragen dran.
 // Erst wenn der ganze Fragenpool durch ist, beginnt ein neuer Durchgang.
@@ -98,11 +102,15 @@ async function loadBoard(targetId, highlightId) {
   const el = $(targetId);
   try {
     const q = query(collection(db, "leaderboard"), where("round", "==", round), where("quiz", "==", QUIZ));
-    const rows = (await getDocs(q)).docs.map(d => ({ id: d.id, ...d.data() }))
-      .sort((a, b) => b.points - a.points).slice(0, 10);
+    const all = (await getDocs(q)).docs.map(d => ({ id: d.id, ...d.data() }))
+      .sort((a, b) => b.points - a.points);
+    const rows = all.slice(0, 10);
+    const meIdx = highlightId ? all.findIndex(r => r.id === highlightId) : -1;
+    if (meIdx >= 10) rows.push(all[meIdx]);   // eigener Platz auch außerhalb der Top 10
     el.innerHTML = "";
-    if (!rows.length) { el.innerHTML = '<li class="empty">Noch keine Einträge – sei der/die Erste!</li>'; return; }
-    rows.forEach((r, i) => {
+    if (!rows.length) { el.innerHTML = '<li class="empty">Noch keine Einträge – sei der/die Erste!</li>'; return all; }
+    rows.forEach((r) => {
+      const i = all.indexOf(r);
       const li = document.createElement("li");
       if (r.id === highlightId) li.className = "me";
       const a = document.createElement("span"); a.className = "rank"; a.textContent = (i + 1) + ".";
@@ -110,10 +118,34 @@ async function loadBoard(targetId, highlightId) {
       const c = document.createElement("span"); c.className = "pt"; c.textContent = r.points.toLocaleString("de-DE");
       li.append(a, b, c); el.appendChild(li);
     });
+    return all;
   } catch (e) {
     console.warn(e);
     el.innerHTML = '<li class="empty">Bestenliste gerade nicht erreichbar.</li>';
+    return null;
   }
+}
+
+// Startseite: Bestenliste + Ranking-Banner (Freitags Frage)
+let bannerData = null;
+async function refreshStart() {
+  const myId = FIRST_ONLY ? localStorage.getItem(playedKey()) : null;
+  const all = await loadBoard("board", myId && myId !== "1" ? myId : null);
+  if (!QZ.weekly) return;
+  let box = $("rank-banner");
+  if (!box) {
+    box = document.createElement("div"); box.id = "rank-banner"; box.className = "rank-banner";
+    $("week-info").after(box);
+  }
+  bannerData = { week: WEEK, rows: all || [], myId, auto: CFG.mode !== "manual" };
+  renderBanner(box, bannerData);
+  // Hinweis, wenn auf diesem Gerät schon gespielt wurde
+  let hint = $("first-hint");
+  if (!hint) { hint = document.createElement("p"); hint.id = "first-hint"; hint.className = "hint first-hint"; $("btn-start").after(hint); }
+  const played = WEEK && localStorage.getItem(playedKey());
+  hint.hidden = !played;
+  hint.innerHTML = "Du hast diese Woche schon gespielt. <b>Nur dein erster Versuch zählt</b> – weitere Runden sind Übung.";
+  $("btn-start").textContent = played ? "ÜBUNGSRUNDE STARTEN" : "QUIZ STARTEN";
 }
 
 // ---------- Start ----------
@@ -123,7 +155,7 @@ $("btn-start").addEventListener("click", () => {
   if (!first || !last) { err.textContent = "Bitte Vor- und Nachnamen eingeben."; err.hidden = false; return; }
   // Seite stand über Freitag 06:00 Uhr offen? Dann erst das neue Quiz anzeigen.
   if (QZ.weekly && applyWeek()) {
-    loadBoard("board");
+    refreshStart();
     err.textContent = "Inzwischen ist ein neues Quiz online – schau kurz drüber und starte dann.";
     err.hidden = false;
     return;
@@ -132,6 +164,7 @@ $("btn-start").addEventListener("click", () => {
     err.textContent = `Du hast „${QZ.label}“ in dieser Runde auf diesem Gerät schon gespielt.`; err.hidden = false; return;
   }
   err.hidden = true;
+  practice = FIRST_ONLY && !!localStorage.getItem(playedKey());
   player = { first, last };
   idx = 0; points = 0; correctCount = 0; log = [];
   game = pickQuestions();
@@ -231,8 +264,18 @@ async function finish() {
   renderContact();
   renderReview();
   if (!QZ.repeat) localStorage.setItem("played_" + QUIZ + "_" + round, "1");
+  renderShare();
 
-  let lbId = null;
+  if (practice) {
+    // Übungsrunde: nichts speichern, aber zeigen, wo man damit stünde
+    const all = await loadBoard("board2", localStorage.getItem(playedKey()));
+    const would = all ? all.filter(r => r.points > points).length + 1 : null;
+    $("end-status").innerHTML = "<b>Übungsrunde</b> – nur dein erster Versuch zählt fürs Ranking." +
+      (would ? ` Mit diesem Ergebnis wärst du auf Platz ${would}.` : "");
+    return;
+  }
+
+  let lbId = null, saved = false;
   try {
     const batch = writeBatch(db);
     const resRef = doc(collection(db, "results"));
@@ -248,12 +291,37 @@ async function finish() {
       points, createdAt: serverTimestamp()
     });
     await batch.commit();
+    saved = true;
+    if (FIRST_ONLY) localStorage.setItem(playedKey(), lbId);
     $("end-status").textContent = "Dein Ergebnis wurde gespeichert.";
   } catch (e) {
     console.warn(e);
     $("end-status").textContent = "Speichern hat nicht geklappt. Bitte gib der Fahrschule kurz Bescheid.";
   }
-  loadBoard("board2", lbId);
+  const all = await loadBoard("board2", lbId);
+  if (QZ.weekly && saved && all) {
+    const rank = all.findIndex(r => r.id === lbId) + 1;
+    if (rank > 0) {
+      lastRank = { rank, count: all.length };
+      $("end-status").innerHTML = `Dein Ergebnis wurde gespeichert – du bist auf <b>Platz ${rank}</b> von ${all.length}.`;
+      flyRank(rank, all.length, document.querySelector("#board2 li.me"));
+    }
+  }
+}
+
+// Teilen-Button (nur Freitags Frage)
+let lastRank = null;
+function renderShare() {
+  const old = $("share-btn"); if (old) old.remove();
+  if (!QZ.weekly) return;
+  lastRank = null;
+  const b = el("button", "btn share-btn", "📲  ERGEBNIS TEILEN"); b.id = "share-btn"; b.type = "button";
+  b.addEventListener("click", () => shareResult({
+    week: WEEK, points, correct: correctCount, total: game.length,
+    rank: lastRank && lastRank.rank, count: lastRank && lastRank.count, practice
+  }, b));
+  const res = document.querySelector("#screen-end .result");
+  res.after(b);
 }
 
 // ---------- Logo-Konfetti: grün bei richtig, rot bei falsch ----------
@@ -363,9 +431,11 @@ if (QUIZ === "technik") mountRechner([
 // ---------- Init ----------
 (async () => {
   await loadRound();
-  loadBoard("board");
+  await refreshStart();
   // Freitags Frage: Startseite jede Minute prüfen, damit der Wechsel um 06:00 Uhr auch bei offener Seite ankommt
   if (QZ.weekly) setInterval(() => {
-    if (!$("screen-start").hidden && applyWeek()) loadBoard("board");
+    if ($("screen-start").hidden) return;
+    if (applyWeek()) refreshStart();                                      // neues Quiz ist online
+    else if (bannerData && $("rank-banner")) renderBanner($("rank-banner"), bannerData);   // nur Countdown
   }, 60000);
 })();

@@ -209,3 +209,25 @@ select.rc-i{appearance:auto;-webkit-appearance:menulist}
 .sd-vt.on{border-color:var(--lime)}
 .sd-vt img{max-width:100%;max-height:100%;object-fit:contain}
 .rc-foot a{color:var(--lime)}
+
+/* Freitags Frage: Ranking-Banner, Platzierung, Teilen */
+.rank-banner{position:relative;overflow:hidden;margin:0 0 18px;padding:16px 18px;border-radius:18px;background:linear-gradient(120deg,#1f2a14,#171b22 70%);border:1px solid #3c4a22}
+.rank-banner[hidden]{display:none}
+.rb-top{display:flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.14em;color:var(--lime)}
+.rb-cup{font-size:24px;animation:rb-cup 2.4s ease-in-out infinite}
+@keyframes rb-cup{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) scale(1.1)}}
+.rb-line{margin:8px 0 10px;color:var(--muted);font-size:14px;line-height:1.45}
+.rb-line b{color:var(--text)}
+.rb-stats{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--muted)}
+.rb-stats b{color:var(--text)}
+.rb-me{margin:12px 0 0;padding:8px 12px;border-radius:12px;background:rgba(194,229,77,.12);color:var(--text);font-size:15px}
+.rb-me b{color:var(--lime);font-size:18px}
+.first-hint{margin:10px 0 0;text-align:center}
+.share-btn{display:flex;align-items:center;justify-content:center;margin:0 0 22px;letter-spacing:.12em}
+.fly-rank{position:fixed;left:50%;top:50%;z-index:60;transform:translate(-50%,-50%) scale(.2);opacity:0;pointer-events:none;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;width:230px;height:230px;border-radius:50%;
+  background:var(--lime);color:#11140a;box-shadow:0 0 0 10px rgba(194,229,77,.25),0 30px 80px rgba(0,0,0,.55)}
+.fly-rank b{font-size:110px;line-height:.95;font-weight:900}
+.fly-rank small{font-size:14px;font-weight:900;letter-spacing:.2em}
+.board li.pop{animation:li-pop .9s ease-out}
+@keyframes li-pop{0%{background:rgba(194,229,77,.55)}100%{background:rgba(194,229,77,.08)}}
