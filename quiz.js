@@ -4,6 +4,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { mountLookup } from "./lookup.js";
 import { mountRechner } from "./rechner.js";
+import { WOCHEN } from "./freitag-wochen.js";
 
 const QUIZ = document.body.dataset.quiz || "freitag";
 const $ = (id) => document.getElementById(id);
@@ -12,7 +13,8 @@ if (!QZ) {
   $("screen-start").innerHTML = '<h1 class="title">BALD<br>VERFÜGBAR.</h1><p class="lead">Dieses Quiz ist noch in Vorbereitung.</p>';
   throw new Error("Quiz noch ohne Fragen: " + QUIZ);
 }
-const QUESTIONS = QZ.questions;
+let QUESTIONS = QZ.questions;
+let WEEK = null;   // aktives Wochen-Quiz (nur Freitags Frage)
 const TIMED = QZ.timer !== false;
 const PER_GAME = QZ.perGame || QUESTIONS_PER_GAME;
 const show = (id) => ["screen-start", "screen-q", "screen-end"].forEach(s => $(s).hidden = s !== id);
@@ -26,6 +28,7 @@ let game = []; // Indizes der Fragen dieses Spiels
 // Erst wenn der ganze Fragenpool durch ist, beginnt ein neuer Durchgang.
 function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 function pickQuestions() {
+  if (QZ.weekly) return QUESTIONS.map((_, i) => i);   // Wochen-Quiz: immer dieselben 10 Fragen
   const n = Math.min(PER_GAME, QUESTIONS.length);
   const key = "seen_" + QUIZ + "_" + QUESTIONS.length;
   let seen = [];
@@ -52,7 +55,32 @@ async function loadRound() {
   try {
     const snap = await getDoc(doc(db, "config", QUIZZES[QUIZ].configDoc));
     if (snap.exists() && snap.data().round) round = snap.data().round;
+    if (QZ.weekly) {
+      const nr = snap.exists() ? snap.data().set : null;
+      WEEK = WOCHEN.find(w => w.nr === nr && w.fragen.length) || null;
+    }
   } catch (e) { console.warn(e); }
+  if (QZ.weekly) showWeek();
+}
+
+// Wochen-Quiz auf der Startseite anzeigen
+function showWeek() {
+  const start = $("screen-start");
+  let box = $("week-info");
+  if (!box) {
+    box = document.createElement("div"); box.id = "week-info"; box.className = "week-info";
+    const lead = start.querySelector(".lead");
+    lead.parentNode.insertBefore(box, lead);
+  }
+  if (WEEK) {
+    QUESTIONS = WEEK.fragen;
+    const d = new Date(WEEK.datum + "T12:00:00").toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
+    box.innerHTML = `<span class="wk-tag">FREITAGS FRAGE #${String(WEEK.nr).padStart(2, "0")}</span><b>${WEEK.thema}</b><small>Quiz vom ${d} · Ranking läuft bis nächsten Freitag</small>`;
+    $("btn-start").disabled = false;
+  } else {
+    box.innerHTML = `<span class="wk-tag">FREITAGS FRAGE</span><b>Das nächste Quiz startet am Freitag.</b><small>Schau dann wieder vorbei!</small>`;
+    $("btn-start").disabled = true;
+  }
 }
 
 async function loadBoard(targetId, highlightId) {

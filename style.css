@@ -172,3 +172,10 @@ select.rc-i{appearance:auto;-webkit-appearance:menulist}
 .rc-res.mid{border-left:8px solid #e0a100}.rc-res.mid>b{color:#7a5600}
 .rc-res.bad{border-left:8px solid #d64545}.rc-res.bad>b{color:#a12626}
 .rc-foot{color:var(--muted);font-size:12px;line-height:1.5;margin:16px 2px 4px}
+
+/* Wochen-Quiz (Freitags Frage) */
+.week-info{border:2px solid var(--lime);border-radius:18px;padding:16px 18px;margin:0 0 18px;text-align:left}
+.week-info .wk-tag{display:inline-block;background:var(--lime);color:#11140a;font-weight:900;font-size:12px;letter-spacing:.12em;padding:6px 12px;border-radius:999px}
+.week-info b{display:block;font-size:22px;margin-top:10px;line-height:1.2}
+.week-info small{display:block;color:var(--muted);margin-top:6px;font-size:13px}
+#btn-start:disabled{opacity:.45;cursor:not-allowed}

@@ -1,4 +1,5 @@
 import { app, db, QUIZZES } from "./config.js";
+import { WOCHEN } from "./freitag-wochen.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { collection, onSnapshot, doc, setDoc, getDoc, deleteDoc }
@@ -56,9 +57,10 @@ function render() {
     });
   }
   qs.value = quiz;
-  const QUESTIONS = QUIZZES[quiz].questions;
   const currentRound = currentRounds[quiz];
   const selected = selectedRounds[quiz];
+  const wk = quiz === "freitag" && /^Q(\d+)-/.exec(selected || "");
+  const QUESTIONS = wk ? ((WOCHEN.find(w => w.nr === +wk[1]) || { fragen: [] }).fragen) : QUIZZES[quiz].questions;
   const mine = all.filter(r => quizOf(r) === quiz);
   const rounds = [...new Set([currentRound, ...mine.map(r => r.round)])].sort().reverse();
   const sel = $("round-select");
@@ -122,7 +124,7 @@ $("btn-new").addEventListener("click", async () => {
   if (all.some(r => quizOf(r) === quiz && r.round === id) || id === currentRound) id += "-" + d.toTimeString().slice(0, 5).replace(":", "");
   if (!confirm(`${QUIZZES[quiz].label}: Neue Runde „${id}“ starten? Die Bestenliste für die Schüler startet dann wieder leer. Alte Ergebnisse bleiben hier sichtbar.`)) return;
   try {
-    await setDoc(doc(db, "config", QUIZZES[quiz].configDoc), { round: id });
+    await setDoc(doc(db, "config", QUIZZES[quiz].configDoc), { round: id }, { merge: true });
     currentRounds[quiz] = id; selectedRounds[quiz] = id; render();
   } catch (e) { alert("Konnte keine neue Runde starten."); console.warn(e); }
 });

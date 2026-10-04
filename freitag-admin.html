@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Freitags Frage – Steuerung</title>
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.wrap-a{max-width:820px;margin:0 auto;padding:calc(20px + env(safe-area-inset-top)) 16px 60px}
+.a-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.a-head h1{font-size:22px;letter-spacing:.14em;margin:0}
+.now{border:2px solid var(--lime);border-radius:20px;padding:18px;margin-bottom:22px}
+.now .lbl{font-size:12px;letter-spacing:.14em;color:var(--muted);font-weight:900}
+.now b{display:block;font-size:22px;margin:6px 0 14px}
+.wk{background:var(--panel,#1b2029);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px}
+.wk.act{border-color:var(--lime);box-shadow:0 0 0 2px var(--lime) inset}
+.wk-top{display:flex;align-items:flex-start;gap:12px}
+.wk-nr{flex:none;width:54px;height:54px;border-radius:14px;background:#11140a;color:var(--lime);display:grid;place-items:center;font-weight:900;font-size:20px;border:2px solid var(--lime)}
+.wk-t{flex:1;min-width:0}
+.wk-t b{display:block;font-size:18px;line-height:1.25}
+.wk-t small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.badge{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.1em;padding:5px 10px;border-radius:999px;margin-top:6px}
+.b-act{background:var(--lime);color:#11140a}.b-done{background:#2b313b;color:#cfd4dc}.b-plan{background:transparent;border:1px solid var(--line);color:var(--muted)}.b-prep{background:#3a2b10;color:#e0a100}
+.wk-btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.wk-btns .btn{min-height:44px;font-size:12px;letter-spacing:.08em;padding:0 10px;margin:0}
+.wk-q{margin:12px 0 0;padding-left:20px;color:#cfd4dc;font-size:14px;line-height:1.5}
+.wk-q li{margin-bottom:6px}.wk-q em{color:var(--lime);font-style:normal}
+@media (min-width:640px){.wk-btns{grid-template-columns:repeat(4,minmax(0,1fr))}}
+a.btn{display:flex;align-items:center;justify-content:center;text-decoration:none}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--lime);color:#11140a;font-weight:900;padding:12px 20px;border-radius:999px;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<main class="wrap-a">
+  <section id="login" class="card" style="max-width:480px;margin:40px auto">
+    <h1 class="title" style="font-size:28px">STEUERUNG<br>FREITAGS FRAGE</h1>
+    <label class="lbl" for="email">E-MAIL</label><input id="email" class="inp" type="email" autocomplete="username">
+    <label class="lbl" for="pw" style="margin-top:12px">PASSWORT</label><input id="pw" class="inp" type="password" autocomplete="current-password">
+    <p id="login-err" class="err" hidden></p>
+    <button id="btn-login" class="btn" style="margin-top:18px">ANMELDEN</button>
+  </section>
+  <section id="dash" hidden>
+    <div class="a-head"><h1>FREITAGS FRAGE</h1><div style="display:flex;gap:8px"><a class="btn ghost" href="host.html" style="min-height:42px;font-size:12px;padding:0 14px">RANKING</a><button id="btn-logout" class="btn ghost" style="min-height:42px;font-size:12px;padding:0 14px">ABMELDEN</button></div></div>
+    <div class="now">
+      <span class="lbl">JETZT ONLINE</span><b id="now-txt">–</b>
+      <button id="btn-next" class="btn">NÄCHSTES QUIZ ONLINE STELLEN</button>
+      <p class="hint" id="next-txt" style="margin:10px 0 0;font-size:13px;color:var(--muted)"></p>
+    </div>
+    <div id="list"></div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+<script type="module" src="freitag-admin.js"></script>
+</body>
+</html>

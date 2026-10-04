@@ -821,7 +821,7 @@ export const CONTACT = {
 const FB = { timer: false, perGame: 20, pointsPerCorrect: 50, repeat: true, contact: false, back: "fortbildung.html", backLabel: "Fortbildung" };
 
 const ALL_QUIZZES = {
-  freitag: { label: "Freitags Frage", configDoc: "current", questions: QUESTIONS, repeat: true },
+  freitag: { label: "Freitags Frage", configDoc: "current", questions: QUESTIONS, repeat: true, weekly: true },
   technik: { label: "Anhänger Quiz", configDoc: "technik", questions: TECHNIK_QUESTIONS, repeat: true },
   technikb: { label: "Technikquiz B-Prüfung", configDoc: "technikb", questions: TECHNIKB_QUESTIONS, repeat: true },
   fbpaed: { label: "Fortbildung · Pädagogik", configDoc: "fbpaed", questions: PAEDAGOGIK_QUESTIONS, ...FB },
