@@ -2,12 +2,12 @@ import { app, db, QUIZZES } from "./config.js";
 import { WOCHEN, freitagsStand } from "./freitag-wochen.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { collection, onSnapshot, doc, setDoc, getDoc, deleteDoc }
+import { collection, onSnapshot, doc, setDoc, getDoc, getDocs, deleteDoc, query, orderBy, limit }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const auth = getAuth(app);
 const $ = (id) => document.getElementById(id);
-let all = [], unsub = null;
+let all = [], unsub = null, unsubPush = null;
 let quiz = "freitag";
 const currentRounds = {};            // aktive Runde je Quiz
 const selectedRounds = {};           // gewählte Runde je Quiz
@@ -31,7 +31,12 @@ onAuthStateChanged(auth, async (user) => {
   $("login").hidden = !!user;
   $("dash").hidden = !user;
   if (unsub) { unsub(); unsub = null; }
+  if (unsubPush) { unsubPush(); unsubPush = null; }
   if (!user) return;
+  loadStats();
+  unsubPush = onSnapshot(query(collection(db, "pushsent"), orderBy("sentAt", "desc"), limit(20)),
+    (snap) => renderPushLog(snap.docs.map(d => d.data())),
+    (err) => { $("p-rows").innerHTML = '<tr><td colspan="5">Keine Berechtigung für „pushsent“ (Firestore-Regeln).</td></tr>'; console.warn(err); });
   for (const [id, qz] of Object.entries(QUIZZES)) {
     currentRounds[id] = "start";
     try {
@@ -158,3 +163,78 @@ $("btn-csv").addEventListener("click", () => {
   a.click();
   URL.revokeObjectURL(a.href);
 });
+
+// ---------- App-Statistik (Sammlungen „installs“ und „push“) ----------
+async function loadStats() {
+  const tage = (n) => Date.now() - n * 864e5;
+  try {
+    const inst = (await getDocs(collection(db, "installs"))).docs.map(d => d.data());
+    const ms = (t) => t?.toMillis ? t.toMillis() : 0;
+    $("a-total").textContent = inst.length;
+    $("a-30").textContent = inst.filter(i => ms(i.last) >= tage(30)).length;
+    $("a-7").textContent = inst.filter(i => ms(i.first) >= tage(7)).length;
+    const pf = { ios: 0, android: 0, desktop: 0 };
+    inst.forEach(i => { pf[i.platform] = (pf[i.platform] || 0) + 1; });
+    $("a-info").textContent = `iPhone/iPad: ${pf.ios} · Android: ${pf.android} · Computer: ${pf.desktop}. Gezählt wird jedes Gerät, das die App vom Homescreen öffnet.`;
+  } catch (e) { $("a-info").textContent = "Keine Berechtigung für „installs“ (Firestore-Regeln)."; console.warn(e); }
+  try { $("a-push").textContent = (await getDocs(collection(db, "push"))).size; }
+  catch (e) { $("a-push").textContent = "?"; console.warn(e); }
+}
+
+// ---------- Push-Nachrichten senden (über die GitHub Action „Freitags-Push“) ----------
+const GH_REPO = "maxi2104-cmd/Fahrschulquiz", GH_WORKFLOW = "freitag-push.yml", GH_KEY = "ot_gh_token";
+const ART = { manuell: "An alle", freitag: "Freitag (auto)", test: "Test" };
+
+function ghToken(neu) {
+  let t = neu ? "" : localStorage.getItem(GH_KEY);
+  if (!t) {
+    t = (prompt("GitHub-Schlüssel (Fine-grained Token mit Recht „Actions: Read and write“ für das Fahrschulquiz-Repo). Wird nur auf diesem Gerät gespeichert.") || "").trim();
+    if (t) localStorage.setItem(GH_KEY, t);
+  }
+  return t;
+}
+$("p-key").addEventListener("click", () => { if (ghToken(true)) msg("GitHub-Schlüssel gespeichert."); });
+$("p-test").disabled = !localStorage.getItem("ot_push_token");
+$("p-test").title = $("p-test").disabled ? "Erst auf diesem Gerät die Freitags-Erinnerung einschalten." : "";
+
+function msg(t, err) { $("p-msg").textContent = t; $("p-msg").className = err ? "err" : "hint"; }
+
+async function sendPush(test) {
+  const titel = $("p-titel").value.trim(), text = $("p-text").value.trim(), link = $("p-link").value;
+  if (!titel || !text) { msg("Bitte Titel und Text ausfüllen.", true); return; }
+  const anz = $("a-push").textContent;
+  if (!test && !confirm(`Push-Nachricht an alle ${anz} Geräte senden?\n\n${titel}\n${text}`)) return;
+  const token = ghToken();
+  if (!token) return;
+  const inputs = { titel, text, link };
+  if (test) inputs.nur_token = localStorage.getItem("ot_push_token");
+  $("p-send").disabled = $("p-test").disabled = true;
+  msg("Wird gesendet …");
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WORKFLOW}/dispatches`, {
+      method: "POST",
+      headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" },
+      body: JSON.stringify({ ref: "main", inputs })
+    });
+    if (res.status === 401 || res.status === 403) { localStorage.removeItem(GH_KEY); throw new Error("GitHub-Schlüssel ungültig oder ohne Recht „Actions“. Bitte neu eingeben."); }
+    if (!res.ok) throw new Error("GitHub meldet Fehler " + res.status + ".");
+    msg("Gestartet ✓ Die Nachricht kommt in ca. 1 Minute an und erscheint dann unten in der Liste.");
+    if (!test) { $("p-titel").value = ""; $("p-text").value = ""; }
+  } catch (e) { msg(e.message || "Senden fehlgeschlagen.", true); console.warn(e); }
+  $("p-send").disabled = false; $("p-test").disabled = !localStorage.getItem("ot_push_token");
+}
+$("p-send").addEventListener("click", () => sendPush(false));
+$("p-test").addEventListener("click", () => sendPush(true));
+
+function renderPushLog(list) {
+  const tb = $("p-rows"); tb.innerHTML = "";
+  if (!list.length) { tb.innerHTML = '<tr><td colspan="5">Noch keine Nachrichten gesendet.</td></tr>'; return; }
+  list.forEach(p => {
+    const tr = document.createElement("tr");
+    const when = p.sentAt?.toDate ? p.sentAt.toDate().toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" }) : "";
+    [when, ART[p.art] || p.art, p.titel, p.text, `${p.ok}/${p.geraete}`].forEach(v => {
+      const td = document.createElement("td"); td.textContent = v ?? ""; tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+}

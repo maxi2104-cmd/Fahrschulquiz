@@ -16,3 +16,5 @@
   // Zurück-Taste (Seite aus dem Zwischenspeicher): wieder sichtbar machen
   addEventListener("pageshow", (e) => { if (e.persisted) document.body.classList.remove("leaving"); });
 })();
+// Statistik (nur in der Homescreen-App): siehe statistik.js
+import("./statistik.js").catch(() => {});

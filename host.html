@@ -63,6 +63,41 @@
         <tbody id="rows"><tr><td colspan="7">Lade …</td></tr></tbody>
       </table>
     </div>
+
+    <h2 class="lbl" style="margin-top:40px">APP-STATISTIK</h2>
+    <div class="row">
+      <div class="stat"><b id="a-total">–</b><span>App auf dem Homescreen</span></div>
+      <div class="stat"><b id="a-30">–</b><span>davon aktiv (30 Tage)</span></div>
+      <div class="stat"><b id="a-7">–</b><span>neu (7 Tage)</span></div>
+      <div class="stat"><b id="a-push">–</b><span>Push-Erinnerung an</span></div>
+    </div>
+    <p class="hint" id="a-info"></p>
+
+    <h2 class="lbl" style="margin-top:40px">PUSH-NACHRICHT SENDEN</h2>
+    <label class="lbl" for="p-titel">TITEL</label>
+    <input id="p-titel" class="inp" maxlength="60" placeholder="z. B. 🚦 Theoriekurs startet Montag!">
+    <label class="lbl" for="p-text">TEXT</label>
+    <input id="p-text" class="inp" maxlength="180" placeholder="z. B. Nur noch 3 Plätze frei – jetzt anmelden.">
+    <label class="lbl" for="p-link">BEIM ANTIPPEN ÖFFNEN</label>
+    <select id="p-link" class="inp">
+      <option value="index.html">Startseite</option>
+      <option value="freitag.html">Freitags Frage</option>
+      <option value="anmeldung.html">Anmeldung</option>
+      <option value="schilder.html">Verkehrszeichen</option>
+      <option value="wissen.html">Wissen</option>
+    </select>
+    <p id="p-msg" class="hint"></p>
+    <div class="row">
+      <button id="p-send" class="btn">AN ALLE SENDEN</button>
+      <button id="p-test" class="btn ghost">TEST AN DIESES GERÄT</button>
+      <button id="p-key" class="btn ghost">GITHUB-SCHLÜSSEL</button>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>GESENDET</th><th>ART</th><th>TITEL</th><th>TEXT</th><th>ZUGESTELLT</th></tr></thead>
+        <tbody id="p-rows"><tr><td colspan="5">Lade …</td></tr></tbody>
+      </table>
+    </div>
   </section>
   <footer class="foot">Nur für die Fahrschule On Track</footer>
 </main>
