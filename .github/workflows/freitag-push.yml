@@ -1,7 +1,7 @@
 # Freitags-Push: schickt um 06:00 Uhr deutscher Zeit eine Nachricht, sobald das neue Quiz online ist.
-# GitHub rechnet in UTC – deshalb zwei Termine (Sommerzeit 04:00 UTC, Winterzeit 05:00 UTC);
-# das Skript prüft selbst, ob heute ein neues Quiz gestartet ist, und verschickt nur einmal.
-# Von Hand: Reiter „Actions“ → „Freitags-Push“ → „Run workflow“ (eigener Titel und Text an alle).
+# GitHub rechnet in UTC ‚Äì deshalb zwei Termine (Sommerzeit 04:00 UTC, Winterzeit 05:00 UTC);
+# das Skript pr√ºft selbst, ob heute ein neues Quiz gestartet ist, und verschickt nur einmal.
+# Von Hand: Reiter ‚ÄûActions‚Äú ‚Üí ‚ÄûFreitags-Push‚Äú ‚Üí ‚ÄûRun workflow‚Äú (eigener Titel und Text an alle).
 name: Freitags-Push
 
 on:
@@ -17,7 +17,10 @@ on:
         description: "Text der Nachricht"
         required: false
       link:
-        description: "Seite, die beim Antippen geöffnet wird (z. B. freitag.html)"
+        description: "Seite, die beim Antippen ge√∂ffnet wird (z. B. freitag.html)"
+        required: false
+      nur_token:
+        description: "Nur an dieses eine Ger√§t senden (Test, leer = alle)"
         required: false
 
 permissions:
@@ -41,3 +44,4 @@ jobs:
           TITEL: ${{ inputs.titel }}
           TEXT: ${{ inputs.text }}
           LINK: ${{ inputs.link }}
+          NUR_TOKEN: ${{ inputs.nur_token }}
