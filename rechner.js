@@ -12,7 +12,7 @@ let modal = null;
 const HTML = `
 <div class="lk-panel rc-panel" role="dialog" aria-modal="true" aria-label="Rechner">
   <div class="lk-head">
-    <span class="lk-h">RECHNER</span>
+    <span class="lk-h">ANHÄNGERRECHNER</span>
     <button type="button" class="lk-close" aria-label="Schließen">✕</button>
   </div>
   <div class="rc-tabs" role="tablist">

@@ -1136,7 +1136,13 @@ setTimeout(() => { const s = document.querySelector(".sp-skip"); if (s) s.remove
   const isChrome = /CriOS|Chrome\//.test(ua) && !/Edg|OPR|SamsungBrowser/.test(ua);
   let deferred = null;
   const lbl = document.getElementById("btn-install-t");
-  if (standalone) { lbl.textContent = "AUF DEM HOMESCREEN ✓"; btn.disabled = true; }
+  if (standalone) {
+    lbl.textContent = "AUF DEM HOMESCREEN ✓"; btn.disabled = true;
+    // App liegt schon auf dem Homescreen: Kachel wird zum Schalter für Benachrichtigungen
+    import("./push.js").then(m => m.mountPushTile(btn, lbl)).then(ok => {
+      if (ok) btn.querySelector("svg").innerHTML = '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>';
+    }).catch(e => console.warn(e));
+  }
   window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; });
   window.addEventListener("appinstalled", () => { lbl.textContent = "AUF DEM HOMESCREEN ✓"; btn.disabled = true; });
 
@@ -1148,7 +1154,7 @@ setTimeout(() => { const s = document.querySelector(".sp-skip"); if (s) s.remove
   document.getElementById("ins-close").onclick = () => { box.hidden = true; };
   box.addEventListener("click", (e) => { if (e.target === box) box.hidden = true; });
   now.onclick = async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice; deferred = null; box.hidden = true; };
-  btn.addEventListener("click", () => { now.hidden = !deferred; box.hidden = false; });
+  btn.addEventListener("click", () => { if (standalone) return; now.hidden = !deferred; box.hidden = false; });
 })();
 </script>
 <script>

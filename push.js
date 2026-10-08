@@ -65,3 +65,25 @@ export async function mountPushCard(box) {
   }
   zeichnen(await pushStatus());
 }
+
+// Kachel auf der Startseite (nur in der Homescreen-App): Benachrichtigungen an/aus
+export async function mountPushTile(btn, lbl) {
+  const texte = {
+    an: "BENACH&shy;RICHTI&shy;GUNGEN AN ✓",
+    aus: "BENACH&shy;RICHTI&shy;GUNGEN EIN&shy;SCHALTEN",
+    blockiert: "BENACH&shy;RICHTI&shy;GUNGEN BLOCKIERT"
+  };
+  let st = await pushStatus();
+  if (!texte[st]) return false;
+  const zeichnen = () => { lbl.innerHTML = texte[st]; btn.disabled = false; btn.classList.toggle("ghost", st === "an"); };
+  zeichnen();
+  btn.addEventListener("click", async () => {
+    if (st === "blockiert") { alert("Benachrichtigungen sind für die App blockiert. Du kannst sie in den Einstellungen deines Handys bei „On Track“ wieder erlauben."); return; }
+    if (st === "an" && !confirm("Benachrichtigungen ausschalten? Du bekommst dann keine Erinnerung an die Freitags Frage und keine News mehr.")) return;
+    btn.disabled = true; lbl.textContent = "EINEN MOMENT …";
+    try { st = st === "an" ? await pushAus() : await pushAn(); }
+    catch (err) { console.warn(err); alert("Das hat nicht geklappt. Versuch es später noch einmal."); }
+    zeichnen();
+  });
+  return true;
+}

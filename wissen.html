@@ -17,10 +17,13 @@
 <script src="nav.js" defer></script>
 <style>
 .pick{display:flex;flex-direction:column;gap:16px;margin-top:8px}
-.pick a,.pick button{display:block;width:100%;padding:24px 22px;border-radius:18px;background:var(--field);border:1px solid var(--line);color:var(--text);text-decoration:none;text-align:left;font:inherit;cursor:pointer;transition:border-color .15s,transform .1s}
+.pick a,.pick button{display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:16px;align-items:center;width:100%;box-sizing:border-box;padding:24px 22px;border-radius:18px;background:var(--field);border:1px solid var(--line);color:var(--text);text-decoration:none;text-align:left;font:inherit;cursor:pointer;transition:border-color .15s,transform .1s}
 .pick a:hover,.pick button:hover{border-color:var(--lime)} .pick a:active,.pick button:active{transform:scale(.99)}
-.pick b{display:block;font-size:26px;font-weight:900;letter-spacing:.01em}
+.pick b{display:block;font-size:24px;font-weight:900;letter-spacing:.01em}
 .pick span{display:block;margin-top:6px;color:var(--muted);font-size:15px;line-height:1.5}
+.pick svg{grid-row:1;width:52px;height:52px;padding:9px;box-sizing:border-box;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--lime);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pick b{grid-column:2}
+.pick span,.pick em{grid-column:1/-1;justify-self:start}
 .pick em{display:inline-block;margin-top:14px;font-style:normal;font-weight:900;font-size:13px;letter-spacing:.18em;color:var(--lime)}
 .home-btn{display:flex;align-items:center;justify-content:center;margin-top:22px;text-decoration:none;box-sizing:border-box}
 </style>
@@ -37,11 +40,11 @@
     <h1 class="title">WISSEN &amp;<br>HELFER.</h1>
     <p class="lead">Praktische Helfer zum Nachschlagen – für die Theorie und für unterwegs.</p>
     <nav class="pick">
-      <button type="button" id="open-rechner"><b>WELCHEN FÜHRER­SCHEIN BRAUCHE ICH?</b><span>Welche Führerscheinklasse brauchst du für dein Gespann? Und darfst du mit Anhänger 100 km/h fahren?</span><em>RECHNER ÖFFNEN</em></button>
-      <a href="schilder.html"><b>SCHILDER­SAMMLUNG UND ERKLÄRUNG</b><span>Über 1.000 Schilder mit Suche und Erklärung: Was bedeutet das Zeichen und was musst du tun?</span><em>SAMMLUNG ÖFFNEN</em></a>
-      <button type="button" id="open-ff"><b>ANHALTEWEG-RECHNER</b><span>Reaktionsweg, Bremsweg, Anhalteweg und Abstand – für jede Geschwindigkeit mit den Faustformeln aus der Fahrschule.</span><em>RECHNER ÖFFNEN</em></button>
-      <a href="abfahrt.html"><b>ABFAHRT&shy;KONTROLLE</b><span>Die Checkliste vor dem Losfahren – für den Enyaq und fürs Gespann, mit Tipps zu jedem Punkt.</span><em>CHECKLISTE ÖFFNEN</em></a>
-      <a href="abzeichen.html"><b>MEINE ABZEICHEN</b><span>Serien, Bestleistungen und Sammelziele – schau, was du schon geschafft hast.</span><em>ABZEICHEN ANSEHEN</em></a>
+      <button type="button" id="open-rechner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1.5 15.5v-3L3.5 9h5l2.5 3.5h1.5v3z"/><circle cx="5" cy="16.5" r="1.6"/><circle cx="10" cy="16.5" r="1.6"/><path d="M12.5 14h2.5"/><rect x="15" y="9.5" width="7.5" height="6" rx="1"/><circle cx="18.75" cy="16.5" r="1.6"/></svg><b>ANHÄNGER&shy;RECHNER</b><span>Welche Führerscheinklasse brauchst du für dein Gespann? Und darfst du mit Anhänger 100 km/h fahren?</span><em>RECHNER ÖFFNEN</em></button>
+      <a href="schilder.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="6"/><path d="M8.5 8.5h7M12 14.5V22M9 22h6"/></svg><b>SCHILDER­SAMMLUNG UND ERKLÄRUNG</b><span>Über 1.000 Schilder mit Suche und Erklärung: Was bedeutet das Zeichen und was musst du tun?</span><em>SAMMLUNG ÖFFNEN</em></a>
+      <button type="button" id="open-ff"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 17.5a8.5 8.5 0 1 1 17 0"/><path d="M12 17.5l4.5-5.5"/><circle cx="12" cy="17.5" r="1.3"/><path d="M6.5 11.5l1 1M12 6.5V8M17.5 11.5l-1 1"/></svg><b>ANHALTEWEG-RECHNER</b><span>Reaktionsweg, Bremsweg, Anhalteweg und Abstand – für jede Geschwindigkeit mit den Faustformeln aus der Fahrschule.</span><em>RECHNER ÖFFNEN</em></button>
+      <a href="abfahrt.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="4" width="15" height="17.5" rx="2.2"/><rect x="9" y="2.5" width="6" height="3.2" rx="1"/><path d="M8 11.5l1.8 1.8L13.5 9.6M8 17h8"/></svg><b>ABFAHRT&shy;KONTROLLE</b><span>Die Checkliste vor dem Losfahren – für den Enyaq und fürs Gespann, mit Tipps zu jedem Punkt.</span><em>CHECKLISTE ÖFFNEN</em></a>
+      <a href="abzeichen.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2.5l3 7.5M16 2.5l-3 7.5"/><circle cx="12" cy="15.5" r="5.5"/><path d="M12 12.6l.95 1.9 2.1.3-1.5 1.45.35 2.1-1.9-1-1.9 1 .35-2.1-1.5-1.45 2.1-.3z"/></svg><b>MEINE ABZEICHEN</b><span>Serien, Bestleistungen und Sammelziele – schau, was du schon geschafft hast.</span><em>ABZEICHEN ANSEHEN</em></a>
     </nav>
     <a class="btn ghost home-btn" href="index.html">← ZUR STARTSEITE</a>
   </section>
